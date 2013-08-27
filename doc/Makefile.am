@@ -20,16 +20,17 @@
 #
 
 # Program to convert DVI files to PostScript
-DVIPS = dvips -D 300
+MYDVIPS = @DVIPS@ -D 300
 # Program to convert texinfo files to html
-TEXI2HTML = texi2html -expandinfo -split_chapter
+TEXI2HTML = @TEXI2HTML@ -expandinfo -split_chapter
 
-manext     = 1
+@COMMENT_IF_NO_POD2MAN@manext = 1
 RM = rm -f
 
 TEXI2POD     = $(srcdir)/texi2pod.pl
-POD2MAN      = @POD2MAN@
-MAN          = wget.$(manext)
+@COMMENT_IF_NO_POD2MAN@POD2MAN      = @POD2MAN@
+@COMMENT_IF_NO_POD2MAN@MAN          = wget.$(manext)
+@COMMENT_IF_NO_POD2MAN@NROFF        = @NROFF@
 WGETRC       = $(sysconfdir)/wgetrc
 SAMPLERCTEXI = sample.wgetrc.munged_for_texi_inclusion
 
@@ -37,7 +38,7 @@ SAMPLERCTEXI = sample.wgetrc.munged_for_texi_inclusion
 # Dependencies for building
 #
 
-man_MANS = $(MAN)
+@COMMENT_IF_NO_POD2MAN@man_MANS = $(MAN)
 
 all: wget.info @COMMENT_IF_NO_POD2MAN@$(MAN)
 
@@ -47,7 +48,7 @@ $(SAMPLERCTEXI): $(srcdir)/sample.wgetrc
 	sed s/@/@@/g $? > $@
 
 info_TEXINFOS = wget.texi
-wget_TEXINFOS = fdl.texi sample.wgetrc.munged_for_texi_inclusion
+wget_TEXINFOS = fdl.texi sample.wgetrc.munged_for_texi_inclusion version.texi
 
 EXTRA_DIST = sample.wgetrc \
 	     $(SAMPLERCTEXI) \
@@ -56,17 +57,17 @@ EXTRA_DIST = sample.wgetrc \
 wget.pod: $(srcdir)/wget.texi version.texi
 	$(TEXI2POD) -D VERSION="$(VERSION)" $(srcdir)/wget.texi $@
 
-$(MAN): wget.pod
-	$(POD2MAN) --center="GNU Wget" --release="GNU Wget @VERSION@" $? > $@
+@COMMENT_IF_NO_POD2MAN@$(MAN): wget.pod
+@COMMENT_IF_NO_POD2MAN@	$(POD2MAN) --center="GNU Wget" --release="GNU Wget @VERSION@" $? > $@
 
-#wget.cat: $(MAN)
-#	nroff -man $? > $@
+@COMMENT_IF_NO_POD2MAN@wget.cat: $(MAN)
+@COMMENT_IF_NO_POD2MAN@	$(NROFF) -man $? > $@
 
 wget_us.ps: wget.dvi
-	$(DVIPS) -t letter -o $@ wget.dvi
+	$(MYDVIPS) -t letter -o $@ wget.dvi
 
 wget_a4.ps: wget.dvi
-	$(DVIPS) -t a4 -o $@ wget.dvi
+	$(MYDVIPS) -t a4 -o $@ wget.dvi
 
 wget_toc.html: $(srcdir)/wget.texi
 	$(TEXI2HTML) $(srcdir)/wget.texi
@@ -83,9 +84,9 @@ uninstall-local: @COMMENT_IF_NO_POD2MAN@uninstall.man
 
 
 # install man page, creating install directory if necessary
-install.man: $(MAN)
-	$(mkinstalldirs) $(DESTDIR)$(mandir)/man$(manext)
-	$(INSTALL_DATA) $(MAN) $(DESTDIR)$(mandir)/man$(manext)/$(MAN)
+@COMMENT_IF_NO_POD2MAN@install.man: $(MAN)
+@COMMENT_IF_NO_POD2MAN@	$(mkinstalldirs) $(DESTDIR)$(mandir)/man$(manext)
+@COMMENT_IF_NO_POD2MAN@	$(INSTALL_DATA) $(MAN) $(DESTDIR)$(mandir)/man$(manext)/$(MAN)
 
 # install sample.wgetrc
 install.wgetrc: $(srcdir)/sample.wgetrc
@@ -107,12 +108,12 @@ install.wgetrc: $(srcdir)/sample.wgetrc
 	fi
 
 # uninstall man page
-uninstall.man:
-	$(RM) $(DESTDIR)$(mandir)/man$(manext)/$(MAN)
+@COMMENT_IF_NO_POD2MAN@uninstall.man:
+@COMMENT_IF_NO_POD2MAN@	$(RM) $(DESTDIR)$(mandir)/man$(manext)/$(MAN)
 
 #
 # Dependencies for cleanup
 #
 
 CLEANFILES = *~ *.bak *.cat *.pod
-DISTCLEANFILES = $(MAN)
+@COMMENT_IF_NO_POD2MAN@DISTCLEANFILES = $(MAN)

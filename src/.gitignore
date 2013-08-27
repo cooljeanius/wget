@@ -1,0 +1,9 @@
+build-info.c
+wget
+libunittest.a
+*~
+*.bak
+core.*
+version.c
+*.o
+css*.c

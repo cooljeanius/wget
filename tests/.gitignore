@@ -1,0 +1,12 @@
+/test-version-etc.c
+/test-version-etc.sh
+/test-update-copyright.sh
+/macros.h
+/signature.h
+/test-getline.c
+/test-getopt.c
+/test-getopt.h
+/test-getopt_long.h
+/test-ioctl.c
+/test-open.c
+/test-open.h

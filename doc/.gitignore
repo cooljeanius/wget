@@ -1,0 +1,13 @@
+wget.1
+wget.dvi
+wget.info
+wget.pdf
+wget.pc
+wget.html
+*~
+*.bak
+*.cat
+*.pod
+wget.t2d
+wget.t2p
+vti.tmp

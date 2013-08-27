@@ -31,7 +31,7 @@
 #
 
 
-# We can't help that installing wget.info leaves /usr/share/info/dir
+# We cannot help that installing wget.info leaves /usr/share/info/dir
 # around, and we need to prevent uninstallation of the possibly
 # previously-existing /etc/wgetrc.
 distuninstallcheck_listfiles = find . -type f | \
@@ -41,19 +41,26 @@ distuninstallcheck_listfiles = find . -type f | \
 ACLOCAL_AMFLAGS = -I m4
 
 # subdirectories in the distribution
-SUBDIRS = lib src doc po tests util
+SUBDIRS = lib src po tests util @COMMENT_IF_NO_POD2MAN@ doc
 
 EXTRA_DIST = ChangeLog.README MAILING-LIST \
              msdos/ChangeLog msdos/config.h msdos/Makefile.DJ \
              msdos/Makefile.WC ABOUT-NLS \
-             build-aux/build_info.pl build-aux/git-version-gen .version
+             build-aux/build_info.pl build-aux/git-version-gen .version \
+             m4/gnulib-cache.m4
 
 CLEANFILES = *~ *.bak $(DISTNAME).tar.gz
 
 BUILT_SOURCES = .version
 
-clean-generic:
+TESTS_ENVIRONMENT = @CHARSETALIASDIR@
+
+TESTS_ENVIRONMENT += @LOCALCHARSET_TESTS_ENVIRONMENT@
+
+clean-generic-local:
 	rm -f install-info
+
+.PHONY: clean-generic-local
 
 .version:
 	echo $(VERSION) > $@-t && mv $@-t $@
