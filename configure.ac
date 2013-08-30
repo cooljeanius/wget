@@ -38,6 +38,11 @@ AC_SUBST([PACKAGE_VERSION])
 if test "x$VERSION" != "x"; then
 	test ! -z "$VERSION"
 	AC_SUBST([VERSION])
+elif test "x$PACKAGE_VERSION" != "x"; then
+	test ! -z "$PACKAGE_VERSION"
+	test -z "$VERSION" && export VERSION="$PACKAGE_VERSION"
+	test ! -z "$VERSION"
+	AC_SUBST([VERSION])
 fi
 
 dnl#
@@ -149,10 +154,6 @@ if test "x$CC" = "x"; then
 	fi
 else
 	test ! -z "$CC"
-	if test "x$CC_C99" = "x"; then
-		test -z "$CC_C99"
-		AC_PROG_CC_C99
-	fi
 	export CC
 	AC_SUBST([CC])
 fi

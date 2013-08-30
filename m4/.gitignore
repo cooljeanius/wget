@@ -210,7 +210,6 @@
 /perl.m4
 /stdarg.m4
 /version-etc.m4
-/memcmp.m4
 /mkostemps.m4
 /setenv.m4
 /symlink.m4

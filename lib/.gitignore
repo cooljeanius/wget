@@ -325,7 +325,6 @@ wctype.h*
 /version-etc-fsf.c
 /version-etc.c
 /version-etc.h
-/memcmp.c
 /mkostemps.c
 /setenv.c
 /symlink.c

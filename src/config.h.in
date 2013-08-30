@@ -2984,9 +2984,6 @@
 /* Define to a type if <wchar.h> does not define. */
 #undef mbstate_t
 
-/* Define to rpl_memcmp if the replacement function should be used. */
-#undef memcmp
-
 /* Define to `int' if <sys/types.h> does not define. */
 #undef mode_t
 
