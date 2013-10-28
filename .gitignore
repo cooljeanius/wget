@@ -35,6 +35,7 @@ lib/Makefile.in
 lib/git-merge-changelog
 lib/libgnu.a
 m4/gnulib-cache.m4
+po/*.gmo
 po/.reference/*.*o
 po/.reference/*.s1
 po/Makefile.in

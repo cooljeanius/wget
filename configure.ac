@@ -100,15 +100,17 @@ dnl# Automake setup
 dnl#
 AC_MSG_CHECKING([automake stuff])
 AC_MSG_RESULT([ ])
-AM_INIT_AUTOMAKE([1.9 dejagnu dist-bzip2 dist-xz dist-zip gnu tar-ustar -Wall])
+AM_INIT_AUTOMAKE([1.9 dejagnu dist-bzip2 dist-lzip dist-xz dist-zip gnu tar-ustar -Wall -Wno-portability -Wno-obsolete -Wno-override])
 AM_MAINTAINER_MODE
+AM_SANITY_CHECK
+AM_MAKE_INCLUDE
 
 dnl#
 dnl# Process features.
 dnl#
 
 AC_ARG_WITH([ssl],
-[AS_HELP_STRING([--with-ssl={gnutls,openssl}],[specify the SSL backend.  GNU TLS is the default.])])
+[AS_HELP_STRING([--with-ssl={gnutls,openssl}],[specify the SSL backend. GNU TLS is the default.])])
 
 AC_ARG_WITH([zlib],
 [AS_HELP_STRING([--without-zlib],[disable zlib])])
@@ -225,6 +227,7 @@ dnl# Checks for basic C compiler characteristics.
 dnl#
 AC_MSG_CHECKING([basic C compiler characteristics])
 AC_MSG_RESULT([ ])
+AC_C_BIGENDIAN
 AC_C_CONST
 AC_C_INLINE
 AC_C_PROTOTYPES
@@ -234,6 +237,11 @@ AX_C___ATTRIBUTE__
 
 dnl# AC_HEADER_STDC is called by other macros, so it is no longer
 dnl# necessary to call it separately
+dnl# We can use a hack to "require" it though
+AC_DEFUN([AC_REQUIRE_HEADER_STDC],[
+  AC_REQUIRE([AC_HEADER_STDC])
+])
+AC_REQUIRE_HEADER_STDC
 
 dnl#
 dnl# Checks for system header files that might be missing.
@@ -289,11 +297,15 @@ AC_CHECK_TYPE([bool],[
     [Define to 1 if bool is an available type.])
 ],[],[
 #ifdef HAVE_SYS_TYPES_H
-#include <sys/types.h>
-#endif
+# include <sys/types.h>
+#else
+# warning this conftest expects <sys/types.h> to be included.
+#endif /* HAVE_SYS_TYPES_H */
 #ifdef HAVE_STDBOOL_H
-#include <stdbool.h>
-#endif
+# include <stdbool.h>
+#else
+# warning this conftest expects <stdbool.h> to be included.
+#endif /* HAVE_STDBOOL_H */
 ])
 AC_TYPE_SIZE_T
 AC_CHECK_SIZEOF([size_t])
@@ -334,7 +346,9 @@ AC_CHECK_TYPES([sig_atomic_t],[],[],[
 #include <sys/types.h>
 #if HAVE_INTTYPES_H
 # include <inttypes.h>
-#endif
+#else
+# warning this conftest expects <inttypes.h> to be included.
+#endif /* HAVE_INTTYPES_H */
 #include <signal.h>
 ])
 AC_CHECK_TYPE([long long],
@@ -409,20 +423,22 @@ AC_FUNC_STRNLEN
 AC_FUNC_STRTOD
 AC_FUNC_UTIME_NULL
 AC_FUNC_VPRINTF
-AC_CHECK_FUNCS([__argz_count __argz_next __argz_stringify __fpending acl alarm \
-                atexit btowc drand48 dup2 endgrent endpwent euidaccess fchdir \
-                fdatasync floor fs_stat_dev ftello ftruncate getcwd getwd \
-                getdelim gethostname gethrtime getmntent getmntinfo getpass \
-                gettimeofday getusershell hasmntopt isascii iswprint lchown \
-                listmntent localeconv localtime_r mblen mbrlen mbtowc memchr \
-                memmove mempcpy memrchr memset mkdir mkfifo modf munmap next \
-                next_dev nl_langinfo pathconf pow printf pstat_getdynamic \
-                putenv re_comp regcomp rint rmdir rpmatch select setenv \
-                sethostname setlocale sigblock sigsetjmp socket sleep sqrt \
-                stime stpcpy strchr strcspn strdup strerror strndup strpbrk \
-                strptime strrchr strspn strstr strtol strtoll strtoul strtoull \
-                strtoumax strverscmp symlink sysinfo system timegm tzset uname \
-                usleep utime vasprintf vsnprintf wcwidth])
+AC_CHECK_FUNCS([__argz_count __argz_next __argz_stringify __fpending acl \
+                alarm atexit btowc drand48 dup2 endgrent endpwent \
+                euidaccess fchdir fdatasync floor fs_stat_dev ftello \
+                ftruncate getcwd getwd getdelim gethostname gethrtime \
+                getmntent getmntinfo getpass gettimeofday getusershell \
+                hasmntopt isascii iswprint lchown listmntent localeconv \
+                localtime_r mblen mbrlen mbtowc memchr memmove mempcpy \
+                memrchr memset mkdir mkfifo modf munmap next next_dev \
+                nl_langinfo pathconf pow printf pstat_getdynamic putenv \
+                re_comp regcomp rint rmdir rpmatch select setenv \
+                sethostname setlocale sigblock sigsetjmp socket sleep \
+                sqrt stime stpcpy strchr strcspn strdup strerror strndup \
+                strpbrk strptime strrchr strspn strstr strtol strtoll \
+                strtoul strtoull strtoumax strverscmp symlink sysinfo \
+                system timegm tzset uname usleep utime vasprintf \
+                vsnprintf wcwidth])
 
 if test x"$ENABLE_OPIE" = xyes; then
   AC_LIBOBJ([ftp-opie])
@@ -441,7 +457,7 @@ ac_cv_func_strcasecmp="no"
 AC_SUBST([ac_cv_func_strcasecmp])
 
 dnl# We expect to have these functions on Unix-like systems configure
-dnl# runs on.  The defines are provided to get them in config.h.in so
+dnl# runs on. The defines are provided to get them in config.h.in so
 dnl# Wget can still be ported to non-Unix systems (such as Windows)
 dnl# that lack some of these functions.
 AC_DEFINE([HAVE_STRCASECMP],[1],[Define to 1 if you have the `strcasecmp' function.])
@@ -466,6 +482,7 @@ dnl#
 
 AC_MSG_CHECKING([libraries])
 AC_MSG_RESULT([ ])
+AC_CHECK_LIB([c],[printf])
 # FIXME: Replace `main' with a function in `-lcurl':
 AC_CHECK_LIB([curl],[main])
 dnl# FIXME: Replace `main' with a function in `-lne':
@@ -476,7 +493,7 @@ AS_IF([test x"$with_zlib" != xno],[
   AC_CHECK_HEADER([zlib.h])
 ])
 
-AS_IF([test x"$with_ssl" = xopenssl], [
+AS_IF([test x"$with_ssl" = xopenssl],[
     dnl# some versions of openssl use zlib compression
     AC_CHECK_LIB([z],[compress])
 
@@ -491,7 +508,8 @@ AS_IF([test x"$with_ssl" = xopenssl], [
     ssl_found=no
     case $host_os in
       *mingw32* )
-        dnl# prefer link to openssl dlls if possible. If not, then fallback on static libs. If not, then error out.
+        dnl# prefer link to openssl dlls if possible. If not, then fallback on
+        dnl# static libs. If not, then error out.
         
         AC_CHECK_LIB([eay32],[EVP_MD_CTX_init])
         if test x"$ac_cv_lib_eay32_EVP_MD_CTX_init" != xno
@@ -768,6 +786,7 @@ AC_CHECK_HEADER([uuid/uuid.h],
                   [LIBS="${LIBS} -luuid"
                    AC_DEFINE([HAVE_LIBUUID],[1],
                              [Define if libuuid is available.])
+                  ],[AC_CHECK_LIB([uuid],[main])
                   ])
 ])
 
@@ -803,6 +822,7 @@ dnl#
 
 AC_CHECK_PROGS([MAKEINFO],[makeinfo],[true])
 AM_MISSING_PROG([EMACSBIN],[emacs])
+AM_PATH_LISPDIR
 AM_MISSING_PROG([INSTALLINFO],[install-info])
 if test "x$INSTALLINFO" = "x"; then
 	test -z "$INSTALLINFO"
@@ -814,6 +834,8 @@ else
 fi
 AM_MISSING_PROG([MYDVIPS],[dvips])
 if test "x$DVIPS" = "x"; then
+	test -z "$DVIPS"
+	test -z "$MYDVIPS"
 	AC_PATH_PROG([MYDVIPS],[dvips])
 else
 	test ! -z "$DVIPS"
@@ -821,6 +843,8 @@ else
 fi
 AM_MISSING_PROG([MYTEXI2DVI],[texi2dvi])
 if test "x$TEXI2DVI" = "x"; then
+	test -z "$TEXI2DVI"
+	test -z "$MYTEXI2DVI"
 	AC_PATH_PROG([MYTEXI2DVI],[texi2dvi])
 fi
 AM_MISSING_PROG([TEXI2HTML],[texi2html])
@@ -834,6 +858,8 @@ else
 fi
 AM_MISSING_PROG([MYTEXI2PDF],[texi2pdf])
 if test "x$TEXI2PDF" = "x"; then
+	test -z "$TEXI2PDF"
+	test -z "$MYTEXI2PDF"
 	AC_PATH_PROG([MYTEXI2PDF],[texi2pdf])
 fi
 AM_MISSING_PROG([TEXI2POD],[texi2pod])

@@ -37,16 +37,20 @@ AC_DEFUN([WGET_STRUCT_UTIMBUF],[
 #include <stdio.h>
 #if HAVE_SYS_TYPES_H
 # include <sys/types.h>
-#endif
+#else
+# warning this conftest expects <sys/types.h> to be included.
+#endif /* HAVE_SYS_TYPES_H */
 #if HAVE_UTIME_H
 # include <utime.h>
-#endif
+#else
+# warning this conftest expects <utime.h to be included.
+#endif /* HAVE_UTIME_H */
   ])
 ])
 
-dnl# Check whether fnmatch.h can be included.  This doesn't use
+dnl# Check whether fnmatch.h can be included. This does NOT use
 dnl# AC_FUNC_FNMATCH because Wget is already careful to only use
-dnl# fnmatch on certain OS'es.  However, fnmatch.h is sometimes broken
+dnl# fnmatch on certain OS'es. However, fnmatch.h is sometimes broken
 dnl# even on those because Apache installs its own fnmatch.h to
 dnl# /usr/local/include (!), which GCC uses before /usr/include.
 
@@ -63,7 +67,7 @@ AC_DEFUN([WGET_FNMATCH],[
   ])
 ])
 
-dnl# Check for nanosleep.  For nanosleep to work on Solaris, we must
+dnl# Check for nanosleep. For nanosleep to work on Solaris, we must
 dnl# link with -lrt (recently) or with -lposix4 (older releases).
 
 AC_DEFUN([WGET_NANOSLEEP],[
@@ -84,7 +88,9 @@ AC_DEFUN([WGET_NANOSLEEP],[
 
 AC_DEFUN([WGET_POSIX_CLOCK],[
   AC_CHECK_FUNCS([clock_gettime],[],[
-    AC_CHECK_LIB([rt],[clock_gettime])
+    AC_CHECK_LIB([rt],[clock_gettime],[],[
+      AC_CHECK_LIB([rt],[main])
+    ])
   ])
 ])
 
@@ -95,7 +101,7 @@ AC_DEFUN([WGET_NSL_SOCKET],[
   dnl# On Solaris, -lnsl is needed to use gethostbyname.  But checking
   dnl# for gethostbyname is not enough because on "NCR MP-RAS 3.0"
   dnl# gethostbyname is in libc, but -lnsl is still needed to use
-  dnl# -lsocket, as well as for functions such as inet_ntoa.  We look
+  dnl# -lsocket, as well as for functions such as inet_ntoa. We look
   dnl# for such known offenders and if one of them is not found, we
   dnl# check if -lnsl is needed.
   wget_check_in_nsl=NONE
@@ -116,7 +122,11 @@ AC_DEFUN([WGET_NSL_SOCKET],[
                   dnl# gethostbyname in the socket lib?
                   AC_CHECK_LIB([socket],[gethostbyname],[
                                 HAVE_GETHOSTBYNAME="1"
-                                LIBS="$LIBS -lsocket"])
+                                LIBS="$LIBS -lsocket"
+                                ],[AC_CHECK_LIB([socket],[main])
+                                ])
+                else
+                  AC_CHECK_LIB([socket],[main])
                 fi])
 
   if test "$HAVE_GETHOSTBYNAME" != "1"
@@ -178,18 +188,20 @@ AC_DEFUN([WGET_NSL_SOCKET],[
         AC_LINK_IFELSE([
           AC_LANG_PROGRAM([[
 #ifdef HAVE_WINDOWS_H
-#ifndef WIN32_LEAN_AND_MEAN
-#define WIN32_LEAN_AND_MEAN
-#endif
-#include <windows.h>
-#ifdef HAVE_WINSOCK2_H
-#include <winsock2.h>
-#else
-#ifdef HAVE_WINSOCK_H
-#include <winsock.h>
-#endif
-#endif
-#endif
+# ifndef WIN32_LEAN_AND_MEAN
+#  define WIN32_LEAN_AND_MEAN
+# endif /* !WIN32_LEAN_AND_MEAN */
+# include <windows.h>
+# ifdef HAVE_WINSOCK2_H
+#  include <winsock2.h>
+# else
+#  ifdef HAVE_WINSOCK_H
+#   include <winsock.h>
+#  else
+#   warning this conftest expects a winsock-related header to be included.
+#  endif /* HAVE_WINSOCK_H */
+# endif /* HAVE_WINSOCK2_H */
+#endif /* HAVE_WINDOWS_H */
           ]],[[
             gethostbyname("www.dummysite.com");
           ]])
@@ -287,17 +299,25 @@ AC_DEFUN([TYPE_STRUCT_SOCKADDR_IN6],[
   ],[
 #include <sys/types.h>
 #ifdef HAVE_SYS_SOCKET_H
-#include <sys/socket.h>
-#endif
+# include <sys/socket.h>
+#else
+# warning this conftest expects <sys/socket.h> to be included.
+#endif /* HAVE_SYS_SOCKET_H */
 #ifdef HAVE_NETINET_IN_H
-#include <netinet/in.h>
-#endif
+# include <netinet/in.h>
+#else
+# warning this conftest expects <netinet/in.h> to be included.
+#endif /* HAVE_NETINET_IN_H */
 #ifdef HAVE_WINSOCK2_H
-#include <winsock2.h>
-#endif
+# include <winsock2.h>
+#else
+# warning this conftest expects <winsock2.h> to be included.
+#endif /* HAVE_WINSOCK2_H */
 #ifdef HAVE_WS2TCPIP_H
-#include <ws2tcpip.h>
-#endif
+# include <ws2tcpip.h>
+#else
+# warning this conftest expects <ws2tcpip.h> to be included.
+#endif /* HAVE_WS2TCPIP_H */
   ])
 
   if test "X$wget_have_sockaddr_in6" = "Xyes"; then :
@@ -322,17 +342,25 @@ AC_DEFUN([MEMBER_SIN6_SCOPE_ID],[
     ],[
 #include <sys/types.h>
 #ifdef HAVE_SYS_SOCKET_H
-#include <sys/socket.h>
-#endif
+# include <sys/socket.h>
+#else
+# warning this conftest expects <sys/socket.h> to be included.
+#endif /* HAVE_SYS_SOCKET_H */
 #ifdef HAVE_NETINET_IN_H
-#include <netinet/in.h>
-#endif
+# include <netinet/in.h>
+#else
+# warning this conftest expects <netinet/in.h> to be included.
+#endif /* HAVE_NETINET_IN_H */
 #ifdef HAVE_WINSOCK2_H
-#include <winsock2.h>
-#endif
+# include <winsock2.h>
+#else
+# warning this conftest expects <winsock2.h> to be included.
+#endif /* HAVE_WINSOCK2_H */
 #ifdef HAVE_WS2TCPIP_H
-#include <ws2tcpip.h>
-#endif
+# include <ws2tcpip.h>
+#else
+# warning this conftest expects <ws2tcpip.h> to be included.
+#endif /* HAVE_WS2TCPIP_H */
     ])
   fi
 
@@ -356,23 +384,31 @@ AC_DEFUN([PROTO_INET6],[
     AC_PREPROC_IFELSE([AC_LANG_SOURCE([[
 #include <sys/types.h>
 #ifdef HAVE_SYS_SOCKET_H
-#include <sys/socket.h>
-#endif
+# include <sys/socket.h>
+#else
+# warning this conftest expects <sys/socket.h> to be included.
+#endif /* HAVE_SYS_SOCKET_H */
 #ifdef HAVE_NETINET_IN_H
-#include <netinet/in.h>
-#endif
+# include <netinet/in.h>
+#else
+# warning this conftest expects <netinet/in.h> to be included.
+#endif /* HAVE_NETINET_IN_H */
 #ifdef HAVE_WINSOCK2_H
-#include <winsock2.h>
-#endif
+# include <winsock2.h>
+#else
+# warning this conftest expects <winsock2.h> to be included.
+#endif /* HAVE_WINSOCK2_H */
 #ifdef HAVE_WS2TCPIP_H
-#include <ws2tcpip.h>
-#endif
+# include <ws2tcpip.h>
+#else
+# warning this conftest expects <ws2tcpip.h> to be included.
+#endif /* HAVE_WS2TCPIP_H */
 #ifndef PF_INET6
-#error Missing PF_INET6
-#endif
+# error Missing PF_INET6
+#endif /* !PF_INET6 */
 #ifndef AF_INET6
-#error Missing AF_INET6
-#endif
+# error Missing AF_INET6
+#endif /* !AF_INET6 */
     ]])],[
       wget_cv_proto_inet6=yes
     ],[
@@ -411,11 +447,15 @@ AC_DEFUN([WGET_STRUCT_SOCKADDR_STORAGE],[
   AC_CHECK_TYPES([struct sockaddr_storage],[],[],[
 #include <sys/types.h>
 #ifdef HAVE_SYS_SOCKET_H
-#include <sys/socket.h>
-#endif
+# include <sys/socket.h>
+#else
+# warning this conftest expects <sys/socket.h> to be included.
+#endif /* HAVE_SYS_SOCKET_H */
 #ifdef HAVE_WINSOCK2_H
-#include <winsock2.h>
-#endif
+# include <winsock2.h>
+#else
+# warning this conftest expects <winsock2.h> to be included.
+#endif /* HAVE_WINSOCK2_H */
   ])
   AC_CHECK_HEADERS_ONCE([netinet/in.h])
   AC_MSG_CHECKING([if struct sockaddr_in6 has sin6_scope_id member])

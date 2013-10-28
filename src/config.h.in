@@ -897,6 +897,9 @@
 /* Define if the ldexp function is available in libc. */
 #undef HAVE_LDEXP_IN_LIBC
 
+/* Define to 1 if you have the `c' library (-lc). */
+#undef HAVE_LIBC
+
 /* Define to 1 if you have the `curl' library (-lcurl). */
 #undef HAVE_LIBCURL
 
@@ -942,7 +945,7 @@
 /* Define to 1 if you have the `ssl32' library (-lssl32). */
 #undef HAVE_LIBSSL32
 
-/* Define if libuuid is available. */
+/* Define to 1 if you have the `uuid' library (-luuid). */
 #undef HAVE_LIBUUID
 
 /* Define to 1 if you have the `ws2_32' library (-lws2_32). */

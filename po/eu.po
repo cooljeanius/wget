@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wget 1.14.128\n"
 "Report-Msgid-Bugs-To: bug-wget@gnu.org\n"
-"POT-Creation-Date: 2013-05-19 23:48+0200\n"
+"POT-Creation-Date: 2013-10-28 11:10-0400\n"
 "PO-Revision-Date: 2013-06-14 00:35+0100\n"
 "Last-Translator: Mikel Olasagasti Uranga <mikel@olasagasti.info>\n"
 "Language-Team: Basque <translation-team-eu@lists.sourceforge.net>\n"
@@ -254,36 +254,36 @@ msgstr "konektatua.\n"
 msgid "failed: %s.\n"
 msgstr "huts egin da: %s.\n"
 
-#: src/connect.c:397 src/http.c:2239
+#: src/connect.c:397 src/http.c:1976
 #, c-format
 msgid "%s: unable to resolve host address %s\n"
 msgstr ""
 
-#: src/convert.c:242
+#: src/convert.c:196
 #, fuzzy, c-format
 msgid "Converted %d files in %s seconds.\n"
 msgstr "%d fitxategi %.2f segundutan bihurtuak.\n"
 
-#: src/convert.c:270
+#: src/convert.c:224
 #, c-format
 msgid "Converting %s... "
 msgstr "%s bihurtzen... "
 
-#: src/convert.c:283
+#: src/convert.c:237
 msgid "nothing to do.\n"
 msgstr "ezer ez egiteko.\n"
 
-#: src/convert.c:291 src/convert.c:315
+#: src/convert.c:245 src/convert.c:269
 #, c-format
 msgid "Cannot convert links in %s: %s\n"
 msgstr "Ezin dira %s-ko linkak bihurtu: %s\n"
 
-#: src/convert.c:306
+#: src/convert.c:260
 #, fuzzy, c-format
 msgid "Unable to delete %s: %s\n"
 msgstr "Ezin da `%s' ezabatu: %s\n"
 
-#: src/convert.c:522
+#: src/convert.c:476
 #, c-format
 msgid "Cannot back up %s as %s: %s\n"
 msgstr "Ezin da %s gordetzeko kopia egin %s bezala: %s\n"
@@ -320,7 +320,9 @@ msgstr "`%s' itxitzerakoan errorea: %s\n"
 
 #: src/ftp-ls.c:1048
 msgid "Unsupported listing type, trying Unix listing parser.\n"
-msgstr "Zerredatze mota sostengurik gabe, Unix zerrendatze sintaxi-analizatzailearekin saiatzen.\n"
+msgstr ""
+"Zerredatze mota sostengurik gabe, Unix zerrendatze sintaxi-"
+"analizatzailearekin saiatzen.\n"
 
 #: src/ftp-ls.c:1099 src/ftp-ls.c:1101
 #, c-format
@@ -362,12 +364,12 @@ msgstr " (%s byte)"
 msgid "Length: %s"
 msgstr "Luzeera: %s"
 
-#: src/ftp.c:227 src/http.c:3012
+#: src/ftp.c:227 src/http.c:2779
 #, c-format
 msgid ", %s (%s) remaining"
 msgstr ""
 
-#: src/ftp.c:231 src/http.c:3016
+#: src/ftp.c:231 src/http.c:2783
 #, c-format
 msgid ", %s remaining"
 msgstr ""
@@ -511,47 +513,47 @@ msgstr ""
 "Ez dago `%s' fitxategi edo direktoriorik.\n"
 "\n"
 
-#: src/ftp.c:1228 src/http.c:3144
+#: src/ftp.c:1228 src/http.c:2910
 #, c-format
 msgid "%s has sprung into existence.\n"
 msgstr ""
 
-#: src/ftp.c:1285
+#: src/ftp.c:1280
 #, c-format
 msgid "%s: %s, closing control connection.\n"
 msgstr "%s: %s, konexio kontrola itxitzen.\n"
 
-#: src/ftp.c:1297
+#: src/ftp.c:1292
 #, c-format
 msgid "%s (%s) - Data connection: %s; "
 msgstr "%s (%s) - Datu konexioa: %s; "
 
-#: src/ftp.c:1312
+#: src/ftp.c:1307
 msgid "Control connection closed.\n"
 msgstr "Kontrol konexioa itxia.\n"
 
-#: src/ftp.c:1335
+#: src/ftp.c:1325
 msgid "Data transfer aborted.\n"
 msgstr "Datu transferentzia abortatua.\n"
 
-#: src/ftp.c:1447
+#: src/ftp.c:1437
 #, fuzzy, c-format
 msgid "File %s already there; not retrieving.\n"
 msgstr "`%s' fitxategia dagoeneko badago, ez da jasoko.\n"
 
-#: src/ftp.c:1529 src/http.c:3318
+#: src/ftp.c:1518 src/http.c:3077
 #, c-format
 msgid "(try:%2d)"
 msgstr "(saiatu:%2d)"
 
-#: src/ftp.c:1623 src/http.c:3703
+#: src/ftp.c:1599 src/http.c:3459
 #, c-format
 msgid ""
 "%s (%s) - written to stdout %s[%s]\n"
 "\n"
 msgstr ""
 
-#: src/ftp.c:1624 src/http.c:3704
+#: src/ftp.c:1600 src/http.c:3460
 #, c-format
 msgid ""
 "%s (%s) - %s saved [%s]\n"
@@ -560,40 +562,41 @@ msgstr ""
 "%s (%s) - %s gordeta [%s]\n"
 "\n"
 
-#: src/ftp.c:1682 src/main.c:1698 src/recur.c:614 src/recur.c:823
-#: src/retr.c:1341
+#: src/ftp.c:1658 src/main.c:1637 src/recur.c:433 src/recur.c:641
+#: src/retr.c:1095
 #, c-format
 msgid "Removing %s.\n"
 msgstr "%s ezabatzen.\n"
 
-#: src/ftp.c:1728
+#: src/ftp.c:1704
 #, fuzzy, c-format
 msgid "Using %s as listing tmp file.\n"
 msgstr "`%s' erabiltzen zerrenda tmp fitxategi bezala.\n"
 
-#: src/ftp.c:1745
+#: src/ftp.c:1721
 #, c-format
 msgid "Removed %s.\n"
 msgstr "%s ezabatua.\n"
 
-#: src/ftp.c:1782
+#: src/ftp.c:1758
 #, c-format
 msgid "Recursion depth %d exceeded max. depth %d.\n"
 msgstr "Inkurtsio sakonera %dk maximoa gainditzen du. Sakonera %d.\n"
 
-#: src/ftp.c:1852
+#: src/ftp.c:1828
 #, fuzzy, c-format
 msgid "Remote file no newer than local file %s -- not retrieving.\n"
-msgstr "`%s' fitxategi erremotoa ez da bertakoa baina berriagoa -- ez da jasoko.\n"
+msgstr ""
+"`%s' fitxategi erremotoa ez da bertakoa baina berriagoa -- ez da jasoko.\n"
 
-#: src/ftp.c:1859
+#: src/ftp.c:1835
 #, fuzzy, c-format
 msgid ""
 "Remote file is newer than local file %s -- retrieving.\n"
 "\n"
 msgstr "`%s' fitxategi erremotoa bertakoa baina berriagoa da -- jasotzen.\n"
 
-#: src/ftp.c:1866
+#: src/ftp.c:1842
 #, fuzzy, c-format
 msgid ""
 "The sizes do not match (local %s) -- retrieving.\n"
@@ -602,11 +605,11 @@ msgstr ""
 "Tamainuak ez dute ezkontzen (lokalak %ld) -- jasotzen.\n"
 "\n"
 
-#: src/ftp.c:1884
+#: src/ftp.c:1860
 msgid "Invalid name of the symlink, skipping.\n"
 msgstr "Baliogabeko symlink izena, saltatzen.\n"
 
-#: src/ftp.c:1901
+#: src/ftp.c:1877
 #, c-format
 msgid ""
 "Already have correct symlink %s -> %s\n"
@@ -615,128 +618,157 @@ msgstr ""
 "Dagoeneko baduka link simboliko zuzena %s -> %s\n"
 "\n"
 
-#: src/ftp.c:1910
+#: src/ftp.c:1886
 #, c-format
 msgid "Creating symlink %s -> %s\n"
 msgstr "Link sinbolikoa sortzen %s -> %s\n"
 
-#: src/ftp.c:1920
+#: src/ftp.c:1896
 #, fuzzy, c-format
 msgid "Symlinks not supported, skipping symlink %s.\n"
 msgstr "Link sinbolikoak ez daude onartuak, `%s' link sinbolikoa baztetzen.\n"
 
-#: src/ftp.c:1932
+#: src/ftp.c:1908
 #, fuzzy, c-format
 msgid "Skipping directory %s.\n"
 msgstr "Direktorioa utzitzen `%s'.\n"
 
-#: src/ftp.c:1941
+#: src/ftp.c:1917
 #, c-format
 msgid "%s: unknown/unsupported file type.\n"
 msgstr "%s: ezagun/euskarririk gabeko fitxategi mota.\n"
 
-#: src/ftp.c:1981
+#: src/ftp.c:1957
 #, c-format
 msgid "%s: corrupt time-stamp.\n"
 msgstr "%s: ordu zigilu okerra.\n"
 
-#: src/ftp.c:2005
+#: src/ftp.c:1981
 #, c-format
 msgid "Will not retrieve dirs since depth is %d (max %d).\n"
 msgstr "Ez dira direktorio gehiago jasoko, sakonera %d-koa delako (mas %d).\n"
 
-#: src/ftp.c:2055
+#: src/ftp.c:2031
 #, fuzzy, c-format
 msgid "Not descending to %s as it is excluded/not-included.\n"
 msgstr "Ez jaisten `%s'ra, ez baitago sartua edo exkluditua dago.\n"
 
-#: src/ftp.c:2121 src/ftp.c:2135
+#: src/ftp.c:2097 src/ftp.c:2111
 #, fuzzy, c-format
 msgid "Rejecting %s.\n"
 msgstr "`%s' ez onartzen.\n"
 
-#: src/ftp.c:2158
+#: src/ftp.c:2134
 #, fuzzy, c-format
 msgid "Error matching %s against %s: %s\n"
 msgstr "Errorea `%s' idazterakoan: %s\n"
 
-#: src/ftp.c:2214
+#: src/ftp.c:2190
 #, fuzzy, c-format
 msgid "No matches on pattern %s.\n"
 msgstr "`%s' ereduarekin ez du lotzen.\n"
 
-#: src/ftp.c:2289
+#: src/ftp.c:2261
 #, fuzzy, c-format
 msgid "Wrote HTML-ized index to %s [%s].\n"
 msgstr "Idatzia HTMLizatutako index-a `%s'-en [%ld].\n"
 
-#: src/ftp.c:2294
+#: src/ftp.c:2266
 #, fuzzy, c-format
 msgid "Wrote HTML-ized index to %s.\n"
 msgstr "Idatzia HTMLzatutako index-a '%s'-en.\n"
 
-#: src/gnutls.c:103
+#: src/gnutls.c:111
 #, c-format
 msgid "ERROR: Cannot open directory %s.\n"
 msgstr ""
 
-#: src/gnutls.c:146
+#: src/gnutls.c:142
+#, c-format
+msgid "ERROR: Failed to open cert %s: (%d).\n"
+msgstr ""
+
+#: src/gnutls.c:174
 msgid "ERROR: GnuTLS requires the key and the cert to be of the same type.\n"
 msgstr ""
 
-#: src/gnutls.c:486 src/openssl.c:518
+#: src/gnutls.c:584 src/openssl.c:566
 msgid "ERROR"
 msgstr "ERROREA"
 
-#: src/gnutls.c:486 src/openssl.c:518
+#: src/gnutls.c:584 src/openssl.c:566
 msgid "WARNING"
 msgstr ""
 
-#: src/gnutls.c:492 src/openssl.c:527
+#: src/gnutls.c:590 src/openssl.c:575
 #, c-format
 msgid "%s: No certificate presented by %s.\n"
 msgstr ""
 
-#: src/gnutls.c:500
+#: src/gnutls.c:596
 #, c-format
 msgid "%s: The certificate of %s is not trusted.\n"
 msgstr ""
 
-#: src/gnutls.c:506
+#: src/gnutls.c:597
 #, c-format
 msgid "%s: The certificate of %s hasn't got a known issuer.\n"
 msgstr ""
 
-#: src/gnutls.c:512
+#: src/gnutls.c:598
 #, c-format
 msgid "%s: The certificate of %s has been revoked.\n"
 msgstr ""
 
-#: src/gnutls.c:526
+#: src/gnutls.c:599
+#, c-format
+msgid "%s: The certificate signer of %s was not a CA.\n"
+msgstr ""
+
+#: src/gnutls.c:600
+#, c-format
+msgid "%s: The certificate of %s was signed using an insecure algorithm.\n"
+msgstr ""
+
+#: src/gnutls.c:601
+#, c-format
+msgid "%s: The certificate of %s is not yet activated.\n"
+msgstr ""
+
+#: src/gnutls.c:602
+#, c-format
+msgid "%s: The certificate of %s has expired.\n"
+msgstr ""
+
+#: src/gnutls.c:613
 #, c-format
 msgid "Error initializing X509 certificate: %s\n"
 msgstr ""
 
-#: src/gnutls.c:535
+#: src/gnutls.c:622
 msgid "No certificate found\n"
 msgstr ""
 
-#: src/gnutls.c:542
+#: src/gnutls.c:629
 #, fuzzy, c-format
 msgid "Error parsing certificate: %s\n"
 msgstr "Proxy URLa parseatzen errorea %s: %s.\n"
 
-#: src/gnutls.c:549
+#: src/gnutls.c:636
 msgid "The certificate has not yet been activated\n"
 msgstr ""
 
-#: src/gnutls.c:554
+#: src/gnutls.c:641
 msgid "The certificate has expired\n"
 msgstr ""
 
-#: src/gnutls.c:560
+#: src/gnutls.c:647
 #, c-format
 msgid "The certificate's owner does not match hostname %s\n"
+msgstr ""
+
+#: src/gnutls.c:656
+msgid "Certificate must be X.509\n"
 msgstr ""
 
 #: src/host.c:361
@@ -756,111 +788,107 @@ msgstr ""
 msgid "failed: timed out.\n"
 msgstr "huts·egin·da: denboraz kanpo.\n"
 
-#: src/html-url.c:288
+#: src/html-url.c:299
 #, c-format
 msgid "%s: Cannot resolve incomplete link %s.\n"
 msgstr "%s: Ezin da osatu gabeko linka ebatzi %s.\n"
 
-#: src/html-url.c:818
+#: src/html-url.c:829
 #, c-format
 msgid "%s: Invalid URL %s: %s\n"
 msgstr "%s: Baliogabeko URLa %s: %s\n"
 
-#: src/http.c:375
+#: src/http.c:371
 #, c-format
 msgid "Failed writing HTTP request: %s.\n"
 msgstr "Huts egin da HTTP eskaera idazterakoan: %s.\n"
 
-#: src/http.c:771
+#: src/http.c:767
 msgid "No headers, assuming HTTP/0.9"
 msgstr ""
 
-#: src/http.c:1693
+#: src/http.c:1477
 #, fuzzy, c-format
 msgid ""
 "File %s already there; not retrieving.\n"
 "\n"
 msgstr "`%s' fitxategia dagoeneko badago, ez da jasoko.\n"
 
-#: src/http.c:1955
+#: src/http.c:1729
 msgid "Disabling SSL due to encountered errors.\n"
 msgstr ""
 
-#: src/http.c:2090
+#: src/http.c:1855
 #, c-format
 msgid "BODY data file %s missing: %s\n"
 msgstr ""
 
-#: src/http.c:2194 src/http.c:2220
+#: src/http.c:1957
 #, fuzzy, c-format
 msgid "Reusing existing connection to [%s]:%d.\n"
 msgstr "Konexioa berrerabiltzen %srentzat: %hu.\n"
 
-#: src/http.c:2199 src/http.c:2224
+#: src/http.c:1962
 #, fuzzy, c-format
 msgid "Reusing existing connection to %s:%d.\n"
 msgstr "Konexioa berrerabiltzen %srentzat: %hu.\n"
 
-#: src/http.c:2294
+#: src/http.c:2035
 #, fuzzy, c-format
 msgid "Failed reading proxy response: %s\n"
 msgstr "Huts egin da HTTP eskaera idazterakoan: %s.\n"
 
-#: src/http.c:2314 src/http.c:2481 src/http.c:3499
+#: src/http.c:2055 src/http.c:2222 src/http.c:3255
 #, c-format
 msgid "%s ERROR %d: %s.\n"
 msgstr "%s ERROREA %d %s.\n"
 
-#: src/http.c:2316 src/http.c:2483 src/http.c:2812
+#: src/http.c:2057 src/http.c:2224 src/http.c:2556
 msgid "Malformed status line"
 msgstr "Gaizki eratutako egoera lerroa"
 
-#: src/http.c:2327
+#: src/http.c:2068
 #, c-format
 msgid "Proxy tunneling failed: %s"
 msgstr ""
 
-#: src/http.c:2421
+#: src/http.c:2162
 #, c-format
 msgid "%s request sent, awaiting response... "
 msgstr "%s eskaera bidalia, erantzunaren zain... "
 
-#: src/http.c:2456
+#: src/http.c:2197
 #, fuzzy
 msgid "No data received.\n"
 msgstr "Ez da daturik jaso"
 
-#: src/http.c:2463
+#: src/http.c:2204
 #, c-format
 msgid "Read error (%s) in headers.\n"
 msgstr "Irakurketa errorea (%s) goiburukoetan.\n"
 
-#: src/http.c:2641
+#: src/http.c:2376
 msgid "Unknown authentication scheme.\n"
 msgstr "Autentifikazio eskema ezezaguna.\n"
 
-#: src/http.c:2675
-msgid "Authorization failed.\n"
-msgstr "Autorizazitzen huts egin da.\n"
-
-#: src/http.c:2814
+#: src/http.c:2558
 msgid "(no description)"
 msgstr "(deskripziorik gabe)"
 
-#: src/http.c:2873
+#: src/http.c:2617
 #, c-format
 msgid "Location: %s%s\n"
 msgstr "Kokapena: %s%s\n"
 
-#: src/http.c:2874 src/http.c:3022
+#: src/http.c:2618 src/http.c:2789
 msgid "unspecified"
 msgstr "zehaztugabea"
 
-#: src/http.c:2875
+#: src/http.c:2619
 msgid " [following]"
 msgstr " [hurrengoa]"
 
-#: src/http.c:2968
+#: src/http.c:2734
 msgid ""
 "\n"
 "    The file is already fully retrieved; nothing to do.\n"
@@ -870,126 +898,137 @@ msgstr ""
 "    Fitxategi hau iada guztiz jasoa dago; ezer ez egiteko.\n"
 "\n"
 
-#: src/http.c:3002
+#: src/http.c:2769
 msgid "Length: "
 msgstr "Luzera: "
 
-#: src/http.c:3022
+#: src/http.c:2789
 msgid "ignored"
 msgstr "baztertua"
 
-#: src/http.c:3167
+#: src/http.c:2933
 #, c-format
 msgid "Saving to: %s\n"
 msgstr "Hemen gordetzen: %s\n"
 
-#: src/http.c:3242
+#: src/http.c:3004
 msgid "Warning: wildcards not supported in HTTP.\n"
 msgstr "Oharra: komodinak ez daude onartuak HTTPean.\n"
 
-#: src/http.c:3307
+#: src/http.c:3066
 msgid "Spider mode enabled. Check if remote file exists.\n"
 msgstr ""
 
-#: src/http.c:3408
+#: src/http.c:3153
 #, fuzzy, c-format
 msgid "Cannot write to %s (%s).\n"
 msgstr "Ezin da `%s' idatzi (%s).\n"
 
-#: src/http.c:3419
+#: src/http.c:3164
+msgid "Required attribute missing from Header received.\n"
+msgstr ""
+
+#: src/http.c:3169
+msgid "Username/Password Authentication Failed.\n"
+msgstr ""
+
+#: src/http.c:3175
 #, fuzzy
 msgid "Cannot write to WARC file.\n"
 msgstr "Ezin da `%s' idatzi (%s).\n"
 
-#: src/http.c:3425
+#: src/http.c:3181
 msgid "Cannot write to temporary WARC file.\n"
 msgstr ""
 
-#: src/http.c:3430
+#: src/http.c:3186
 msgid "Unable to establish SSL connection.\n"
 msgstr "Ezinezkoa SSL konexioa sortzea.\n"
 
-#: src/http.c:3436
+#: src/http.c:3192
 #, fuzzy, c-format
 msgid "Cannot unlink %s (%s).\n"
 msgstr "Ezin da `%s' idatzi (%s).\n"
 
-#: src/http.c:3446
+#: src/http.c:3202
 #, c-format
 msgid "ERROR: Redirection (%d) without location.\n"
 msgstr "ERROREA: (%d) helbideraketa kokapenik gabe.\n"
 
-#: src/http.c:3494
+#: src/http.c:3250
 msgid "Remote file does not exist -- broken link!!!\n"
 msgstr ""
 
-#: src/http.c:3516
+#: src/http.c:3272
 msgid "Last-modified header missing -- time-stamps turned off.\n"
 msgstr "Azken·burugoiko·modifikazitua falta da·-·ordu·zigilua·itzalia.\n"
 
-#: src/http.c:3524
+#: src/http.c:3280
 msgid "Last-modified header invalid -- time-stamp ignored.\n"
 msgstr "Azken burugoiko modifikazioa baliogabekoa - ordu zigilua ignoratua.\n"
 
-#: src/http.c:3554
+#: src/http.c:3310
 #, fuzzy, c-format
 msgid ""
 "Server file no newer than local file %s -- not retrieving.\n"
 "\n"
 msgstr ""
-"Zerbitzariko fitxategia ez da bertakoa %s fitxategia  baina berriagoa -- ez da jasoko.\n"
+"Zerbitzariko fitxategia ez da bertakoa %s fitxategia  baina berriagoa -- ez "
+"da jasoko.\n"
 "\n"
 
-#: src/http.c:3562
+#: src/http.c:3318
 #, fuzzy, c-format
 msgid "The sizes do not match (local %s) -- retrieving.\n"
 msgstr "Tamainuak·ez·dute·ezkontzen·(lokalak·%ld)·--·jasotzen.\n"
 
-#: src/http.c:3571
+#: src/http.c:3327
 msgid "Remote file is newer, retrieving.\n"
 msgstr "Fitxategi erremotoa berriagoa da, jasotzen.\n"
 
-#: src/http.c:3589
+#: src/http.c:3345
 #, fuzzy
 msgid ""
-"Remote file exists and could contain links to other resources -- retrieving.\n"
+"Remote file exists and could contain links to other resources -- "
+"retrieving.\n"
 "\n"
 msgstr "`%s' fitxategi erremotoa bertakoa baina berriagoa da -- jasotzen.\n"
 
-#: src/http.c:3595
+#: src/http.c:3351
 #, fuzzy
 msgid ""
 "Remote file exists but does not contain any link -- not retrieving.\n"
 "\n"
-msgstr "`%s' fitxategi erremotoa ez da bertakoa baina berriagoa -- ez da jasoko.\n"
+msgstr ""
+"`%s' fitxategi erremotoa ez da bertakoa baina berriagoa -- ez da jasoko.\n"
 
-#: src/http.c:3604
+#: src/http.c:3360
 msgid ""
 "Remote file exists and could contain further links,\n"
 "but recursion is disabled -- not retrieving.\n"
 "\n"
 msgstr ""
 
-#: src/http.c:3610
+#: src/http.c:3366
 #, fuzzy
 msgid ""
 "Remote file exists.\n"
 "\n"
 msgstr "Fitxategi erremotoa berriagoa da, jasotzen.\n"
 
-#: src/http.c:3619
+#: src/http.c:3375
 #, fuzzy, c-format
 msgid "%s URL: %s %2d %s\n"
 msgstr "%s ERROREA %d %s.\n"
 
-#: src/http.c:3667
+#: src/http.c:3423
 #, c-format
 msgid ""
 "%s (%s) - written to stdout %s[%s/%s]\n"
 "\n"
 msgstr ""
 
-#: src/http.c:3668
+#: src/http.c:3424
 #, fuzzy, c-format
 msgid ""
 "%s (%s) - %s saved [%s/%s]\n"
@@ -998,57 +1037,57 @@ msgstr ""
 "%s (%s) - `%s' gordeta [%ld/%ld]\n"
 "\n"
 
-#: src/http.c:3729
+#: src/http.c:3485
 #, fuzzy, c-format
 msgid "%s (%s) - Connection closed at byte %s. "
 msgstr "%s (%s) - Konexioa itxia ondorengo bytean %ld. "
 
-#: src/http.c:3752
+#: src/http.c:3508
 #, fuzzy, c-format
 msgid "%s (%s) - Read error at byte %s (%s)."
 msgstr "%s (%s) - Irakurtze errorea %ld bytean (%s)."
 
-#: src/http.c:3761
+#: src/http.c:3517
 #, fuzzy, c-format
 msgid "%s (%s) - Read error at byte %s/%s (%s). "
 msgstr "%s (%s) - Irakurtze errorea %ld/%ld bytean (%s). "
 
-#: src/http.c:3993
+#: src/http.c:3749
 #, c-format
 msgid "Unsupported quality of protection '%s'.\n"
 msgstr ""
 
-#: src/http.c:3999
+#: src/http.c:3755
 #, fuzzy, c-format
 msgid "Unsupported algorithm '%s'.\n"
 msgstr "Sostengu gabeko eskema"
 
-#: src/init.c:495
+#: src/init.c:480
 #, c-format
 msgid "%s: WGETRC points to %s, which doesn't exist.\n"
 msgstr "%s: WGETRC %sra apuntatzen du, ez dena existitzen.\n"
 
-#: src/init.c:600 src/netrc.c:242
+#: src/init.c:585 src/netrc.c:242
 #, c-format
 msgid "%s: Cannot read %s (%s).\n"
 msgstr "%s: Ezin irakurri %s (%s).\n"
 
-#: src/init.c:617
+#: src/init.c:602
 #, c-format
 msgid "%s: Error in %s at line %d.\n"
 msgstr "%s: %s-n errorea %d lerroan.\n"
 
-#: src/init.c:623
+#: src/init.c:608
 #, fuzzy, c-format
 msgid "%s: Syntax error in %s at line %d.\n"
 msgstr "%s: %s-n errorea %d lerroan.\n"
 
-#: src/init.c:628
+#: src/init.c:613
 #, fuzzy, c-format
 msgid "%s: Unknown command %s in %s at line %d.\n"
 msgstr "%s: %s-n errorea %d lerroan.\n"
 
-#: src/init.c:665
+#: src/init.c:650
 #, c-format
 msgid ""
 "Parsing system wgetrc file (env SYSTEM_WGETRC) failed.  Please check\n"
@@ -1056,7 +1095,7 @@ msgid ""
 "or specify a different file using --config.\n"
 msgstr ""
 
-#: src/init.c:680
+#: src/init.c:665
 #, c-format
 msgid ""
 "Parsing system wgetrc file failed.  Please check\n"
@@ -1064,58 +1103,58 @@ msgid ""
 "or specify a different file using --config.\n"
 msgstr ""
 
-#: src/init.c:696
+#: src/init.c:681
 #, fuzzy, c-format
 msgid "%s: Warning: Both system and user wgetrc point to %s.\n"
 msgstr "%s: Kontuz: Bai sistema bai wgetrc `%s'ra apuntatzen dute.\n"
 
-#: src/init.c:886
+#: src/init.c:871
 #, fuzzy, c-format
 msgid "%s: Invalid --execute command %s\n"
 msgstr "%s: Baliogaeko --exekutatu`%s' komandoa\n"
 
-#: src/init.c:931
+#: src/init.c:916
 #, fuzzy, c-format
 msgid "%s: %s: Invalid boolean %s; use `on' or `off'.\n"
 msgstr "%s: %s: Baliogabeko booleanoa `%s', erabili `on' edo `off'.\n"
 
-#: src/init.c:948
+#: src/init.c:933
 #, fuzzy, c-format
 msgid "%s: %s: Invalid number %s.\n"
 msgstr "%s: %s: Baliogabeko zenbakia `%s'.\n"
 
-#: src/init.c:1169 src/init.c:1188
+#: src/init.c:1155 src/init.c:1174
 #, fuzzy, c-format
 msgid "%s: %s: Invalid byte value %s\n"
 msgstr "%s: %s: Baliogabeko byte balioa `%s'\n"
 
-#: src/init.c:1213
+#: src/init.c:1199
 #, fuzzy, c-format
 msgid "%s: %s: Invalid time period %s\n"
 msgstr "%s: %s: Baliogabeko denbora tartea `%s'\n"
 
-#: src/init.c:1267 src/init.c:1378 src/init.c:1434 src/init.c:1498
-#: src/init.c:1514 src/init.c:1539
+#: src/init.c:1253 src/init.c:1364 src/init.c:1420 src/init.c:1484
+#: src/init.c:1500 src/init.c:1525
 #, fuzzy, c-format
 msgid "%s: %s: Invalid value %s.\n"
 msgstr "%s: %s: Baliogabeko balioa `%s'.\n"
 
-#: src/init.c:1304
+#: src/init.c:1290
 #, fuzzy, c-format
 msgid "%s: %s: Invalid header %s.\n"
 msgstr "%s: %s: Baliogabeko goiburukoa `%s'.\n"
 
-#: src/init.c:1325
+#: src/init.c:1311
 #, fuzzy, c-format
 msgid "%s: %s: Invalid WARC header %s.\n"
 msgstr "%s: %s: Baliogabeko goiburukoa `%s'.\n"
 
-#: src/init.c:1391
+#: src/init.c:1377
 #, fuzzy, c-format
 msgid "%s: %s: Invalid progress type %s.\n"
 msgstr "%s: %s: Baliogabeko aurreratze mota `%s'.\n"
 
-#: src/init.c:1471
+#: src/init.c:1457
 #, fuzzy, c-format
 msgid ""
 "%s: %s: Invalid restriction %s,\n"
@@ -1176,12 +1215,12 @@ msgstr "Ez da daturik jaso"
 msgid "%s: %s; disabling logging.\n"
 msgstr "%s: %s; saio hasiera desgaitzen.\n"
 
-#: src/main.c:428
+#: src/main.c:419
 #, c-format
 msgid "Usage: %s [OPTION]... [URL]...\n"
 msgstr "Erabili: %s [AUKERA]... [URL]...\n"
 
-#: src/main.c:440
+#: src/main.c:431
 #, fuzzy
 msgid ""
 "Mandatory arguments to long options are mandatory for short options too.\n"
@@ -1191,690 +1230,767 @@ msgstr ""
 "Aginduzko argumentu luzeegiak aukera txikientzako agindu ere badira.\n"
 "\n"
 
-#: src/main.c:442
+#: src/main.c:433
 msgid "Startup:\n"
 msgstr ""
 
-#: src/main.c:444
+#: src/main.c:435
 msgid "  -V,  --version           display the version of Wget and exit.\n"
 msgstr ""
 
-#: src/main.c:446
+#: src/main.c:437
 msgid "  -h,  --help              print this help.\n"
 msgstr ""
 
-#: src/main.c:448
+#: src/main.c:439
 msgid "  -b,  --background        go to background after startup.\n"
 msgstr ""
 
-#: src/main.c:450
+#: src/main.c:441
 msgid "  -e,  --execute=COMMAND   execute a `.wgetrc'-style command.\n"
 msgstr ""
 
-#: src/main.c:454
+#: src/main.c:445
 msgid "Logging and input file:\n"
 msgstr ""
 
-#: src/main.c:456
+#: src/main.c:447
 msgid "  -o,  --output-file=FILE    log messages to FILE.\n"
 msgstr ""
 
-#: src/main.c:458
+#: src/main.c:449
 msgid "  -a,  --append-output=FILE  append messages to FILE.\n"
 msgstr ""
 
-#: src/main.c:461
+#: src/main.c:452
 msgid "  -d,  --debug               print lots of debugging information.\n"
 msgstr ""
 
-#: src/main.c:465
+#: src/main.c:456
 msgid "       --wdebug              print Watt-32 debug output.\n"
 msgstr ""
 
-#: src/main.c:468
+#: src/main.c:459
 msgid "  -q,  --quiet               quiet (no output).\n"
 msgstr ""
 
-#: src/main.c:470
+#: src/main.c:461
 msgid "  -v,  --verbose             be verbose (this is the default).\n"
 msgstr ""
 
-#: src/main.c:472
-msgid "  -nv, --no-verbose          turn off verboseness, without being quiet.\n"
+#: src/main.c:463
+msgid ""
+"  -nv, --no-verbose          turn off verboseness, without being quiet.\n"
 msgstr ""
 
-#: src/main.c:474
-msgid "       --report-speed=TYPE   Output bandwidth as TYPE.  TYPE can be bits.\n"
+#: src/main.c:465
+msgid ""
+"       --report-speed=TYPE   Output bandwidth as TYPE.  TYPE can be bits.\n"
 msgstr ""
 
-#: src/main.c:476
-msgid "  -i,  --input-file=FILE     download URLs found in local or external FILE.\n"
+#: src/main.c:467
+msgid ""
+"  -i,  --input-file=FILE     download URLs found in local or external FILE.\n"
 msgstr ""
 
-#: src/main.c:478
+#: src/main.c:469
 msgid "  -F,  --force-html          treat input file as HTML.\n"
 msgstr ""
 
-#: src/main.c:480
+#: src/main.c:471
 msgid ""
 "  -B,  --base=URL            resolves HTML input-file links (-i -F)\n"
 "                             relative to URL.\n"
 msgstr ""
 
-#: src/main.c:483
+#: src/main.c:474
 msgid "       --config=FILE         Specify config file to use.\n"
 msgstr ""
 
-#: src/main.c:486
-msgid "       --metalink-file       download URLs found in local or external metalink FILE.\n"
-msgstr ""
-
-#: src/main.c:491
+#: src/main.c:478
 msgid "Download:\n"
 msgstr ""
 
-#: src/main.c:494
+#: src/main.c:480
 msgid ""
-"       --retries                 specify the number of retries for a file.\n"
-"                                 (needs to be used with --metalink-file)\n"
+"  -t,  --tries=NUMBER            set number of retries to NUMBER (0 "
+"unlimits).\n"
 msgstr ""
 
-#: src/main.c:498
-msgid "  -t,  --tries=NUMBER            set number of retries to NUMBER (0 unlimits).\n"
-msgstr ""
-
-#: src/main.c:500
+#: src/main.c:482
 msgid "       --retry-connrefused       retry even if connection is refused.\n"
 msgstr ""
 
-#: src/main.c:502
+#: src/main.c:484
 msgid "  -O,  --output-document=FILE    write documents to FILE.\n"
 msgstr ""
 
-#: src/main.c:504
+#: src/main.c:486
 msgid ""
 "  -nc, --no-clobber              skip downloads that would download to\n"
 "                                 existing files (overwriting them).\n"
 msgstr ""
 
-#: src/main.c:507
-msgid "  -c,  --continue                resume getting a partially-downloaded file.\n"
+#: src/main.c:489
+msgid ""
+"  -c,  --continue                resume getting a partially-downloaded "
+"file.\n"
 msgstr ""
 
-#: src/main.c:509
+#: src/main.c:491
 msgid "       --progress=TYPE           select progress gauge type.\n"
 msgstr ""
 
-#: src/main.c:511
+#: src/main.c:493
 msgid ""
 "  -N,  --timestamping            don't re-retrieve files unless newer than\n"
 "                                 local.\n"
 msgstr ""
 
-#: src/main.c:514
+#: src/main.c:496
 msgid ""
 "  --no-use-server-timestamps     don't set the local file's timestamp by\n"
 "                                 the one on the server.\n"
 msgstr ""
 
-#: src/main.c:517
+#: src/main.c:499
 msgid "  -S,  --server-response         print server response.\n"
 msgstr ""
 
-#: src/main.c:519
+#: src/main.c:501
 msgid "       --spider                  don't download anything.\n"
 msgstr ""
 
-#: src/main.c:521
+#: src/main.c:503
 msgid "  -T,  --timeout=SECONDS         set all timeout values to SECONDS.\n"
 msgstr ""
 
-#: src/main.c:523
+#: src/main.c:505
 msgid "       --dns-timeout=SECS        set the DNS lookup timeout to SECS.\n"
 msgstr ""
 
-#: src/main.c:525
+#: src/main.c:507
 msgid "       --connect-timeout=SECS    set the connect timeout to SECS.\n"
 msgstr ""
 
-#: src/main.c:527
+#: src/main.c:509
 msgid "       --read-timeout=SECS       set the read timeout to SECS.\n"
 msgstr ""
 
-#: src/main.c:529
+#: src/main.c:511
 msgid "  -w,  --wait=SECONDS            wait SECONDS between retrievals.\n"
 msgstr ""
 
-#: src/main.c:531
-msgid "       --waitretry=SECONDS       wait 1..SECONDS between retries of a retrieval.\n"
+#: src/main.c:513
+msgid ""
+"       --waitretry=SECONDS       wait 1..SECONDS between retries of a "
+"retrieval.\n"
 msgstr ""
 
-#: src/main.c:533
-msgid "       --random-wait             wait from 0.5*WAIT...1.5*WAIT secs between retrievals.\n"
+#: src/main.c:515
+msgid ""
+"       --random-wait             wait from 0.5*WAIT...1.5*WAIT secs between "
+"retrievals.\n"
 msgstr ""
 
-#: src/main.c:535
+#: src/main.c:517
 msgid "       --no-proxy                explicitly turn off proxy.\n"
 msgstr ""
 
-#: src/main.c:537
+#: src/main.c:519
 msgid "  -Q,  --quota=NUMBER            set retrieval quota to NUMBER.\n"
 msgstr ""
 
-#: src/main.c:539
-msgid "       --bind-address=ADDRESS    bind to ADDRESS (hostname or IP) on local host.\n"
+#: src/main.c:521
+msgid ""
+"       --bind-address=ADDRESS    bind to ADDRESS (hostname or IP) on local "
+"host.\n"
 msgstr ""
 
-#: src/main.c:541
+#: src/main.c:523
 msgid "       --limit-rate=RATE         limit download rate to RATE.\n"
 msgstr ""
 
-#: src/main.c:543
+#: src/main.c:525
 msgid "       --no-dns-cache            disable caching DNS lookups.\n"
 msgstr ""
 
-#: src/main.c:545
-msgid "       --restrict-file-names=OS  restrict chars in file names to ones OS allows.\n"
+#: src/main.c:527
+msgid ""
+"       --restrict-file-names=OS  restrict chars in file names to ones OS "
+"allows.\n"
 msgstr ""
 
-#: src/main.c:547
-msgid "       --ignore-case             ignore case when matching files/directories.\n"
+#: src/main.c:529
+msgid ""
+"       --ignore-case             ignore case when matching files/"
+"directories.\n"
 msgstr ""
 
-#: src/main.c:550
+#: src/main.c:532
 msgid "  -4,  --inet4-only              connect only to IPv4 addresses.\n"
 msgstr ""
 
-#: src/main.c:552
+#: src/main.c:534
 msgid "  -6,  --inet6-only              connect only to IPv6 addresses.\n"
 msgstr ""
 
-#: src/main.c:554
+#: src/main.c:536
 msgid ""
-"       --prefer-family=FAMILY    connect first to addresses of specified family,\n"
+"       --prefer-family=FAMILY    connect first to addresses of specified "
+"family,\n"
 "                                 one of IPv6, IPv4, or none.\n"
 msgstr ""
 
-#: src/main.c:558
+#: src/main.c:540
 msgid "       --user=USER               set both ftp and http user to USER.\n"
 msgstr ""
 
-#: src/main.c:560
-msgid "       --password=PASS           set both ftp and http password to PASS.\n"
+#: src/main.c:542
+msgid ""
+"       --password=PASS           set both ftp and http password to PASS.\n"
 msgstr ""
 
-#: src/main.c:562
+#: src/main.c:544
 msgid "       --ask-password            prompt for passwords.\n"
 msgstr ""
 
-#: src/main.c:564
+#: src/main.c:546
 msgid "       --no-iri                  turn off IRI support.\n"
 msgstr ""
 
-#: src/main.c:566
-msgid "       --local-encoding=ENC      use ENC as the local encoding for IRIs.\n"
+#: src/main.c:548
+msgid ""
+"       --local-encoding=ENC      use ENC as the local encoding for IRIs.\n"
 msgstr ""
 
-#: src/main.c:568
-msgid "       --remote-encoding=ENC     use ENC as the default remote encoding.\n"
+#: src/main.c:550
+msgid ""
+"       --remote-encoding=ENC     use ENC as the default remote encoding.\n"
 msgstr ""
 
-#: src/main.c:570
+#: src/main.c:552
 msgid "       --unlink                  remove file before clobber.\n"
 msgstr ""
 
-#: src/main.c:573
-msgid "       --jobs                    specify how many threads use.\n"
-msgstr ""
-
-#: src/main.c:577
+#: src/main.c:556
 msgid "Directories:\n"
 msgstr "Direktorioak:\n"
 
-#: src/main.c:579
+#: src/main.c:558
 msgid "  -nd, --no-directories           don't create directories.\n"
 msgstr ""
 
-#: src/main.c:581
+#: src/main.c:560
 msgid "  -x,  --force-directories        force creation of directories.\n"
 msgstr ""
 
-#: src/main.c:583
+#: src/main.c:562
 msgid "  -nH, --no-host-directories      don't create host directories.\n"
 msgstr ""
 
-#: src/main.c:585
+#: src/main.c:564
 msgid "       --protocol-directories     use protocol name in directories.\n"
 msgstr ""
 
-#: src/main.c:587
+#: src/main.c:566
 msgid "  -P,  --directory-prefix=PREFIX  save files to PREFIX/...\n"
 msgstr ""
 
-#: src/main.c:589
-msgid "       --cut-dirs=NUMBER          ignore NUMBER remote directory components.\n"
+#: src/main.c:568
+msgid ""
+"       --cut-dirs=NUMBER          ignore NUMBER remote directory "
+"components.\n"
 msgstr ""
 
-#: src/main.c:593
+#: src/main.c:572
 msgid "HTTP options:\n"
 msgstr ""
 
-#: src/main.c:595
+#: src/main.c:574
 msgid "       --http-user=USER        set http user to USER.\n"
 msgstr ""
 
-#: src/main.c:597
+#: src/main.c:576
 msgid "       --http-password=PASS    set http password to PASS.\n"
 msgstr ""
 
-#: src/main.c:599
+#: src/main.c:578
 msgid "       --no-cache              disallow server-cached data.\n"
 msgstr ""
 
-#: src/main.c:601
+#: src/main.c:580
 msgid ""
 "       --default-page=NAME     Change the default page name (normally\n"
 "                               this is `index.html'.).\n"
 msgstr ""
 
-#: src/main.c:604
-msgid "  -E,  --adjust-extension      save HTML/CSS documents with proper extensions.\n"
+#: src/main.c:583
+msgid ""
+"  -E,  --adjust-extension      save HTML/CSS documents with proper "
+"extensions.\n"
 msgstr ""
 
-#: src/main.c:606
+#: src/main.c:585
 msgid "       --ignore-length         ignore `Content-Length' header field.\n"
 msgstr ""
 
-#: src/main.c:608
+#: src/main.c:587
 msgid "       --header=STRING         insert STRING among the headers.\n"
 msgstr ""
 
-#: src/main.c:610
+#: src/main.c:589
 msgid "       --max-redirect          maximum redirections allowed per page.\n"
 msgstr ""
 
-#: src/main.c:612
+#: src/main.c:591
 msgid "       --proxy-user=USER       set USER as proxy username.\n"
 msgstr ""
 
-#: src/main.c:614
+#: src/main.c:593
 msgid "       --proxy-password=PASS   set PASS as proxy password.\n"
 msgstr ""
 
-#: src/main.c:616
-msgid "       --referer=URL           include `Referer: URL' header in HTTP request.\n"
+#: src/main.c:595
+msgid ""
+"       --referer=URL           include `Referer: URL' header in HTTP "
+"request.\n"
 msgstr ""
 
-#: src/main.c:618
+#: src/main.c:597
 msgid "       --save-headers          save the HTTP headers to file.\n"
 msgstr ""
 
-#: src/main.c:620
-msgid "  -U,  --user-agent=AGENT      identify as AGENT instead of Wget/VERSION.\n"
+#: src/main.c:599
+msgid ""
+"  -U,  --user-agent=AGENT      identify as AGENT instead of Wget/VERSION.\n"
 msgstr ""
 
-#: src/main.c:622
-msgid "       --no-http-keep-alive    disable HTTP keep-alive (persistent connections).\n"
+#: src/main.c:601
+msgid ""
+"       --no-http-keep-alive    disable HTTP keep-alive (persistent "
+"connections).\n"
 msgstr ""
 
-#: src/main.c:624
+#: src/main.c:603
 msgid "       --no-cookies            don't use cookies.\n"
 msgstr ""
 
-#: src/main.c:626
+#: src/main.c:605
 msgid "       --load-cookies=FILE     load cookies from FILE before session.\n"
 msgstr ""
 
-#: src/main.c:628
+#: src/main.c:607
 msgid "       --save-cookies=FILE     save cookies to FILE after session.\n"
 msgstr ""
 
-#: src/main.c:630
-msgid "       --keep-session-cookies  load and save session (non-permanent) cookies.\n"
+#: src/main.c:609
+msgid ""
+"       --keep-session-cookies  load and save session (non-permanent) "
+"cookies.\n"
 msgstr ""
 
-#: src/main.c:632
-msgid "       --post-data=STRING      use the POST method; send STRING as the data.\n"
+#: src/main.c:611
+msgid ""
+"       --post-data=STRING      use the POST method; send STRING as the "
+"data.\n"
 msgstr ""
 
-#: src/main.c:634
-msgid "       --post-file=FILE        use the POST method; send contents of FILE.\n"
+#: src/main.c:613
+msgid ""
+"       --post-file=FILE        use the POST method; send contents of FILE.\n"
 msgstr ""
 
-#: src/main.c:636
-msgid "       --method=HTTPMethod     use method \"HTTPMethod\" in the header.\n"
+#: src/main.c:615
+msgid ""
+"       --method=HTTPMethod     use method \"HTTPMethod\" in the header.\n"
 msgstr ""
 
-#: src/main.c:638
-msgid "       --body-data=STRING      Send STRING as data. --method MUST be set.\n"
+#: src/main.c:617
+msgid ""
+"       --body-data=STRING      Send STRING as data. --method MUST be set.\n"
 msgstr ""
 
-#: src/main.c:640
-msgid "       --body-file=FILE        Send contents of FILE. --method MUST be set.\n"
+#: src/main.c:619
+msgid ""
+"       --body-file=FILE        Send contents of FILE. --method MUST be set.\n"
 msgstr ""
 
-#: src/main.c:642
+#: src/main.c:621
 msgid ""
 "       --content-disposition   honor the Content-Disposition header when\n"
 "                               choosing local file names (EXPERIMENTAL).\n"
 msgstr ""
 
-#: src/main.c:645
-msgid "       --content-on-error      output the received content on server errors.\n"
+#: src/main.c:624
+msgid ""
+"       --content-on-error      output the received content on server "
+"errors.\n"
 msgstr ""
 
-#: src/main.c:647
+#: src/main.c:626
 msgid ""
 "       --auth-no-challenge     send Basic HTTP authentication information\n"
 "                               without first waiting for the server's\n"
 "                               challenge.\n"
 msgstr ""
 
-#: src/main.c:654
+#: src/main.c:633
 msgid "HTTPS (SSL/TLS) options:\n"
 msgstr ""
 
-#: src/main.c:656
+#: src/main.c:635
 msgid ""
 "       --secure-protocol=PR     choose secure protocol, one of auto, SSLv2,\n"
 "                                SSLv3, and TLSv1.\n"
 msgstr ""
 
-#: src/main.c:659
-msgid "       --no-check-certificate   don't validate the server's certificate.\n"
+#: src/main.c:638
+msgid ""
+"       --no-check-certificate   don't validate the server's certificate.\n"
 msgstr ""
 
-#: src/main.c:661
+#: src/main.c:640
 msgid "       --certificate=FILE       client certificate file.\n"
 msgstr ""
 
-#: src/main.c:663
+#: src/main.c:642
 msgid "       --certificate-type=TYPE  client certificate type, PEM or DER.\n"
 msgstr ""
 
-#: src/main.c:665
+#: src/main.c:644
 msgid "       --private-key=FILE       private key file.\n"
 msgstr ""
 
-#: src/main.c:667
+#: src/main.c:646
 msgid "       --private-key-type=TYPE  private key type, PEM or DER.\n"
 msgstr ""
 
-#: src/main.c:669
+#: src/main.c:648
 msgid "       --ca-certificate=FILE    file with the bundle of CA's.\n"
 msgstr ""
 
-#: src/main.c:671
-msgid "       --ca-directory=DIR       directory where hash list of CA's is stored.\n"
+#: src/main.c:650
+msgid ""
+"       --ca-directory=DIR       directory where hash list of CA's is "
+"stored.\n"
 msgstr ""
 
-#: src/main.c:673
-msgid "       --random-file=FILE       file with random data for seeding the SSL PRNG.\n"
+#: src/main.c:652
+msgid ""
+"       --random-file=FILE       file with random data for seeding the SSL "
+"PRNG.\n"
 msgstr ""
 
-#: src/main.c:675
-msgid "       --egd-file=FILE          file naming the EGD socket with random data.\n"
+#: src/main.c:654
+msgid ""
+"       --egd-file=FILE          file naming the EGD socket with random "
+"data.\n"
 msgstr ""
 
-#: src/main.c:680
+#: src/main.c:659
 msgid "FTP options:\n"
 msgstr ""
 
-#: src/main.c:683
-msgid "       --ftp-stmlf             Use Stream_LF format for all binary FTP files.\n"
+#: src/main.c:662
+msgid ""
+"       --ftp-stmlf             Use Stream_LF format for all binary FTP "
+"files.\n"
 msgstr ""
 
-#: src/main.c:686
+#: src/main.c:665
 msgid "       --ftp-user=USER         set ftp user to USER.\n"
 msgstr ""
 
-#: src/main.c:688
+#: src/main.c:667
 msgid "       --ftp-password=PASS     set ftp password to PASS.\n"
 msgstr ""
 
-#: src/main.c:690
+#: src/main.c:669
 msgid "       --no-remove-listing     don't remove `.listing' files.\n"
 msgstr ""
 
-#: src/main.c:692
+#: src/main.c:671
 msgid "       --no-glob               turn off FTP file name globbing.\n"
 msgstr ""
 
-#: src/main.c:694
+#: src/main.c:673
 msgid "       --no-passive-ftp        disable the \"passive\" transfer mode.\n"
 msgstr ""
 
-#: src/main.c:696
+#: src/main.c:675
 msgid "       --preserve-permissions  preserve remote file permissions.\n"
 msgstr ""
 
-#: src/main.c:698
-msgid "       --retr-symlinks         when recursing, get linked-to files (not dir).\n"
+#: src/main.c:677
+msgid ""
+"       --retr-symlinks         when recursing, get linked-to files (not "
+"dir).\n"
 msgstr ""
 
-#: src/main.c:702
+#: src/main.c:681
 msgid "WARC options:\n"
 msgstr ""
 
-#: src/main.c:704
-msgid "       --warc-file=FILENAME      save request/response data to a .warc.gz file.\n"
+#: src/main.c:683
+msgid ""
+"       --warc-file=FILENAME      save request/response data to a .warc.gz "
+"file.\n"
 msgstr ""
 
-#: src/main.c:706
-msgid "       --warc-header=STRING      insert STRING into the warcinfo record.\n"
+#: src/main.c:685
+msgid ""
+"       --warc-header=STRING      insert STRING into the warcinfo record.\n"
 msgstr ""
 
-#: src/main.c:708
-msgid "       --warc-max-size=NUMBER    set maximum size of WARC files to NUMBER.\n"
+#: src/main.c:687
+msgid ""
+"       --warc-max-size=NUMBER    set maximum size of WARC files to NUMBER.\n"
 msgstr ""
 
-#: src/main.c:710
+#: src/main.c:689
 msgid "       --warc-cdx                write CDX index files.\n"
 msgstr ""
 
-#: src/main.c:712
-msgid "       --warc-dedup=FILENAME     do not store records listed in this CDX file.\n"
+#: src/main.c:691
+msgid ""
+"       --warc-dedup=FILENAME     do not store records listed in this CDX "
+"file.\n"
 msgstr ""
 
-#: src/main.c:715
-msgid "       --no-warc-compression     do not compress WARC files with GZIP.\n"
+#: src/main.c:694
+msgid ""
+"       --no-warc-compression     do not compress WARC files with GZIP.\n"
 msgstr ""
 
-#: src/main.c:718
+#: src/main.c:697
 msgid "       --no-warc-digests         do not calculate SHA1 digests.\n"
 msgstr ""
 
-#: src/main.c:720
-msgid "       --no-warc-keep-log        do not store the log file in a WARC record.\n"
+#: src/main.c:699
+msgid ""
+"       --no-warc-keep-log        do not store the log file in a WARC "
+"record.\n"
 msgstr ""
 
-#: src/main.c:722
+#: src/main.c:701
 msgid ""
-"       --warc-tempdir=DIRECTORY  location for temporary files created by the\n"
+"       --warc-tempdir=DIRECTORY  location for temporary files created by "
+"the\n"
 "                                 WARC writer.\n"
 msgstr ""
 
-#: src/main.c:727
+#: src/main.c:706
 msgid "Recursive download:\n"
 msgstr ""
 
-#: src/main.c:729
+#: src/main.c:708
 msgid "  -r,  --recursive          specify recursive download.\n"
 msgstr ""
 
-#: src/main.c:731
-msgid "  -l,  --level=NUMBER       maximum recursion depth (inf or 0 for infinite).\n"
+#: src/main.c:710
+msgid ""
+"  -l,  --level=NUMBER       maximum recursion depth (inf or 0 for "
+"infinite).\n"
 msgstr ""
 
-#: src/main.c:733
-msgid "       --delete-after       delete files locally after downloading them.\n"
+#: src/main.c:712
+msgid ""
+"       --delete-after       delete files locally after downloading them.\n"
 msgstr ""
 
-#: src/main.c:735
+#: src/main.c:714
 msgid ""
 "  -k,  --convert-links      make links in downloaded HTML or CSS point to\n"
 "                            local files.\n"
 msgstr ""
 
-#: src/main.c:739
-msgid "  -K,  --backup-converted   before converting file X, back up as X_orig.\n"
+#: src/main.c:717
+msgid "  --backups=N   before writing file X, rotate up to N backup files.\n"
 msgstr ""
 
-#: src/main.c:742
-msgid "  -K,  --backup-converted   before converting file X, back up as X.orig.\n"
+#: src/main.c:721
+msgid ""
+"  -K,  --backup-converted   before converting file X, back up as X_orig.\n"
 msgstr ""
 
-#: src/main.c:745
-msgid "  -m,  --mirror             shortcut for -N -r -l inf --no-remove-listing.\n"
+#: src/main.c:724
+msgid ""
+"  -K,  --backup-converted   before converting file X, back up as X.orig.\n"
 msgstr ""
 
-#: src/main.c:747
-msgid "  -p,  --page-requisites    get all images, etc. needed to display HTML page.\n"
+#: src/main.c:727
+msgid ""
+"  -m,  --mirror             shortcut for -N -r -l inf --no-remove-listing.\n"
 msgstr ""
 
-#: src/main.c:749
-msgid "       --strict-comments    turn on strict (SGML) handling of HTML comments.\n"
+#: src/main.c:729
+msgid ""
+"  -p,  --page-requisites    get all images, etc. needed to display HTML "
+"page.\n"
 msgstr ""
 
-#: src/main.c:753
+#: src/main.c:731
+msgid ""
+"       --strict-comments    turn on strict (SGML) handling of HTML "
+"comments.\n"
+msgstr ""
+
+#: src/main.c:735
 msgid "Recursive accept/reject:\n"
 msgstr ""
 
-#: src/main.c:755
-msgid "  -A,  --accept=LIST               comma-separated list of accepted extensions.\n"
+#: src/main.c:737
+msgid ""
+"  -A,  --accept=LIST               comma-separated list of accepted "
+"extensions.\n"
 msgstr ""
 
-#: src/main.c:757
-msgid "  -R,  --reject=LIST               comma-separated list of rejected extensions.\n"
+#: src/main.c:739
+msgid ""
+"  -R,  --reject=LIST               comma-separated list of rejected "
+"extensions.\n"
 msgstr ""
 
-#: src/main.c:759
+#: src/main.c:741
 msgid "       --accept-regex=REGEX        regex matching accepted URLs.\n"
 msgstr ""
 
-#: src/main.c:761
+#: src/main.c:743
 msgid "       --reject-regex=REGEX        regex matching rejected URLs.\n"
 msgstr ""
 
-#: src/main.c:764
+#: src/main.c:746
 msgid "       --regex-type=TYPE           regex type (posix|pcre).\n"
 msgstr ""
 
-#: src/main.c:767
+#: src/main.c:749
 msgid "       --regex-type=TYPE           regex type (posix).\n"
 msgstr ""
 
-#: src/main.c:770
-msgid "  -D,  --domains=LIST              comma-separated list of accepted domains.\n"
+#: src/main.c:752
+msgid ""
+"  -D,  --domains=LIST              comma-separated list of accepted "
+"domains.\n"
 msgstr ""
 
-#: src/main.c:772
-msgid "       --exclude-domains=LIST      comma-separated list of rejected domains.\n"
+#: src/main.c:754
+msgid ""
+"       --exclude-domains=LIST      comma-separated list of rejected "
+"domains.\n"
 msgstr ""
 
-#: src/main.c:774
-msgid "       --follow-ftp                follow FTP links from HTML documents.\n"
+#: src/main.c:756
+msgid ""
+"       --follow-ftp                follow FTP links from HTML documents.\n"
 msgstr ""
 
-#: src/main.c:776
-msgid "       --follow-tags=LIST          comma-separated list of followed HTML tags.\n"
+#: src/main.c:758
+msgid ""
+"       --follow-tags=LIST          comma-separated list of followed HTML "
+"tags.\n"
 msgstr ""
 
-#: src/main.c:778
-msgid "       --ignore-tags=LIST          comma-separated list of ignored HTML tags.\n"
+#: src/main.c:760
+msgid ""
+"       --ignore-tags=LIST          comma-separated list of ignored HTML "
+"tags.\n"
 msgstr ""
 
-#: src/main.c:780
-msgid "  -H,  --span-hosts                go to foreign hosts when recursive.\n"
+#: src/main.c:762
+msgid ""
+"  -H,  --span-hosts                go to foreign hosts when recursive.\n"
 msgstr ""
 
-#: src/main.c:782
+#: src/main.c:764
 msgid "  -L,  --relative                  follow relative links only.\n"
 msgstr ""
 
-#: src/main.c:784
+#: src/main.c:766
 msgid "  -I,  --include-directories=LIST  list of allowed directories.\n"
 msgstr ""
 
-#: src/main.c:786
+#: src/main.c:768
 msgid ""
-"  --trust-server-names             use the name specified by the redirection\n"
+"  --trust-server-names             use the name specified by the "
+"redirection\n"
 "                                   url last component.\n"
 msgstr ""
 
-#: src/main.c:789
+#: src/main.c:771
 msgid "  -X,  --exclude-directories=LIST  list of excluded directories.\n"
 msgstr ""
 
-#: src/main.c:791
-msgid "  -np, --no-parent                 don't ascend to the parent directory.\n"
+#: src/main.c:773
+msgid ""
+"  -np, --no-parent                 don't ascend to the parent directory.\n"
 msgstr ""
 
-#: src/main.c:794
+#: src/main.c:776
 msgid "Mail bug reports and suggestions to <bug-wget@gnu.org>.\n"
 msgstr "Bidali bug-ak eta iradokizunak <bug-wget@gnu.org>-era.\n"
 
-#: src/main.c:799
+#: src/main.c:781
 #, c-format
 msgid "GNU Wget %s, a non-interactive network retriever.\n"
 msgstr "GNU Wget %s, sare informazio jaitsitzaile ez interaktiboa.\n"
 
-#: src/main.c:842
+#: src/main.c:824
 #, c-format
 msgid "Password for user %s: "
 msgstr ""
 
-#: src/main.c:844
+#: src/main.c:826
 #, c-format
 msgid "Password: "
 msgstr "Pasahitza:"
 
-#: src/main.c:899
+#: src/main.c:882
 msgid "Wgetrc: "
 msgstr "Wgetrc: "
 
-#: src/main.c:900
+#: src/main.c:883
 msgid "Locale: "
 msgstr "Locale-a:"
 
-#: src/main.c:901
+#: src/main.c:884
 msgid "Compile: "
 msgstr "Konpilazioa:"
 
-#: src/main.c:902
+#: src/main.c:885
 msgid "Link: "
 msgstr "Esteka:"
 
-#: src/main.c:906
+#: src/main.c:889
 #, c-format
 msgid ""
 "GNU Wget %s built on %s.\n"
 "\n"
 msgstr ""
 
-#: src/main.c:933
+#: src/main.c:916
 #, c-format
 msgid "    %s (env)\n"
 msgstr ""
 
-#: src/main.c:940
+#: src/main.c:923
 #, c-format
 msgid "    %s (user)\n"
 msgstr ""
 
-#: src/main.c:945
+#: src/main.c:928
 #, c-format
 msgid "    %s (system)\n"
 msgstr ""
 
 #. TRANSLATORS: When available, an actual copyright character
 #. (circle-c) should be used in preference to "(C)".
-#: src/main.c:973
+#: src/main.c:956
 #, fuzzy
 msgid "Copyright (C) 2011 Free Software Foundation, Inc.\n"
 msgstr "Copyright (C) 2003 Free Software Foundation, Inc.\n"
 
-#: src/main.c:976
+#: src/main.c:959
 msgid ""
 "License GPLv3+: GNU GPL version 3 or later\n"
 "<http://www.gnu.org/licenses/gpl.html>.\n"
@@ -1884,7 +2000,7 @@ msgstr ""
 
 #. TRANSLATORS: When available, please use the proper diacritics for
 #. names such as this one. See en_US.po for reference.
-#: src/main.c:984
+#: src/main.c:967
 msgid ""
 "\n"
 "Originally written by Hrvoje Niksic <hniksic@xemacs.org>.\n"
@@ -1892,158 +2008,159 @@ msgstr ""
 "\n"
 "Originalki Hrvoje Niksic-k idatzia <hniksic@xemacs.org>.\n"
 
-#: src/main.c:987
+#: src/main.c:970
 #, fuzzy
 msgid "Please send bug reports and questions to <bug-wget@gnu.org>.\n"
 msgstr "Bidali bug-ak eta iradokizunak <bug-wget@gnu.org>-era.\n"
 
-#: src/main.c:1038 src/main.c:1496
+#: src/main.c:1021 src/main.c:1482
 #, c-format
 msgid "Memory allocation problem\n"
 msgstr ""
 
-#: src/main.c:1083
+#: src/main.c:1066
 #, c-format
 msgid "Exiting due to error in %s\n"
 msgstr ""
 
-#: src/main.c:1112 src/main.c:1183 src/main.c:1364
+#: src/main.c:1095 src/main.c:1166 src/main.c:1343
 #, c-format
 msgid "Try `%s --help' for more options.\n"
 msgstr "Saiatu `%s --help` aukera gehiagorako.\n"
 
-#: src/main.c:1179
+#: src/main.c:1162
 #, c-format
 msgid "%s: illegal option -- `-n%c'\n"
 msgstr "%s: legez kanpoko aukera -- `-n%c'\n"
 
-#: src/main.c:1220
+#: src/main.c:1203
 #, c-format
-msgid "Both --no-clobber and --convert-links were specified, only --convert-links will be used.\n"
+msgid ""
+"Both --no-clobber and --convert-links were specified, only --convert-links "
+"will be used.\n"
 msgstr ""
 
-#: src/main.c:1248
+#: src/main.c:1231
 #, c-format
 msgid "Can't be verbose and quiet at the same time.\n"
 msgstr "Ezin da berritsu eta ixil moduan egon une berean.\n"
 
-#: src/main.c:1254
+#: src/main.c:1237
 #, c-format
 msgid "Can't timestamp and not clobber old files at the same time.\n"
-msgstr "Ezin dira ez-gainidatzi fitxategiak eta denbora markak erabili une berean.\n"
+msgstr ""
+"Ezin dira ez-gainidatzi fitxategiak eta denbora markak erabili une berean.\n"
 
-#: src/main.c:1263
+#: src/main.c:1246
 #, c-format
 msgid "Cannot specify both --inet4-only and --inet6-only.\n"
 msgstr ""
 
-#: src/main.c:1273
+#: src/main.c:1256
 msgid ""
 "Cannot specify both -k and -O if multiple URLs are given, or in combination\n"
 "with -p or -r. See the manual for details.\n"
 "\n"
 msgstr ""
 
-#: src/main.c:1282
+#: src/main.c:1265
 msgid ""
 "WARNING: combining -O with -r or -p will mean that all downloaded content\n"
 "will be placed in the single file you specified.\n"
 "\n"
 msgstr ""
 
-#: src/main.c:1288
+#: src/main.c:1271
 msgid ""
 "WARNING: timestamping does nothing in combination with -O. See the manual\n"
 "for details.\n"
 "\n"
 msgstr ""
 
-#: src/main.c:1297
+#: src/main.c:1280
 #, fuzzy, c-format
 msgid "File `%s' already there; not retrieving.\n"
 msgstr "`%s' fitxategia dagoeneko badago, ez da jasoko.\n"
 
-#: src/main.c:1308
+#: src/main.c:1291
 #, c-format
-msgid "WARC output does not work with --no-clobber, --no-clobber will be disabled.\n"
+msgid ""
+"WARC output does not work with --no-clobber, --no-clobber will be disabled.\n"
 msgstr ""
 
-#: src/main.c:1315
+#: src/main.c:1298
 #, c-format
-msgid "WARC output does not work with timestamping, timestamping will be disabled.\n"
+msgid ""
+"WARC output does not work with timestamping, timestamping will be disabled.\n"
 msgstr ""
 
-#: src/main.c:1322
+#: src/main.c:1305
 #, c-format
 msgid "WARC output does not work with --spider.\n"
 msgstr ""
 
-#: src/main.c:1328
+#: src/main.c:1311
 #, c-format
-msgid "WARC output does not work with --continue, --continue will be disabled.\n"
+msgid ""
+"WARC output does not work with --continue, --continue will be disabled.\n"
 msgstr ""
 
-#: src/main.c:1335
+#: src/main.c:1318
 #, c-format
-msgid "Digests are disabled; WARC deduplication will not find duplicate records.\n"
+msgid ""
+"Digests are disabled; WARC deduplication will not find duplicate records.\n"
 msgstr ""
 
-#: src/main.c:1347
+#: src/main.c:1330
 #, c-format
 msgid "Cannot specify both --ask-password and --password.\n"
 msgstr ""
 
-#: src/main.c:1359
+#: src/main.c:1338
 #, c-format
 msgid "%s: missing URL\n"
 msgstr "%s: URL falta\n"
 
-#: src/main.c:1400
+#: src/main.c:1379
 #, c-format
 msgid "You cannot specify both --post-data and --post-file.\n"
 msgstr ""
 
-#: src/main.c:1405
+#: src/main.c:1384
 #, c-format
-msgid "You cannot use --post-data or --post-file along with --method. --method expects data through --body-data and --body-file options"
+msgid ""
+"You cannot use --post-data or --post-file along with --method. --method "
+"expects data through --body-data and --body-file options"
 msgstr ""
 
-#: src/main.c:1414
+#: src/main.c:1393
 #, c-format
-msgid "You must specify a method through --method=HTTPMethod to use with --body-data or --body-file.\n"
+msgid ""
+"You must specify a method through --method=HTTPMethod to use with --body-"
+"data or --body-file.\n"
 msgstr ""
 
-#: src/main.c:1420
+#: src/main.c:1399
 #, c-format
 msgid "You cannot specify both --body-data and --body-file.\n"
 msgstr ""
 
-#: src/main.c:1465
+#: src/main.c:1451
 #, c-format
 msgid "This version does not have support for IRIs\n"
 msgstr ""
 
-#: src/main.c:1565
+#: src/main.c:1551
 #, c-format
 msgid "-k can be used together with -O only if outputting to a regular file.\n"
 msgstr ""
 
-#: src/main.c:1581
-#, c-format
-msgid "Username and password information not needed to                    be specified when downloading from a metalink.\n"
-msgstr ""
-
-#: src/main.c:1612
-#, fuzzy, c-format
-msgid "%s can not be used with --metalink.\n"
-msgstr "%s: Ezin da osatu gabeko linka ebatzi %s.\n"
-
-#: src/main.c:1718 src/main.c:1732
+#: src/main.c:1656
 #, c-format
 msgid "No URLs found in %s.\n"
 msgstr "Ez da URLrik aurkitu %s-n.\n"
 
-#: src/main.c:1758
+#: src/main.c:1677
 #, fuzzy, c-format
 msgid ""
 "FINISHED --%s--\n"
@@ -2054,7 +2171,7 @@ msgstr ""
 "AMAITUTA --%s--\n"
 "Jatsitakoa: %s byte %d fitxategietan\n"
 
-#: src/main.c:1772
+#: src/main.c:1691
 #, fuzzy, c-format
 msgid "Download quota of %s EXCEEDED!\n"
 msgstr "Jaitsiera kuota (%s byte) GAINDITUA!\n"
@@ -2123,40 +2240,41 @@ msgstr ""
 msgid "Could not seed PRNG; consider using --random-file.\n"
 msgstr "Ezin da OpenSSL PRNG hasi, SSL ezintzen.\n"
 
-#: src/openssl.c:549
+#: src/openssl.c:597
 #, c-format
 msgid "%s: cannot verify %s's certificate, issued by %s:\n"
 msgstr ""
 
-#: src/openssl.c:558
+#: src/openssl.c:606
 msgid "  Unable to locally verify the issuer's authority.\n"
 msgstr ""
 
-#: src/openssl.c:563
+#: src/openssl.c:611
 msgid "  Self-signed certificate encountered.\n"
 msgstr ""
 
-#: src/openssl.c:566
+#: src/openssl.c:614
 msgid "  Issued certificate not yet valid.\n"
 msgstr ""
 
-#: src/openssl.c:569
+#: src/openssl.c:617
 msgid "  Issued certificate has expired.\n"
 msgstr ""
 
-#: src/openssl.c:654
+#: src/openssl.c:702
 #, c-format
 msgid ""
 "%s: no certificate subject alternative name matches\n"
 "\trequested host name %s.\n"
 msgstr ""
 
-#: src/openssl.c:671
+#: src/openssl.c:719
 #, c-format
-msgid "    %s: certificate common name %s doesn't match requested host name %s.\n"
+msgid ""
+"    %s: certificate common name %s doesn't match requested host name %s.\n"
 msgstr ""
 
-#: src/openssl.c:703
+#: src/openssl.c:751
 #, c-format
 msgid ""
 "    %s: certificate common name is invalid (contains a NUL character).\n"
@@ -2164,7 +2282,7 @@ msgid ""
 "    (that is, it is not the real %s).\n"
 msgstr ""
 
-#: src/openssl.c:721
+#: src/openssl.c:769
 #, c-format
 msgid "To connect to %s insecurely, use `--no-check-certificate'.\n"
 msgstr ""
@@ -2181,7 +2299,8 @@ msgstr ""
 #: src/progress.c:454
 #, fuzzy, c-format
 msgid "Invalid dot style specification %s; leaving unchanged.\n"
-msgstr "Baliogabeko puntuazio estilo espezifikazioa '%s'; aldatu gabe utzitzen.\n"
+msgstr ""
+"Baliogabeko puntuazio estilo espezifikazioa '%s'; aldatu gabe utzitzen.\n"
 
 #. TRANSLATORS: "ETA" is English-centric, but this must
 #. be short, ideally 3 chars.  Abbreviate if necessary.
@@ -2199,7 +2318,7 @@ msgstr ""
 msgid "Cannot get REALTIME clock frequency: %s\n"
 msgstr ""
 
-#: src/recur.c:615
+#: src/recur.c:434
 #, c-format
 msgid "Removing %s since it should be rejected.\n"
 msgstr "%s ezabatzen ezestua izan behar zuelako.\n"
@@ -2213,22 +2332,22 @@ msgstr "Ezin dira %s-ko linkak bihurtu: %s\n"
 msgid "Loading robots.txt; please ignore errors.\n"
 msgstr "Robots.txt kargatzen; mesedez ignoratu erroreak.\n"
 
-#: src/retr.c:792
+#: src/retr.c:767
 #, c-format
 msgid "Error parsing proxy URL %s: %s.\n"
 msgstr "Proxy URLa parseatzen errorea %s: %s.\n"
 
-#: src/retr.c:802
+#: src/retr.c:777
 #, c-format
 msgid "Error in proxy URL %s: Must be HTTP.\n"
 msgstr "Errorea proxy URLan %s: HTTP izan behar du.\n"
 
-#: src/retr.c:902
+#: src/retr.c:877
 #, c-format
 msgid "%d redirections exceeded.\n"
 msgstr "%d erredirekzio kopurua gainditua.\n"
 
-#: src/retr.c:1368
+#: src/retr.c:1119
 msgid ""
 "Giving up.\n"
 "\n"
@@ -2236,7 +2355,7 @@ msgstr ""
 "Utzitzen.\n"
 "\n"
 
-#: src/retr.c:1368
+#: src/retr.c:1119
 msgid ""
 "Retrying.\n"
 "\n"
@@ -2299,7 +2418,7 @@ msgstr "IPV6 motako helbideak ez daude erabilgarri"
 msgid "Invalid IPv6 numeric address"
 msgstr "Baliogabeko IPv6 zenbaki helbidea"
 
-#: src/url.c:958
+#: src/url.c:957
 #, fuzzy
 msgid "HTTPS support not compiled in"
 msgstr "%s: ez dago debug euskarriarekin konpilatua.\n"
@@ -2339,39 +2458,39 @@ msgstr ""
 msgid "Error while matching %s: %d\n"
 msgstr "Errorea `%s' idazterakoan: %s\n"
 
-#: src/warc.c:213
+#: src/warc.c:219
 msgid "Error opening GZIP stream to WARC file.\n"
 msgstr ""
 
-#: src/warc.c:696
+#: src/warc.c:702
 msgid "Error writing warcinfo record to WARC file.\n"
 msgstr ""
 
-#: src/warc.c:752
+#: src/warc.c:764
 #, c-format
 msgid ""
 "Opening WARC file %s.\n"
 "\n"
 msgstr ""
 
-#: src/warc.c:758
+#: src/warc.c:770
 #, fuzzy, c-format
 msgid "Error opening WARC file %s.\n"
 msgstr "Proxy URLa parseatzen errorea %s: %s.\n"
 
-#: src/warc.c:956
+#: src/warc.c:968
 msgid "CDX file does not list original urls. (Missing column 'a'.)\n"
 msgstr ""
 
-#: src/warc.c:959
+#: src/warc.c:971
 msgid "CDX file does not list checksums. (Missing column 'k'.)\n"
 msgstr ""
 
-#: src/warc.c:962
+#: src/warc.c:974
 msgid "CDX file does not list record ids. (Missing column 'u'.)\n"
 msgstr ""
 
-#: src/warc.c:984
+#: src/warc.c:996
 #, c-format
 msgid ""
 "Loaded %d record from CDX.\n"
@@ -2382,37 +2501,45 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/warc.c:1029
+#: src/warc.c:1041
 #, c-format
 msgid "Could not read CDX file %s for deduplication.\n"
 msgstr ""
 
-#: src/warc.c:1039
+#: src/warc.c:1051
 msgid "Could not open temporary WARC manifest file.\n"
 msgstr ""
 
-#: src/warc.c:1049
+#: src/warc.c:1061
 msgid "Could not open temporary WARC log file.\n"
 msgstr ""
 
-#: src/warc.c:1058
+#: src/warc.c:1070
 msgid "Could not open WARC file.\n"
 msgstr ""
 
-#: src/warc.c:1067
+#: src/warc.c:1079
 msgid "Could not open CDX file for output.\n"
 msgstr ""
 
-#: src/warc.c:1095
+#: src/warc.c:1107
 msgid "Could not open temporary WARC file.\n"
 msgstr ""
 
-#: src/warc.c:1334
+#: src/warc.c:1364
 msgid "Found exact match in CDX file. Saving revisit record to WARC.\n"
 msgstr ""
 
+#~ msgid "Authorization failed.\n"
+#~ msgstr "Autorizazitzen huts egin da.\n"
+
+#, fuzzy
+#~ msgid "%s can not be used with --metalink.\n"
+#~ msgstr "%s: Ezin da osatu gabeko linka ebatzi %s.\n"
+
 #~ msgid "Unable to convert `%s' to a bind address.  Reverting to ANY.\n"
-#~ msgstr "Ezin da `%s' lotura helbide batetara bihurtu.  BESTE batera bihurtzen.\n"
+#~ msgstr ""
+#~ "Ezin da `%s' lotura helbide batetara bihurtu.  BESTE batera bihurtzen.\n"
 
 #~ msgid "Error in Set-Cookie, field `%s'"
 #~ msgstr "Okerra Set-Cookie egiten, `%s' eremuan"
@@ -2455,7 +2582,8 @@ msgstr ""
 #~ "\n"
 #~ msgstr ""
 #~ "\n"
-#~ "Deskargaren jarrapienak huts egin du fitxategi hontan, eta `-c'-rekin gatazka sortzen du.\n"
+#~ "Deskargaren jarrapienak huts egin du fitxategi hontan, eta `-c'-rekin "
+#~ "gatazka sortzen du.\n"
 #~ "Existitzen den `%s' fitxategia moztea ukatzen da.\n"
 
 #~ msgid " (%s to go)"
@@ -2475,7 +2603,8 @@ msgstr ""
 #~ msgstr "%s (%s) - Konexioa itxia ondorengo bytean %ld/%ld. "
 
 #~ msgid "%s: %s: Invalid boolean `%s', use always, on, off, or never.\n"
-#~ msgstr "%s: %s: Baliogabeko booleanoa `%s', erabili beti, on, off, edo never.\n"
+#~ msgstr ""
+#~ "%s: %s: Baliogabeko booleanoa `%s', erabili beti, on, off, edo never.\n"
 
 #~ msgid ""
 #~ "Startup:\n"
@@ -2502,7 +2631,8 @@ msgstr ""
 #~ "  -nv, --non-verbose          turn off verboseness, without being quiet.\n"
 #~ "  -i,  --input-file=FILE      download URLs found in FILE.\n"
 #~ "  -F,  --force-html           treat input file as HTML.\n"
-#~ "  -B,  --base=URL             prepends URL to relative links in -F -i file.\n"
+#~ "  -B,  --base=URL             prepends URL to relative links in -F -i "
+#~ "file.\n"
 #~ "\n"
 #~ msgstr ""
 #~ "Logeatze eta irteera fitxategia:\n"
@@ -2511,21 +2641,28 @@ msgstr ""
 #~ "  -d,  --debug                erakutsi debug-aren irteera.\n"
 #~ "  -q,  --quiet                ixilik (irteerarik gabe).\n"
 #~ "  -v,  --verbose              irteera luzea (lehenetsia).\n"
-#~ "  -nv, --non-verbose          irteera luzerik gabe, baina ixilik egon gabe.\n"
-#~ "  -i,  --input-file=FITXATEGIA      emandako FITXATEGIAN dauden URLak jaitsi.\n"
+#~ "  -nv, --non-verbose          irteera luzerik gabe, baina ixilik egon "
+#~ "gabe.\n"
+#~ "  -i,  --input-file=FITXATEGIA      emandako FITXATEGIAN dauden URLak "
+#~ "jaitsi.\n"
 #~ "  -F,  --force-html           sarrera fitxategia HTML bezala tratatu.\n"
-#~ "  -B,  --base=URL             URLa geitu hasieran -F -i fitxategien link erlatiboetan.\n"
+#~ "  -B,  --base=URL             URLa geitu hasieran -F -i fitxategien link "
+#~ "erlatiboetan.\n"
 #~ "\n"
 
 #~ msgid ""
 #~ "Download:\n"
-#~ "  -t,  --tries=NUMBER           set number of retries to NUMBER (0 unlimits).\n"
+#~ "  -t,  --tries=NUMBER           set number of retries to NUMBER (0 "
+#~ "unlimits).\n"
 #~ "       --retry-connrefused      retry even if connection is refused.\n"
 #~ "  -O   --output-document=FILE   write documents to FILE.\n"
-#~ "  -nc, --no-clobber             don't clobber existing files or use .# suffixes.\n"
-#~ "  -c,  --continue               resume getting a partially-downloaded file.\n"
+#~ "  -nc, --no-clobber             don't clobber existing files or use .# "
+#~ "suffixes.\n"
+#~ "  -c,  --continue               resume getting a partially-downloaded "
+#~ "file.\n"
 #~ "       --progress=TYPE          select progress gauge type.\n"
-#~ "  -N,  --timestamping           don't re-retrieve files unless newer than local.\n"
+#~ "  -N,  --timestamping           don't re-retrieve files unless newer than "
+#~ "local.\n"
 #~ "  -S,  --server-response        print server response.\n"
 #~ "       --spider                 don't download anything.\n"
 #~ "  -T,  --timeout=SECONDS        set all timeout values to SECONDS.\n"
@@ -2533,39 +2670,55 @@ msgstr ""
 #~ "       --connect-timeout=SECS   set the connect timeout to SECS.\n"
 #~ "       --read-timeout=SECS      set the read timeout to SECS.\n"
 #~ "  -w,  --wait=SECONDS           wait SECONDS between retrievals.\n"
-#~ "       --waitretry=SECONDS      wait 1...SECONDS between retries of a retrieval.\n"
-#~ "       --random-wait            wait from 0...2*WAIT secs between retrievals.\n"
+#~ "       --waitretry=SECONDS      wait 1...SECONDS between retries of a "
+#~ "retrieval.\n"
+#~ "       --random-wait            wait from 0...2*WAIT secs between "
+#~ "retrievals.\n"
 #~ "  -Y,  --proxy=on/off           turn proxy on or off.\n"
 #~ "  -Q,  --quota=NUMBER           set retrieval quota to NUMBER.\n"
-#~ "       --bind-address=ADDRESS   bind to ADDRESS (hostname or IP) on local host.\n"
+#~ "       --bind-address=ADDRESS   bind to ADDRESS (hostname or IP) on local "
+#~ "host.\n"
 #~ "       --limit-rate=RATE        limit download rate to RATE.\n"
 #~ "       --dns-cache=off          disable caching DNS lookups.\n"
-#~ "       --restrict-file-names=OS restrict chars in file names to ones OS allows.\n"
+#~ "       --restrict-file-names=OS restrict chars in file names to ones OS "
+#~ "allows.\n"
 #~ "\n"
 #~ msgstr ""
 #~ "Jaitsi:\n"
-#~ "  -t,  --tries=ZENBAKIA           jaisteko egingo diren saiakera kopurua (0 limiterik gabe).\n"
+#~ "  -t,  --tries=ZENBAKIA           jaisteko egingo diren saiakera kopurua "
+#~ "(0 limiterik gabe).\n"
 #~ "       --retry-connrefused      konexioa ukatzen bada ere berriz saiatu.\n"
 #~ "  -O   --output-document=FITXATEGIA   idatzi dokumentuak FITXATEGIAN.\n"
-#~ "  -nc, --no-clobber             ez jaitsi dagoeneko exisitzen bada edo erabili .# luzapen bezala.\n"
-#~ "  -c,  --continue               jarraitu jaisten partzialki jatsirik dagoen fitxategia.\n"
+#~ "  -nc, --no-clobber             ez jaitsi dagoeneko exisitzen bada edo "
+#~ "erabili .# luzapen bezala.\n"
+#~ "  -c,  --continue               jarraitu jaisten partzialki jatsirik "
+#~ "dagoen fitxategia.\n"
 #~ "       --progress=MOTA          progresu mota aukeratu.\n"
-#~ "  -N,  --timestamping           ez jaitsi fitxategiak bertakoak baina berriagoak ez badira.\n"
+#~ "  -N,  --timestamping           ez jaitsi fitxategiak bertakoak baina "
+#~ "berriagoak ez badira.\n"
 #~ "  -S,  --server-response        erakutsi zerbitzariaren erantzuna.\n"
 #~ "       --spider                 ez jaitsi ezer.\n"
-#~ "  -T,  --timeout=SEGUNDUAK        ezarri denboraz kanpo balio guztiak emandako SEGUNDUTAN.\n"
-#~ "       --dns-timeout=SEGUNDUAK       ezarri DNS ikustatze limitea emandako SEGUNDUTAN.\n"
-#~ "       --connect-timeout=SEGUNDUAK   ezarri konexioa denboraz kanpo egotea emandako SEGUNDUTAN.\n"
-#~ "       --read-timeout=SEGUNDUAK      ezarri irakurtzea denboraz kanpo egotea emandako SEGUNDUTAN.\n"
-#~ "  -w,  --wait=SEGUNDUAK           itxaron emandako SEGUNDUAK jaitsieren artean.\n"
-#~ "       --waitretry=SEGUNDUAK      itxaron emandako SEGUNDUAK huts egindako jaitsiera bat jarraitzeko.\n"
+#~ "  -T,  --timeout=SEGUNDUAK        ezarri denboraz kanpo balio guztiak "
+#~ "emandako SEGUNDUTAN.\n"
+#~ "       --dns-timeout=SEGUNDUAK       ezarri DNS ikustatze limitea "
+#~ "emandako SEGUNDUTAN.\n"
+#~ "       --connect-timeout=SEGUNDUAK   ezarri konexioa denboraz kanpo "
+#~ "egotea emandako SEGUNDUTAN.\n"
+#~ "       --read-timeout=SEGUNDUAK      ezarri irakurtzea denboraz kanpo "
+#~ "egotea emandako SEGUNDUTAN.\n"
+#~ "  -w,  --wait=SEGUNDUAK           itxaron emandako SEGUNDUAK jaitsieren "
+#~ "artean.\n"
+#~ "       --waitretry=SEGUNDUAK      itxaron emandako SEGUNDUAK huts "
+#~ "egindako jaitsiera bat jarraitzeko.\n"
 #~ "       --random-wait            itxaron 0 tik 2*ra saiatzeen artean.\n"
 #~ "  -Y,  --proxy=on/off           gaitu ala ez gaitu proxya.\n"
 #~ "  -Q,  --quota=ZENBAKIA           ezarri saiatze kuota ZENBAKIRA.\n"
-#~ "       --bind-address=HELBIDEA  itsutu HELBIEARA (host izena edo IPa) host lokalean.\n"
+#~ "       --bind-address=HELBIDEA  itsutu HELBIEARA (host izena edo IPa) "
+#~ "host lokalean.\n"
 #~ "       --limit-rate=TASA        ezarri jaitsiera limitea TASARA.\n"
 #~ "       --dns-cache=off          ezgaitu katxeaturiko DNSak ikustatzea.\n"
-#~ "       --restrict-file-names=SE SE (Sistema Eragile)ak onartzen dituen karaktereak soilik erabili.\n"
+#~ "       --restrict-file-names=SE SE (Sistema Eragile)ak onartzen dituen "
+#~ "karaktereak soilik erabili.\n"
 #~ "\n"
 
 #~ msgid ""
@@ -2574,7 +2727,8 @@ msgstr ""
 #~ "  -x,  --force-directories         force creation of directories.\n"
 #~ "  -nH, --no-host-directories       don't create host directories.\n"
 #~ "  -P,  --directory-prefix=PREFIX   save files to PREFIX/...\n"
-#~ "       --cut-dirs=NUMBER           ignore NUMBER remote directory components.\n"
+#~ "       --cut-dirs=NUMBER           ignore NUMBER remote directory "
+#~ "components.\n"
 #~ "\n"
 #~ msgstr ""
 #~ "Direktorioak:\n"
@@ -2582,48 +2736,66 @@ msgstr ""
 #~ "  -x,  --force-directories         behartu direktorioak sortzera.\n"
 #~ "  -nH, --no-host-directories       ez sortu host direktoriorik.\n"
 #~ "  -P,  --directory-prefix=AURREZKI   gorde fitxategiak AURREZKI/-an...\n"
-#~ "       --cut-dirs=KOPURUA           ez egin jaramonik urruneko direktorio KOPURUAri.\n"
+#~ "       --cut-dirs=KOPURUA           ez egin jaramonik urruneko direktorio "
+#~ "KOPURUAri.\n"
 #~ "\n"
 
 #~ msgid ""
 #~ "HTTP options:\n"
 #~ "       --http-user=USER      set http user to USER.\n"
 #~ "       --http-passwd=PASS    set http password to PASS.\n"
-#~ "  -C,  --cache=on/off        (dis)allow server-cached data (normally allowed).\n"
-#~ "  -E,  --html-extension      save all text/html documents with .html extension.\n"
+#~ "  -C,  --cache=on/off        (dis)allow server-cached data (normally "
+#~ "allowed).\n"
+#~ "  -E,  --html-extension      save all text/html documents with .html "
+#~ "extension.\n"
 #~ "       --ignore-length       ignore `Content-Length' header field.\n"
 #~ "       --header=STRING       insert STRING among the headers.\n"
 #~ "       --proxy-user=USER     set USER as proxy username.\n"
 #~ "       --proxy-passwd=PASS   set PASS as proxy password.\n"
-#~ "       --referer=URL         include `Referer: URL' header in HTTP request.\n"
+#~ "       --referer=URL         include `Referer: URL' header in HTTP "
+#~ "request.\n"
 #~ "  -s,  --save-headers        save the HTTP headers to file.\n"
 #~ "  -U,  --user-agent=AGENT    identify as AGENT instead of Wget/VERSION.\n"
-#~ "       --no-http-keep-alive  disable HTTP keep-alive (persistent connections).\n"
+#~ "       --no-http-keep-alive  disable HTTP keep-alive (persistent "
+#~ "connections).\n"
 #~ "       --cookies=off         don't use cookies.\n"
 #~ "       --load-cookies=FILE   load cookies from FILE before session.\n"
 #~ "       --save-cookies=FILE   save cookies to FILE after session.\n"
-#~ "       --post-data=STRING    use the POST method; send STRING as the data.\n"
+#~ "       --post-data=STRING    use the POST method; send STRING as the "
+#~ "data.\n"
 #~ "       --post-file=FILE      use the POST method; send contents of FILE.\n"
 #~ "\n"
 #~ msgstr ""
 #~ "HTTP aukerak:\n"
-#~ "       --http-user=ERABILTZAILEA      ezarri http erabiltzaile bezala ERABILTZAILEA.\n"
+#~ "       --http-user=ERABILTZAILEA      ezarri http erabiltzaile bezala "
+#~ "ERABILTZAILEA.\n"
 #~ "       --http-passwd=PASAHITZA    ezarri http pasahitz bezala PASAHITZA.\n"
-#~ "  -C,  --cache=on/off        zerbitzari katxea gaitu ala ezgaitu (normalean onartua).\n"
-#~ "  -E,  --html-extension      gorde text/html dokumentuak .html luzapenarekin.\n"
+#~ "  -C,  --cache=on/off        zerbitzari katxea gaitu ala ezgaitu "
+#~ "(normalean onartua).\n"
+#~ "  -E,  --html-extension      gorde text/html dokumentuak .html "
+#~ "luzapenarekin.\n"
 #~ "       --ignore-length       ignoratu `Content-Length' goiburua.\n"
 #~ "       --header=KATEA       gehitu KATEA goiburua beste goiburuekin.\n"
-#~ "       --proxy-user=ERABILTZAILEA     ezarri proxy erabiltzaile bezela ERABILTZAILEA.\n"
-#~ "       --proxy-passwd=PASAHITZA   ezarri proxy pasahitz bezela PASAHITZA.\n"
-#~ "       --referer=URL         sartu `Referer: URL' goiburua HTTP eskaeran.\n"
+#~ "       --proxy-user=ERABILTZAILEA     ezarri proxy erabiltzaile bezela "
+#~ "ERABILTZAILEA.\n"
+#~ "       --proxy-passwd=PASAHITZA   ezarri proxy pasahitz bezela "
+#~ "PASAHITZA.\n"
+#~ "       --referer=URL         sartu `Referer: URL' goiburua HTTP "
+#~ "eskaeran.\n"
 #~ "  -s,  --save-headers        gorde HTTP goiburuak fitxategi batean.\n"
-#~ "  -U,  --user-agent=AGENTEA    identifikatu AGENTE bezala Wget/BERTSIOA-ren ordez.\n"
-#~ "       --no-http-keep-alive  ezgaitu HTTP keep alive (konexio iraunkorrak).\n"
+#~ "  -U,  --user-agent=AGENTEA    identifikatu AGENTE bezala Wget/BERTSIOA-"
+#~ "ren ordez.\n"
+#~ "       --no-http-keep-alive  ezgaitu HTTP keep alive (konexio "
+#~ "iraunkorrak).\n"
 #~ "       --cookies=off         ez erabili cookieak.\n"
-#~ "       --load-cookies=FITXATEGIA   kargatu cookieak FITXATEGITIK saioa hasi aurretik.\n"
-#~ "       --save-cookies=FITXATEGIA   gorde cookieak FITXATEGIAN saioa amaitzean.\n"
-#~ "       --post-data=KATEA    erabili POST metodoa; bidali KATEA datu bezala.\n"
-#~ "       --post-file=FITXATEGIA      erabili POST metodoa; bidali FITXATEGIAREN edukia datu bezala.\n"
+#~ "       --load-cookies=FITXATEGIA   kargatu cookieak FITXATEGITIK saioa "
+#~ "hasi aurretik.\n"
+#~ "       --save-cookies=FITXATEGIA   gorde cookieak FITXATEGIAN saioa "
+#~ "amaitzean.\n"
+#~ "       --post-data=KATEA    erabili POST metodoa; bidali KATEA datu "
+#~ "bezala.\n"
+#~ "       --post-file=FITXATEGIA      erabili POST metodoa; bidali "
+#~ "FITXATEGIAREN edukia datu bezala.\n"
 #~ "\n"
 
 #~ msgid ""
@@ -2633,7 +2805,8 @@ msgstr ""
 #~ "       --egd-file=FILE        file name of the EGD socket.\n"
 #~ "       --sslcadir=DIR         dir where hash list of CA's are stored.\n"
 #~ "       --sslcafile=FILE       file with bundle of CA's\n"
-#~ "       --sslcerttype=0/1      Client-Cert type 0=PEM (default) / 1=ASN1 (DER)\n"
+#~ "       --sslcerttype=0/1      Client-Cert type 0=PEM (default) / 1=ASN1 "
+#~ "(DER)\n"
 #~ "       --sslcheckcert=0/1     Check the server cert agenst given CA\n"
 #~ "       --sslprotocol=0-3      choose SSL protocol; 0=automatic,\n"
 #~ "                              1=SSLv2 2=SSLv3 3=TLSv1\n"
@@ -2641,12 +2814,16 @@ msgstr ""
 #~ msgstr ""
 #~ "HTTPS (SSL) aukerak:\n"
 #~ "       --sslcertfile=FITXATEGIA     aukerazko bezero zertifikatua.\n"
-#~ "       --sslcertkey=GILTZA-FITXATEGIA   zertifikatu honentzat aukerazko giltza-fitxategia.\n"
+#~ "       --sslcertkey=GILTZA-FITXATEGIA   zertifikatu honentzat aukerazko "
+#~ "giltza-fitxategia.\n"
 #~ "       --egd-file=FITXATEGIA        EGD socket-aren fitxategi izena.\n"
-#~ "       --sslcadir=DIR         CA hash zerrendak gordetzen diren direktorioa.\n"
+#~ "       --sslcadir=DIR         CA hash zerrendak gordetzen diren "
+#~ "direktorioa.\n"
 #~ "       --sslcafile=FITXATEGIA       CA zertifikatudun fitxategiak\n"
-#~ "       --sslcerttype=0/1      Bezeroaren zertifikazio mota 0=PEM (lehenetsia) / 1=ASN1 (DER)\n"
-#~ "       --sslcheckcert=0/1     Egiaztatu zerbitzariaren zertifikatua emandako CArekin\n"
+#~ "       --sslcerttype=0/1      Bezeroaren zertifikazio mota 0=PEM "
+#~ "(lehenetsia) / 1=ASN1 (DER)\n"
+#~ "       --sslcheckcert=0/1     Egiaztatu zerbitzariaren zertifikatua "
+#~ "emandako CArekin\n"
 #~ "       --sslprotocol=0-3      aukeratu SSL protokoloa; 0=automatikoa,\n"
 #~ "                              1=SSLv2 2=SSLv3 3=TLSv1\n"
 #~ "\n"
@@ -2656,64 +2833,89 @@ msgstr ""
 #~ "  -nr, --dont-remove-listing   don't remove `.listing' files.\n"
 #~ "  -g,  --glob=on/off           turn file name globbing on or off.\n"
 #~ "       --passive-ftp           use the \"passive\" transfer mode.\n"
-#~ "       --retr-symlinks         when recursing, get linked-to files (not dirs).\n"
+#~ "       --retr-symlinks         when recursing, get linked-to files (not "
+#~ "dirs).\n"
 #~ "\n"
 #~ msgstr ""
 #~ "FTP aukerak:\n"
 #~ "  -nr, --dont-remove-listing   ez ezabatu `.listing' fitxategiak.\n"
 #~ "  -g,  --glob=on/off           fitxategi izen komodinak gaitu ala ez.\n"
 #~ "       --passive-ftp           transferentzia modu \"pasiboa\" erabili.\n"
-#~ "       --retr-symlinks         errekurtsibitatean, linkaturiko fitxategiak hartu (direktorioak ez).\n"
+#~ "       --retr-symlinks         errekurtsibitatean, linkaturiko "
+#~ "fitxategiak hartu (direktorioak ez).\n"
 #~ "\n"
 
 #~ msgid ""
 #~ "Recursive retrieval:\n"
 #~ "  -r,  --recursive          recursive download.\n"
-#~ "  -l,  --level=NUMBER       maximum recursion depth (inf or 0 for infinite).\n"
+#~ "  -l,  --level=NUMBER       maximum recursion depth (inf or 0 for "
+#~ "infinite).\n"
 #~ "       --delete-after       delete files locally after downloading them.\n"
 #~ "  -k,  --convert-links      convert non-relative links to relative.\n"
 #~ "  -K,  --backup-converted   before converting file X, back up as X.orig.\n"
-#~ "  -m,  --mirror             shortcut option equivalent to -r -N -l inf -nr.\n"
-#~ "  -p,  --page-requisites    get all images, etc. needed to display HTML page.\n"
-#~ "       --strict-comments    turn on strict (SGML) handling of HTML comments.\n"
+#~ "  -m,  --mirror             shortcut option equivalent to -r -N -l inf -"
+#~ "nr.\n"
+#~ "  -p,  --page-requisites    get all images, etc. needed to display HTML "
+#~ "page.\n"
+#~ "       --strict-comments    turn on strict (SGML) handling of HTML "
+#~ "comments.\n"
 #~ "\n"
 #~ msgstr ""
 #~ "Eskuratze errekurtsiboa:\n"
 #~ "  -r,  --recursive          jaitsiera errekurtsiboa.\n"
-#~ "  -l,  --level=ZENBAKIA       errekurtsibitate sakonera maximoa(inf edo 0 infiturentzat).\n"
+#~ "  -l,  --level=ZENBAKIA       errekurtsibitate sakonera maximoa(inf edo 0 "
+#~ "infiturentzat).\n"
 #~ "       --delete-after       ezabatu fitxategiak lokalki jaitsi ondoren.\n"
 #~ "  -k,  --convert-links      link erlatiboak ez erlatiboetan bihurtu.\n"
-#~ "  -K,  --backup-converted   X fitxategia bihurtu aurretik segurtasun kopia egin X.orig bezala.\n"
+#~ "  -K,  --backup-converted   X fitxategia bihurtu aurretik segurtasun "
+#~ "kopia egin X.orig bezala.\n"
 #~ "  -m,  --mirror             laster-bide bat -r -N -l inf -nr egiteko.\n"
-#~ "  -p,  --page-requisites    irudiak eta besteak hartu, HTML orriak erakusteko beharrezkoak.\n"
+#~ "  -p,  --page-requisites    irudiak eta besteak hartu, HTML orriak "
+#~ "erakusteko beharrezkoak.\n"
 #~ "       --strict-comments    HTML komentarioak SGML bidez maneiatu.\n"
 #~ "\n"
 
 #~ msgid ""
 #~ "Recursive accept/reject:\n"
-#~ "  -A,  --accept=LIST                comma-separated list of accepted extensions.\n"
-#~ "  -R,  --reject=LIST                comma-separated list of rejected extensions.\n"
-#~ "  -D,  --domains=LIST               comma-separated list of accepted domains.\n"
-#~ "       --exclude-domains=LIST       comma-separated list of rejected domains.\n"
-#~ "       --follow-ftp                 follow FTP links from HTML documents.\n"
-#~ "       --follow-tags=LIST           comma-separated list of followed HTML tags.\n"
-#~ "  -G,  --ignore-tags=LIST           comma-separated list of ignored HTML tags.\n"
+#~ "  -A,  --accept=LIST                comma-separated list of accepted "
+#~ "extensions.\n"
+#~ "  -R,  --reject=LIST                comma-separated list of rejected "
+#~ "extensions.\n"
+#~ "  -D,  --domains=LIST               comma-separated list of accepted "
+#~ "domains.\n"
+#~ "       --exclude-domains=LIST       comma-separated list of rejected "
+#~ "domains.\n"
+#~ "       --follow-ftp                 follow FTP links from HTML "
+#~ "documents.\n"
+#~ "       --follow-tags=LIST           comma-separated list of followed HTML "
+#~ "tags.\n"
+#~ "  -G,  --ignore-tags=LIST           comma-separated list of ignored HTML "
+#~ "tags.\n"
 #~ "  -H,  --span-hosts                 go to foreign hosts when recursive.\n"
 #~ "  -L,  --relative                   follow relative links only.\n"
 #~ "  -I,  --include-directories=LIST   list of allowed directories.\n"
 #~ "  -X,  --exclude-directories=LIST   list of excluded directories.\n"
-#~ "  -np, --no-parent                  don't ascend to the parent directory.\n"
+#~ "  -np, --no-parent                  don't ascend to the parent "
+#~ "directory.\n"
 #~ "\n"
 #~ msgstr ""
 #~ "Errekurtsibitatean onartu/ezetsi:\n"
-#~ "  -A,  --accept=ZERRENDA                onartutako luzapenen zerrenda komaz bereiztua.\n"
-#~ "  -R,  --reject=ZERRENDA                ezetsitako luzapen zerrenda komaz bereiztua.\n"
-#~ "  -D,  --domains=ZERRENDA               onartutako dominioen zerrenda komaz bereiztua.\n"
-#~ "       --exclude-domains=ZERRENDA       ezetsitako dominio zerrenda komaz bereiztua.\n"
-#~ "       --follow-ftp                 jarraitu FTP linkak HTML dokumentu batean.\n"
-#~ "       --follow-tags=ZERRENDA           jarraituko diren HTML tag zerrenda komaz bereiztua.\n"
-#~ "  -G,  --ignore-tags=ZERRENDA           ignoratuak izango diren HTML tag zerrenda komaz bereiztua.\n"
-#~ "  -H,  --span-hosts                 joan kanpo-hostalarietara errekurtsibitatean.\n"
+#~ "  -A,  --accept=ZERRENDA                onartutako luzapenen zerrenda "
+#~ "komaz bereiztua.\n"
+#~ "  -R,  --reject=ZERRENDA                ezetsitako luzapen zerrenda komaz "
+#~ "bereiztua.\n"
+#~ "  -D,  --domains=ZERRENDA               onartutako dominioen zerrenda "
+#~ "komaz bereiztua.\n"
+#~ "       --exclude-domains=ZERRENDA       ezetsitako dominio zerrenda komaz "
+#~ "bereiztua.\n"
+#~ "       --follow-ftp                 jarraitu FTP linkak HTML dokumentu "
+#~ "batean.\n"
+#~ "       --follow-tags=ZERRENDA           jarraituko diren HTML tag "
+#~ "zerrenda komaz bereiztua.\n"
+#~ "  -G,  --ignore-tags=ZERRENDA           ignoratuak izango diren HTML tag "
+#~ "zerrenda komaz bereiztua.\n"
+#~ "  -H,  --span-hosts                 joan kanpo-hostalarietara "
+#~ "errekurtsibitatean.\n"
 #~ "  -L,  --relative                   jarraitu link erlatiboak soilik.\n"
 #~ "  -I,  --include-directories=ZERRENDA   onartutako direktorio zerrenda.\n"
 #~ "  -X,  --exclude-directories=ZERRENDA   egotzitako direktorio zerrenda.\n"
