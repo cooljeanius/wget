@@ -7,3 +7,17 @@ core.*
 version.c
 *.o
 css*.c
+site.exp
+site.bak
+*.tab.c
+config.h
+stamp-h*
+TAGS
+ID
+GTAGS
+GRTAGS
+GSYMS
+GPATH
+tags
+*deps/*
+Makefile

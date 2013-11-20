@@ -296,6 +296,7 @@ arpa/*
 errno.h*
 fcntl.h*
 float.h*
+fnmatch.h*
 getopt.h*
 iconv.h*
 langinfo.h*
@@ -320,6 +321,23 @@ time.h*
 unistd.h*
 wchar.h*
 wctype.h*
+site.exp
+site.bak
+*.tab.c
+glthread/*/.dirstamp
+glthread/.dirstamp
+*.dirstamp
+../GNUmakefile
+TAGS
+ID
+GTAGS
+GRTAGS
+GSYMS
+GPATH
+tags
+*deps/*
+glthread/*deps/*
+Makefile
 
 /stdarg.in.h
 /version-etc-fsf.c
@@ -329,3 +347,11 @@ wctype.h*
 /setenv.c
 /symlink.c
 /unsetenv.c
+/fnmatch.c
+/fnmatch.in.h
+/fnmatch_loop.c
+/mbsrtowcs-impl.h
+/mbsrtowcs-state.c
+/mbsrtowcs.c
+/strnlen1.c
+/strnlen1.h

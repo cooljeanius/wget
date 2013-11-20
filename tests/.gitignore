@@ -10,3 +10,13 @@
 /test-ioctl.c
 /test-open.c
 /test-open.h
+/test-fnmatch.c
+unit-tests
+*~
+*.bak
+core*
+*.o
+site.exp
+*.tab.c
+WgetTest.pm
+Makefile

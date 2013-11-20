@@ -8,6 +8,16 @@ wget.html
 *.bak
 *.cat
 *.pod
+*.tar.gz
 wget.t2d
 wget.t2p
 vti.tmp
+site.exp
+TAGS
+ID
+GTAGS
+GRTAGS
+GSYMS
+GPATH
+tags
+cscope*.out

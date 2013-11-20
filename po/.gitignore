@@ -15,3 +15,6 @@ stamp-poT
 core.*
 wget.*po
 *.new.po
+*.gmo
+*.mo
+POTFILES

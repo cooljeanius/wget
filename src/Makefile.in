@@ -120,7 +120,8 @@ DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	obstack.c stat.c $(top_srcdir)/build-aux/depcomp ChangeLog
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/00gnulib.m4 \
-	$(top_srcdir)/m4/alloca.m4 $(top_srcdir)/m4/arpa_inet_h.m4 \
+	$(top_srcdir)/m4/alloca.m4 $(top_srcdir)/m4/ansi-c++.m4 \
+	$(top_srcdir)/m4/arpa_inet_h.m4 \
 	$(top_srcdir)/m4/asm-underscore.m4 \
 	$(top_srcdir)/m4/ax_c___attribute__.m4 \
 	$(top_srcdir)/m4/base32.m4 $(top_srcdir)/m4/btowc.m4 \
@@ -135,15 +136,15 @@ am__aclocal_m4_deps = $(top_srcdir)/m4/00gnulib.m4 \
 	$(top_srcdir)/m4/fatal-signal.m4 $(top_srcdir)/m4/fcntl-o.m4 \
 	$(top_srcdir)/m4/fcntl.m4 $(top_srcdir)/m4/fcntl_h.m4 \
 	$(top_srcdir)/m4/fileblocks.m4 $(top_srcdir)/m4/float_h.m4 \
-	$(top_srcdir)/m4/fseek.m4 $(top_srcdir)/m4/fseeko.m4 \
-	$(top_srcdir)/m4/fstat.m4 $(top_srcdir)/m4/ftell.m4 \
-	$(top_srcdir)/m4/ftello.m4 $(top_srcdir)/m4/futimens.m4 \
-	$(top_srcdir)/m4/getaddrinfo.m4 $(top_srcdir)/m4/getdelim.m4 \
-	$(top_srcdir)/m4/getdtablesize.m4 $(top_srcdir)/m4/getline.m4 \
-	$(top_srcdir)/m4/getopt.m4 $(top_srcdir)/m4/getpass.m4 \
-	$(top_srcdir)/m4/gettext.m4 $(top_srcdir)/m4/gettime.m4 \
-	$(top_srcdir)/m4/gettimeofday.m4 $(top_srcdir)/m4/glibc21.m4 \
-	$(top_srcdir)/m4/gnulib-common.m4 \
+	$(top_srcdir)/m4/fnmatch.m4 $(top_srcdir)/m4/fseek.m4 \
+	$(top_srcdir)/m4/fseeko.m4 $(top_srcdir)/m4/fstat.m4 \
+	$(top_srcdir)/m4/ftell.m4 $(top_srcdir)/m4/ftello.m4 \
+	$(top_srcdir)/m4/futimens.m4 $(top_srcdir)/m4/getaddrinfo.m4 \
+	$(top_srcdir)/m4/getdelim.m4 $(top_srcdir)/m4/getdtablesize.m4 \
+	$(top_srcdir)/m4/getline.m4 $(top_srcdir)/m4/getopt.m4 \
+	$(top_srcdir)/m4/getpass.m4 $(top_srcdir)/m4/gettext.m4 \
+	$(top_srcdir)/m4/gettime.m4 $(top_srcdir)/m4/gettimeofday.m4 \
+	$(top_srcdir)/m4/glibc21.m4 $(top_srcdir)/m4/gnulib-common.m4 \
 	$(top_srcdir)/m4/gnulib-comp.m4 $(top_srcdir)/m4/hostent.m4 \
 	$(top_srcdir)/m4/iconv.m4 $(top_srcdir)/m4/iconv_h.m4 \
 	$(top_srcdir)/m4/include_next.m4 $(top_srcdir)/m4/inet_ntop.m4 \
@@ -159,13 +160,13 @@ am__aclocal_m4_deps = $(top_srcdir)/m4/00gnulib.m4 \
 	$(top_srcdir)/m4/lseek.m4 $(top_srcdir)/m4/lstat.m4 \
 	$(top_srcdir)/m4/malloc.m4 $(top_srcdir)/m4/malloca.m4 \
 	$(top_srcdir)/m4/mbrtowc.m4 $(top_srcdir)/m4/mbsinit.m4 \
-	$(top_srcdir)/m4/mbstate_t.m4 $(top_srcdir)/m4/mbtowc.m4 \
-	$(top_srcdir)/m4/md5.m4 $(top_srcdir)/m4/memchr.m4 \
-	$(top_srcdir)/m4/minmax.m4 $(top_srcdir)/m4/mkdir.m4 \
-	$(top_srcdir)/m4/mkostemp.m4 $(top_srcdir)/m4/mkostemps.m4 \
-	$(top_srcdir)/m4/mkstemp.m4 $(top_srcdir)/m4/mktime.m4 \
-	$(top_srcdir)/m4/mmap-anon.m4 $(top_srcdir)/m4/mode_t.m4 \
-	$(top_srcdir)/m4/msvc-inval.m4 \
+	$(top_srcdir)/m4/mbsrtowcs.m4 $(top_srcdir)/m4/mbstate_t.m4 \
+	$(top_srcdir)/m4/mbtowc.m4 $(top_srcdir)/m4/md5.m4 \
+	$(top_srcdir)/m4/memchr.m4 $(top_srcdir)/m4/minmax.m4 \
+	$(top_srcdir)/m4/mkdir.m4 $(top_srcdir)/m4/mkostemp.m4 \
+	$(top_srcdir)/m4/mkostemps.m4 $(top_srcdir)/m4/mkstemp.m4 \
+	$(top_srcdir)/m4/mktime.m4 $(top_srcdir)/m4/mmap-anon.m4 \
+	$(top_srcdir)/m4/mode_t.m4 $(top_srcdir)/m4/msvc-inval.m4 \
 	$(top_srcdir)/m4/msvc-nothrow.m4 $(top_srcdir)/m4/multiarch.m4 \
 	$(top_srcdir)/m4/netdb_h.m4 $(top_srcdir)/m4/netinet_in_h.m4 \
 	$(top_srcdir)/m4/nl_langinfo.m4 $(top_srcdir)/m4/nls.m4 \
@@ -396,6 +397,7 @@ CXX = @CXX@
 CXXCPP = @CXXCPP@
 CXXDEPMODE = @CXXDEPMODE@
 CXXFLAGS = @CXXFLAGS@
+CXX_CHOICE = @CXX_CHOICE@
 CYGPATH_W = @CYGPATH_W@
 
 # The following line is losing on some versions of make!
@@ -417,6 +419,7 @@ EOVERFLOW_VALUE = @EOVERFLOW_VALUE@
 ERRNO_H = @ERRNO_H@
 EXEEXT = @EXEEXT@
 FLOAT_H = @FLOAT_H@
+FNMATCH_H = @FNMATCH_H@
 GETADDRINFO_LIB = @GETADDRINFO_LIB@
 GETOPT_H = @GETOPT_H@
 GETTEXT_MACRO_VERSION = @GETTEXT_MACRO_VERSION@

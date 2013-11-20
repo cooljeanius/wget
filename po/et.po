@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: GNU wget 1.14.128\n"
+"Project-Id-Version: GNU wget 1.15-pre1\n"
 "Report-Msgid-Bugs-To: bug-wget@gnu.org\n"
-"POT-Creation-Date: 2013-10-28 11:10-0400\n"
-"PO-Revision-Date: 2013-06-07 11:35+0400\n"
+"POT-Creation-Date: 2013-11-02 12:28+0100\n"
+"PO-Revision-Date: 2013-11-03 14:48+0200\n"
 "Last-Translator: Toomas Soome <tsoome@me.com>\n"
 "Language-Team: Estonian <linux-ee@lists.eenet.ee>\n"
 "Language: et\n"
@@ -246,7 +246,7 @@ msgstr "ühendus loodud.\n"
 msgid "failed: %s.\n"
 msgstr "ebaõnnestus: %s.\n"
 
-#: src/connect.c:397 src/http.c:1976
+#: src/connect.c:397 src/http.c:1974
 #, c-format
 msgid "%s: unable to resolve host address %s\n"
 msgstr "%s: hosti aadressi %s ei õnnestu lahendada\n"
@@ -349,83 +349,83 @@ msgstr "Pole kindel "
 msgid " (%s bytes)"
 msgstr " (%s baiti)"
 
-#: src/ftp.c:221
+#: src/ftp.c:222
 #, c-format
 msgid "Length: %s"
 msgstr "Pikkus: %s"
 
-#: src/ftp.c:227 src/http.c:2779
+#: src/ftp.c:228 src/http.c:2776
 #, c-format
 msgid ", %s (%s) remaining"
 msgstr ", %s (%s) veel"
 
-#: src/ftp.c:231 src/http.c:2783
+#: src/ftp.c:232 src/http.c:2780
 #, c-format
 msgid ", %s remaining"
 msgstr ", %s veel"
 
-#: src/ftp.c:234
+#: src/ftp.c:235
 msgid " (unauthoritative)\n"
 msgstr " (autoriseerimata)\n"
 
-#: src/ftp.c:309
+#: src/ftp.c:312
 #, c-format
 msgid "Logging in as %s ... "
 msgstr "Meldin serverisse kasutajana %s ... "
 
-#: src/ftp.c:328 src/ftp.c:374 src/ftp.c:403 src/ftp.c:468 src/ftp.c:698
-#: src/ftp.c:751 src/ftp.c:791 src/ftp.c:848 src/ftp.c:909 src/ftp.c:1001
-#: src/ftp.c:1050
+#: src/ftp.c:331 src/ftp.c:377 src/ftp.c:444 src/ftp.c:509 src/ftp.c:739
+#: src/ftp.c:792 src/ftp.c:835 src/ftp.c:892 src/ftp.c:953 src/ftp.c:1045
+#: src/ftp.c:1095
 msgid "Error in server response, closing control connection.\n"
 msgstr "Vigane serveri vastus, sulgen juhtühenduse.\n"
 
-#: src/ftp.c:335
+#: src/ftp.c:338
 msgid "Error in server greeting.\n"
 msgstr "Vigane serveri tervitus.\n"
 
-#: src/ftp.c:342 src/ftp.c:476 src/ftp.c:706 src/ftp.c:799 src/ftp.c:858
-#: src/ftp.c:919 src/ftp.c:1011 src/ftp.c:1060
+#: src/ftp.c:345 src/ftp.c:517 src/ftp.c:747 src/ftp.c:843 src/ftp.c:902
+#: src/ftp.c:963 src/ftp.c:1055 src/ftp.c:1105
 msgid "Write failed, closing control connection.\n"
 msgstr "Kirjutamine ebaõnnestus, sulgen juhtühenduse.\n"
 
-#: src/ftp.c:348
+#: src/ftp.c:351
 msgid "The server refuses login.\n"
 msgstr "Server ei luba meldida.\n"
 
-#: src/ftp.c:354
+#: src/ftp.c:357
 msgid "Login incorrect.\n"
 msgstr "Vigane meldimine.\n"
 
-#: src/ftp.c:360
+#: src/ftp.c:363
 msgid "Logged in!\n"
 msgstr "Melditud!\n"
 
-#: src/ftp.c:382
+#: src/ftp.c:385
 msgid "Server error, can't determine system type.\n"
 msgstr "Viga serveris, ei suuda tuvastada süsteemi tüüpi.\n"
 
-#: src/ftp.c:391 src/ftp.c:835 src/ftp.c:892 src/ftp.c:935
+#: src/ftp.c:394 src/ftp.c:879 src/ftp.c:936 src/ftp.c:979
 msgid "done.    "
 msgstr "tehtud.  "
 
-#: src/ftp.c:456 src/ftp.c:723 src/ftp.c:764 src/ftp.c:1031 src/ftp.c:1079
+#: src/ftp.c:497 src/ftp.c:764 src/ftp.c:805 src/ftp.c:1075 src/ftp.c:1124
 msgid "done.\n"
 msgstr "tehtud.\n"
 
-#: src/ftp.c:483
+#: src/ftp.c:524
 #, c-format
 msgid "Unknown type `%c', closing control connection.\n"
 msgstr "Tundmatu tüüp `%c', sulgen juhtühenduse.\n"
 
-#: src/ftp.c:495
+#: src/ftp.c:536
 msgid "done.  "
 msgstr "tehtud.  "
 
-#: src/ftp.c:501
+#: src/ftp.c:542
 msgid "==> CWD not needed.\n"
 msgstr "==> CWD pole vajalik.\n"
 
-#: src/ftp.c:712
+#: src/ftp.c:753
 #, c-format
 msgid ""
 "No such directory %s.\n"
@@ -434,37 +434,37 @@ msgstr ""
 "Kataloogi %s pole.\n"
 "\n"
 
-#: src/ftp.c:733
+#: src/ftp.c:774
 msgid "==> CWD not required.\n"
 msgstr "==> CWD ei ole kohustuslik.\n"
 
-#: src/ftp.c:772
+#: src/ftp.c:813
 msgid "File has already been retrieved.\n"
 msgstr "Fail on juba olemas, ei tõmba.\n"
 
-#: src/ftp.c:805
+#: src/ftp.c:849
 msgid "Cannot initiate PASV transfer.\n"
 msgstr "Ei saa algatada PASV ülekannet.\n"
 
-#: src/ftp.c:809
+#: src/ftp.c:853
 msgid "Cannot parse PASV response.\n"
 msgstr "Ei suuda analüüsida PASV vastust.\n"
 
-#: src/ftp.c:826
+#: src/ftp.c:870
 #, c-format
 msgid "couldn't connect to %s port %d: %s\n"
 msgstr "ei õnnestu luua ühendust serveriga %s port %d: %s\n"
 
-#: src/ftp.c:874
+#: src/ftp.c:918
 #, c-format
 msgid "Bind error (%s).\n"
 msgstr "Bind operatsiooni viga (%s).\n"
 
-#: src/ftp.c:880
+#: src/ftp.c:924
 msgid "Invalid PORT.\n"
 msgstr "Vale PORT.\n"
 
-#: src/ftp.c:926
+#: src/ftp.c:970
 msgid ""
 "\n"
 "REST failed, starting from scratch.\n"
@@ -472,17 +472,17 @@ msgstr ""
 "\n"
 "REST ebaõnnestus, alustan algusest.\n"
 
-#: src/ftp.c:967
+#: src/ftp.c:1011
 #, c-format
 msgid "File %s exists.\n"
 msgstr "Fail %s on olemas.\n"
 
-#: src/ftp.c:973
+#: src/ftp.c:1017
 #, c-format
 msgid "No such file %s.\n"
 msgstr "Faili %s pole.\n"
 
-#: src/ftp.c:1019
+#: src/ftp.c:1063
 #, c-format
 msgid ""
 "No such file %s.\n"
@@ -491,7 +491,7 @@ msgstr ""
 "Faili %s pole.\n"
 "\n"
 
-#: src/ftp.c:1068
+#: src/ftp.c:1113
 #, c-format
 msgid ""
 "No such file or directory %s.\n"
@@ -500,40 +500,40 @@ msgstr ""
 "Faili või kataloogi %s pole.\n"
 "\n"
 
-#: src/ftp.c:1228 src/http.c:2910
+#: src/ftp.c:1273 src/http.c:2907
 #, c-format
 msgid "%s has sprung into existence.\n"
 msgstr "%s ilmus.\n"
 
-#: src/ftp.c:1280
+#: src/ftp.c:1325
 #, c-format
 msgid "%s: %s, closing control connection.\n"
 msgstr "%s: %s, sulgen juhtühenduse.\n"
 
-#: src/ftp.c:1292
+#: src/ftp.c:1337
 #, c-format
 msgid "%s (%s) - Data connection: %s; "
 msgstr "%s (%s) - andme ühendus: %s; "
 
-#: src/ftp.c:1307
+#: src/ftp.c:1352
 msgid "Control connection closed.\n"
 msgstr "Juhtühendus suletud.\n"
 
-#: src/ftp.c:1325
+#: src/ftp.c:1370
 msgid "Data transfer aborted.\n"
 msgstr "Andmete ülekanne katkestatud.\n"
 
-#: src/ftp.c:1437
+#: src/ftp.c:1575
 #, c-format
 msgid "File %s already there; not retrieving.\n"
 msgstr "Fail %s on juba olemas, ei tõmba.\n"
 
-#: src/ftp.c:1518 src/http.c:3077
+#: src/ftp.c:1656 src/http.c:3074
 #, c-format
 msgid "(try:%2d)"
 msgstr "(katse:%2d)"
 
-#: src/ftp.c:1599 src/http.c:3459
+#: src/ftp.c:1737 src/http.c:3456
 #, c-format
 msgid ""
 "%s (%s) - written to stdout %s[%s]\n"
@@ -542,7 +542,7 @@ msgstr ""
 "%s (%s) - kirjutatud standardväljundissse %s[%s]\n"
 "\n"
 
-#: src/ftp.c:1600 src/http.c:3460
+#: src/ftp.c:1738 src/http.c:3457
 #, c-format
 msgid ""
 "%s (%s) - %s saved [%s]\n"
@@ -551,33 +551,33 @@ msgstr ""
 "%s (%s) - %s salvestatud [%s]\n"
 "\n"
 
-#: src/ftp.c:1658 src/main.c:1637 src/recur.c:433 src/recur.c:641
+#: src/ftp.c:1796 src/main.c:1640 src/recur.c:433 src/recur.c:650
 #: src/retr.c:1095
 #, c-format
 msgid "Removing %s.\n"
 msgstr "Kustutan %s.\n"
 
-#: src/ftp.c:1704
+#: src/ftp.c:1842
 #, c-format
 msgid "Using %s as listing tmp file.\n"
 msgstr "Kasutan %s ajutise listingu failina.\n"
 
-#: src/ftp.c:1721
+#: src/ftp.c:1859
 #, c-format
 msgid "Removed %s.\n"
 msgstr "Kustutatud %s.\n"
 
-#: src/ftp.c:1758
+#: src/ftp.c:1896
 #, c-format
 msgid "Recursion depth %d exceeded max. depth %d.\n"
 msgstr "Rekursiooni sügavus %d ületab maksimum sügavust %d.\n"
 
-#: src/ftp.c:1828
+#: src/ftp.c:1966
 #, c-format
 msgid "Remote file no newer than local file %s -- not retrieving.\n"
 msgstr "Kauge fail ei ole uuem, kui lokaalne fail %s -- ei lae.\n"
 
-#: src/ftp.c:1835
+#: src/ftp.c:1973
 #, c-format
 msgid ""
 "Remote file is newer than local file %s -- retrieving.\n"
@@ -586,7 +586,7 @@ msgstr ""
 "Kauge fail on uuem kui lokaalne fail %s -- laen uuesti.\n"
 "\n"
 
-#: src/ftp.c:1842
+#: src/ftp.c:1980
 #, c-format
 msgid ""
 "The sizes do not match (local %s) -- retrieving.\n"
@@ -595,11 +595,11 @@ msgstr ""
 "Suurused ei klapi (lokaalne %s) -- laen uuesti.\n"
 "\n"
 
-#: src/ftp.c:1860
+#: src/ftp.c:1998
 msgid "Invalid name of the symlink, skipping.\n"
 msgstr "Vigane nimeviide, jätan vahele.\n"
 
-#: src/ftp.c:1877
+#: src/ftp.c:2015
 #, c-format
 msgid ""
 "Already have correct symlink %s -> %s\n"
@@ -608,62 +608,62 @@ msgstr ""
 "Korrektne nimeviide on juba olemas %s -> %s\n"
 "\n"
 
-#: src/ftp.c:1886
+#: src/ftp.c:2024
 #, c-format
 msgid "Creating symlink %s -> %s\n"
 msgstr "Loon nimeviite %s -> %s\n"
 
-#: src/ftp.c:1896
+#: src/ftp.c:2034
 #, c-format
 msgid "Symlinks not supported, skipping symlink %s.\n"
 msgstr "Ei toeta nimeviiteid, jätan nimeviite %s vahele.\n"
 
-#: src/ftp.c:1908
+#: src/ftp.c:2046
 #, c-format
 msgid "Skipping directory %s.\n"
 msgstr "Jätan kataloogi %s vahele.\n"
 
-#: src/ftp.c:1917
+#: src/ftp.c:2055
 #, c-format
 msgid "%s: unknown/unsupported file type.\n"
 msgstr "%s: tundmatu faili tüüp.\n"
 
-#: src/ftp.c:1957
+#: src/ftp.c:2095
 #, c-format
 msgid "%s: corrupt time-stamp.\n"
 msgstr "%s: vigane ajatempel.\n"
 
-#: src/ftp.c:1981
+#: src/ftp.c:2119
 #, c-format
 msgid "Will not retrieve dirs since depth is %d (max %d).\n"
 msgstr "Ei tõmba katalooge, kuna sügavus on %d (maks. %d).\n"
 
-#: src/ftp.c:2031
+#: src/ftp.c:2169
 #, c-format
 msgid "Not descending to %s as it is excluded/not-included.\n"
 msgstr "Jätame %s vahele, ta on välistatud või pole kaasatud.\n"
 
-#: src/ftp.c:2097 src/ftp.c:2111
+#: src/ftp.c:2235 src/ftp.c:2249
 #, c-format
 msgid "Rejecting %s.\n"
 msgstr "Keelame %s.\n"
 
-#: src/ftp.c:2134
+#: src/ftp.c:2272
 #, c-format
 msgid "Error matching %s against %s: %s\n"
 msgstr "Viga %s otsimisel %s: %s\n"
 
-#: src/ftp.c:2190
+#: src/ftp.c:2328
 #, c-format
 msgid "No matches on pattern %s.\n"
 msgstr "Jokker %s ei anna midagi.\n"
 
-#: src/ftp.c:2261
+#: src/ftp.c:2399
 #, c-format
 msgid "Wrote HTML-ized index to %s [%s].\n"
 msgstr "Kirjutasin HTML-iseeritud indeksi faili %s [%s].\n"
 
-#: src/ftp.c:2266
+#: src/ftp.c:2404
 #, c-format
 msgid "Wrote HTML-ized index to %s.\n"
 msgstr "Kirjutasin HTML-iseeritud indeksi faili %s.\n"
@@ -674,92 +674,92 @@ msgid "ERROR: Cannot open directory %s.\n"
 msgstr "VIGA: Kataloogi %s ei saa avada.\n"
 
 #: src/gnutls.c:142
-#, fuzzy, c-format
+#, c-format
 msgid "ERROR: Failed to open cert %s: (%d).\n"
-msgstr "VIGA: Kataloogi %s ei saa avada.\n"
+msgstr "VIGA: Ei õnnestu avada sertifikaati %s: (%d).\n"
 
 #: src/gnutls.c:174
 msgid "ERROR: GnuTLS requires the key and the cert to be of the same type.\n"
 msgstr "VIGA: GnuTLS nõuab et võti ja sertifikaat oleks sama tüüpi.\n"
 
-#: src/gnutls.c:584 src/openssl.c:566
+#: src/gnutls.c:590 src/openssl.c:573
 msgid "ERROR"
 msgstr "VIGA"
 
-#: src/gnutls.c:584 src/openssl.c:566
+#: src/gnutls.c:590 src/openssl.c:573
 msgid "WARNING"
 msgstr "HOIATUS"
 
-#: src/gnutls.c:590 src/openssl.c:575
+#: src/gnutls.c:596 src/openssl.c:582
 #, c-format
 msgid "%s: No certificate presented by %s.\n"
 msgstr "%s: %s ei esitanud sertifikaati.\n"
 
-#: src/gnutls.c:596
+#: src/gnutls.c:602
 #, c-format
 msgid "%s: The certificate of %s is not trusted.\n"
 msgstr "%s: Sertifikaat %s ei ole usaldatav.\n"
 
-#: src/gnutls.c:597
+#: src/gnutls.c:603
 #, c-format
 msgid "%s: The certificate of %s hasn't got a known issuer.\n"
 msgstr "%s: %s sertifikaat ei oma tuntud väljastajat.\n"
 
-#: src/gnutls.c:598
+#: src/gnutls.c:604
 #, c-format
 msgid "%s: The certificate of %s has been revoked.\n"
 msgstr "%s: Sertifikaat %s on kuulutatud kehtetuks.\n"
 
-#: src/gnutls.c:599
-#, fuzzy, c-format
+#: src/gnutls.c:605
+#, c-format
 msgid "%s: The certificate signer of %s was not a CA.\n"
-msgstr "%s: Sertifikaat %s ei ole usaldatav.\n"
+msgstr "%s: Sertifikaadi %s allkirjastaja ei ole CA.\n"
 
-#: src/gnutls.c:600
-#, fuzzy, c-format
+#: src/gnutls.c:606
+#, c-format
 msgid "%s: The certificate of %s was signed using an insecure algorithm.\n"
-msgstr "%s: %s sertifikaat ei oma tuntud väljastajat.\n"
+msgstr "%s: %s sertifikaat on allkirjastatud ebaturvalise algoritmiga.\n"
 
-#: src/gnutls.c:601
-#, fuzzy, c-format
+#: src/gnutls.c:607
+#, c-format
 msgid "%s: The certificate of %s is not yet activated.\n"
-msgstr "%s: Sertifikaat %s ei ole usaldatav.\n"
+msgstr "%s: %s sertifikaat ei ole veel aktiivne.\n"
 
-#: src/gnutls.c:602
-#, fuzzy, c-format
+#: src/gnutls.c:608
+#, c-format
 msgid "%s: The certificate of %s has expired.\n"
-msgstr "%s: Sertifikaat %s on kuulutatud kehtetuks.\n"
+msgstr "%s: %s sertifikaat on aegunud.\n"
 
-#: src/gnutls.c:613
+#: src/gnutls.c:619
 #, c-format
 msgid "Error initializing X509 certificate: %s\n"
 msgstr "Viga X509 sertifikaadi initsialiseerimisel: %s\n"
 
-#: src/gnutls.c:622
+#: src/gnutls.c:628
 msgid "No certificate found\n"
 msgstr "Sertifikaati pole.\n"
 
-#: src/gnutls.c:629
+#: src/gnutls.c:635
 #, c-format
 msgid "Error parsing certificate: %s\n"
 msgstr "Viga sertifikaadi parsimisel: %s\n"
 
-#: src/gnutls.c:636
+#: src/gnutls.c:642
 msgid "The certificate has not yet been activated\n"
 msgstr "Sertifikaat pole veel kehtiv\n"
 
-#: src/gnutls.c:641
+#: src/gnutls.c:647
 msgid "The certificate has expired\n"
 msgstr "Sertifikaat on aegunud\n"
 
-#: src/gnutls.c:647
+#: src/gnutls.c:653
 #, c-format
 msgid "The certificate's owner does not match hostname %s\n"
 msgstr "Sertifikaadi omanik ei sobi klapi hosti nimega %s\n"
 
-#: src/gnutls.c:656
+#: src/gnutls.c:662
 msgid "Certificate must be X.509\n"
-msgstr ""
+msgstr "Sertifikaat peab olema X.509\n"
 
 #: src/host.c:361
 msgid "Unknown host"
@@ -778,12 +778,12 @@ msgstr "ebaõnnestus: Masinal pole IPv4/IPv6 aadresse.\n"
 msgid "failed: timed out.\n"
 msgstr "ebaõnnestus: aegus.\n"
 
-#: src/html-url.c:299
+#: src/html-url.c:303
 #, c-format
 msgid "%s: Cannot resolve incomplete link %s.\n"
 msgstr "%s: Ei õnnestu lahendada poolikut viidet %s.\n"
 
-#: src/html-url.c:829
+#: src/html-url.c:835
 #, c-format
 msgid "%s: Invalid URL %s: %s\n"
 msgstr "%s: Vigane URL %s: %s\n"
@@ -797,7 +797,7 @@ msgstr "HTTP päringu kirjutamine ebaõnnestus: %s.\n"
 msgid "No headers, assuming HTTP/0.9"
 msgstr "Päiseid pole, eeldan HTTP/0.9"
 
-#: src/http.c:1477
+#: src/http.c:1475
 #, c-format
 msgid ""
 "File %s already there; not retrieving.\n"
@@ -806,80 +806,80 @@ msgstr ""
 "Fail %s on juba olemas, ei tõmba.\n"
 "\n"
 
-#: src/http.c:1729
+#: src/http.c:1727
 msgid "Disabling SSL due to encountered errors.\n"
 msgstr "Kuna tekkis vigu, siis blokeerin SSLi.\n"
 
-#: src/http.c:1855
+#: src/http.c:1853
 #, c-format
 msgid "BODY data file %s missing: %s\n"
 msgstr "BODY andmete failis %s puudub: %s\n"
 
-#: src/http.c:1957
+#: src/http.c:1955
 #, c-format
 msgid "Reusing existing connection to [%s]:%d.\n"
 msgstr "Kasutan ühendust serveriga [%s]:%d.\n"
 
-#: src/http.c:1962
+#: src/http.c:1960
 #, c-format
 msgid "Reusing existing connection to %s:%d.\n"
 msgstr "Kasutan ühendust serveriga %s:%d.\n"
 
-#: src/http.c:2035
+#: src/http.c:2032
 #, c-format
 msgid "Failed reading proxy response: %s\n"
 msgstr "Proksi vastuse lugemine ebaõnnestus: %s\n"
 
-#: src/http.c:2055 src/http.c:2222 src/http.c:3255
+#: src/http.c:2052 src/http.c:2219 src/http.c:3252
 #, c-format
 msgid "%s ERROR %d: %s.\n"
 msgstr "%s VIGA %d: %s.\n"
 
-#: src/http.c:2057 src/http.c:2224 src/http.c:2556
+#: src/http.c:2054 src/http.c:2221 src/http.c:2553
 msgid "Malformed status line"
 msgstr "Katkine staatuse rida"
 
-#: src/http.c:2068
+#: src/http.c:2065
 #, c-format
 msgid "Proxy tunneling failed: %s"
 msgstr "Proksi tunneldamine ebaõnnestus: %s"
 
-#: src/http.c:2162
+#: src/http.c:2159
 #, c-format
 msgid "%s request sent, awaiting response... "
 msgstr "%s päring saadetud, ootan vastust... "
 
-#: src/http.c:2197
+#: src/http.c:2194
 msgid "No data received.\n"
 msgstr "Andmeid ei saanudki.\n"
 
-#: src/http.c:2204
+#: src/http.c:2201
 #, c-format
 msgid "Read error (%s) in headers.\n"
 msgstr "Päiste lugemise viga (%s).\n"
 
-#: src/http.c:2376
+#: src/http.c:2373
 msgid "Unknown authentication scheme.\n"
 msgstr "Tundmatu autentimis skeem.\n"
 
-#: src/http.c:2558
+#: src/http.c:2555
 msgid "(no description)"
 msgstr "(kirjeldus puudub)"
 
-#: src/http.c:2617
+#: src/http.c:2614
 #, c-format
 msgid "Location: %s%s\n"
 msgstr "Asukoht: %s%s\n"
 
-#: src/http.c:2618 src/http.c:2789
+#: src/http.c:2615 src/http.c:2786
 msgid "unspecified"
 msgstr "määramata"
 
-#: src/http.c:2619
+#: src/http.c:2616
 msgid " [following]"
 msgstr " [järgnev]"
 
-#: src/http.c:2734
+#: src/http.c:2731
 msgid ""
 "\n"
 "    The file is already fully retrieved; nothing to do.\n"
@@ -889,77 +889,75 @@ msgstr ""
 "    Fail on juba täielikult kohal; rohkem ei saa midagi teha.\n"
 "\n"
 
-#: src/http.c:2769
+#: src/http.c:2766
 msgid "Length: "
 msgstr "Pikkus: "
 
-#: src/http.c:2789
+#: src/http.c:2786
 msgid "ignored"
 msgstr "ignoreerin"
 
-#: src/http.c:2933
+#: src/http.c:2930
 #, c-format
 msgid "Saving to: %s\n"
 msgstr "Salvestan: %s\n"
 
-#: src/http.c:3004
+#: src/http.c:3001
 msgid "Warning: wildcards not supported in HTTP.\n"
 msgstr "Hoiatus: HTTP ei toeta jokkereid.\n"
 
-#: src/http.c:3066
+#: src/http.c:3063
 msgid "Spider mode enabled. Check if remote file exists.\n"
-msgstr ""
-"Ämbliku režiim on sisse lülitatud. Kontrollige et mittelokaalne fail on "
-"olemas.\n"
+msgstr "Ämbliku režiim on sisse lülitatud. Kontrollige et mittelokaalne fail on olemas.\n"
 
-#: src/http.c:3153
+#: src/http.c:3150
 #, c-format
 msgid "Cannot write to %s (%s).\n"
 msgstr "Ei saa kirjutada faili %s (%s).\n"
 
-#: src/http.c:3164
+#: src/http.c:3161
 msgid "Required attribute missing from Header received.\n"
-msgstr ""
+msgstr "Laekunud päises puudub nõutud atribuut.\n"
 
-#: src/http.c:3169
+#: src/http.c:3166
 msgid "Username/Password Authentication Failed.\n"
-msgstr ""
+msgstr "Kasutajanimi/Parool autentimine ebaõnnestus.\n"
 
-#: src/http.c:3175
+#: src/http.c:3172
 msgid "Cannot write to WARC file.\n"
 msgstr "Ei saa kirjutada WARC faili.\n"
 
-#: src/http.c:3181
+#: src/http.c:3178
 msgid "Cannot write to temporary WARC file.\n"
 msgstr "Ei saa kirjutada ajutisse WARC faili.\n"
 
-#: src/http.c:3186
+#: src/http.c:3183
 msgid "Unable to establish SSL connection.\n"
 msgstr "SSL ühenduse loomine ei õnnestu.\n"
 
-#: src/http.c:3192
+#: src/http.c:3189
 #, c-format
 msgid "Cannot unlink %s (%s).\n"
 msgstr "Ei saa kustutada %s (%s).\n"
 
-#: src/http.c:3202
+#: src/http.c:3199
 #, c-format
 msgid "ERROR: Redirection (%d) without location.\n"
 msgstr "VIGA: Ümbersuunamine (%d) ilma asukohata.\n"
 
-#: src/http.c:3250
+#: src/http.c:3247
 msgid "Remote file does not exist -- broken link!!!\n"
 msgstr "Mittelokaalset faili pole -- katkine viide!!!\n"
 
-#: src/http.c:3272
+#: src/http.c:3269
 msgid "Last-modified header missing -- time-stamps turned off.\n"
 msgstr "Last-modified päist pole -- ei kasuta ajatempleid.\n"
 
-#: src/http.c:3280
+#: src/http.c:3277
 msgid "Last-modified header invalid -- time-stamp ignored.\n"
 msgstr "Last-modified päis on vigane -- ignoreerin ajatemplit.\n"
 
-#: src/http.c:3310
+#: src/http.c:3307
 #, c-format
 msgid ""
 "Server file no newer than local file %s -- not retrieving.\n"
@@ -968,32 +966,30 @@ msgstr ""
 "Fail serveril ei ole uuem lokaalsest failist %s -- ei lae.\n"
 "\n"
 
-#: src/http.c:3318
+#: src/http.c:3315
 #, c-format
 msgid "The sizes do not match (local %s) -- retrieving.\n"
 msgstr "Suurused ei klapi (lokaalne %s) -- laen uuesti.\n"
 
-#: src/http.c:3327
+#: src/http.c:3324
 msgid "Remote file is newer, retrieving.\n"
 msgstr "Kauge fail on uuem, laen alla.\n"
 
-#: src/http.c:3345
+#: src/http.c:3342
 msgid ""
-"Remote file exists and could contain links to other resources -- "
-"retrieving.\n"
+"Remote file exists and could contain links to other resources -- retrieving.\n"
 "\n"
 msgstr ""
-"Kauge fail on olemas ja võib sisldada viiteid muudele ressurssidele -- "
-"laen.\n"
+"Kauge fail on olemas ja võib sisldada viiteid muudele ressurssidele -- laen.\n"
 "\n"
 
-#: src/http.c:3351
+#: src/http.c:3348
 msgid ""
 "Remote file exists but does not contain any link -- not retrieving.\n"
 "\n"
 msgstr "Kauge fail on olemas, aga ei sisalda viiteid -- ei lae.\n"
 
-#: src/http.c:3360
+#: src/http.c:3357
 msgid ""
 "Remote file exists and could contain further links,\n"
 "but recursion is disabled -- not retrieving.\n"
@@ -1003,7 +999,7 @@ msgstr ""
 "aga rekursioon pole lubatud -- ei lae.\n"
 "\n"
 
-#: src/http.c:3366
+#: src/http.c:3363
 msgid ""
 "Remote file exists.\n"
 "\n"
@@ -1011,12 +1007,12 @@ msgstr ""
 "Kauge fail on olemas.\n"
 "\n"
 
-#: src/http.c:3375
+#: src/http.c:3372
 #, c-format
 msgid "%s URL: %s %2d %s\n"
 msgstr "%s URL: %s %2d %s\n"
 
-#: src/http.c:3423
+#: src/http.c:3420
 #, c-format
 msgid ""
 "%s (%s) - written to stdout %s[%s/%s]\n"
@@ -1025,7 +1021,7 @@ msgstr ""
 "%s (%s) - %s salvestatud [%s/%s]\n"
 "\n"
 
-#: src/http.c:3424
+#: src/http.c:3421
 #, c-format
 msgid ""
 "%s (%s) - %s saved [%s/%s]\n"
@@ -1034,57 +1030,57 @@ msgstr ""
 "%s (%s) - %s salvestatud [%s/%s]\n"
 "\n"
 
-#: src/http.c:3485
+#: src/http.c:3482
 #, c-format
 msgid "%s (%s) - Connection closed at byte %s. "
 msgstr "%s (%s) - Ühendus suletud baidil %s. "
 
-#: src/http.c:3508
+#: src/http.c:3505
 #, c-format
 msgid "%s (%s) - Read error at byte %s (%s)."
 msgstr "%s (%s) - Lugemise viga baidil %s (%s)."
 
-#: src/http.c:3517
+#: src/http.c:3514
 #, c-format
 msgid "%s (%s) - Read error at byte %s/%s (%s). "
 msgstr "%s (%s) - Lugemise viga baidil %s/%s (%s). "
 
-#: src/http.c:3749
+#: src/http.c:3746
 #, c-format
 msgid "Unsupported quality of protection '%s'.\n"
 msgstr "Mittetoetatud kaitse kvaliteet '%s'.\n"
 
-#: src/http.c:3755
+#: src/http.c:3752
 #, c-format
 msgid "Unsupported algorithm '%s'.\n"
 msgstr "Mittetoetatud algoritm '%s'.\n"
 
-#: src/init.c:480
+#: src/init.c:483
 #, c-format
 msgid "%s: WGETRC points to %s, which doesn't exist.\n"
 msgstr "%s: WGETRC viitab %s, mida pole olemas.\n"
 
-#: src/init.c:585 src/netrc.c:242
+#: src/init.c:588 src/netrc.c:242
 #, c-format
 msgid "%s: Cannot read %s (%s).\n"
 msgstr "%s: %s ei saa lugeda (%s).\n"
 
-#: src/init.c:602
+#: src/init.c:605
 #, c-format
 msgid "%s: Error in %s at line %d.\n"
 msgstr "%s: Viga %s's real %d.\n"
 
-#: src/init.c:608
+#: src/init.c:611
 #, c-format
 msgid "%s: Syntax error in %s at line %d.\n"
 msgstr "%s: Süntaksi viga %s's real %d.\n"
 
-#: src/init.c:613
+#: src/init.c:616
 #, c-format
 msgid "%s: Unknown command %s in %s at line %d.\n"
 msgstr "%s: Tundmatu käsklus %s, failis %s real %d.\n"
 
-#: src/init.c:650
+#: src/init.c:653
 #, c-format
 msgid ""
 "Parsing system wgetrc file (env SYSTEM_WGETRC) failed.  Please check\n"
@@ -1094,7 +1090,7 @@ msgstr ""
 "Süsteemse wgetrc faili (env SYSTEM_WGETRC) parsimine ebaõnnestus. Palun\n"
 "kontrollige '%s', või määrake võtmega --config teine fail.\n"
 
-#: src/init.c:665
+#: src/init.c:668
 #, c-format
 msgid ""
 "Parsing system wgetrc file failed.  Please check\n"
@@ -1104,58 +1100,58 @@ msgstr ""
 "Süsteemse wgetrc faili parsimine ebaõnnestus. Palun\\n\"\n"
 "\"kontrollige '%s', või määrake võtmega --config teine fail.\n"
 
-#: src/init.c:681
+#: src/init.c:684
 #, c-format
 msgid "%s: Warning: Both system and user wgetrc point to %s.\n"
 msgstr "%s: Hoiatus: Nii süsteemne kui kasutaja wgetrc viitab %s.\n"
 
-#: src/init.c:871
+#: src/init.c:874
 #, c-format
 msgid "%s: Invalid --execute command %s\n"
 msgstr "%s: Vigane --execute käsklus %s\n"
 
-#: src/init.c:916
+#: src/init.c:919
 #, c-format
 msgid "%s: %s: Invalid boolean %s; use `on' or `off'.\n"
 msgstr "%s: %s: Vigane tõeväärtus %s; kasutage `on' või `off'.\n"
 
-#: src/init.c:933
+#: src/init.c:936
 #, c-format
 msgid "%s: %s: Invalid number %s.\n"
 msgstr "%s %s: Vigane number %s.\n"
 
-#: src/init.c:1155 src/init.c:1174
+#: src/init.c:1158 src/init.c:1177
 #, c-format
 msgid "%s: %s: Invalid byte value %s\n"
 msgstr "%s: %s: Vigane baidi väärtus %s\n"
 
-#: src/init.c:1199
+#: src/init.c:1202
 #, c-format
 msgid "%s: %s: Invalid time period %s\n"
 msgstr "%s: %s: Vigane aja periood %s\n"
 
-#: src/init.c:1253 src/init.c:1364 src/init.c:1420 src/init.c:1484
-#: src/init.c:1500 src/init.c:1525
+#: src/init.c:1256 src/init.c:1367 src/init.c:1423 src/init.c:1487
+#: src/init.c:1504 src/init.c:1529
 #, c-format
 msgid "%s: %s: Invalid value %s.\n"
 msgstr "%s: %s: Vigane väärtus %s.\n"
 
-#: src/init.c:1290
+#: src/init.c:1293
 #, c-format
 msgid "%s: %s: Invalid header %s.\n"
 msgstr "%s: %s: Vigane päis %s.\n"
 
-#: src/init.c:1311
+#: src/init.c:1314
 #, c-format
 msgid "%s: %s: Invalid WARC header %s.\n"
 msgstr "%s: %s: Vigane WARC päis %s.\n"
 
-#: src/init.c:1377
+#: src/init.c:1380
 #, c-format
 msgid "%s: %s: Invalid progress type %s.\n"
 msgstr "%s: %s: Vigane edenemise tüüp %s.\n"
 
-#: src/init.c:1457
+#: src/init.c:1460
 #, c-format
 msgid ""
 "%s: %s: Invalid restriction %s,\n"
@@ -1220,92 +1216,84 @@ msgstr ""
 msgid "%s: %s; disabling logging.\n"
 msgstr "%s: %s; blokeerin logimise.\n"
 
-#: src/main.c:419
+#: src/main.c:420
 #, c-format
 msgid "Usage: %s [OPTION]... [URL]...\n"
 msgstr "Kasuta: %s [VÕTI]... [URL]...\n"
 
-#: src/main.c:431
+#: src/main.c:432
 msgid ""
 "Mandatory arguments to long options are mandatory for short options too.\n"
 "\n"
 msgstr ""
-"Kohustuslikud argumendid pikkadele võtmetele on kohustuslikud ka "
-"lühikestele.\n"
+"Kohustuslikud argumendid pikkadele võtmetele on kohustuslikud ka lühikestele.\n"
 "\n"
 
-#: src/main.c:433
+#: src/main.c:434
 msgid "Startup:\n"
 msgstr "Start:\n"
 
-#: src/main.c:435
+#: src/main.c:436
 msgid "  -V,  --version           display the version of Wget and exit.\n"
 msgstr "  -V,  --version           näita Wget versioon ja lõpeta töö.\n"
 
-#: src/main.c:437
+#: src/main.c:438
 msgid "  -h,  --help              print this help.\n"
 msgstr "  -h,  --help              näita abiinfot.\n"
 
-#: src/main.c:439
+#: src/main.c:440
 msgid "  -b,  --background        go to background after startup.\n"
 msgstr "  -b,  --background        tööta taustal.\n"
 
-#: src/main.c:441
+#: src/main.c:442
 msgid "  -e,  --execute=COMMAND   execute a `.wgetrc'-style command.\n"
 msgstr "  -e,  --execute=KÄSKLUS   täida `.wgetrc'-stiilis käsklus.\n"
 
-#: src/main.c:445
+#: src/main.c:446
 msgid "Logging and input file:\n"
 msgstr "Logimine ja sisendfail:\n"
 
-#: src/main.c:447
+#: src/main.c:448
 msgid "  -o,  --output-file=FILE    log messages to FILE.\n"
 msgstr "  -o,  --output-file=FAIL     logi teated faili FAIL.\n"
 
-#: src/main.c:449
+#: src/main.c:450
 msgid "  -a,  --append-output=FILE  append messages to FILE.\n"
 msgstr "  -a,  --append-output=FAIL   lisa teated faili FAIL.\n"
 
-#: src/main.c:452
+#: src/main.c:453
 msgid "  -d,  --debug               print lots of debugging information.\n"
 msgstr "  -d,  --debug                väljasta silumise teated.\n"
 
-#: src/main.c:456
+#: src/main.c:457
 msgid "       --wdebug              print Watt-32 debug output.\n"
 msgstr "       --wdebug                väljasta Watt-32 silumise teated.\n"
 
-#: src/main.c:459
+#: src/main.c:460
 msgid "  -q,  --quiet               quiet (no output).\n"
 msgstr "  -q,  --quiet                vaikselt.\n"
 
-#: src/main.c:461
+#: src/main.c:462
 msgid "  -v,  --verbose             be verbose (this is the default).\n"
 msgstr "  -v,  --verbose              lobise (see on vaikimisi).\n"
 
-#: src/main.c:463
-msgid ""
-"  -nv, --no-verbose          turn off verboseness, without being quiet.\n"
-msgstr ""
-"  -nv, --non-verbose          keela lobisemine, luba asjalikud teated.\n"
+#: src/main.c:464
+msgid "  -nv, --no-verbose          turn off verboseness, without being quiet.\n"
+msgstr "  -nv, --non-verbose          keela lobisemine, luba asjalikud teated.\n"
 
-#: src/main.c:465
-msgid ""
-"       --report-speed=TYPE   Output bandwidth as TYPE.  TYPE can be bits.\n"
-msgstr ""
-"       --report-speed=TÜÜP   Läbilaske väljundi tüüp.  TÜÜP võib olla "
-"bitid.\n"
+#: src/main.c:466
+msgid "       --report-speed=TYPE   Output bandwidth as TYPE.  TYPE can be bits.\n"
+msgstr "       --report-speed=TÜÜP   Läbilaske väljundi tüüp.  TÜÜP võib olla bitid.\n"
 
-#: src/main.c:467
-msgid ""
-"  -i,  --input-file=FILE     download URLs found in local or external FILE.\n"
-msgstr ""
-"  -i,  --input-file=FAIL      loe URLid [mitte]lokaalsest failist FAIL.\n"
+#: src/main.c:468
+msgid "  -i,  --input-file=FILE     download URLs found in local or external FILE.\n"
+msgstr "  -i,  --input-file=FAIL      loe URLid [mitte]lokaalsest failist FAIL.\n"
 
-#: src/main.c:469
+#: src/main.c:470
 msgid "  -F,  --force-html          treat input file as HTML.\n"
 msgstr "  -F,  --force-html           käsitle sisendfaili HTMLina.\n"
 
-#: src/main.c:471
+#: src/main.c:472
 msgid ""
 "  -B,  --base=URL            resolves HTML input-file links (-i -F)\n"
 "                             relative to URL.\n"
@@ -1313,30 +1301,27 @@ msgstr ""
 "  -B,  --base=URL            lahendab URL suhtelised HTML sisend-faili\n"
 "                             viited (-i -F).\n"
 
-#: src/main.c:474
+#: src/main.c:475
 msgid "       --config=FILE         Specify config file to use.\n"
 msgstr "       --config=FAIL         Määra seadistuste fail.\n"
 
-#: src/main.c:478
+#: src/main.c:479
 msgid "Download:\n"
 msgstr "Allalaadimine:\n"
 
-#: src/main.c:480
-msgid ""
-"  -t,  --tries=NUMBER            set number of retries to NUMBER (0 "
-"unlimits).\n"
+#: src/main.c:481
+msgid "  -t,  --tries=NUMBER            set number of retries to NUMBER (0 unlimits).\n"
 msgstr "  -t,  --tries=NUMBER           katsete arvuks NUMBER (0 piiramata).\n"
 
-#: src/main.c:482
+#: src/main.c:483
 msgid "       --retry-connrefused       retry even if connection is refused.\n"
-msgstr ""
-"       --retry-connrefused      korda isegi kui ühendusest keeldutakse.\n"
+msgstr "       --retry-connrefused      korda isegi kui ühendusest keeldutakse.\n"
 
-#: src/main.c:484
+#: src/main.c:485
 msgid "  -O,  --output-document=FILE    write documents to FILE.\n"
 msgstr "  -O   --output-document=FAIL   kirjuta dokumendid faili FAIL.\n"
 
-#: src/main.c:486
+#: src/main.c:487
 msgid ""
 "  -nc, --no-clobber              skip downloads that would download to\n"
 "                                 existing files (overwriting them).\n"
@@ -1344,25 +1329,21 @@ msgstr ""
 "  -nc, --no-clobber              ära lae faile, miks kirjutaks olemasolevad\n"
 "                                 failid üle.\n"
 
-#: src/main.c:489
-msgid ""
-"  -c,  --continue                resume getting a partially-downloaded "
-"file.\n"
-msgstr ""
-"  -c,  --continue               jätka olemasoleva faili allalaadimist.\n"
+#: src/main.c:490
+msgid "  -c,  --continue                resume getting a partially-downloaded file.\n"
+msgstr "  -c,  --continue               jätka olemasoleva faili allalaadimist.\n"
 
-#: src/main.c:491
+#: src/main.c:492
 msgid "       --progress=TYPE           select progress gauge type.\n"
 msgstr "       --progress=TÜÜP          vali progressi indikaatori tüüp\n"
 
-#: src/main.c:493
+#: src/main.c:494
 msgid ""
 "  -N,  --timestamping            don't re-retrieve files unless newer than\n"
 "                                 local.\n"
-msgstr ""
-"  -N,  --timestamping           ära tõmba vanemaid faile kui lokaalsed.\n"
+msgstr "  -N,  --timestamping           ära tõmba vanemaid faile kui lokaalsed.\n"
 
-#: src/main.c:496
+#: src/main.c:497
 msgid ""
 "  --no-use-server-timestamps     don't set the local file's timestamp by\n"
 "                                 the one on the server.\n"
@@ -1370,188 +1351,159 @@ msgstr ""
 "  --no-use-server-timestamps     ära sea lokaalsele failile serveris oleva\n"
 "                                 faili aega.\n"
 
-#: src/main.c:499
+#: src/main.c:500
 msgid "  -S,  --server-response         print server response.\n"
 msgstr "  -S,  --server-response         trüki serveri vastused.\n"
 
-#: src/main.c:501
+#: src/main.c:502
 msgid "       --spider                  don't download anything.\n"
 msgstr "       --spider                  ara tõmba midagi.\n"
 
-#: src/main.c:503
+#: src/main.c:504
 msgid "  -T,  --timeout=SECONDS         set all timeout values to SECONDS.\n"
 msgstr "  -T,  --timeout=SEK             kõik taimoutid on SEKUNDEID.\n"
 
-#: src/main.c:505
+#: src/main.c:506
 msgid "       --dns-timeout=SECS        set the DNS lookup timeout to SECS.\n"
 msgstr "       --dns-timeout=SEK         nime lahenduse aegumine on SEK.\n"
 
-#: src/main.c:507
+#: src/main.c:508
 msgid "       --connect-timeout=SECS    set the connect timeout to SECS.\n"
 msgstr "       --connect-timeout=SEK     ühenduse loomise aegumine on SEK.\n"
 
-#: src/main.c:509
+#: src/main.c:510
 msgid "       --read-timeout=SECS       set the read timeout to SECS.\n"
 msgstr "       --read-timeout=SEK        lugemise aegumine on SEK.\n"
 
-#: src/main.c:511
+#: src/main.c:512
 msgid "  -w,  --wait=SECONDS            wait SECONDS between retrievals.\n"
 msgstr "  -w,  --wait=SEKUNDEID          oota SEKUNDEID päringute vahel.\n"
 
-#: src/main.c:513
-msgid ""
-"       --waitretry=SECONDS       wait 1..SECONDS between retries of a "
-"retrieval.\n"
-msgstr ""
-"       --waitretry=SEKUNDEID     oota 1..SEKUNDIT laadimise katsete vahel.\n"
+#: src/main.c:514
+msgid "       --waitretry=SECONDS       wait 1..SECONDS between retries of a retrieval.\n"
+msgstr "       --waitretry=SEKUNDEID     oota 1..SEKUNDIT laadimise katsete vahel.\n"
 
-#: src/main.c:515
-msgid ""
-"       --random-wait             wait from 0.5*WAIT...1.5*WAIT secs between "
-"retrievals.\n"
-msgstr ""
-"       --random-wait             oota korduste vahel "
-"0.5*SEKUNDIT..1.5*SEKUNDIT.\n"
+#: src/main.c:516
+msgid "       --random-wait             wait from 0.5*WAIT...1.5*WAIT secs between retrievals.\n"
+msgstr "       --random-wait             oota korduste vahel 0.5*SEKUNDIT..1.5*SEKUNDIT.\n"
 
-#: src/main.c:517
+#: src/main.c:518
 msgid "       --no-proxy                explicitly turn off proxy.\n"
 msgstr "       --no-proxy                proksit ei kasuta.\n"
 
-#: src/main.c:519
+#: src/main.c:520
 msgid "  -Q,  --quota=NUMBER            set retrieval quota to NUMBER.\n"
 msgstr "  -Q,  --quota=NUMBER           kasuta kvooti NUMBER.\n"
 
-#: src/main.c:521
-msgid ""
-"       --bind-address=ADDRESS    bind to ADDRESS (hostname or IP) on local "
-"host.\n"
+#: src/main.c:522
+msgid "       --bind-address=ADDRESS    bind to ADDRESS (hostname or IP) on local host.\n"
 msgstr "       --bind-address=AADRESS   kasuta kohaliku masina nime või IP.\n"
 
-#: src/main.c:523
+#: src/main.c:524
 msgid "       --limit-rate=RATE         limit download rate to RATE.\n"
 msgstr "       --limit-rate=KIIRUS      piira allalaadimise kiirust.\n"
 
-#: src/main.c:525
+#: src/main.c:526
 msgid "       --no-dns-cache            disable caching DNS lookups.\n"
 msgstr "       --no-dns-cache            blokkeri nimeserveri puhver.\n"
 
-#: src/main.c:527
-msgid ""
-"       --restrict-file-names=OS  restrict chars in file names to ones OS "
-"allows.\n"
-msgstr ""
-"       --restrict-file-names=OS luba failinimedes ainult OS poolt lubatud "
-"sümboleid.\n"
+#: src/main.c:528
+msgid "       --restrict-file-names=OS  restrict chars in file names to ones OS allows.\n"
+msgstr "       --restrict-file-names=OS luba failinimedes ainult OS poolt lubatud sümboleid.\n"
 
-#: src/main.c:529
-msgid ""
-"       --ignore-case             ignore case when matching files/"
-"directories.\n"
-msgstr ""
-"       --ignore-case             failide/kataloogide otsimine on "
-"tõstutundetu.\n"
+#: src/main.c:530
+msgid "       --ignore-case             ignore case when matching files/directories.\n"
+msgstr "       --ignore-case             failide/kataloogide otsimine on tõstutundetu.\n"
 
-#: src/main.c:532
+#: src/main.c:533
 msgid "  -4,  --inet4-only              connect only to IPv4 addresses.\n"
 msgstr "  -4,  --inet4-only              kasuta ainult IPv4 aadresse.\n"
 
-#: src/main.c:534
+#: src/main.c:535
 msgid "  -6,  --inet6-only              connect only to IPv6 addresses.\n"
 msgstr "  -6,  --inet6-only              kasuta ainult IPv6 aadresse.\n"
 
-#: src/main.c:536
+#: src/main.c:537
 msgid ""
-"       --prefer-family=FAMILY    connect first to addresses of specified "
-"family,\n"
+"       --prefer-family=FAMILY    connect first to addresses of specified family,\n"
 "                                 one of IPv6, IPv4, or none.\n"
 msgstr ""
-"       --prefer-family=PEREK     loo ühendus esmalt antud perekonna "
-"aadressiga,\n"
+"       --prefer-family=PEREK     loo ühendus esmalt antud perekonna aadressiga,\n"
 "                                 väärtus on IPv6, IPv4 või none.\n"
 
-#: src/main.c:540
+#: src/main.c:541
 msgid "       --user=USER               set both ftp and http user to USER.\n"
 msgstr "       --user=USER               sea nii ftp, kui http kasutaja.\n"
 
-#: src/main.c:542
-msgid ""
-"       --password=PASS           set both ftp and http password to PASS.\n"
+#: src/main.c:543
+msgid "       --password=PASS           set both ftp and http password to PASS.\n"
 msgstr "       --password=PASS           sea nii ftp, kui http parool.\n"
 
-#: src/main.c:544
+#: src/main.c:545
 msgid "       --ask-password            prompt for passwords.\n"
 msgstr "       --ask-password            küsi paroole.\n"
 
-#: src/main.c:546
+#: src/main.c:547
 msgid "       --no-iri                  turn off IRI support.\n"
 msgstr "       --no-iri                  lülita IRI tugi välja.\n"
 
-#: src/main.c:548
-msgid ""
-"       --local-encoding=ENC      use ENC as the local encoding for IRIs.\n"
+#: src/main.c:549
+msgid "       --local-encoding=ENC      use ENC as the local encoding for IRIs.\n"
 msgstr "       --local-encoding=KOOD     määra kohalik kodeering IRI jaoks.\n"
 
-#: src/main.c:550
-msgid ""
-"       --remote-encoding=ENC     use ENC as the default remote encoding.\n"
-msgstr ""
-"       --remote-encoding=KOOD    määra mittelokaalne kodeering IRI jaoks.\n"
+#: src/main.c:551
+msgid "       --remote-encoding=ENC     use ENC as the default remote encoding.\n"
+msgstr "       --remote-encoding=KOOD    määra mittelokaalne kodeering IRI jaoks.\n"
 
-#: src/main.c:552
+#: src/main.c:553
 msgid "       --unlink                  remove file before clobber.\n"
 msgstr "       --unlink                  eemalda fail.\n"
 
-#: src/main.c:556
+#: src/main.c:557
 msgid "Directories:\n"
 msgstr "Kataloogid:\n"
 
-#: src/main.c:558
+#: src/main.c:559
 msgid "  -nd, --no-directories           don't create directories.\n"
 msgstr "  -nd  --no-directories            ära loo katalooge.\n"
 
-#: src/main.c:560
+#: src/main.c:561
 msgid "  -x,  --force-directories        force creation of directories.\n"
-msgstr ""
-"  -x,  --force-directories         kohustuslik kataloogide tekitamine.\n"
+msgstr "  -x,  --force-directories         kohustuslik kataloogide tekitamine.\n"
 
-#: src/main.c:562
+#: src/main.c:563
 msgid "  -nH, --no-host-directories      don't create host directories.\n"
 msgstr "  -nH, --no-host-directories       ära loo hosti kataloogi.\n"
 
-#: src/main.c:564
+#: src/main.c:565
 msgid "       --protocol-directories     use protocol name in directories.\n"
-msgstr ""
-"       --protocol-directories     kasuta kataloogides protokolli nime.\n"
+msgstr "       --protocol-directories     kasuta kataloogides protokolli nime.\n"
 
-#: src/main.c:566
+#: src/main.c:567
 msgid "  -P,  --directory-prefix=PREFIX  save files to PREFIX/...\n"
-msgstr ""
-"  -P,  --directory-prefix=PREFIX   salvesta failid kataloogi PREFIX/...\n"
+msgstr "  -P,  --directory-prefix=PREFIX   salvesta failid kataloogi PREFIX/...\n"
 
-#: src/main.c:568
-msgid ""
-"       --cut-dirs=NUMBER          ignore NUMBER remote directory "
-"components.\n"
-msgstr ""
-"       --cut-dirs=NUMBER           ignoreeri NUMBER kataloogi komponente.\n"
+#: src/main.c:569
+msgid "       --cut-dirs=NUMBER          ignore NUMBER remote directory components.\n"
+msgstr "       --cut-dirs=NUMBER           ignoreeri NUMBER kataloogi komponente.\n"
 
-#: src/main.c:572
+#: src/main.c:573
 msgid "HTTP options:\n"
 msgstr "HTTP võtmed:\n"
 
-#: src/main.c:574
+#: src/main.c:575
 msgid "       --http-user=USER        set http user to USER.\n"
 msgstr "       --http-user=USER        kasuta http kasutajat USER.\n"
 
-#: src/main.c:576
+#: src/main.c:577
 msgid "       --http-password=PASS    set http password to PASS.\n"
 msgstr "       --http-password=PASS    kasuta http parooli PASS.\n"
 
-#: src/main.c:578
+#: src/main.c:579
 msgid "       --no-cache              disallow server-cached data.\n"
 msgstr "       --no-cache              keela puhverdamise kasutamine.\n"
 
-#: src/main.c:580
+#: src/main.c:581
 msgid ""
 "       --default-page=NAME     Change the default page name (normally\n"
 "                               this is `index.html'.).\n"
@@ -1559,116 +1511,83 @@ msgstr ""
 "       --default-page=NIMI     Muuda vaikimisi lehe nime (tavaliselt\n"
 "                               on selleks `index.html'.).\n"
 
-#: src/main.c:583
-msgid ""
-"  -E,  --adjust-extension      save HTML/CSS documents with proper "
-"extensions.\n"
-msgstr ""
-"  -E,  --adjust-extension      salvesta HTML/CSS dokumendid korrektse "
-"lõpuga.\n"
+#: src/main.c:584
+msgid "  -E,  --adjust-extension      save HTML/CSS documents with proper extensions.\n"
+msgstr "  -E,  --adjust-extension      salvesta HTML/CSS dokumendid korrektse lõpuga.\n"
 
-#: src/main.c:585
+#: src/main.c:586
 msgid "       --ignore-length         ignore `Content-Length' header field.\n"
-msgstr ""
-"       --ignore-length         inoreeri `Content-Length' päise välja.\n"
+msgstr "       --ignore-length         inoreeri `Content-Length' päise välja.\n"
 
-#: src/main.c:587
+#: src/main.c:588
 msgid "       --header=STRING         insert STRING among the headers.\n"
 msgstr "       --header=SÕNE           lisa SÕNE päisesse.\n"
 
-#: src/main.c:589
+#: src/main.c:590
 msgid "       --max-redirect          maximum redirections allowed per page.\n"
-msgstr ""
-"       --max-redirect          lehel lubatud maksimaalne ümbersuunamiste "
-"arv.\n"
+msgstr "       --max-redirect          lehel lubatud maksimaalne ümbersuunamiste arv.\n"
 
-#: src/main.c:591
+#: src/main.c:592
 msgid "       --proxy-user=USER       set USER as proxy username.\n"
 msgstr "       --proxy-user=USER       USER proxy kasutajanimeks.\n"
 
-#: src/main.c:593
+#: src/main.c:594
 msgid "       --proxy-password=PASS   set PASS as proxy password.\n"
 msgstr "       --proxy-passwd=PASS     PASS proxy parooliks.\n"
 
-#: src/main.c:595
-msgid ""
-"       --referer=URL           include `Referer: URL' header in HTTP "
-"request.\n"
-msgstr ""
-"       --referer=URL           lisa HTTP päringu päisesse `Referer: URL'\n"
+#: src/main.c:596
+msgid "       --referer=URL           include `Referer: URL' header in HTTP request.\n"
+msgstr "       --referer=URL           lisa HTTP päringu päisesse `Referer: URL'\n"
 
-#: src/main.c:597
+#: src/main.c:598
 msgid "       --save-headers          save the HTTP headers to file.\n"
 msgstr "       --save-headers          salvesta HTTP päised.\n"
 
-#: src/main.c:599
-msgid ""
-"  -U,  --user-agent=AGENT      identify as AGENT instead of Wget/VERSION.\n"
-msgstr ""
-"  -U,  --user-agent=AGENT      identifitseeri kui AGENT, mitte kui Wget/"
-"VERSIOON.\n"
+#: src/main.c:600
+msgid "  -U,  --user-agent=AGENT      identify as AGENT instead of Wget/VERSION.\n"
+msgstr "  -U,  --user-agent=AGENT      identifitseeri kui AGENT, mitte kui Wget/VERSIOON.\n"
 
-#: src/main.c:601
-msgid ""
-"       --no-http-keep-alive    disable HTTP keep-alive (persistent "
-"connections).\n"
-msgstr ""
-"       --no-http-keep-alive    blokeeri HTTP keep-alive (püsivad "
-"ühendused).\n"
+#: src/main.c:602
+msgid "       --no-http-keep-alive    disable HTTP keep-alive (persistent connections).\n"
+msgstr "       --no-http-keep-alive    blokeeri HTTP keep-alive (püsivad ühendused).\n"
 
-#: src/main.c:603
+#: src/main.c:604
 msgid "       --no-cookies            don't use cookies.\n"
 msgstr "       --no-cookies            ära kasuta präänikuid.\n"
 
-#: src/main.c:605
+#: src/main.c:606
 msgid "       --load-cookies=FILE     load cookies from FILE before session.\n"
-msgstr ""
-"       --load-cookies=FAIL     lae enne sessiooni präänikud failist FAIL.\n"
+msgstr "       --load-cookies=FAIL     lae enne sessiooni präänikud failist FAIL.\n"
 
-#: src/main.c:607
+#: src/main.c:608
 msgid "       --save-cookies=FILE     save cookies to FILE after session.\n"
-msgstr ""
-"       --save-cookies=FAIL     salvesta sessiooni lõpus präänikud faili.\n"
+msgstr "       --save-cookies=FAIL     salvesta sessiooni lõpus präänikud faili.\n"
 
-#: src/main.c:609
-msgid ""
-"       --keep-session-cookies  load and save session (non-permanent) "
-"cookies.\n"
-msgstr ""
-"       --keep-session-cookies  lae ja salvesta sessiooni (ühekordsed) "
-"präänikud.\n"
+#: src/main.c:610
+msgid "       --keep-session-cookies  load and save session (non-permanent) cookies.\n"
+msgstr "       --keep-session-cookies  lae ja salvesta sessiooni (ühekordsed) präänikud.\n"
 
-#: src/main.c:611
-msgid ""
-"       --post-data=STRING      use the POST method; send STRING as the "
-"data.\n"
+#: src/main.c:612
+msgid "       --post-data=STRING      use the POST method; send STRING as the data.\n"
 msgstr "       --post-data=SÕNE        kasuta POST meetodit; saada SÕNE.\n"
 
-#: src/main.c:613
-msgid ""
-"       --post-file=FILE        use the POST method; send contents of FILE.\n"
-msgstr ""
-"       --post-file=FAIL        kasuta POST meetodit; saada FAILi sisu.\n"
+#: src/main.c:614
+msgid "       --post-file=FILE        use the POST method; send contents of FILE.\n"
+msgstr "       --post-file=FAIL        kasuta POST meetodit; saada FAILi sisu.\n"
 
-#: src/main.c:615
-msgid ""
-"       --method=HTTPMethod     use method \"HTTPMethod\" in the header.\n"
+#: src/main.c:616
+msgid "       --method=HTTPMethod     use method \"HTTPMethod\" in the header.\n"
 msgstr "       --method=HTTPMeetod     kasuta päises \"HTTPMeetod\".\n"
 
-#: src/main.c:617
-msgid ""
-"       --body-data=STRING      Send STRING as data. --method MUST be set.\n"
-msgstr ""
-"       --body-data=SÕNE        Saada sõne. --method PEAB olema seatud\n"
+#: src/main.c:618
+msgid "       --body-data=STRING      Send STRING as data. --method MUST be set.\n"
+msgstr "       --body-data=SÕNE        Saada sõne. --method PEAB olema seatud\n"
 
-#: src/main.c:619
-msgid ""
-"       --body-file=FILE        Send contents of FILE. --method MUST be set.\n"
-msgstr ""
-"       --body-file=FAIL        Saada faili sisu. --method PEAB olema "
-"seatud.\n"
+#: src/main.c:620
+msgid "       --body-file=FILE        Send contents of FILE. --method MUST be set.\n"
+msgstr "       --body-file=FAIL        Saada faili sisu. --method PEAB olema seatud.\n"
 
-#: src/main.c:621
+#: src/main.c:622
 msgid ""
 "       --content-disposition   honor the Content-Disposition header when\n"
 "                               choosing local file names (EXPERIMENTAL).\n"
@@ -1676,14 +1595,11 @@ msgstr ""
 "       --content-disposition   luba Content-Disposition päist lokaalse\n"
 "                               faili nime valikul (EKSPERIMENTAALNE).\n"
 
-#: src/main.c:624
-msgid ""
-"       --content-on-error      output the received content on server "
-"errors.\n"
-msgstr ""
-"       --content-on-error      väljasta laetud sisu serveri vigadena.\n"
+#: src/main.c:625
+msgid "       --content-on-error      output the received content on server errors.\n"
+msgstr "       --content-on-error      väljasta laetud sisu serveri vigadena.\n"
 
-#: src/main.c:626
+#: src/main.c:627
 msgid ""
 "       --auth-no-challenge     send Basic HTTP authentication information\n"
 "                               without first waiting for the server's\n"
@@ -1692,186 +1608,155 @@ msgstr ""
 "       --auth-no-challenge     saada Basic HTTP autentimise info ilma, et\n"
 "                               ootaks serverilt päringut.\n"
 
-#: src/main.c:633
+#: src/main.c:634
 msgid "HTTPS (SSL/TLS) options:\n"
 msgstr "HTTPS (SSL/TLS) võtmed:\n"
 
-#: src/main.c:635
+#: src/main.c:636
 msgid ""
 "       --secure-protocol=PR     choose secure protocol, one of auto, SSLv2,\n"
-"                                SSLv3, and TLSv1.\n"
+"                                SSLv3, TLSv1 and PFS.\n"
 msgstr ""
-"       --secure-protocol=PR     vali turvaprotokoll, võimalikud auto, "
-"SSLv2,\n"
-"                                SSLv3 ja TLSv1.\n"
+"       --secure-protocol=PR     vali turvaprotokoll, võimalikud auto, SSLv2,\n"
+"                                SSLv3, TLSv1 ja PFS.\n"
 
-#: src/main.c:638
-msgid ""
-"       --no-check-certificate   don't validate the server's certificate.\n"
+#: src/main.c:639
+msgid "       --https-only             only follow secure HTTPS links\n"
+msgstr "       --https-only             järgi ainult turvalisi HTTPS viiteid\n"
+
+#: src/main.c:641
+msgid "       --no-check-certificate   don't validate the server's certificate.\n"
 msgstr "       --no-check-certificate   ära valideeri serveri sertifikaati.\n"
 
-#: src/main.c:640
+#: src/main.c:643
 msgid "       --certificate=FILE       client certificate file.\n"
 msgstr "       --certificate=FAIL       kliendi sertifikaat.\n"
 
-#: src/main.c:642
+#: src/main.c:645
 msgid "       --certificate-type=TYPE  client certificate type, PEM or DER.\n"
 msgstr "       --certificate-type=TÜÜP  Kliendi sert. tüüp, PEM või DER.\n"
 
-#: src/main.c:644
+#: src/main.c:647
 msgid "       --private-key=FILE       private key file.\n"
 msgstr "       --privare-key=FAIL       privaatvõti.\n"
 
-#: src/main.c:646
+#: src/main.c:649
 msgid "       --private-key-type=TYPE  private key type, PEM or DER.\n"
 msgstr "       --private-key-type=TÜÜP  privaatvõtme tüüp, PEM või DER.\n"
 
-#: src/main.c:648
+#: src/main.c:651
 msgid "       --ca-certificate=FILE    file with the bundle of CA's.\n"
 msgstr "       --ca-certificate=FAIL    CA nimekirja fail.\n"
 
-#: src/main.c:650
-msgid ""
-"       --ca-directory=DIR       directory where hash list of CA's is "
-"stored.\n"
+#: src/main.c:653
+msgid "       --ca-directory=DIR       directory where hash list of CA's is stored.\n"
 msgstr "       --ca-directory=KAT       CA nimekirja kataloog.\n"
 
-#: src/main.c:652
-msgid ""
-"       --random-file=FILE       file with random data for seeding the SSL "
-"PRNG.\n"
-msgstr ""
-"       --random-file=FAIL       fail juhuarvudega SSL PRNG laadimiseks.\n"
+#: src/main.c:655
+msgid "       --random-file=FILE       file with random data for seeding the SSL PRNG.\n"
+msgstr "       --random-file=FAIL       fail juhuarvudega SSL PRNG laadimiseks.\n"
 
-#: src/main.c:654
-msgid ""
-"       --egd-file=FILE          file naming the EGD socket with random "
-"data.\n"
+#: src/main.c:657
+msgid "       --egd-file=FILE          file naming the EGD socket with random data.\n"
 msgstr "       --egd-file=FAIL          EGD pistiku faili nimi.\n"
 
-#: src/main.c:659
+#: src/main.c:662
 msgid "FTP options:\n"
 msgstr "FTP võtmed:\n"
 
-#: src/main.c:662
-msgid ""
-"       --ftp-stmlf             Use Stream_LF format for all binary FTP "
-"files.\n"
+#: src/main.c:665
+msgid "       --ftp-stmlf             Use Stream_LF format for all binary FTP files.\n"
 msgstr ""
-"       --ftp-stmlf             Kasuta binaar moodis FTP failide jaoks "
-"Stream_LF\n"
+"       --ftp-stmlf             Kasuta binaar moodis FTP failide jaoks Stream_LF\n"
 "                                vormingut.\n"
 
-#: src/main.c:665
+#: src/main.c:668
 msgid "       --ftp-user=USER         set ftp user to USER.\n"
 msgstr "       --ftp-user=USER         sea ftp kasutaja.\n"
 
-#: src/main.c:667
+#: src/main.c:670
 msgid "       --ftp-password=PASS     set ftp password to PASS.\n"
 msgstr "       --ftp-password=PASS     sea ftp parool.\n"
 
-#: src/main.c:669
+#: src/main.c:672
 msgid "       --no-remove-listing     don't remove `.listing' files.\n"
 msgstr "       --no-remove-listing     ära eemalda `.listing' faile.\n"
 
-#: src/main.c:671
+#: src/main.c:674
 msgid "       --no-glob               turn off FTP file name globbing.\n"
 msgstr "       --no-glob               lülita faili nime täiendamine välja.\n"
 
-#: src/main.c:673
+#: src/main.c:676
 msgid "       --no-passive-ftp        disable the \"passive\" transfer mode.\n"
 msgstr "       --no-passive-ftp        ei kasuta \"passive\" ülekande moodi.\n"
 
-#: src/main.c:675
+#: src/main.c:678
 msgid "       --preserve-permissions  preserve remote file permissions.\n"
 msgstr "       --preserve-permissions  säilita kauge faili õigused.\n"
 
-#: src/main.c:677
-msgid ""
-"       --retr-symlinks         when recursing, get linked-to files (not "
-"dir).\n"
+#: src/main.c:680
+msgid "       --retr-symlinks         when recursing, get linked-to files (not dir).\n"
 msgstr "       --retr-symlinks         lae ka FTP nimeviited failidele.\n"
 
-#: src/main.c:681
+#: src/main.c:684
 msgid "WARC options:\n"
 msgstr "WARC võtmed:\n"
 
-#: src/main.c:683
-msgid ""
-"       --warc-file=FILENAME      save request/response data to a .warc.gz "
-"file.\n"
-msgstr ""
-"       --warc-file=FAILINIMI     salvesta päring/vastus info .warc.gz "
-"faili.\n"
+#: src/main.c:686
+msgid "       --warc-file=FILENAME      save request/response data to a .warc.gz file.\n"
+msgstr "       --warc-file=FAILINIMI     salvesta päring/vastus info .warc.gz faili.\n"
 
-#: src/main.c:685
-msgid ""
-"       --warc-header=STRING      insert STRING into the warcinfo record.\n"
+#: src/main.c:688
+msgid "       --warc-header=STRING      insert STRING into the warcinfo record.\n"
 msgstr "       --warc-header=SÕNE        lisa SÕNE warcinfo kirjesse.\n"
 
-#: src/main.c:687
-msgid ""
-"       --warc-max-size=NUMBER    set maximum size of WARC files to NUMBER.\n"
+#: src/main.c:690
+msgid "       --warc-max-size=NUMBER    set maximum size of WARC files to NUMBER.\n"
 msgstr "       --warc-max-size=NUMBER    sea maksimaalne WARC faili suurus.\n"
 
-#: src/main.c:689
+#: src/main.c:692
 msgid "       --warc-cdx                write CDX index files.\n"
 msgstr "       --warc-cdx                kirjuta CDX indeks failid.\n"
 
-#: src/main.c:691
-msgid ""
-"       --warc-dedup=FILENAME     do not store records listed in this CDX "
-"file.\n"
-msgstr ""
-"       --warc-dedup=FAILINIMI    ära salvesta selles CDX failis olevaid "
-"kirjeid.\n"
-
 #: src/main.c:694
-msgid ""
-"       --no-warc-compression     do not compress WARC files with GZIP.\n"
-msgstr ""
-"       --no-warc-compression     ära tihenda WARC faile GZIP programmiga.\n"
+msgid "       --warc-dedup=FILENAME     do not store records listed in this CDX file.\n"
+msgstr "       --warc-dedup=FAILINIMI    ära salvesta selles CDX failis olevaid kirjeid.\n"
 
 #: src/main.c:697
+msgid "       --no-warc-compression     do not compress WARC files with GZIP.\n"
+msgstr "       --no-warc-compression     ära tihenda WARC faile GZIP programmiga.\n"
+
+#: src/main.c:700
 msgid "       --no-warc-digests         do not calculate SHA1 digests.\n"
 msgstr "       --no-warc-digests         ära arvuta SHA1 räsi.\n"
 
-#: src/main.c:699
-msgid ""
-"       --no-warc-keep-log        do not store the log file in a WARC "
-"record.\n"
+#: src/main.c:702
+msgid "       --no-warc-keep-log        do not store the log file in a WARC record.\n"
 msgstr "       --no-warc-keep-log        ära säilita WARC kirje logi.\n"
 
-#: src/main.c:701
+#: src/main.c:704
 msgid ""
-"       --warc-tempdir=DIRECTORY  location for temporary files created by "
-"the\n"
+"       --warc-tempdir=DIRECTORY  location for temporary files created by the\n"
 "                                 WARC writer.\n"
-msgstr ""
-"       --warc-tempdir=KATALOOG   WARC kirjutaja ajutiste failide asukoht.\n"
+msgstr "       --warc-tempdir=KATALOOG   WARC kirjutaja ajutiste failide asukoht.\n"
 
-#: src/main.c:706
+#: src/main.c:709
 msgid "Recursive download:\n"
 msgstr "Rekursiivne allalaadimine:\n"
 
-#: src/main.c:708
+#: src/main.c:711
 msgid "  -r,  --recursive          specify recursive download.\n"
 msgstr "  -r,  --recursive          rekursiivne allalaadimine.\n"
 
-#: src/main.c:710
-msgid ""
-"  -l,  --level=NUMBER       maximum recursion depth (inf or 0 for "
-"infinite).\n"
-msgstr ""
-"  -l,  --level=NUMBER       maksimaalne rekursiooni sügavus (inf või 0 "
-"lõpmatu)\n"
+#: src/main.c:713
+msgid "  -l,  --level=NUMBER       maximum recursion depth (inf or 0 for infinite).\n"
+msgstr "  -l,  --level=NUMBER       maksimaalne rekursiooni sügavus (inf või 0 lõpmatu)\n"
 
-#: src/main.c:712
-msgid ""
-"       --delete-after       delete files locally after downloading them.\n"
+#: src/main.c:715
+msgid "       --delete-after       delete files locally after downloading them.\n"
 msgstr "       --delete-after       kustuta allalaetud failid.\n"
 
-#: src/main.c:714
+#: src/main.c:717
 msgid ""
 "  -k,  --convert-links      make links in downloaded HTML or CSS point to\n"
 "                            local files.\n"
@@ -1879,188 +1764,140 @@ msgstr ""
 "  -k,  --convert-links      sea alla laetud HTML või CSS failide viited\n"
 "                            viitama lokaalsetele failidele.\n"
 
-#: src/main.c:717
-#, fuzzy
+#: src/main.c:720
 msgid "  --backups=N   before writing file X, rotate up to N backup files.\n"
-msgstr ""
-"  -K,  --backup-converted   enne faili X teisendamist salvesta failiks "
-"X_orig.\n"
-
-#: src/main.c:721
-msgid ""
-"  -K,  --backup-converted   before converting file X, back up as X_orig.\n"
-msgstr ""
-"  -K,  --backup-converted   enne faili X teisendamist salvesta failiks "
-"X_orig.\n"
+msgstr "  --backups=N   enne faili X kirjutamist, roteeri kuni N varukoopiat.\n"
 
 #: src/main.c:724
-msgid ""
-"  -K,  --backup-converted   before converting file X, back up as X.orig.\n"
-msgstr ""
-"  -K,  --backup-converted   enne faili X teisendamist salvesta failiks X."
-"orig.\n"
+msgid "  -K,  --backup-converted   before converting file X, back up as X_orig.\n"
+msgstr "  -K,  --backup-converted   enne faili X teisendamist salvesta failiks X_orig.\n"
 
 #: src/main.c:727
-msgid ""
-"  -m,  --mirror             shortcut for -N -r -l inf --no-remove-listing.\n"
-msgstr ""
-"  -m,  --mirror             lühend võtmetele -N -r -l inf --no-remove-"
-"listing.\n"
+msgid "  -K,  --backup-converted   before converting file X, back up as X.orig.\n"
+msgstr "  -K,  --backup-converted   enne faili X teisendamist salvesta failiks X.orig.\n"
 
-#: src/main.c:729
-msgid ""
-"  -p,  --page-requisites    get all images, etc. needed to display HTML "
-"page.\n"
-msgstr ""
-"  -p,  --page-requisites    lae kõik HTML lehe vaatamiseks vajalik info.\n"
+#: src/main.c:730
+msgid "  -m,  --mirror             shortcut for -N -r -l inf --no-remove-listing.\n"
+msgstr "  -m,  --mirror             lühend võtmetele -N -r -l inf --no-remove-listing.\n"
 
-#: src/main.c:731
-msgid ""
-"       --strict-comments    turn on strict (SGML) handling of HTML "
-"comments.\n"
-msgstr ""
-"       --strict-comments    lülita sisse range (SGML) HTML kommentaaride "
-"käsitlemine.\n"
+#: src/main.c:732
+msgid "  -p,  --page-requisites    get all images, etc. needed to display HTML page.\n"
+msgstr "  -p,  --page-requisites    lae kõik HTML lehe vaatamiseks vajalik info.\n"
 
-#: src/main.c:735
+#: src/main.c:734
+msgid "       --strict-comments    turn on strict (SGML) handling of HTML comments.\n"
+msgstr "       --strict-comments    lülita sisse range (SGML) HTML kommentaaride käsitlemine.\n"
+
+#: src/main.c:738
 msgid "Recursive accept/reject:\n"
 msgstr "Rekursiivne accept/reject:\n"
 
-#: src/main.c:737
-msgid ""
-"  -A,  --accept=LIST               comma-separated list of accepted "
-"extensions.\n"
+#: src/main.c:740
+msgid "  -A,  --accept=LIST               comma-separated list of accepted extensions.\n"
 msgstr "  -A,  --accept=LIST               lubatud laienduste nimistu.\n"
 
-#: src/main.c:739
-msgid ""
-"  -R,  --reject=LIST               comma-separated list of rejected "
-"extensions.\n"
+#: src/main.c:742
+msgid "  -R,  --reject=LIST               comma-separated list of rejected extensions.\n"
 msgstr "  -R,  --reject=LIST               keelatud laienduste nimistu.\n"
 
-#: src/main.c:741
+#: src/main.c:744
 msgid "       --accept-regex=REGEX        regex matching accepted URLs.\n"
-msgstr ""
-"       --accept-regex=REGAV        aktsepteeritavate URLide "
-"regulaaravaldis.\n"
-
-#: src/main.c:743
-msgid "       --reject-regex=REGEX        regex matching rejected URLs.\n"
-msgstr ""
-"       --reject-regex=REGAV        mitteaktsepteeritavate URLide "
-"regulaaravaldis.\n"
+msgstr "       --accept-regex=REGAV        aktsepteeritavate URLide regulaaravaldis.\n"
 
 #: src/main.c:746
-msgid "       --regex-type=TYPE           regex type (posix|pcre).\n"
-msgstr ""
-"       --regex-type=TÜÜP           regulaaravaldise tüüp (posix|pcre).\n"
+msgid "       --reject-regex=REGEX        regex matching rejected URLs.\n"
+msgstr "       --reject-regex=REGAV        mitteaktsepteeritavate URLide regulaaravaldis.\n"
 
 #: src/main.c:749
+msgid "       --regex-type=TYPE           regex type (posix|pcre).\n"
+msgstr "       --regex-type=TÜÜP           regulaaravaldise tüüp (posix|pcre).\n"
+
+#: src/main.c:752
 msgid "       --regex-type=TYPE           regex type (posix).\n"
 msgstr "       --regex-type=TÜÜP           regulaaravaldise tüüp (posix).\n"
 
-#: src/main.c:752
-msgid ""
-"  -D,  --domains=LIST              comma-separated list of accepted "
-"domains.\n"
+#: src/main.c:755
+msgid "  -D,  --domains=LIST              comma-separated list of accepted domains.\n"
 msgstr "  -D,  --domains=LIST              lubatud doomenite nimistu.\n"
 
-#: src/main.c:754
-msgid ""
-"       --exclude-domains=LIST      comma-separated list of rejected "
-"domains.\n"
-msgstr ""
-"       --exclude-domains=LIST      komadega eraldatud keelatud doomenite "
-"nimistu.\n"
+#: src/main.c:757
+msgid "       --exclude-domains=LIST      comma-separated list of rejected domains.\n"
+msgstr "       --exclude-domains=LIST      komadega eraldatud keelatud doomenite nimistu.\n"
 
-#: src/main.c:756
-msgid ""
-"       --follow-ftp                follow FTP links from HTML documents.\n"
-msgstr ""
-"       --follow-ftp                järgne HTML dokumentides FTP viidetele.\n"
+#: src/main.c:759
+msgid "       --follow-ftp                follow FTP links from HTML documents.\n"
+msgstr "       --follow-ftp                järgne HTML dokumentides FTP viidetele.\n"
 
-#: src/main.c:758
-msgid ""
-"       --follow-tags=LIST          comma-separated list of followed HTML "
-"tags.\n"
-msgstr ""
-"       --follow-tags=LIST          komadega eraldatud loend järgitavaid HTML "
-"lipikuid.\n"
+#: src/main.c:761
+msgid "       --follow-tags=LIST          comma-separated list of followed HTML tags.\n"
+msgstr "       --follow-tags=LIST          komadega eraldatud loend järgitavaid HTML lipikuid.\n"
 
-#: src/main.c:760
-msgid ""
-"       --ignore-tags=LIST          comma-separated list of ignored HTML "
-"tags.\n"
-msgstr ""
-"       --ignore-tags=LIST          komadega eraldatud loend ignoreeritavaid "
-"HTML lipikuid.\n"
+#: src/main.c:763
+msgid "       --ignore-tags=LIST          comma-separated list of ignored HTML tags.\n"
+msgstr "       --ignore-tags=LIST          komadega eraldatud loend ignoreeritavaid HTML lipikuid.\n"
 
-#: src/main.c:762
-msgid ""
-"  -H,  --span-hosts                go to foreign hosts when recursive.\n"
+#: src/main.c:765
+msgid "  -H,  --span-hosts                go to foreign hosts when recursive.\n"
 msgstr "  -H,  --span-hosts                 mine ka teistesse serveritesse.\n"
 
-#: src/main.c:764
+#: src/main.c:767
 msgid "  -L,  --relative                  follow relative links only.\n"
 msgstr "  -L,  --relative                  järgne ainult suhtelisi viiteid.\n"
 
-#: src/main.c:766
+#: src/main.c:769
 msgid "  -I,  --include-directories=LIST  list of allowed directories.\n"
 msgstr "  -I,  --include-directories=LIST  lubatud kataloogide nimistu.\n"
 
-#: src/main.c:768
-msgid ""
-"  --trust-server-names             use the name specified by the "
-"redirection\n"
-"                                   url last component.\n"
-msgstr ""
-"  --trust-server-names             kasuta ümbersuunamisel määratud nime.\n"
-
 #: src/main.c:771
+msgid ""
+"  --trust-server-names             use the name specified by the redirection\n"
+"                                   url last component.\n"
+msgstr "  --trust-server-names             kasuta ümbersuunamisel määratud nime.\n"
+
+#: src/main.c:774
 msgid "  -X,  --exclude-directories=LIST  list of excluded directories.\n"
 msgstr "  -X,  --exclude-directories=LIST  välistatud kataloogide nimistu.\n"
 
-#: src/main.c:773
-msgid ""
-"  -np, --no-parent                 don't ascend to the parent directory.\n"
+#: src/main.c:776
+msgid "  -np, --no-parent                 don't ascend to the parent directory.\n"
 msgstr "  -np, --no-parent                 ära tõuse vanem kataloogini.\n"
 
-#: src/main.c:776
+#: src/main.c:779
 msgid "Mail bug reports and suggestions to <bug-wget@gnu.org>.\n"
 msgstr "Saada soovitused ja vigade kirjeldused aadressil <bug-wget@gnu.org>.\n"
 
-#: src/main.c:781
+#: src/main.c:784
 #, c-format
 msgid "GNU Wget %s, a non-interactive network retriever.\n"
 msgstr "GNU Wget %s, mitte-interaktiivne võrgu imeja.\n"
 
-#: src/main.c:824
+#: src/main.c:827
 #, c-format
 msgid "Password for user %s: "
 msgstr "Parool kasutajale %s: "
 
-#: src/main.c:826
+#: src/main.c:829
 #, c-format
 msgid "Password: "
 msgstr "Parool: "
 
-#: src/main.c:882
+#: src/main.c:885
 msgid "Wgetrc: "
 msgstr "Wgetrc: "
 
-#: src/main.c:883
+#: src/main.c:886
 msgid "Locale: "
 msgstr "Lokaat: "
 
-#: src/main.c:884
+#: src/main.c:887
 msgid "Compile: "
 msgstr "Kompileeritud:"
 
-#: src/main.c:885
+#: src/main.c:888
 msgid "Link: "
 msgstr "Lingitud:"
 
-#: src/main.c:889
+#: src/main.c:892
 #, c-format
 msgid ""
 "GNU Wget %s built on %s.\n"
@@ -2069,28 +1906,28 @@ msgstr ""
 "GNU Wget %s ehitatud süsteemil %s.\n"
 "\n"
 
-#: src/main.c:916
+#: src/main.c:919
 #, c-format
 msgid "    %s (env)\n"
 msgstr "    %s (keskkond)\n"
 
-#: src/main.c:923
+#: src/main.c:926
 #, c-format
 msgid "    %s (user)\n"
 msgstr "    %s (kasutaja)\n"
 
-#: src/main.c:928
+#: src/main.c:931
 #, c-format
 msgid "    %s (system)\n"
 msgstr "    %s (süsteem)\n"
 
 #. TRANSLATORS: When available, an actual copyright character
 #. (circle-c) should be used in preference to "(C)".
-#: src/main.c:956
+#: src/main.c:959
 msgid "Copyright (C) 2011 Free Software Foundation, Inc.\n"
 msgstr "Autoriõigus  © 2011 Free Software Foundation, Inc.\n"
 
-#: src/main.c:959
+#: src/main.c:962
 msgid ""
 "License GPLv3+: GNU GPL version 3 or later\n"
 "<http://www.gnu.org/licenses/gpl.html>.\n"
@@ -2104,7 +1941,7 @@ msgstr ""
 
 #. TRANSLATORS: When available, please use the proper diacritics for
 #. names such as this one. See en_US.po for reference.
-#: src/main.c:967
+#: src/main.c:970
 msgid ""
 "\n"
 "Originally written by Hrvoje Niksic <hniksic@xemacs.org>.\n"
@@ -2112,56 +1949,51 @@ msgstr ""
 "\n"
 "Selle programmi kirjutas Hrvoje Niksic <hniksic@xemacs.org>.\n"
 
-#: src/main.c:970
+#: src/main.c:973
 msgid "Please send bug reports and questions to <bug-wget@gnu.org>.\n"
-msgstr ""
-"Palun saatke vigade kirjeldused ja küsimused aadressil <bug-wget@gnu.org>.\n"
+msgstr "Palun saatke vigade kirjeldused ja küsimused aadressil <bug-wget@gnu.org>.\n"
 
-#: src/main.c:1021 src/main.c:1482
+#: src/main.c:1024 src/main.c:1485
 #, c-format
 msgid "Memory allocation problem\n"
 msgstr "Mälu ei jätku\n"
 
-#: src/main.c:1066
+#: src/main.c:1069
 #, c-format
 msgid "Exiting due to error in %s\n"
 msgstr "Lõpetan %s vea tõttu\n"
 
-#: src/main.c:1095 src/main.c:1166 src/main.c:1343
+#: src/main.c:1098 src/main.c:1169 src/main.c:1346
 #, c-format
 msgid "Try `%s --help' for more options.\n"
 msgstr "Täiendava info saamiseks proovige `%s --help'.\n"
 
-#: src/main.c:1162
+#: src/main.c:1165
 #, c-format
 msgid "%s: illegal option -- `-n%c'\n"
 msgstr "%s: illegaalne võti -- `-n%c'\n"
 
-#: src/main.c:1203
+#: src/main.c:1206
 #, c-format
-msgid ""
-"Both --no-clobber and --convert-links were specified, only --convert-links "
-"will be used.\n"
-msgstr ""
-"Kasutati korraga --no-clobber ja --convert-links, kasutan ainult --convert-"
-"links.\n"
+msgid "Both --no-clobber and --convert-links were specified, only --convert-links will be used.\n"
+msgstr "Kasutati korraga --no-clobber ja --convert-links, kasutan ainult --convert-links.\n"
 
-#: src/main.c:1231
+#: src/main.c:1234
 #, c-format
 msgid "Can't be verbose and quiet at the same time.\n"
 msgstr "Ei saa korraga lobiseda ja vait olla.\n"
 
-#: src/main.c:1237
+#: src/main.c:1240
 #, c-format
 msgid "Can't timestamp and not clobber old files at the same time.\n"
 msgstr "Ei saa samaaegselt muuta failide aegu ja mitte puutuda vanu faile.\n"
 
-#: src/main.c:1246
+#: src/main.c:1249
 #, c-format
 msgid "Cannot specify both --inet4-only and --inet6-only.\n"
 msgstr "Ei saa korraga kasutada --inet4-only ja --inet6-only.\n"
 
-#: src/main.c:1256
+#: src/main.c:1259
 msgid ""
 "Cannot specify both -k and -O if multiple URLs are given, or in combination\n"
 "with -p or -r. See the manual for details.\n"
@@ -2171,7 +2003,7 @@ msgstr ""
 "kombinatsioonis võtmetega -p või -r. Deteilid leiate manualist.\n"
 "\n"
 
-#: src/main.c:1265
+#: src/main.c:1268
 msgid ""
 "WARNING: combining -O with -r or -p will mean that all downloaded content\n"
 "will be placed in the single file you specified.\n"
@@ -2181,108 +2013,91 @@ msgstr ""
 "salvestatakse teie poolt määratud ühte faili.\n"
 "\n"
 
-#: src/main.c:1271
+#: src/main.c:1274
 msgid ""
 "WARNING: timestamping does nothing in combination with -O. See the manual\n"
 "for details.\n"
 "\n"
 msgstr ""
-"HOIATUS: ajatembeldamine võtmega -O ei tee midagi. Detailid leiate "
-"manualist.\n"
+"HOIATUS: ajatembeldamine võtmega -O ei tee midagi. Detailid leiate manualist.\n"
 "\n"
 
-#: src/main.c:1280
+#: src/main.c:1283
 #, c-format
 msgid "File `%s' already there; not retrieving.\n"
 msgstr "Fail `%s' on juba olemas, ei tõmba.\n"
 
-#: src/main.c:1291
+#: src/main.c:1294
 #, c-format
-msgid ""
-"WARC output does not work with --no-clobber, --no-clobber will be disabled.\n"
-msgstr ""
-"WARC väljund ei tööta võtmega --no-clobber, --no-clobber blokeeritakse.\n"
+msgid "WARC output does not work with --no-clobber, --no-clobber will be disabled.\n"
+msgstr "WARC väljund ei tööta võtmega --no-clobber, --no-clobber blokeeritakse.\n"
 
-#: src/main.c:1298
+#: src/main.c:1301
 #, c-format
-msgid ""
-"WARC output does not work with timestamping, timestamping will be disabled.\n"
+msgid "WARC output does not work with timestamping, timestamping will be disabled.\n"
 msgstr "WARC väljund ei tööta ajatemplitega, ajatembeldamine blokeeritakse.\n"
 
-#: src/main.c:1305
+#: src/main.c:1308
 #, c-format
 msgid "WARC output does not work with --spider.\n"
 msgstr "WARC väljund ei tööta võtmega --spider.\n"
 
-#: src/main.c:1311
+#: src/main.c:1314
 #, c-format
-msgid ""
-"WARC output does not work with --continue, --continue will be disabled.\n"
+msgid "WARC output does not work with --continue, --continue will be disabled.\n"
 msgstr "WARC väljund ei tööta võtmega --continue, --continue blokeeritakse.\n"
 
-#: src/main.c:1318
+#: src/main.c:1321
 #, c-format
-msgid ""
-"Digests are disabled; WARC deduplication will not find duplicate records.\n"
-msgstr ""
-"Räsi on blokeeritud; WARC deduplitseerimine ei leia duplikaat kirjeid.\n"
+msgid "Digests are disabled; WARC deduplication will not find duplicate records.\n"
+msgstr "Räsi on blokeeritud; WARC deduplitseerimine ei leia duplikaat kirjeid.\n"
 
-#: src/main.c:1330
+#: src/main.c:1333
 #, c-format
 msgid "Cannot specify both --ask-password and --password.\n"
 msgstr "Võtmeid --ask-password ja --password ei saa korraga kasutada.\n"
 
-#: src/main.c:1338
+#: src/main.c:1341
 #, c-format
 msgid "%s: missing URL\n"
 msgstr "%s: puudub URL\n"
 
-#: src/main.c:1379
+#: src/main.c:1382
 #, c-format
 msgid "You cannot specify both --post-data and --post-file.\n"
 msgstr "Võtmeid --post-data ja --post-file ei saa korraga kasutada.\n"
 
-#: src/main.c:1384
+#: src/main.c:1387
 #, c-format
-msgid ""
-"You cannot use --post-data or --post-file along with --method. --method "
-"expects data through --body-data and --body-file options"
-msgstr ""
-"Võtmeid --post-data või --post-file ei saa kasutada koos võtmega --method. --"
-"method eeldab andmeid võtmetega --body-data ja --body-file"
+msgid "You cannot use --post-data or --post-file along with --method. --method expects data through --body-data and --body-file options"
+msgstr "Võtmeid --post-data või --post-file ei saa kasutada koos võtmega --method. --method eeldab andmeid võtmetega --body-data ja --body-file"
 
-#: src/main.c:1393
+#: src/main.c:1396
 #, c-format
-msgid ""
-"You must specify a method through --method=HTTPMethod to use with --body-"
-"data or --body-file.\n"
-msgstr ""
-"--body-data või --body-file korral tuleb määrata meetod võtmega --"
-"method=HTTPMeetod.\n"
+msgid "You must specify a method through --method=HTTPMethod to use with --body-data or --body-file.\n"
+msgstr "--body-data või --body-file korral tuleb määrata meetod võtmega --method=HTTPMeetod.\n"
 
-#: src/main.c:1399
+#: src/main.c:1402
 #, c-format
 msgid "You cannot specify both --body-data and --body-file.\n"
 msgstr "Võtmeid --body-data ja --body-file ei saa korraga kasutada.\n"
 
-#: src/main.c:1451
+#: src/main.c:1454
 #, c-format
 msgid "This version does not have support for IRIs\n"
 msgstr "See versioon ei toeta IRIsid\n"
 
-#: src/main.c:1551
+#: src/main.c:1554
 #, c-format
 msgid "-k can be used together with -O only if outputting to a regular file.\n"
-msgstr ""
-"-k saab kasutada koos võtmega -O ainult juhul, kui väljund on tavalisse "
-"faili.\n"
+msgstr "-k saab kasutada koos võtmega -O ainult juhul, kui väljund on tavalisse faili.\n"
 
-#: src/main.c:1656
+#: src/main.c:1659
 #, c-format
 msgid "No URLs found in %s.\n"
 msgstr "%s ei sisalda URLe.\n"
 
-#: src/main.c:1677
+#: src/main.c:1680
 #, c-format
 msgid ""
 "FINISHED --%s--\n"
@@ -2293,7 +2108,7 @@ msgstr ""
 "Täielik aeg: %s\n"
 "Alla laetud: %d faili, %s aeg %s (%s)\n"
 
-#: src/main.c:1691
+#: src/main.c:1694
 #, c-format
 msgid "Download quota of %s EXCEEDED!\n"
 msgstr "Allalaadimise kvoot %s ON ÜLETATUD!\n"
@@ -2361,28 +2176,28 @@ msgstr "HOIATUS: vilets juhuarvude alginfo.\n"
 msgid "Could not seed PRNG; consider using --random-file.\n"
 msgstr "Ei õnnestu laadida PRNGd; kasutage --random-file.\n"
 
-#: src/openssl.c:597
+#: src/openssl.c:604
 #, c-format
 msgid "%s: cannot verify %s's certificate, issued by %s:\n"
 msgstr "%s: %s sertifikaati ei õnnestu kontrollida, väljastaja %s:\n"
 
-#: src/openssl.c:606
+#: src/openssl.c:613
 msgid "  Unable to locally verify the issuer's authority.\n"
 msgstr "  Väljastaja autoriteeti ei saa kontrollida.\n"
 
-#: src/openssl.c:611
+#: src/openssl.c:618
 msgid "  Self-signed certificate encountered.\n"
 msgstr "  Leiti ise-allkirjastatud sertifikaat.\n"
 
-#: src/openssl.c:614
+#: src/openssl.c:621
 msgid "  Issued certificate not yet valid.\n"
 msgstr "  Välja antud sertifikaat pole veel kehtiv.\n"
 
-#: src/openssl.c:617
+#: src/openssl.c:624
 msgid "  Issued certificate has expired.\n"
 msgstr "  Välja antud sertifikaat on aegunud.\n"
 
-#: src/openssl.c:702
+#: src/openssl.c:709
 #, c-format
 msgid ""
 "%s: no certificate subject alternative name matches\n"
@@ -2391,14 +2206,12 @@ msgstr ""
 "%s: sertifikaadi subjekti alternatiivne nimi ei klapi\n"
 "\tküsitud hosti nimega %s.\n"
 
-#: src/openssl.c:719
+#: src/openssl.c:726
 #, c-format
-msgid ""
-"    %s: certificate common name %s doesn't match requested host name %s.\n"
-msgstr ""
-"    %s: sertifikaadi üldine nimi %s ei klapi küsitud hosti nimega %s.\n"
+msgid "    %s: certificate common name %s doesn't match requested host name %s.\n"
+msgstr "    %s: sertifikaadi üldine nimi %s ei klapi küsitud hosti nimega %s.\n"
 
-#: src/openssl.c:751
+#: src/openssl.c:758
 #, c-format
 msgid ""
 "    %s: certificate common name is invalid (contains a NUL character).\n"
@@ -2409,12 +2222,10 @@ msgstr ""
 "    See võib viidata et server pole see, millena ta üritab ennast näidata\n"
 "    (see tähendab,see pole reaalne %s).\n"
 
-#: src/openssl.c:769
+#: src/openssl.c:776
 #, c-format
 msgid "To connect to %s insecurely, use `--no-check-certificate'.\n"
-msgstr ""
-"Kontrollimata ühenduse loomiseks servieriga %s kasutage `--no-check-"
-"certificate'.\n"
+msgstr "Kontrollimata ühenduse loomiseks servieriga %s kasutage `--no-check-certificate'.\n"
 
 #: src/progress.c:240
 #, c-format
@@ -2545,7 +2356,7 @@ msgstr "IPv6 aadresse ei toetata"
 msgid "Invalid IPv6 numeric address"
 msgstr "Vigane numbriline IPv6 aadress"
 
-#: src/url.c:957
+#: src/url.c:960
 msgid "HTTPS support not compiled in"
 msgstr "HTTPS tuge pole sisse kompileeritud"
 
@@ -2660,35 +2471,4 @@ msgstr "Ajutise WARC faili avamine ebaõnnestus.\n"
 
 #: src/warc.c:1364
 msgid "Found exact match in CDX file. Saving revisit record to WARC.\n"
-msgstr ""
-"Leidsin täpse vaste CDX failist. Salvestan uuesti külastamise kirje WARC "
-"faili.\n"
-
-#~ msgid "Authorization failed.\n"
-#~ msgstr "Autoriseerimine ebaõnnestus.\n"
-
-#~ msgid ""
-#~ "       --metalink-file       download URLs found in local or external "
-#~ "metalink FILE.\n"
-#~ msgstr ""
-#~ "       --metalink-file       lae URLid [mitte]lokaalsest metalinkide "
-#~ "failist.\n"
-
-#~ msgid ""
-#~ "       --retries                 specify the number of retries for a "
-#~ "file.\n"
-#~ "                                 (needs to be used with --metalink-file)\n"
-#~ msgstr ""
-#~ "       --retries                 määra korduste arv.\n"
-#~ "                                 (peab kasutama võtmega --metalink-file)\n"
-
-#~ msgid "       --jobs                    specify how many threads use.\n"
-#~ msgstr "       --jobs                    määra kasutatavate lõimede arv.\n"
-
-#~ msgid ""
-#~ "Username and password information not needed to                    be "
-#~ "specified when downloading from a metalink.\n"
-#~ msgstr "metalinki kasutamisel ei ole vaja kasutajanime ja parooli anda.\n"
-
-#~ msgid "%s can not be used with --metalink.\n"
-#~ msgstr "%s ei saa võtmega --metalink kasutada.\n"
+msgstr "Leidsin täpse vaste CDX failist. Salvestan uuesti külastamise kirje WARC faili.\n"

@@ -1,30 +1,31 @@
-# Translation of `wget' messages to Esperanto.
-# Copyright (C) 2003 Free Software Foundation, Inc.
-# This file is distributed under the same license as the `wget' package.
+# Translation of 'wget' messages to Esperanto.
+# Copyright (C) 2003, 2013 Free Software Foundation, Inc.
+# This file is distributed under the same license as the wget package.
 # Luiz Portella <lfpor@lujz.org>, 2005.
+# Felipe Castro <fefcas@gmail.com>, 2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: GNU wget 1.10.1-b1\n"
+"Project-Id-Version: GNU wget 1.15-pre1\n"
 "Report-Msgid-Bugs-To: bug-wget@gnu.org\n"
-"POT-Creation-Date: 2013-10-28 11:10-0400\n"
-"PO-Revision-Date: 2005-11-06 22:12-0200\n"
-"Last-Translator: Luiz Portella <lfpor@lujz.org>\n"
+"POT-Creation-Date: 2013-11-02 12:28+0100\n"
+"PO-Revision-Date: 2013-11-04 09:33-0300\n"
+"Last-Translator: Felipe Castro <fefcas@gmail.com>\n"
 "Language-Team: Esperanto <translation-team-eo@lists.sourceforge.net>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: lib/error.c:188
-#, fuzzy
 msgid "Unknown system error"
-msgstr "Nekonata eraro"
+msgstr "Nekonata sistem-eraro"
 
 #: lib/gai_strerror.c:57
-#, fuzzy
 msgid "Address family for hostname not supported"
-msgstr "IPv6 adreso ne eltenebla"
+msgstr "Adres-familio por gastig-nomo ne estas subtenata"
 
 #: lib/gai_strerror.c:58 src/host.c:365
 msgid "Temporary failure in name resolution"
@@ -32,129 +33,126 @@ msgstr "Dumtempa malsukceso ĉe nom-eltrovo"
 
 #: lib/gai_strerror.c:59
 msgid "Bad value for ai_flags"
-msgstr ""
+msgstr "Malĝusta valoro por ai_flags"
 
 #: lib/gai_strerror.c:60
-#, fuzzy
 msgid "Non-recoverable failure in name resolution"
-msgstr "Dumtempa malsukceso ĉe nom-eltrovo"
+msgstr "Ne-riparebla malsukceso ĉe nom-eltrovo"
 
 #: lib/gai_strerror.c:61
 msgid "ai_family not supported"
-msgstr ""
+msgstr "ai_family ne estas subtenata"
 
 #: lib/gai_strerror.c:62
 msgid "Memory allocation failure"
-msgstr ""
+msgstr "Malsukceso ĉe rezervo de memoro"
 
 #: lib/gai_strerror.c:63
 msgid "No address associated with hostname"
-msgstr ""
+msgstr "Neniu adresso estas asociita kun gastig-nomo"
 
 #: lib/gai_strerror.c:64
 msgid "Name or service not known"
-msgstr ""
+msgstr "Nomo aŭ servo ne estas konata"
 
 #: lib/gai_strerror.c:65
 msgid "Servname not supported for ai_socktype"
-msgstr ""
+msgstr "Servnomo ne estas subtenata por ai_socktype"
 
 #: lib/gai_strerror.c:66
-#, fuzzy
 msgid "ai_socktype not supported"
-msgstr "IPv6 adreso ne eltenebla"
+msgstr "ai_socktype ne estas subtenata"
 
 #: lib/gai_strerror.c:67
-#, fuzzy
 msgid "System error"
-msgstr "Sen eraro"
+msgstr "Sistem-eraro"
 
 #: lib/gai_strerror.c:68
 msgid "Argument buffer too small"
-msgstr ""
+msgstr "Argumenta bufro tro malgrandas"
 
 #: lib/gai_strerror.c:70
 msgid "Processing request in progress"
-msgstr ""
+msgstr "Procezada peto rulas"
 
 #: lib/gai_strerror.c:71
 msgid "Request canceled"
-msgstr ""
+msgstr "Peto estis ĉesigata"
 
 #: lib/gai_strerror.c:72
 msgid "Request not canceled"
-msgstr ""
+msgstr "Peto ne estis ĉesigata"
 
 #: lib/gai_strerror.c:73
 msgid "All requests done"
-msgstr ""
+msgstr "Ĉiuj petoj estas plenumitaj"
 
 #: lib/gai_strerror.c:74
 msgid "Interrupted by a signal"
-msgstr ""
+msgstr "Interrompita de signalo"
 
 #: lib/gai_strerror.c:75
 msgid "Parameter string not correctly encoded"
-msgstr ""
+msgstr "Parametra ĉeno ne estas ĝuste enkodigita"
 
 #: lib/gai_strerror.c:87 src/host.c:367
 msgid "Unknown error"
 msgstr "Nekonata eraro"
 
 #: lib/getopt.c:547 lib/getopt.c:576
-#, fuzzy, c-format
+#, c-format
 msgid "%s: option '%s' is ambiguous; possibilities:"
-msgstr "%s: opcio `%s' estas plursenca\n"
+msgstr "%s: modifilo '%s' estas plursenca; ebloj:"
 
 #: lib/getopt.c:624 lib/getopt.c:628
-#, fuzzy, c-format
+#, c-format
 msgid "%s: option '--%s' doesn't allow an argument\n"
-msgstr "%s:  opcio `--%s' ne permesas argumenton\n"
+msgstr "%s: modifilo '--%s' ne permesas argumenton\n"
 
 #: lib/getopt.c:637 lib/getopt.c:642
-#, fuzzy, c-format
+#, c-format
 msgid "%s: option '%c%s' doesn't allow an argument\n"
-msgstr "%s: opcio `%c%s' ne permesas argumenton\n"
+msgstr "%s: modifilo '%c%s' ne permesas argumenton\n"
 
 #: lib/getopt.c:685 lib/getopt.c:704
-#, fuzzy, c-format
+#, c-format
 msgid "%s: option '--%s' requires an argument\n"
-msgstr "%s: opcio `%s' postulas argumenton\n"
+msgstr "%s: modifilo '--%s' postulas argumenton\n"
 
 #: lib/getopt.c:742 lib/getopt.c:745
-#, fuzzy, c-format
+#, c-format
 msgid "%s: unrecognized option '--%s'\n"
-msgstr "%s: nekonata opcio `--%s'\n"
+msgstr "%s: nerekonata modifilo '--%s'\n"
 
 #: lib/getopt.c:753 lib/getopt.c:756
-#, fuzzy, c-format
+#, c-format
 msgid "%s: unrecognized option '%c%s'\n"
-msgstr "%s: nekonata opcio `%c%s'\n"
+msgstr "%s: nerekonata modifilo '%c%s'\n"
 
 #: lib/getopt.c:805 lib/getopt.c:808
-#, fuzzy, c-format
+#, c-format
 msgid "%s: invalid option -- '%c'\n"
-msgstr "%s: nevalida opcio -- %c\n"
+msgstr "%s: malvalida modifilo -- '%c'\n"
 
 #: lib/getopt.c:861 lib/getopt.c:878 lib/getopt.c:1088 lib/getopt.c:1106
-#, fuzzy, c-format
+#, c-format
 msgid "%s: option requires an argument -- '%c'\n"
-msgstr "%s: opcio postulas argumenton -- %c\n"
+msgstr "%s: modifilo postulas argumenton -- '%c'\n"
 
 #: lib/getopt.c:934 lib/getopt.c:950
-#, fuzzy, c-format
+#, c-format
 msgid "%s: option '-W %s' is ambiguous\n"
-msgstr "%s: opcio `-W %s' estas plursenca\n"
+msgstr "%s: modifilo '-W %s' estas plursenca\n"
 
 #: lib/getopt.c:974 lib/getopt.c:992
-#, fuzzy, c-format
+#, c-format
 msgid "%s: option '-W %s' doesn't allow an argument\n"
-msgstr "%s: opcio `-W %s' ne permesas argumenton\n"
+msgstr "%s: modifilo '-W %s' ne permesas argumenton\n"
 
 #: lib/getopt.c:1013 lib/getopt.c:1031
-#, fuzzy, c-format
+#, c-format
 msgid "%s: option '-W %s' requires an argument\n"
-msgstr "%s: opcio `%s' postulas argumenton\n"
+msgstr "%s: modifilo 'W %s' postulas argumenton\n"
 
 #. TRANSLATORS:
 #. Get translations for open and closing quotation marks.
@@ -179,67 +177,67 @@ msgstr "%s: opcio `%s' postulas argumenton\n"
 #. and use glyphs suitable for your language.
 #: lib/quotearg.c:312
 msgid "`"
-msgstr ""
+msgstr "'"
 
 #: lib/quotearg.c:313
 msgid "'"
-msgstr ""
+msgstr "'"
 
 #: lib/spawn-pipe.c:140 lib/spawn-pipe.c:143 lib/spawn-pipe.c:264
 #: lib/spawn-pipe.c:267
 #, c-format
 msgid "cannot create pipe"
-msgstr ""
+msgstr "ne eblas krei dukton"
 
 #: lib/spawn-pipe.c:234 lib/spawn-pipe.c:348 lib/wait-process.c:282
 #: lib/wait-process.c:356
 #, c-format
 msgid "%s subprocess failed"
-msgstr ""
+msgstr "subprocezo %s malsukcesis"
 
 #: lib/w32spawn.h:43
 #, c-format
 msgid "_open_osfhandle failed"
-msgstr ""
+msgstr "_open_osfhandle malsukcesis"
 
 #: lib/w32spawn.h:84
 #, c-format
 msgid "cannot restore fd %d: dup2 failed"
-msgstr ""
+msgstr "ne eblas restarigi fd %d: dup2 malsukcesis"
 
 #: lib/wait-process.c:223 lib/wait-process.c:255 lib/wait-process.c:317
 #, c-format
 msgid "%s subprocess"
-msgstr ""
+msgstr "Subprocezo %s"
 
 #: lib/wait-process.c:274 lib/wait-process.c:346
 #, c-format
 msgid "%s subprocess got fatal signal %d"
-msgstr ""
+msgstr "Subprocezo %s ricevis fatalan signalon %d"
 
 #: lib/xalloc-die.c:34
 msgid "memory exhausted"
-msgstr ""
+msgstr "memoro estas plenigita"
 
 #: src/connect.c:203
 #, c-format
 msgid "%s: unable to resolve bind address %s; disabling bind.\n"
-msgstr ""
+msgstr "%s: ne eblas solvi bind-adreson %s; ni malebligas bindon.\n"
 
 #: src/connect.c:287
 #, c-format
 msgid "Connecting to %s|%s|:%d... "
-msgstr "Konektante al %s|%s|:%d... "
+msgstr "Konektado al %s|%s|:%d... "
 
 #: src/connect.c:296
 #, c-format
 msgid "Connecting to %s:%d... "
-msgstr "Konektante al %s:%d... "
+msgstr "Konektado al %s:%d... "
 
 #: src/connect.c:299
-#, fuzzy, c-format
+#, c-format
 msgid "Connecting to [%s]:%d... "
-msgstr "Konektante al %s:%d... "
+msgstr "Konektado al [%s]:%d... "
 
 #: src/connect.c:361
 msgid "connected.\n"
@@ -248,22 +246,22 @@ msgstr "konektita.\n"
 #: src/connect.c:373 src/host.c:783 src/host.c:812
 #, c-format
 msgid "failed: %s.\n"
-msgstr "fiasko: %s.\n"
+msgstr "malsukceso: %s.\n"
 
-#: src/connect.c:397 src/http.c:1976
+#: src/connect.c:397 src/http.c:1974
 #, c-format
 msgid "%s: unable to resolve host address %s\n"
-msgstr ""
+msgstr "%s: ne eblas trovi gastigantan adreson %s\n"
 
 #: src/convert.c:196
-#, fuzzy, c-format
+#, c-format
 msgid "Converted %d files in %s seconds.\n"
-msgstr "Konvertitaj %d dosieroj dum %.*f sekundoj.\n"
+msgstr "Ni konvertis %d dosierojn en %s sekundoj.\n"
 
 #: src/convert.c:224
 #, c-format
 msgid "Converting %s... "
-msgstr "Konvertante %s... "
+msgstr "Ni konvertas %s... "
 
 #: src/convert.c:237
 msgid "nothing to do.\n"
@@ -275,9 +273,9 @@ msgid "Cannot convert links in %s: %s\n"
 msgstr "Ne eblas konverti ligilojn al %s: %s\n"
 
 #: src/convert.c:260
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to delete %s: %s\n"
-msgstr "Ne kapabla forviŝi `%s': %s\n"
+msgstr "Ne eblas forviŝi %s: %s\n"
 
 #: src/convert.c:476
 #, c-format
@@ -290,36 +288,33 @@ msgid "Syntax error in Set-Cookie: %s at position %d.\n"
 msgstr "Sintaksa eraro en Set-Cookie: %s ĉe pozicio %d.\n"
 
 #: src/cookies.c:687
-#, fuzzy, c-format
+#, c-format
 msgid "Cookie coming from %s attempted to set domain to "
-msgstr "Kuketo venanta el %s provinte difini retadreson al %s\n"
+msgstr "Kuketo venanta el %s provis difini retadreson al "
 
 #: src/cookies.c:690 src/spider.c:92
 #, c-format
 msgid "%s\n"
-msgstr ""
+msgstr "%s\n"
 
 #: src/cookies.c:1138 src/cookies.c:1259
-#, fuzzy, c-format
+#, c-format
 msgid "Cannot open cookies file %s: %s\n"
-msgstr "Ne eblas malfermi kuketan dosieron `%s': %s\n"
+msgstr "Ne eblas malfermi kuketan dosieron %s: %s\n"
 
 #: src/cookies.c:1296
-#, fuzzy, c-format
+#, c-format
 msgid "Error writing to %s: %s\n"
-msgstr "Eraro dum registrado al `%s': %s\n"
+msgstr "Eraro dum skribo al %s: %s\n"
 
 #: src/cookies.c:1299
-#, fuzzy, c-format
+#, c-format
 msgid "Error closing %s: %s\n"
-msgstr "Eraro fermante `%s': %s\n"
+msgstr "Eraro dum fermo de %s: %s\n"
 
 #: src/ftp-ls.c:1048
-#, fuzzy
 msgid "Unsupported listing type, trying Unix listing parser.\n"
-msgstr ""
-"Ne eltenebla printaĵa tipo, provante Uniksan printaĵan sintaksan "
-"analizilon.\n"
+msgstr "Ne subtenata listiga tipo, ni provas Uniksan listigan analizilon.\n"
 
 #: src/ftp-ls.c:1099 src/ftp-ls.c:1101
 #, c-format
@@ -329,12 +324,12 @@ msgstr "Indekso de /%s en %s:%d"
 #: src/ftp-ls.c:1126
 #, c-format
 msgid "time unknown       "
-msgstr "horaro nekonata   "
+msgstr "horaro nekonata    "
 
 #: src/ftp-ls.c:1130
 #, c-format
 msgid "File        "
-msgstr "Dosiero        "
+msgstr "Dosiero     "
 
 #: src/ftp-ls.c:1133
 #, c-format
@@ -344,271 +339,269 @@ msgstr "Dosierujo   "
 #: src/ftp-ls.c:1136
 #, c-format
 msgid "Link        "
-msgstr "Ligilo        "
+msgstr "Ligilo      "
 
 #: src/ftp-ls.c:1139
 #, c-format
 msgid "Not sure    "
-msgstr "Sen certeco    "
+msgstr "Sen certeco "
 
 #: src/ftp-ls.c:1162
 #, c-format
 msgid " (%s bytes)"
 msgstr " (%s bajtoj)"
 
-#: src/ftp.c:221
+#: src/ftp.c:222
 #, c-format
 msgid "Length: %s"
 msgstr "Grando: %s"
 
-#: src/ftp.c:227 src/http.c:2779
+#: src/ftp.c:228 src/http.c:2776
 #, c-format
 msgid ", %s (%s) remaining"
 msgstr ", %s (%s) restanta"
 
-#: src/ftp.c:231 src/http.c:2783
+#: src/ftp.c:232 src/http.c:2780
 #, c-format
 msgid ", %s remaining"
 msgstr ", %s restanta"
 
-#: src/ftp.c:234
+#: src/ftp.c:235
 msgid " (unauthoritative)\n"
-msgstr " (ne havante permeson)\n"
+msgstr " (sen permeso)\n"
 
-#: src/ftp.c:309
+#: src/ftp.c:312
 #, c-format
 msgid "Logging in as %s ... "
-msgstr "Salutante kiel %s ... "
+msgstr "Salutanta kiel %s ... "
 
-#: src/ftp.c:328 src/ftp.c:374 src/ftp.c:403 src/ftp.c:468 src/ftp.c:698
-#: src/ftp.c:751 src/ftp.c:791 src/ftp.c:848 src/ftp.c:909 src/ftp.c:1001
-#: src/ftp.c:1050
+#: src/ftp.c:331 src/ftp.c:377 src/ftp.c:444 src/ftp.c:509 src/ftp.c:739
+#: src/ftp.c:792 src/ftp.c:835 src/ftp.c:892 src/ftp.c:953 src/ftp.c:1045
+#: src/ftp.c:1095
 msgid "Error in server response, closing control connection.\n"
-msgstr "Eraro en la servila respondo, fermante stirkonekton.\n"
+msgstr "Eraro en la servila respondo, ni fermas la stirkonekton.\n"
 
-#: src/ftp.c:335
+#: src/ftp.c:338
 msgid "Error in server greeting.\n"
 msgstr "Eraro en la saluto de servilo.\n"
 
-#: src/ftp.c:342 src/ftp.c:476 src/ftp.c:706 src/ftp.c:799 src/ftp.c:858
-#: src/ftp.c:919 src/ftp.c:1011 src/ftp.c:1060
+#: src/ftp.c:345 src/ftp.c:517 src/ftp.c:747 src/ftp.c:843 src/ftp.c:902
+#: src/ftp.c:963 src/ftp.c:1055 src/ftp.c:1105
 msgid "Write failed, closing control connection.\n"
-msgstr "Skrib-fiasko, fermante stirkonekton.\n"
+msgstr "Skrib-fiasko, ni fermas la stirkonekton.\n"
 
-#: src/ftp.c:348
+#: src/ftp.c:351
 msgid "The server refuses login.\n"
-msgstr "La servilo rifuzis la saluton.\n"
+msgstr "La servilo rifuzis la ensaluton.\n"
 
-#: src/ftp.c:354
+#: src/ftp.c:357
 msgid "Login incorrect.\n"
-msgstr "Erara saluto.\n"
+msgstr "Malĝusta ensaluto.\n"
 
-#: src/ftp.c:360
+#: src/ftp.c:363
 msgid "Logged in!\n"
-msgstr "Ensalutite!\n"
+msgstr "Ensalutita!\n"
 
-#: src/ftp.c:382
+#: src/ftp.c:385
 msgid "Server error, can't determine system type.\n"
-msgstr "Eraro de la servilo, ne eblas difini la tipon de sistemo.\n"
+msgstr "Eraro de la servilo, ne eblas difini la sistem-tipon.\n"
 
-#: src/ftp.c:391 src/ftp.c:835 src/ftp.c:892 src/ftp.c:935
+#: src/ftp.c:394 src/ftp.c:879 src/ftp.c:936 src/ftp.c:979
 msgid "done.    "
-msgstr "farite.    "
+msgstr "farita.  "
 
-#: src/ftp.c:456 src/ftp.c:723 src/ftp.c:764 src/ftp.c:1031 src/ftp.c:1079
+#: src/ftp.c:497 src/ftp.c:764 src/ftp.c:805 src/ftp.c:1075 src/ftp.c:1124
 msgid "done.\n"
-msgstr "farite.\n"
+msgstr "farita.\n"
 
-#: src/ftp.c:483
+#: src/ftp.c:524
 #, c-format
 msgid "Unknown type `%c', closing control connection.\n"
-msgstr "Tipo `%c' nekonata, fermante stirkonekton.\n"
+msgstr "Tipo '%c' nekonatas, ni fermas la stirkonekton.\n"
 
-#: src/ftp.c:495
+#: src/ftp.c:536
 msgid "done.  "
-msgstr "farite.  "
+msgstr "farita.  "
 
-#: src/ftp.c:501
+#: src/ftp.c:542
 msgid "==> CWD not needed.\n"
-msgstr "==> CWD ne necesa.\n"
+msgstr "==> CWD ne necesas.\n"
 
-#: src/ftp.c:712
-#, fuzzy, c-format
+#: src/ftp.c:753
+#, c-format
 msgid ""
 "No such directory %s.\n"
 "\n"
 msgstr ""
-"Netrovita dosierujo `%s'.\n"
+"Netrovita dosierujo %s.\n"
 "\n"
 
-#: src/ftp.c:733
+#: src/ftp.c:774
 msgid "==> CWD not required.\n"
-msgstr "==> CWD ne postulita.\n"
+msgstr "==> CWD ne estas postulata.\n"
 
-#: src/ftp.c:772
-#, fuzzy
+#: src/ftp.c:813
 msgid "File has already been retrieved.\n"
-msgstr "La dosiero `%s' jam estas ĉi tie; ĝi ne estos elŝutita.\n"
+msgstr "La dosiero jam estas havigita.\n"
 
-#: src/ftp.c:805
+#: src/ftp.c:849
 msgid "Cannot initiate PASV transfer.\n"
 msgstr "Ne eblas komenci transporton PASV.\n"
 
-#: src/ftp.c:809
+#: src/ftp.c:853
 msgid "Cannot parse PASV response.\n"
-msgstr ""
+msgstr "ne eblas analizi respondon PASV.\n"
 
-#: src/ftp.c:826
+#: src/ftp.c:870
 #, c-format
 msgid "couldn't connect to %s port %d: %s\n"
 msgstr "ne eblis konekti al %s pordo %d: %s\n"
 
-#: src/ftp.c:874
+#: src/ftp.c:918
 #, c-format
 msgid "Bind error (%s).\n"
 msgstr "Bind-eraro (%s).\n"
 
-#: src/ftp.c:880
+#: src/ftp.c:924
 msgid "Invalid PORT.\n"
-msgstr "Pordo nevalida.\n"
+msgstr "Malvalida pordo.\n"
 
-#: src/ftp.c:926
-#, fuzzy
+#: src/ftp.c:970
 msgid ""
 "\n"
 "REST failed, starting from scratch.\n"
 msgstr ""
 "\n"
-"REST fuŝis; .\n"
+"REST fiaskis, ni rekomencas de la bazo.\n"
 
-#: src/ftp.c:967
+#: src/ftp.c:1011
 #, c-format
 msgid "File %s exists.\n"
-msgstr ""
+msgstr "La dosiero %s ekzistas.\n"
 
-#: src/ftp.c:973
-#, fuzzy, c-format
+#: src/ftp.c:1017
+#, c-format
 msgid "No such file %s.\n"
-msgstr ""
-"Netrovita dosiero `%s'.\n"
-"\n"
+msgstr "Neniu tia dosiero %s.\n"
 
-#: src/ftp.c:1019
-#, fuzzy, c-format
+#: src/ftp.c:1063
+#, c-format
 msgid ""
 "No such file %s.\n"
 "\n"
 msgstr ""
-"Netrovita dosiero `%s'.\n"
+"Neniu tia dosiero %s.\n"
 "\n"
 
-#: src/ftp.c:1068
-#, fuzzy, c-format
+#: src/ftp.c:1113
+#, c-format
 msgid ""
 "No such file or directory %s.\n"
 "\n"
 msgstr ""
-"Netrovita dosiero aŭ dosierujo `%s'.\n"
+"Neniu tia dosiero aŭ dosierujo %s.\n"
 "\n"
 
-#: src/ftp.c:1228 src/http.c:2910
+#: src/ftp.c:1273 src/http.c:2907
 #, c-format
 msgid "%s has sprung into existence.\n"
-msgstr ""
-
-#: src/ftp.c:1280
-#, c-format
-msgid "%s: %s, closing control connection.\n"
-msgstr "%s: %s, fermante stirkonekton.\n"
-
-#: src/ftp.c:1292
-#, c-format
-msgid "%s (%s) - Data connection: %s; "
-msgstr "%s (%s) - Konekto de datumoj: %s; "
-
-#: src/ftp.c:1307
-msgid "Control connection closed.\n"
-msgstr "Stirkonekto fermita.\n"
+msgstr "%s ekfloris naskiĝe.\n"
 
 #: src/ftp.c:1325
+#, c-format
+msgid "%s: %s, closing control connection.\n"
+msgstr "%s: %s, ni fermas stirkonekton.\n"
+
+#: src/ftp.c:1337
+#, c-format
+msgid "%s (%s) - Data connection: %s; "
+msgstr "%s (%s) - Konekto de datumaro: %s; "
+
+#: src/ftp.c:1352
+msgid "Control connection closed.\n"
+msgstr "Stirkonekto estas fermita.\n"
+
+#: src/ftp.c:1370
 msgid "Data transfer aborted.\n"
-msgstr "Transporto de datumoj ĉesigita.\n"
+msgstr "Transporto de datumoj estas ĉesigita.\n"
 
-#: src/ftp.c:1437
-#, fuzzy, c-format
+#: src/ftp.c:1575
+#, c-format
 msgid "File %s already there; not retrieving.\n"
-msgstr "La dosiero `%s' jam estas ĉi tie; ĝi ne estos elŝutita.\n"
+msgstr "La dosiero %s jam estas ĉi tie; ĝi ne estos elŝutita.\n"
 
-#: src/ftp.c:1518 src/http.c:3077
+#: src/ftp.c:1656 src/http.c:3074
 #, c-format
 msgid "(try:%2d)"
 msgstr "(provo:%2d)"
 
-#: src/ftp.c:1599 src/http.c:3459
-#, fuzzy, c-format
+#: src/ftp.c:1737 src/http.c:3456
+#, c-format
 msgid ""
 "%s (%s) - written to stdout %s[%s]\n"
 "\n"
 msgstr ""
-"%s (%s) - `%s' ricevite [%s/%s]\n"
+"%s (%s) - skribita al ĉefeligo %s[%s]\n"
 "\n"
 
-#: src/ftp.c:1600 src/http.c:3460
-#, fuzzy, c-format
+#: src/ftp.c:1738 src/http.c:3457
+#, c-format
 msgid ""
 "%s (%s) - %s saved [%s]\n"
 "\n"
 msgstr ""
-"%s (%s) - `%s' ricevite [%s]\n"
+"%s (%s) - %s konservita [%s]\n"
 "\n"
 
-#: src/ftp.c:1658 src/main.c:1637 src/recur.c:433 src/recur.c:641
+#: src/ftp.c:1796 src/main.c:1640 src/recur.c:433 src/recur.c:650
 #: src/retr.c:1095
 #, c-format
 msgid "Removing %s.\n"
-msgstr "Forviŝante %s.\n"
+msgstr "Ni forviŝas %s.\n"
 
-#: src/ftp.c:1704
-#, fuzzy, c-format
+#: src/ftp.c:1842
+#, c-format
 msgid "Using %s as listing tmp file.\n"
-msgstr "Uzante `%s' kiel dumtempan dosieron de printaĵo.\n"
+msgstr "Ni uzas %s kiel provizoran listig-dosieron.\n"
 
-#: src/ftp.c:1721
-#, fuzzy, c-format
+#: src/ftp.c:1859
+#, c-format
 msgid "Removed %s.\n"
-msgstr "Forviŝite `%s'.\n"
+msgstr "Ni forigis %s.\n"
 
-#: src/ftp.c:1758
+#: src/ftp.c:1896
 #, c-format
 msgid "Recursion depth %d exceeded max. depth %d.\n"
 msgstr "Nivelo de rekursio %d superas maksimuman nivelon %d.\n"
 
-#: src/ftp.c:1828
-#, fuzzy, c-format
+#: src/ftp.c:1966
+#, c-format
 msgid "Remote file no newer than local file %s -- not retrieving.\n"
-msgstr "Fora dosiero ne estas plej nova ol loka `%s' -- forgesante.\n"
+msgstr "Fora dosiero ne estas pli nova ol loka %s -- ni ne elŝutas.\n"
 
-#: src/ftp.c:1835
-#, fuzzy, c-format
+#: src/ftp.c:1973
+#, c-format
 msgid ""
 "Remote file is newer than local file %s -- retrieving.\n"
 "\n"
 msgstr ""
-"Fora dosiero estas plej nova ol loka `%s' -- elŝutante.\n"
+"Fora dosiero estas pli nova ol loka %s -- ni elŝutas.\n"
 "\n"
 
-#: src/ftp.c:1842
+#: src/ftp.c:1980
 #, c-format
 msgid ""
 "The sizes do not match (local %s) -- retrieving.\n"
 "\n"
-msgstr "La grandoj neegalaj (loka %s) -- elŝutante.\n"
+msgstr ""
+"La grandoj ne egalas (loka %s) -- ni elŝutas.\n"
+"\n"
 
-#: src/ftp.c:1860
+#: src/ftp.c:1998
 msgid "Invalid name of the symlink, skipping.\n"
-msgstr "Nevalida nomo de simbola ligilo, pretersaltante.\n"
+msgstr "Malvalida nomo de simbola ligilo, ni pretersaltas.\n"
 
-#: src/ftp.c:1877
+#: src/ftp.c:2015
 #, c-format
 msgid ""
 "Already have correct symlink %s -> %s\n"
@@ -617,161 +610,158 @@ msgstr ""
 "Simbola ligilo jam estis ĝusta %s -> %s\n"
 "\n"
 
-#: src/ftp.c:1886
+#: src/ftp.c:2024
 #, c-format
 msgid "Creating symlink %s -> %s\n"
-msgstr "Kreante simbolan ligilon %s -> %s\n"
+msgstr "Ni kreas simbolan ligilon %s -> %s\n"
 
-#: src/ftp.c:1896
-#, fuzzy, c-format
+#: src/ftp.c:2034
+#, c-format
 msgid "Symlinks not supported, skipping symlink %s.\n"
-msgstr ""
-"Simbolaj ligiloj ne elteneblaj, pretersaltante simbolan ligilon `%s'.\n"
+msgstr "Simbolaj ligiloj ne estas subtenataj, ni pretersaltas %s.\n"
 
-#: src/ftp.c:1908
-#, fuzzy, c-format
+#: src/ftp.c:2046
+#, c-format
 msgid "Skipping directory %s.\n"
-msgstr "Pretersaltante dosierujon `%s'.\n"
+msgstr "Ni pretersaltas dosierujon %s.\n"
 
-#: src/ftp.c:1917
+#: src/ftp.c:2055
 #, c-format
 msgid "%s: unknown/unsupported file type.\n"
-msgstr "%s: nekonata/neeltenebla dosier-tipo.\n"
+msgstr "%s: nekonata/nesubtenata dosier-tipo.\n"
 
-#: src/ftp.c:1957
+#: src/ftp.c:2095
 #, c-format
 msgid "%s: corrupt time-stamp.\n"
-msgstr "%s: horaro (time-stamp) erara.\n"
+msgstr "%s: fuŝita tempindiko.\n"
 
-#: src/ftp.c:1981
+#: src/ftp.c:2119
 #, c-format
 msgid "Will not retrieve dirs since depth is %d (max %d).\n"
-msgstr ""
-"Dosierujoj ne estos elŝutitaj dum nivelo de rekursio estas %d (maksimuma "
-"%d).\n"
+msgstr "Dosierujoj ne estos elŝutitaj dum nivelo de rekursio estas %d (maksimuma %d).\n"
 
-#: src/ftp.c:2031
+#: src/ftp.c:2169
 #, c-format
 msgid "Not descending to %s as it is excluded/not-included.\n"
-msgstr ""
+msgstr "Ni ne iras suben al %s ĉar ĝi estas forigita/ne-inkluzivita.\n"
 
-#: src/ftp.c:2097 src/ftp.c:2111
-#, fuzzy, c-format
+#: src/ftp.c:2235 src/ftp.c:2249
+#, c-format
 msgid "Rejecting %s.\n"
-msgstr "Rifuzante `%s'.\n"
+msgstr "Ni rifuzas %s.\n"
 
-#: src/ftp.c:2134
-#, fuzzy, c-format
+#: src/ftp.c:2272
+#, c-format
 msgid "Error matching %s against %s: %s\n"
-msgstr "Eraro dum registrado al `%s': %s\n"
+msgstr "Eraro dum kongruo de %s kontraŭ %s: %s\n"
 
-#: src/ftp.c:2190
-#, fuzzy, c-format
+#: src/ftp.c:2328
+#, c-format
 msgid "No matches on pattern %s.\n"
-msgstr "Nenio trovita kun la ŝablono `%s'.\n"
+msgstr "Neniu kongruo ĉe la ŝablono %s.\n"
 
-#: src/ftp.c:2261
-#, fuzzy, c-format
+#: src/ftp.c:2399
+#, c-format
 msgid "Wrote HTML-ized index to %s [%s].\n"
-msgstr "Skribite HTML-igitan indekson al `%s' [%s].\n"
+msgstr "Ni skribis HTML-igitan indekson al %s [%s].\n"
 
-#: src/ftp.c:2266
-#, fuzzy, c-format
+#: src/ftp.c:2404
+#, c-format
 msgid "Wrote HTML-ized index to %s.\n"
-msgstr "Skribite HTML-igitan indekson al `%s'.\n"
+msgstr "Ni skribis HTML-igitan indekson al %s.\n"
 
 #: src/gnutls.c:111
 #, c-format
 msgid "ERROR: Cannot open directory %s.\n"
-msgstr ""
+msgstr "ERARO: ne eblas malfermi la dosierujon %s.\n"
 
 #: src/gnutls.c:142
 #, c-format
 msgid "ERROR: Failed to open cert %s: (%d).\n"
-msgstr ""
+msgstr "ERARO: ni fiaskis malfermi atestilon %s: (%d).\n"
 
 #: src/gnutls.c:174
 msgid "ERROR: GnuTLS requires the key and the cert to be of the same type.\n"
-msgstr ""
+msgstr "ERARO: GnuTLS postulas ke la ŝlosilo kaj la atestilo estu samtipaj.\n"
 
-#: src/gnutls.c:584 src/openssl.c:566
+#: src/gnutls.c:590 src/openssl.c:573
 msgid "ERROR"
 msgstr "ERARO"
 
-#: src/gnutls.c:584 src/openssl.c:566
+#: src/gnutls.c:590 src/openssl.c:573
 msgid "WARNING"
-msgstr "ATENDANTE"
+msgstr "AVERTO"
 
-#: src/gnutls.c:590 src/openssl.c:575
+#: src/gnutls.c:596 src/openssl.c:582
 #, c-format
 msgid "%s: No certificate presented by %s.\n"
-msgstr ""
-
-#: src/gnutls.c:596
-#, c-format
-msgid "%s: The certificate of %s is not trusted.\n"
-msgstr ""
-
-#: src/gnutls.c:597
-#, c-format
-msgid "%s: The certificate of %s hasn't got a known issuer.\n"
-msgstr ""
-
-#: src/gnutls.c:598
-#, c-format
-msgid "%s: The certificate of %s has been revoked.\n"
-msgstr ""
-
-#: src/gnutls.c:599
-#, c-format
-msgid "%s: The certificate signer of %s was not a CA.\n"
-msgstr ""
-
-#: src/gnutls.c:600
-#, c-format
-msgid "%s: The certificate of %s was signed using an insecure algorithm.\n"
-msgstr ""
-
-#: src/gnutls.c:601
-#, c-format
-msgid "%s: The certificate of %s is not yet activated.\n"
-msgstr ""
+msgstr "%s: neniu atestilo estis prezentata de %s.\n"
 
 #: src/gnutls.c:602
 #, c-format
-msgid "%s: The certificate of %s has expired.\n"
-msgstr ""
+msgid "%s: The certificate of %s is not trusted.\n"
+msgstr "%s: la atestilo de %s de estas fidinda.\n"
 
-#: src/gnutls.c:613
+#: src/gnutls.c:603
+#, c-format
+msgid "%s: The certificate of %s hasn't got a known issuer.\n"
+msgstr "%s: la atestilo de %s ne sukcesis havi konatan eldonanton.\n"
+
+#: src/gnutls.c:604
+#, c-format
+msgid "%s: The certificate of %s has been revoked.\n"
+msgstr "%s: la atestilo de %s estas senvalidigita.\n"
+
+#: src/gnutls.c:605
+#, c-format
+msgid "%s: The certificate signer of %s was not a CA.\n"
+msgstr "%s: la atestila signanto de %s ne estis CA.\n"
+
+#: src/gnutls.c:606
+#, c-format
+msgid "%s: The certificate of %s was signed using an insecure algorithm.\n"
+msgstr "%s: la atestilo de %s estis signata uzante nesekuran algoritmon.\n"
+
+#: src/gnutls.c:607
+#, c-format
+msgid "%s: The certificate of %s is not yet activated.\n"
+msgstr "%s: la atestilo de %s ankoraŭ ne estas aktiva.\n"
+
+#: src/gnutls.c:608
+#, c-format
+msgid "%s: The certificate of %s has expired.\n"
+msgstr "%s: la atestilo de %s senvalidiĝis.\n"
+
+#: src/gnutls.c:619
 #, c-format
 msgid "Error initializing X509 certificate: %s\n"
-msgstr ""
+msgstr "Eraro dum ekigo de atestilo X509: %s\n"
 
-#: src/gnutls.c:622
+#: src/gnutls.c:628
 msgid "No certificate found\n"
-msgstr ""
+msgstr "Neniu atestilo estis trovata\n"
 
-#: src/gnutls.c:629
-#, fuzzy, c-format
+#: src/gnutls.c:635
+#, c-format
 msgid "Error parsing certificate: %s\n"
-msgstr "Eraro dum registrado al `%s': %s\n"
+msgstr "Eraro dum analizo de atestilo: %s\n"
 
-#: src/gnutls.c:636
+#: src/gnutls.c:642
 msgid "The certificate has not yet been activated\n"
-msgstr ""
-
-#: src/gnutls.c:641
-msgid "The certificate has expired\n"
-msgstr ""
+msgstr "La atestilo ankoraŭ ne estas aktivigita\n"
 
 #: src/gnutls.c:647
+msgid "The certificate has expired\n"
+msgstr "La atestilo eksvalidiĝis\n"
+
+#: src/gnutls.c:653
 #, c-format
 msgid "The certificate's owner does not match hostname %s\n"
-msgstr ""
+msgstr "La atestila posedanto ne kongruas al la gastigant-nomo %s\n"
 
-#: src/gnutls.c:656
+#: src/gnutls.c:662
 msgid "Certificate must be X.509\n"
-msgstr ""
+msgstr "Atestilo devas esti X.509\n"
 
 #: src/host.c:361
 msgid "Unknown host"
@@ -780,424 +770,434 @@ msgstr "Nekonata retnodo"
 #: src/host.c:740
 #, c-format
 msgid "Resolving %s... "
-msgstr "Provante %s... "
+msgstr "Ni solvigas %s... "
 
 #: src/host.c:792
 msgid "failed: No IPv4/IPv6 addresses for host.\n"
-msgstr "fiasko: Ne estas IPv4/IPv6 adreso por la retnodo.\n"
+msgstr "fiasko: ne estas IPv4/IPv6 adreso por la retnodo.\n"
 
 #: src/host.c:815
 msgid "failed: timed out.\n"
-msgstr "fiasko: limtempo finita.\n"
+msgstr "fiasko: limtempo finiĝis.\n"
 
-#: src/html-url.c:299
-#, fuzzy, c-format
+#: src/html-url.c:303
+#, c-format
 msgid "%s: Cannot resolve incomplete link %s.\n"
-msgstr "%s: Ne eblis eltrovi nekompletan ligilon %s.\n"
+msgstr "%s: ne eblis solvigi nekompletan ligilon %s.\n"
 
-#: src/html-url.c:829
+#: src/html-url.c:835
 #, c-format
 msgid "%s: Invalid URL %s: %s\n"
-msgstr "%s: Nevalida URL %s: %s\n"
+msgstr "%s: malvalida URL %s: %s\n"
 
 #: src/http.c:371
 #, c-format
 msgid "Failed writing HTTP request: %s.\n"
-msgstr "Fiasko skribante HTTP-an peton: %s.\n"
+msgstr "Fiasko dum skribo de HTTP-peton: %s.\n"
 
 #: src/http.c:767
 msgid "No headers, assuming HTTP/0.9"
-msgstr "Sen ĉapoj, supozante HTTP/0.9"
+msgstr "Sen ĉapoj, ni supozas HTTP/0.9"
 
-#: src/http.c:1477
-#, fuzzy, c-format
+#: src/http.c:1475
+#, c-format
 msgid ""
 "File %s already there; not retrieving.\n"
 "\n"
 msgstr ""
-"La dosiero `%s' jam estas ĉi tie; ĝi ne estos elŝutita.\n"
+"La dosiero %s jam estas tie; ĝi ne estos elŝutata.\n"
 "\n"
 
-#: src/http.c:1729
+#: src/http.c:1727
 msgid "Disabling SSL due to encountered errors.\n"
-msgstr ""
+msgstr "Ni malebligas SSL pro aperintaj eraroj.\n"
 
-#: src/http.c:1855
+#: src/http.c:1853
 #, c-format
 msgid "BODY data file %s missing: %s\n"
-msgstr ""
+msgstr "BODY-datumar-dosiero %s mankas: %s\n"
 
-#: src/http.c:1957
-#, fuzzy, c-format
+#: src/http.c:1955
+#, c-format
 msgid "Reusing existing connection to [%s]:%d.\n"
-msgstr "Reuzante estantan konekton al %s:%d.\n"
+msgstr "Ni reuzas ekzistantan konekton al [%s]:%d.\n"
 
-#: src/http.c:1962
+#: src/http.c:1960
 #, c-format
 msgid "Reusing existing connection to %s:%d.\n"
-msgstr "Reuzante estantan konekton al %s:%d.\n"
+msgstr "Ni reuzas ekzistantan konekton al %s:%d.\n"
 
-#: src/http.c:2035
+#: src/http.c:2032
 #, c-format
 msgid "Failed reading proxy response: %s\n"
-msgstr "Fiasko legante prokuran (proxy) respondon: %s\n"
+msgstr "Fiasko dum lego de prokurila respondo: %s\n"
 
-#: src/http.c:2055 src/http.c:2222 src/http.c:3255
+#: src/http.c:2052 src/http.c:2219 src/http.c:3252
 #, c-format
 msgid "%s ERROR %d: %s.\n"
 msgstr "%s ERARO %d: %s.\n"
 
-#: src/http.c:2057 src/http.c:2224 src/http.c:2556
+#: src/http.c:2054 src/http.c:2221 src/http.c:2553
 msgid "Malformed status line"
-msgstr ""
+msgstr "Fuŝa stat-linio"
 
-#: src/http.c:2068
+#: src/http.c:2065
 #, c-format
 msgid "Proxy tunneling failed: %s"
-msgstr ""
+msgstr "Prokura tuneligo fiaskis: %s"
 
-#: src/http.c:2162
+#: src/http.c:2159
 #, c-format
 msgid "%s request sent, awaiting response... "
-msgstr "%s peto sendita, atendante respondon... "
+msgstr "%s peto sendita, ni atendas respondon... "
 
-#: src/http.c:2197
+#: src/http.c:2194
 msgid "No data received.\n"
-msgstr "Ne datumo ricevita.\n"
+msgstr "Neniu datumaro estas ricevita.\n"
 
-#: src/http.c:2204
+#: src/http.c:2201
 #, c-format
 msgid "Read error (%s) in headers.\n"
 msgstr "Leg-eraro (%s) ĉe ĉapoj.\n"
 
-#: src/http.c:2376
+#: src/http.c:2373
 msgid "Unknown authentication scheme.\n"
-msgstr "Nekonata aŭtentokontrola ŝablono.\n"
+msgstr "Nekonata aŭtentikiga ŝablono.\n"
 
-#: src/http.c:2558
+#: src/http.c:2555
 msgid "(no description)"
 msgstr "(sen priskribo)"
 
-#: src/http.c:2617
+#: src/http.c:2614
 #, c-format
 msgid "Location: %s%s\n"
-msgstr ""
+msgstr "Loko: %s%s\n"
 
-#: src/http.c:2618 src/http.c:2789
+#: src/http.c:2615 src/http.c:2786
 msgid "unspecified"
-msgstr "nedifinita"
+msgstr "nespecifita"
 
-#: src/http.c:2619
+#: src/http.c:2616
 msgid " [following]"
-msgstr "[sekvanta]"
+msgstr " [sekvanta]"
 
-#: src/http.c:2734
+#: src/http.c:2731
 msgid ""
 "\n"
 "    The file is already fully retrieved; nothing to do.\n"
 "\n"
 msgstr ""
 "\n"
-"    La dosiero estas fakte tute elŝutita; nenio farenda.\n"
+"    La dosiero estas fakte tute elŝutita; nenio farendas.\n"
 "\n"
 
-#: src/http.c:2769
+#: src/http.c:2766
 msgid "Length: "
 msgstr "Grando: "
 
-#: src/http.c:2789
+#: src/http.c:2786
 msgid "ignored"
-msgstr "ignorita"
+msgstr "preteratentita"
 
-#: src/http.c:2933
+#: src/http.c:2930
 #, c-format
 msgid "Saving to: %s\n"
-msgstr ""
+msgstr "Ni konservas al: %s\n"
 
-#: src/http.c:3004
+#: src/http.c:3001
 msgid "Warning: wildcards not supported in HTTP.\n"
-msgstr ""
+msgstr "Averto: ĵokeroj ne estas subtenataj en HTTP.\n"
 
-#: src/http.c:3066
+#: src/http.c:3063
 msgid "Spider mode enabled. Check if remote file exists.\n"
-msgstr ""
+msgstr "Arenea reĝimo ebligita. Kontrolu ĉu fora dosiero ekzistas.\n"
 
-#: src/http.c:3153
-#, fuzzy, c-format
+#: src/http.c:3150
+#, c-format
 msgid "Cannot write to %s (%s).\n"
-msgstr "Ne eblas skribi al `%s' (%s).\n"
+msgstr "Ne eblas skribi al %s (%s).\n"
 
-#: src/http.c:3164
+#: src/http.c:3161
 msgid "Required attribute missing from Header received.\n"
-msgstr ""
+msgstr "Mankas postulata atributo el Kaplinio 'received'.\n"
 
-#: src/http.c:3169
+#: src/http.c:3166
 msgid "Username/Password Authentication Failed.\n"
-msgstr ""
+msgstr "Aŭtentikigo de uzantnomo/pasvorto fiaskis.\n"
 
-#: src/http.c:3175
-#, fuzzy
+#: src/http.c:3172
 msgid "Cannot write to WARC file.\n"
-msgstr "Ne eblas skribi al `%s' (%s).\n"
+msgstr "Ne eblas skribi al dosiero WARC.\n"
 
-#: src/http.c:3181
+#: src/http.c:3178
 msgid "Cannot write to temporary WARC file.\n"
-msgstr ""
+msgstr "Ne eblas skribi al provizora dosiero WARC.\n"
 
-#: src/http.c:3186
+#: src/http.c:3183
 msgid "Unable to establish SSL connection.\n"
-msgstr "Ne kapabla starigi SSL-konekton.\n"
+msgstr "Ne eblas starigi SSL-konekton.\n"
 
-#: src/http.c:3192
-#, fuzzy, c-format
+#: src/http.c:3189
+#, c-format
 msgid "Cannot unlink %s (%s).\n"
-msgstr "Ne eblas skribi al `%s' (%s).\n"
+msgstr "Ne eblas forigi %s (%s).\n"
 
-#: src/http.c:3202
+#: src/http.c:3199
 #, c-format
 msgid "ERROR: Redirection (%d) without location.\n"
-msgstr ""
+msgstr "ERARO: redirektigo (%d) sen loko.\n"
 
-#: src/http.c:3250
+#: src/http.c:3247
 msgid "Remote file does not exist -- broken link!!!\n"
-msgstr ""
+msgstr "Fora dosiero ne ekzistas -- fuŝa ligo!!!\n"
 
-#: src/http.c:3272
+#: src/http.c:3269
 msgid "Last-modified header missing -- time-stamps turned off.\n"
-msgstr ""
+msgstr "Mankas ĉapo 'last-modified' -- temp-indikoj estas malaktivitaj.\n"
 
-#: src/http.c:3280
+#: src/http.c:3277
 msgid "Last-modified header invalid -- time-stamp ignored.\n"
-msgstr ""
+msgstr "Malvalida ĉapo 'last-modified' -- temp-indikoj estas preteratentitaj.\n"
 
-#: src/http.c:3310
-#, fuzzy, c-format
+#: src/http.c:3307
+#, c-format
 msgid ""
 "Server file no newer than local file %s -- not retrieving.\n"
 "\n"
 msgstr ""
-"Servila dosiero ne estas plej nova ol loka `%s' -- forgesante.\n"
+"Servila dosiero ne estas pli nova ol loka %s -- ni ne elŝutas.\n"
 "\n"
 
-#: src/http.c:3318
+#: src/http.c:3315
 #, c-format
 msgid "The sizes do not match (local %s) -- retrieving.\n"
-msgstr "La grandoj neegalas (loka %s) -- elŝutante.\n"
+msgstr "La grandoj ne interkongruas (loka %s) -- ni elŝutas.\n"
 
-#: src/http.c:3327
+#: src/http.c:3324
 msgid "Remote file is newer, retrieving.\n"
-msgstr "Fora dosiero estas plej nova, elŝutante.\n"
+msgstr "Fora dosiero estas pli nova, ni elŝutas.\n"
 
-#: src/http.c:3345
-#, fuzzy
+#: src/http.c:3342
 msgid ""
-"Remote file exists and could contain links to other resources -- "
-"retrieving.\n"
+"Remote file exists and could contain links to other resources -- retrieving.\n"
 "\n"
 msgstr ""
-"Fora dosiero estas plej nova ol loka `%s' -- elŝutante.\n"
+"Fora dosiero ekzistas kaj povos enhavi ligojn al aliaj rimedoj -- ni elŝutas.\n"
 "\n"
 
-#: src/http.c:3351
-#, fuzzy
+#: src/http.c:3348
 msgid ""
 "Remote file exists but does not contain any link -- not retrieving.\n"
 "\n"
-msgstr "Fora dosiero ne estas plej nova ol loka `%s' -- forgesante.\n"
+msgstr ""
+"Fora dosiero ekzistas sed enhavas neniun ligon -- ni ne elŝutas.\n"
+"\n"
 
-#: src/http.c:3360
+#: src/http.c:3357
 msgid ""
 "Remote file exists and could contain further links,\n"
 "but recursion is disabled -- not retrieving.\n"
 "\n"
 msgstr ""
+"Fora dosiero ekzistas kaj povos enhavi pliajn ligojn,\n"
+"sed rikuro estas malaktivita -- ni ne elŝutas.\n"
+"\n"
 
-#: src/http.c:3366
-#, fuzzy
+#: src/http.c:3363
 msgid ""
 "Remote file exists.\n"
 "\n"
-msgstr "Fora dosiero estas plej nova, elŝutante.\n"
+msgstr ""
+"Fora dosiero ekzistas.\n"
+"\n"
 
-#: src/http.c:3375
-#, fuzzy, c-format
+#: src/http.c:3372
+#, c-format
 msgid "%s URL: %s %2d %s\n"
-msgstr "%s: Nevalida URL %s: %s\n"
+msgstr "URL %s: %s %2d %s\n"
 
-#: src/http.c:3423
-#, fuzzy, c-format
+#: src/http.c:3420
+#, c-format
 msgid ""
 "%s (%s) - written to stdout %s[%s/%s]\n"
 "\n"
 msgstr ""
-"%s (%s) - `%s' ricevite [%s/%s]\n"
+"%s (%s) - skribita al ĉefeligujo %s[%s/%s]\n"
 "\n"
 
-#: src/http.c:3424
-#, fuzzy, c-format
+#: src/http.c:3421
+#, c-format
 msgid ""
 "%s (%s) - %s saved [%s/%s]\n"
 "\n"
 msgstr ""
-"%s (%s) - `%s' ricevite [%s/%s]\n"
+"%s (%s) - %s konservita [%s/%s]\n"
 "\n"
 
-#: src/http.c:3485
+#: src/http.c:3482
 #, c-format
 msgid "%s (%s) - Connection closed at byte %s. "
 msgstr "%s (%s) - Konekto fermita ĉe la bajto %s. "
 
-#: src/http.c:3508
+#: src/http.c:3505
 #, c-format
 msgid "%s (%s) - Read error at byte %s (%s)."
 msgstr "%s (%s) - Leg-eraro ĉe la bajto %s (%s)."
 
-#: src/http.c:3517
+#: src/http.c:3514
 #, c-format
 msgid "%s (%s) - Read error at byte %s/%s (%s). "
 msgstr "%s (%s) - Leg-eraro ĉe la bajto %s/%s (%s). "
 
-#: src/http.c:3749
+#: src/http.c:3746
 #, c-format
 msgid "Unsupported quality of protection '%s'.\n"
-msgstr ""
+msgstr "Nesubtenata eco de protekto '%s'.\n"
 
-#: src/http.c:3755
-#, fuzzy, c-format
+#: src/http.c:3752
+#, c-format
 msgid "Unsupported algorithm '%s'.\n"
-msgstr "Neeltenebla ŝablono"
+msgstr "Nesubtenata algoritmo '%s'.\n"
 
-#: src/init.c:480
+#: src/init.c:483
 #, c-format
 msgid "%s: WGETRC points to %s, which doesn't exist.\n"
-msgstr ""
+msgstr "%s: WGETRC indikas %s, kiu ne ekzistas.\n"
 
-#: src/init.c:585 src/netrc.c:242
+#: src/init.c:588 src/netrc.c:242
 #, c-format
 msgid "%s: Cannot read %s (%s).\n"
 msgstr "%s: Ne eblas legi %s (%s).\n"
 
-#: src/init.c:602
+#: src/init.c:605
 #, c-format
 msgid "%s: Error in %s at line %d.\n"
 msgstr "%s: Eraro en %s ĉe linio %d.\n"
 
-#: src/init.c:608
+#: src/init.c:611
 #, c-format
 msgid "%s: Syntax error in %s at line %d.\n"
 msgstr "%s: Sintaksa eraro en %s ĉe linio %d.\n"
 
-#: src/init.c:613
-#, fuzzy, c-format
+#: src/init.c:616
+#, c-format
 msgid "%s: Unknown command %s in %s at line %d.\n"
-msgstr "%s: Nekonata komando `%s' en %s ĉe linio %d.\n"
+msgstr "%s: nekonata komando %s en %s ĉe linio %d.\n"
 
-#: src/init.c:650
+#: src/init.c:653
 #, c-format
 msgid ""
 "Parsing system wgetrc file (env SYSTEM_WGETRC) failed.  Please check\n"
 "'%s',\n"
 "or specify a different file using --config.\n"
 msgstr ""
+"Analizo de sistema dosiero wgetrc (env SYSTEM_WGETRC) fiaskis.  Bonvole\n"
+"kontrolu '%s',\n"
+"aŭ indiku malsaman dosieron uzante --config.\n"
 
-#: src/init.c:665
+#: src/init.c:668
 #, c-format
 msgid ""
 "Parsing system wgetrc file failed.  Please check\n"
 "'%s',\n"
 "or specify a different file using --config.\n"
 msgstr ""
+"Analizo de sistema dosiero wgetrc fiaskis.  Bonvole\n"
+"kontrolu '%s',\n"
+"aŭ indiku malsaman dosieron uzante --config.\n"
 
-#: src/init.c:681
+#: src/init.c:684
 #, c-format
 msgid "%s: Warning: Both system and user wgetrc point to %s.\n"
-msgstr ""
+msgstr "%s: Averto: la wgetrc, kaj de la sistemo kaj de la uzanto, indikas %s.\n"
 
-#: src/init.c:871
-#, fuzzy, c-format
+#: src/init.c:874
+#, c-format
 msgid "%s: Invalid --execute command %s\n"
-msgstr "%s: %s: Nevalida bajta valuto `%s'\n"
+msgstr "%s: malvalida komando --execute %s\n"
 
-#: src/init.c:916
-#, fuzzy, c-format
+#: src/init.c:919
+#, c-format
 msgid "%s: %s: Invalid boolean %s; use `on' or `off'.\n"
-msgstr "%s: %s: Nevalida numero `%s'.\n"
+msgstr "%s: %s: malvalida buleo %s; uzu 'on' aŭ 'off'.\n"
 
-#: src/init.c:933
-#, fuzzy, c-format
+#: src/init.c:936
+#, c-format
 msgid "%s: %s: Invalid number %s.\n"
-msgstr "%s: %s: Nevalida numero `%s'.\n"
+msgstr "%s: %s: malvalida numero %s.\n"
 
-#: src/init.c:1155 src/init.c:1174
-#, fuzzy, c-format
+#: src/init.c:1158 src/init.c:1177
+#, c-format
 msgid "%s: %s: Invalid byte value %s\n"
-msgstr "%s: %s: Nevalida bajta valuto `%s'\n"
+msgstr "%s: %s: malvalida bajt-valoro %s\n"
 
-#: src/init.c:1199
-#, fuzzy, c-format
+#: src/init.c:1202
+#, c-format
 msgid "%s: %s: Invalid time period %s\n"
-msgstr "%s: %s: Nevalida numero `%s'.\n"
+msgstr "%s: %s: malvalida tempo-periodo %s\n"
 
-#: src/init.c:1253 src/init.c:1364 src/init.c:1420 src/init.c:1484
-#: src/init.c:1500 src/init.c:1525
-#, fuzzy, c-format
+#: src/init.c:1256 src/init.c:1367 src/init.c:1423 src/init.c:1487
+#: src/init.c:1504 src/init.c:1529
+#, c-format
 msgid "%s: %s: Invalid value %s.\n"
-msgstr "%s: %s: Nevalida valuto `%s'.\n"
+msgstr "%s: %s: malvalida valoro %s.\n"
 
-#: src/init.c:1290
-#, fuzzy, c-format
+#: src/init.c:1293
+#, c-format
 msgid "%s: %s: Invalid header %s.\n"
-msgstr "%s: %s: Nevalida ĉapo `%s'.\n"
+msgstr "%s: %s: malvalida ĉapo %s.\n"
 
-#: src/init.c:1311
-#, fuzzy, c-format
+#: src/init.c:1314
+#, c-format
 msgid "%s: %s: Invalid WARC header %s.\n"
-msgstr "%s: %s: Nevalida ĉapo `%s'.\n"
+msgstr "%s: %s: malvalida ĉapo WARC %s.\n"
 
-#: src/init.c:1377
-#, fuzzy, c-format
+#: src/init.c:1380
+#, c-format
 msgid "%s: %s: Invalid progress type %s.\n"
-msgstr "%s: %s: Nevalida ĉapo `%s'.\n"
+msgstr "%s: %s: malvalida progres-tipo %s.\n"
 
-#: src/init.c:1457
+#: src/init.c:1460
 #, c-format
 msgid ""
 "%s: %s: Invalid restriction %s,\n"
 "    use [unix|windows],[lowercase|uppercase],[nocontrol],[ascii].\n"
 msgstr ""
+"%s: %s: malvalida limigo %s,\n"
+"    uzu [unix|windows],[lowercase|uppercase],[nocontrol],[ascii].\n"
 
 #: src/iri.c:103
 #, c-format
 msgid "Encoding %s isn't valid\n"
-msgstr ""
+msgstr "Enkodigo %s ne validas\n"
 
 #: src/iri.c:124
 msgid "locale_to_utf8: locale is unset\n"
-msgstr ""
+msgstr "locale_to_utf8: lokaĵaro ne estas difinita\n"
 
 #: src/iri.c:134
 #, c-format
 msgid "Conversion from %s to %s isn't supported\n"
-msgstr ""
+msgstr "Konverto de %s al %s ne estas subtenata\n"
 
 #: src/iri.c:175
 msgid "Incomplete or invalid multibyte sequence encountered\n"
-msgstr ""
+msgstr "Malkompleta aŭ malvalida plurbajta sekvo estis trovata\n"
 
 #: src/iri.c:200
 #, c-format
 msgid "Unhandled errno %d\n"
-msgstr ""
+msgstr "Netraktita errno %d\n"
 
 #: src/iri.c:229
 #, c-format
 msgid "idn_encode failed (%d): %s\n"
-msgstr ""
+msgstr "idn_encode fiaskis (%d): %s\n"
 
 #: src/iri.c:248
 #, c-format
 msgid "idn_decode failed (%d): %s\n"
-msgstr ""
+msgstr "idn_decode fiaskis (%d): %s\n"
 
 #: src/log.c:862
 #, c-format
@@ -1205,6 +1205,8 @@ msgid ""
 "\n"
 "%s received, redirecting output to %s.\n"
 msgstr ""
+"\n"
+"%s estis ricevata, ni redirektas eligon al %s.\n"
 
 #: src/log.c:872
 #, c-format
@@ -1213,811 +1215,743 @@ msgid ""
 "%s received.\n"
 msgstr ""
 "\n"
-"%s ricevite.\n"
+"%s estis ricevata.\n"
 
 #: src/log.c:873
 #, c-format
 msgid "%s: %s; disabling logging.\n"
-msgstr ""
+msgstr "%s: %s; ni malebligas protokoladon.\n"
 
-#: src/main.c:419
+#: src/main.c:420
 #, c-format
 msgid "Usage: %s [OPTION]... [URL]...\n"
-msgstr ""
+msgstr "Uzmaniero: %s [MODIFILO]... [URL]...\n"
 
-#: src/main.c:431
+#: src/main.c:432
 msgid ""
 "Mandatory arguments to long options are mandatory for short options too.\n"
 "\n"
 msgstr ""
+"Nepraj argumentoj por longaj modifiloj ankaŭ nepras por la mallongaj.\n"
+"\n"
 
-#: src/main.c:433
+#: src/main.c:434
 msgid "Startup:\n"
-msgstr ""
+msgstr "Ekigo:\n"
 
-#: src/main.c:435
+#: src/main.c:436
 msgid "  -V,  --version           display the version of Wget and exit.\n"
-msgstr "  -V,  --version           vidigas la version de Wget kaj eliras.\n"
+msgstr "  -V,  --version           montri la version de Wget kaj eliri.\n"
 
-#: src/main.c:437
+#: src/main.c:438
 msgid "  -h,  --help              print this help.\n"
-msgstr "  -h,  --help              printas ĉi helpilon.\n"
+msgstr "  -h,  --help              montri tiun ĉi helpilon.\n"
 
-#: src/main.c:439
+#: src/main.c:440
 msgid "  -b,  --background        go to background after startup.\n"
-msgstr "  -b,  --background        iras al fona reĝimo post starto.\n"
+msgstr "  -b,  --background        iri al fona reĝimo post starto.\n"
 
-#: src/main.c:441
+#: src/main.c:442
 msgid "  -e,  --execute=COMMAND   execute a `.wgetrc'-style command.\n"
-msgstr ""
+msgstr "  -e,  --execute=KOMANDO   lanĉi komandon laŭ stilo '.wgetrc'.\n"
 
-#: src/main.c:445
+#: src/main.c:446
 msgid "Logging and input file:\n"
-msgstr "Salutante kaj enigante dosieron:\n"
+msgstr "Saluta kaj enig-dosiero:\n"
 
-#: src/main.c:447
+#: src/main.c:448
 msgid "  -o,  --output-file=FILE    log messages to FILE.\n"
-msgstr "  -o,  --output-file=DOSIERO    log mesaĝoj al DOSIERO.\n"
+msgstr "  -o,  --output-file=DOSIERO    protokoli mesaĝojn al DOSIERO.\n"
 
-#: src/main.c:449
+#: src/main.c:450
 msgid "  -a,  --append-output=FILE  append messages to FILE.\n"
-msgstr ""
+msgstr "  -a,  --append-output=DOSIERO postmeti mesaĝojn al DOSIERO.\n"
 
-#: src/main.c:452
+#: src/main.c:453
 msgid "  -d,  --debug               print lots of debugging information.\n"
-msgstr ""
+msgstr "  -d,  --debug               montri multe da rafiniga informaro.\n"
 
-#: src/main.c:456
-#, fuzzy
+#: src/main.c:457
 msgid "       --wdebug              print Watt-32 debug output.\n"
-msgstr "  -h,  --help              printas ĉi helpilon.\n"
+msgstr "       --wdebug              montri rafinigan eligon Watt-32.\n"
 
-#: src/main.c:459
+#: src/main.c:460
 msgid "  -q,  --quiet               quiet (no output).\n"
-msgstr ""
+msgstr "  -q,  --quiet               kviete (neniu eligo).\n"
 
-#: src/main.c:461
+#: src/main.c:462
 msgid "  -v,  --verbose             be verbose (this is the default).\n"
-msgstr ""
+msgstr "  -v,  --verbose             fariĝi detalema (tio ĉi aprioras).\n"
 
-#: src/main.c:463
-msgid ""
-"  -nv, --no-verbose          turn off verboseness, without being quiet.\n"
-msgstr ""
+#: src/main.c:464
+msgid "  -nv, --no-verbose          turn off verboseness, without being quiet.\n"
+msgstr "  -nv, --no-verbose          malŝalti detalemon, sen esti kvieta.\n"
 
-#: src/main.c:465
-msgid ""
-"       --report-speed=TYPE   Output bandwidth as TYPE.  TYPE can be bits.\n"
-msgstr ""
+#: src/main.c:466
+msgid "       --report-speed=TYPE   Output bandwidth as TYPE.  TYPE can be bits.\n"
+msgstr "       --report-speed=TIPO   Eligi bendlarĝo kiel TIPO.  TIPO povas esti 'bits'.\n"
 
-#: src/main.c:467
-#, fuzzy
-msgid ""
-"  -i,  --input-file=FILE     download URLs found in local or external FILE.\n"
-msgstr "  -i,  --input-file=DOSIERO     elŝutu URL-ojn trovitajn en DOSIERO.\n"
+#: src/main.c:468
+msgid "  -i,  --input-file=FILE     download URLs found in local or external FILE.\n"
+msgstr "  -i,  --input-file=DOSIERO     elŝuti URL-ojn trovitajn en loka aŭ ekstera DOSIERO.\n"
 
-#: src/main.c:469
+#: src/main.c:470
 msgid "  -F,  --force-html          treat input file as HTML.\n"
-msgstr ""
+msgstr "  -F,  --force-html          trakti enig-dosieron kiel HTML.\n"
 
-#: src/main.c:471
+#: src/main.c:472
 msgid ""
 "  -B,  --base=URL            resolves HTML input-file links (-i -F)\n"
 "                             relative to URL.\n"
 msgstr ""
+"  -B,  --base=URL            adrestrovi HTML-enig-dosierajn ligojn (-i -F)\n"
+"                             relativajn al URL.\n"
 
-#: src/main.c:474
+#: src/main.c:475
 msgid "       --config=FILE         Specify config file to use.\n"
-msgstr ""
+msgstr "       --config=DOSIERO      Indiki uzotan agord-dosieron.\n"
 
-#: src/main.c:478
+#: src/main.c:479
 msgid "Download:\n"
-msgstr "Elŝutite:\n"
+msgstr "Elŝuti:\n"
 
-#: src/main.c:480
-msgid ""
-"  -t,  --tries=NUMBER            set number of retries to NUMBER (0 "
-"unlimits).\n"
-msgstr ""
-"  -t,  --tries=NOMBRO            agordas nombron de reprovoj je NOMBRO (0 "
-"senlimaj).\n"
+#: src/main.c:481
+msgid "  -t,  --tries=NUMBER            set number of retries to NUMBER (0 unlimits).\n"
+msgstr "  -t,  --tries=NOMBRO            agordi nombron de reprovoj je NOMBRO (0 senlimaj).\n"
 
-#: src/main.c:482
+#: src/main.c:483
 msgid "       --retry-connrefused       retry even if connection is refused.\n"
-msgstr ""
-"       --retry-connrefused       provas reen eĉ se la konekto estas "
-"rifuzita.\n"
+msgstr "       --retry-connrefused       reprovi eĉ se la konekto estas rifuzita.\n"
 
-#: src/main.c:484
+#: src/main.c:485
 msgid "  -O,  --output-document=FILE    write documents to FILE.\n"
-msgstr ""
+msgstr "  -O,  --output-document=DOSIERO skribi dokumentojn al DOSIERO.\n"
 
-#: src/main.c:486
+#: src/main.c:487
 msgid ""
 "  -nc, --no-clobber              skip downloads that would download to\n"
 "                                 existing files (overwriting them).\n"
 msgstr ""
+"  -nc, --no-clobber              preterpasi elŝutojn kiuj anstataŭigus\n"
+"                                 ekzistantajn dosierojn.\n"
 
-#: src/main.c:489
-msgid ""
-"  -c,  --continue                resume getting a partially-downloaded "
-"file.\n"
+#: src/main.c:490
+msgid "  -c,  --continue                resume getting a partially-downloaded file.\n"
 msgstr "  -c,  --continue                daŭri uzi dosieron parte elŝutita.\n"
 
-#: src/main.c:491
+#: src/main.c:492
 msgid "       --progress=TYPE           select progress gauge type.\n"
-msgstr ""
+msgstr "       --progress=TIPO           elekti tipon de progres-montrilo.\n"
 
-#: src/main.c:493
+#: src/main.c:494
 msgid ""
 "  -N,  --timestamping            don't re-retrieve files unless newer than\n"
 "                                 local.\n"
 msgstr ""
+"  -N,  --timestamping            ne re-elpreni dosierojn krom se pli nova ol\n"
+"                                 la loka.\n"
 
-#: src/main.c:496
+#: src/main.c:497
 msgid ""
 "  --no-use-server-timestamps     don't set the local file's timestamp by\n"
 "                                 the one on the server.\n"
 msgstr ""
+"  --no-use-server-timestamps     ne difini la lokan dosieran tempindikon per\n"
+"                                 tiu de la servilo.\n"
 
-#: src/main.c:499
+#: src/main.c:500
 msgid "  -S,  --server-response         print server response.\n"
-msgstr "  -S,  --server-response         printas respondon de la servilo.\n"
+msgstr "  -S,  --server-response         montri respondon de la servilo.\n"
 
-#: src/main.c:501
+#: src/main.c:502
 msgid "       --spider                  don't download anything.\n"
-msgstr "       --spider                  ne elŝutas ion ajn.\n"
+msgstr "       --spider                  ne elŝuti ion ajn.\n"
 
-#: src/main.c:503
+#: src/main.c:504
 msgid "  -T,  --timeout=SECONDS         set all timeout values to SECONDS.\n"
-msgstr ""
-"  -T,  --timeout=SEKUNDOJ         agordas ĉiujn temp-limojn je SEKUNDOJ.\n"
+msgstr "  -T,  --timeout=SEKUNDOJ        agordi ĉiujn temp-limojn je SEKUNDOJ.\n"
 
-#: src/main.c:505
+#: src/main.c:506
 msgid "       --dns-timeout=SECS        set the DNS lookup timeout to SECS.\n"
-msgstr ""
-"       --dns-timeout=Sekundoj        agordas la temp-limon por serĉo de DNS "
-"je Sekundoj.\n"
+msgstr "       --dns-timeout=Sekundoj    agordi la temp-limon por serĉo de DNS je Sekundoj.\n"
 
-#: src/main.c:507
+#: src/main.c:508
 msgid "       --connect-timeout=SECS    set the connect timeout to SECS.\n"
-msgstr ""
-"       --connect-timeout=Sekundoj    agordas la temp-limon por konekto je "
-"Sekundoj.\n"
+msgstr "       --connect-timeout=Sekundoj agordi la temp-limon por konekto je Sekundoj.\n"
 
-#: src/main.c:509
+#: src/main.c:510
 msgid "       --read-timeout=SECS       set the read timeout to SECS.\n"
-msgstr ""
-"       --read-timeout=Sekundoj       agordas la temp-limon por lego je "
-"Sekundoj.\n"
+msgstr "       --read-timeout=Sekundoj   agordi la temp-limon por lego je Sekundoj.\n"
 
-#: src/main.c:511
+#: src/main.c:512
 msgid "  -w,  --wait=SECONDS            wait SECONDS between retrievals.\n"
-msgstr "  -w,  --wait=SEKUNDOJ            atendas SEKUNDOJn inter elŝutoj.\n"
+msgstr "  -w,  --wait=SEKUNDOJ           atendi SEKUNDOJn inter elŝutoj.\n"
 
-#: src/main.c:513
-msgid ""
-"       --waitretry=SECONDS       wait 1..SECONDS between retries of a "
-"retrieval.\n"
-msgstr ""
-"       --waitretry=SEKUNDOJ       atendas 1..SEKUNDOJn inter reprovoj de "
-"elŝutoj.\n"
+#: src/main.c:514
+msgid "       --waitretry=SECONDS       wait 1..SECONDS between retries of a retrieval.\n"
+msgstr "       --waitretry=SEKUNDOJ      atendi 1..SEKUNDOJn inter reprovoj de elŝutoj.\n"
 
-#: src/main.c:515
-#, fuzzy
-msgid ""
-"       --random-wait             wait from 0.5*WAIT...1.5*WAIT secs between "
-"retrievals.\n"
-msgstr "  -w,  --wait=SEKUNDOJ            atendas SEKUNDOJn inter elŝutoj.\n"
+#: src/main.c:516
+msgid "       --random-wait             wait from 0.5*WAIT...1.5*WAIT secs between retrievals.\n"
+msgstr "       --random-wait             atendi de 0.5*WAIT...1.5*WAIT sekundoj inter elŝutoj.\n"
 
-#: src/main.c:517
+#: src/main.c:518
 msgid "       --no-proxy                explicitly turn off proxy.\n"
-msgstr ""
+msgstr "       --no-proxy                nepre malŝalti prokur-servilon.\n"
 
-#: src/main.c:519
+#: src/main.c:520
 msgid "  -Q,  --quota=NUMBER            set retrieval quota to NUMBER.\n"
-msgstr ""
+msgstr "  -Q,  --quota=NUMERO            difini elŝuta limo al NUMERO.\n"
 
-#: src/main.c:521
-msgid ""
-"       --bind-address=ADDRESS    bind to ADDRESS (hostname or IP) on local "
-"host.\n"
-msgstr ""
+#: src/main.c:522
+msgid "       --bind-address=ADDRESS    bind to ADDRESS (hostname or IP) on local host.\n"
+msgstr "       --bind-address=ADRESO     ligi al ADRESO (gastigant-nomo aŭ IP) en la loka gastiganto.\n"
 
-#: src/main.c:523
+#: src/main.c:524
 msgid "       --limit-rate=RATE         limit download rate to RATE.\n"
-msgstr ""
+msgstr "       --limit-rate=RAPIDO       limigi elŝut-rapido al RAPIDO.\n"
 
-#: src/main.c:525
+#: src/main.c:526
 msgid "       --no-dns-cache            disable caching DNS lookups.\n"
-msgstr ""
+msgstr "       --no-dns-cache            malebligi kaŝmemorajn DNS-serĉojn.\n"
 
-#: src/main.c:527
-msgid ""
-"       --restrict-file-names=OS  restrict chars in file names to ones OS "
-"allows.\n"
-msgstr ""
+#: src/main.c:528
+msgid "       --restrict-file-names=OS  restrict chars in file names to ones OS allows.\n"
+msgstr "       --restrict-file-names=OS  limigi signojn en dosiernomoj al tiuj permesataj de la OS.\n"
 
-#: src/main.c:529
-msgid ""
-"       --ignore-case             ignore case when matching files/"
-"directories.\n"
-msgstr ""
+#: src/main.c:530
+msgid "       --ignore-case             ignore case when matching files/directories.\n"
+msgstr "       --ignore-case             preteratenti usklecon dum kongruo al dosieroj/dosierujoj.\n"
 
-#: src/main.c:532
+#: src/main.c:533
 msgid "  -4,  --inet4-only              connect only to IPv4 addresses.\n"
-msgstr ""
+msgstr "  -4,  --inet4-only              konekti nur al adresoj IPv4.\n"
 
-#: src/main.c:534
+#: src/main.c:535
 msgid "  -6,  --inet6-only              connect only to IPv6 addresses.\n"
-msgstr ""
+msgstr "  -6,  --inet6-only              konekti nur al adresoj IPv6.\n"
 
-#: src/main.c:536
+#: src/main.c:537
 msgid ""
-"       --prefer-family=FAMILY    connect first to addresses of specified "
-"family,\n"
+"       --prefer-family=FAMILY    connect first to addresses of specified family,\n"
 "                                 one of IPv6, IPv4, or none.\n"
 msgstr ""
+"       --prefer-family=FAMILIO   konekti unue al adresoj el indikita familio,\n"
+"                                 unu el IPv6, IPv4, aŭ neniu.\n"
 
-#: src/main.c:540
+#: src/main.c:541
 msgid "       --user=USER               set both ftp and http user to USER.\n"
-msgstr ""
+msgstr "       --user=UZANTO             difini uzanto kaj de ftp kaj de http kiel UZANTOn.\n"
 
-#: src/main.c:542
-msgid ""
-"       --password=PASS           set both ftp and http password to PASS.\n"
-msgstr ""
+#: src/main.c:543
+msgid "       --password=PASS           set both ftp and http password to PASS.\n"
+msgstr "       --password=PASV           difini pasvorton kaj de ftp kaj de http kiel PASV.\n"
 
-#: src/main.c:544
+#: src/main.c:545
 msgid "       --ask-password            prompt for passwords.\n"
-msgstr ""
+msgstr "       --ask-password            peti pasvortojn.\n"
 
-#: src/main.c:546
-#, fuzzy
+#: src/main.c:547
 msgid "       --no-iri                  turn off IRI support.\n"
-msgstr "       --spider                  ne elŝutas ion ajn.\n"
+msgstr "       --no-iri                  malŝalti subteno al IRI.\n"
 
-#: src/main.c:548
-msgid ""
-"       --local-encoding=ENC      use ENC as the local encoding for IRIs.\n"
-msgstr ""
+#: src/main.c:549
+msgid "       --local-encoding=ENC      use ENC as the local encoding for IRIs.\n"
+msgstr "       --local-encoding=ENK      uzi ENK kiel lokan enkodigon por IRI.\n"
 
-#: src/main.c:550
-msgid ""
-"       --remote-encoding=ENC     use ENC as the default remote encoding.\n"
-msgstr ""
+#: src/main.c:551
+msgid "       --remote-encoding=ENC     use ENC as the default remote encoding.\n"
+msgstr "       --remote-encoding=ENK     uzi ENK kiel la aprioran deforan enkodigon.\n"
 
-#: src/main.c:552
+#: src/main.c:553
 msgid "       --unlink                  remove file before clobber.\n"
-msgstr ""
+msgstr "       --unlink                  forigi la dosieron antaŭ ol pereigo.\n"
 
-#: src/main.c:556
+#: src/main.c:557
 msgid "Directories:\n"
 msgstr "Dosierujoj:\n"
 
-#: src/main.c:558
+#: src/main.c:559
 msgid "  -nd, --no-directories           don't create directories.\n"
-msgstr ""
+msgstr "  -nd, --no-directories           ne krei dosierujojn.\n"
 
-#: src/main.c:560
+#: src/main.c:561
 msgid "  -x,  --force-directories        force creation of directories.\n"
-msgstr ""
+msgstr "  -x,  --force-directories        devigi kreon de dosierujoj.\n"
 
-#: src/main.c:562
+#: src/main.c:563
 msgid "  -nH, --no-host-directories      don't create host directories.\n"
-msgstr ""
+msgstr "  -nH, --no-host-directories      ne krei gastigantajn dosierujojn.\n"
 
-#: src/main.c:564
+#: src/main.c:565
 msgid "       --protocol-directories     use protocol name in directories.\n"
-msgstr ""
+msgstr "       --protocol-directories     uzi protokola nomo en dosierujoj.\n"
 
-#: src/main.c:566
+#: src/main.c:567
 msgid "  -P,  --directory-prefix=PREFIX  save files to PREFIX/...\n"
-msgstr ""
+msgstr "  -P,  --directory-prefix=PREFIKSO konservi dosierojn al PREFIKSO/...\n"
 
-#: src/main.c:568
-msgid ""
-"       --cut-dirs=NUMBER          ignore NUMBER remote directory "
-"components.\n"
-msgstr ""
+#: src/main.c:569
+msgid "       --cut-dirs=NUMBER          ignore NUMBER remote directory components.\n"
+msgstr "       --cut-dirs=NOMBRO          preteratenti NOMBROn da dosierujaj komponantoj.\n"
 
-#: src/main.c:572
+#: src/main.c:573
 msgid "HTTP options:\n"
-msgstr ""
+msgstr "Modifiloj de HTTP:\n"
 
-#: src/main.c:574
+#: src/main.c:575
 msgid "       --http-user=USER        set http user to USER.\n"
-msgstr ""
+msgstr "       --http-user=UZANTO      difini http-uzanton kiel UZANTOn.\n"
 
-#: src/main.c:576
+#: src/main.c:577
 msgid "       --http-password=PASS    set http password to PASS.\n"
-msgstr ""
+msgstr "       --http-password=PASVORTO difini http-pasvorton kiel PASVORTOn.\n"
 
-#: src/main.c:578
+#: src/main.c:579
 msgid "       --no-cache              disallow server-cached data.\n"
-msgstr ""
+msgstr "       --no-cache              malebligi servil-enmemorigitan datumaron.\n"
 
-#: src/main.c:580
+#: src/main.c:581
 msgid ""
 "       --default-page=NAME     Change the default page name (normally\n"
 "                               this is `index.html'.).\n"
 msgstr ""
+"       --default-page=NOMO     Ŝanĝi la aprioran paĝnomon (ordinare\n"
+"                               ĝi estas 'index.html'.).\n"
 
-#: src/main.c:583
-msgid ""
-"  -E,  --adjust-extension      save HTML/CSS documents with proper "
-"extensions.\n"
-msgstr ""
+#: src/main.c:584
+msgid "  -E,  --adjust-extension      save HTML/CSS documents with proper extensions.\n"
+msgstr "  -E,  --adjust-extension      konservi dokumentojn HTML/CSS kun taŭgaj sufiksoj.\n"
 
-#: src/main.c:585
+#: src/main.c:586
 msgid "       --ignore-length         ignore `Content-Length' header field.\n"
-msgstr ""
+msgstr "       --ignore-length         preteratenti la kap-kampon 'Content-Length'.\n"
 
-#: src/main.c:587
+#: src/main.c:588
 msgid "       --header=STRING         insert STRING among the headers.\n"
-msgstr ""
+msgstr "       --header=ĈENO           enmeti ĈENO inter la kaplinioj.\n"
 
-#: src/main.c:589
+#: src/main.c:590
 msgid "       --max-redirect          maximum redirections allowed per page.\n"
-msgstr ""
+msgstr "       --max-redirect          maximumo da redirektigoj permesataj por paĝo.\n"
 
-#: src/main.c:591
+#: src/main.c:592
 msgid "       --proxy-user=USER       set USER as proxy username.\n"
-msgstr ""
+msgstr "       --proxy-user=UZANTO     difini UZANTOn kiel prokuran uzantnomon.\n"
 
-#: src/main.c:593
+#: src/main.c:594
 msgid "       --proxy-password=PASS   set PASS as proxy password.\n"
-msgstr ""
+msgstr "       --proxy-password=PASV   difini PASV kiel prokuran pasvorton.\n"
 
-#: src/main.c:595
-msgid ""
-"       --referer=URL           include `Referer: URL' header in HTTP "
-"request.\n"
-msgstr ""
+#: src/main.c:596
+msgid "       --referer=URL           include `Referer: URL' header in HTTP request.\n"
+msgstr "       --referer=URL           inkluzivigi la kapon 'Referer: URL' en peto HTTP.\n"
 
-#: src/main.c:597
+#: src/main.c:598
 msgid "       --save-headers          save the HTTP headers to file.\n"
-msgstr ""
+msgstr "       --save-headers          konservi la kapliniojn HTTP en dosieron.\n"
 
-#: src/main.c:599
-msgid ""
-"  -U,  --user-agent=AGENT      identify as AGENT instead of Wget/VERSION.\n"
-msgstr ""
+#: src/main.c:600
+msgid "  -U,  --user-agent=AGENT      identify as AGENT instead of Wget/VERSION.\n"
+msgstr "  -U,  --user-agent=AGENTO     identigi kiel AGENTOn anstataŭ Wget/VERSIO.\n"
 
-#: src/main.c:601
-msgid ""
-"       --no-http-keep-alive    disable HTTP keep-alive (persistent "
-"connections).\n"
-msgstr ""
+#: src/main.c:602
+msgid "       --no-http-keep-alive    disable HTTP keep-alive (persistent connections).\n"
+msgstr "       --no-http-keep-alive    malebligi HTTP-an 'keep-alive' (persistaj konektoj).\n"
 
-#: src/main.c:603
+#: src/main.c:604
 msgid "       --no-cookies            don't use cookies.\n"
-msgstr ""
+msgstr "       --no-cookies            ne uzi kuketojn.\n"
 
-#: src/main.c:605
+#: src/main.c:606
 msgid "       --load-cookies=FILE     load cookies from FILE before session.\n"
-msgstr ""
+msgstr "       --load-cookies=DOSIERO  ŝargi kuketojn el DOSIERO antaŭ la seanco.\n"
 
-#: src/main.c:607
+#: src/main.c:608
 msgid "       --save-cookies=FILE     save cookies to FILE after session.\n"
-msgstr ""
+msgstr "       --save-cookies=DOSIERO  konservi kuketojn al DOSIERO post la seanco.\n"
 
-#: src/main.c:609
-msgid ""
-"       --keep-session-cookies  load and save session (non-permanent) "
-"cookies.\n"
-msgstr ""
+#: src/main.c:610
+msgid "       --keep-session-cookies  load and save session (non-permanent) cookies.\n"
+msgstr "       --keep-session-cookies  ŝargi kaj konservi seancajn (ne-ĉiamajn) kuketojn.\n"
 
-#: src/main.c:611
-msgid ""
-"       --post-data=STRING      use the POST method; send STRING as the "
-"data.\n"
-msgstr ""
+#: src/main.c:612
+msgid "       --post-data=STRING      use the POST method; send STRING as the data.\n"
+msgstr "       --post-data=ĈENO        uzi metodon POST; sendi ĈENOn kiel la datumaron.\n"
 
-#: src/main.c:613
-msgid ""
-"       --post-file=FILE        use the POST method; send contents of FILE.\n"
-msgstr ""
+#: src/main.c:614
+msgid "       --post-file=FILE        use the POST method; send contents of FILE.\n"
+msgstr "       --post-file=DOSIERO     uzi metodon POST; sendi enhavojn de DOSIERO.\n"
 
-#: src/main.c:615
-msgid ""
-"       --method=HTTPMethod     use method \"HTTPMethod\" in the header.\n"
-msgstr ""
+#: src/main.c:616
+msgid "       --method=HTTPMethod     use method \"HTTPMethod\" in the header.\n"
+msgstr "       --method=HTTPMethod     uzi metodon \"HTTPMethod\" en la kaplinioj.\n"
 
-#: src/main.c:617
-msgid ""
-"       --body-data=STRING      Send STRING as data. --method MUST be set.\n"
-msgstr ""
+#: src/main.c:618
+msgid "       --body-data=STRING      Send STRING as data. --method MUST be set.\n"
+msgstr "       --body-data=ĈENO        sendi ĈENOn kiel datumaron. --method DEVAS esti difinita.\n"
 
-#: src/main.c:619
-msgid ""
-"       --body-file=FILE        Send contents of FILE. --method MUST be set.\n"
-msgstr ""
+#: src/main.c:620
+msgid "       --body-file=FILE        Send contents of FILE. --method MUST be set.\n"
+msgstr "       --body-file=DOSIERO     sendi enhavojn de DOSIERO. --method DEVAS esti difinita.\n"
 
-#: src/main.c:621
+#: src/main.c:622
 msgid ""
 "       --content-disposition   honor the Content-Disposition header when\n"
 "                               choosing local file names (EXPERIMENTAL).\n"
 msgstr ""
+"       --content-disposition   honorigi la kaplinion Content-Disposition dum\n"
+"                               elekto de lokaj dosiernomoj (EKSPERIMENTA).\n"
 
-#: src/main.c:624
-msgid ""
-"       --content-on-error      output the received content on server "
-"errors.\n"
-msgstr ""
+#: src/main.c:625
+msgid "       --content-on-error      output the received content on server errors.\n"
+msgstr "       --content-on-error      montri la ricevitan enhavon je servilaj eraroj.\n"
 
-#: src/main.c:626
+#: src/main.c:627
 msgid ""
 "       --auth-no-challenge     send Basic HTTP authentication information\n"
 "                               without first waiting for the server's\n"
 "                               challenge.\n"
 msgstr ""
+"       --auth-no-challenge     sendi aŭtentikigan informon Baza HTTP\n"
+"                               sen unue atendi por testo de la servilo.\n"
 
-#: src/main.c:633
+#: src/main.c:634
 msgid "HTTPS (SSL/TLS) options:\n"
-msgstr ""
+msgstr "Modifiloj HTTPS (SSL/TLS):\n"
 
-#: src/main.c:635
+#: src/main.c:636
 msgid ""
 "       --secure-protocol=PR     choose secure protocol, one of auto, SSLv2,\n"
-"                                SSLv3, and TLSv1.\n"
+"                                SSLv3, TLSv1 and PFS.\n"
 msgstr ""
+"       --secure-protocol=PR     elekti sekuran protokolon, unu el: auto, SSLv2,\n"
+"                                SSLv3, TLSv1 aŭ PFS.\n"
 
-#: src/main.c:638
-msgid ""
-"       --no-check-certificate   don't validate the server's certificate.\n"
-msgstr ""
+#: src/main.c:639
+msgid "       --https-only             only follow secure HTTPS links\n"
+msgstr "       --https-only             nur sekvi sekurajn ligojn HTTPS\n"
 
-#: src/main.c:640
+#: src/main.c:641
+msgid "       --no-check-certificate   don't validate the server's certificate.\n"
+msgstr "       --no-check-certificate   ne validigi la atestilon de la servilo.\n"
+
+#: src/main.c:643
 msgid "       --certificate=FILE       client certificate file.\n"
-msgstr ""
+msgstr "       --certificate=DOSIERO    klienta atestila dosiero.\n"
 
-#: src/main.c:642
+#: src/main.c:645
 msgid "       --certificate-type=TYPE  client certificate type, PEM or DER.\n"
-msgstr ""
+msgstr "       --certificate-type=TIPO  klienta atestilo-tipo, PEM aŭ DER.\n"
 
-#: src/main.c:644
+#: src/main.c:647
 msgid "       --private-key=FILE       private key file.\n"
-msgstr ""
+msgstr "       --private-key=DOSIERO    privata ŝlosila dosiero.\n"
 
-#: src/main.c:646
+#: src/main.c:649
 msgid "       --private-key-type=TYPE  private key type, PEM or DER.\n"
-msgstr ""
+msgstr "       --private-key-type=TIPO  privata ŝlosilo-tipo, PEM aŭ DER.\n"
 
-#: src/main.c:648
+#: src/main.c:651
 msgid "       --ca-certificate=FILE    file with the bundle of CA's.\n"
-msgstr ""
+msgstr "       --ca-certificate=DOSIERO dosiero sen aro da CA-oj.\n"
 
-#: src/main.c:650
-msgid ""
-"       --ca-directory=DIR       directory where hash list of CA's is "
-"stored.\n"
-msgstr ""
+#: src/main.c:653
+msgid "       --ca-directory=DIR       directory where hash list of CA's is stored.\n"
+msgstr "       --ca-directory=UJO       dosierujo kie haketa listo da CA-oj estas konservataj.\n"
 
-#: src/main.c:652
-msgid ""
-"       --random-file=FILE       file with random data for seeding the SSL "
-"PRNG.\n"
-msgstr ""
+#: src/main.c:655
+msgid "       --random-file=FILE       file with random data for seeding the SSL PRNG.\n"
+msgstr "       --random-file=DOSIERO    dosiero kun hazarda datumaro por semigi la SSL PRNG.\n"
 
-#: src/main.c:654
-msgid ""
-"       --egd-file=FILE          file naming the EGD socket with random "
-"data.\n"
-msgstr ""
-
-#: src/main.c:659
-msgid "FTP options:\n"
-msgstr ""
+#: src/main.c:657
+msgid "       --egd-file=FILE          file naming the EGD socket with random data.\n"
+msgstr "       --egd-file=DOSIERO       dosiero nomigantan la ingo EGD kun hazarda datumaro.\n"
 
 #: src/main.c:662
-msgid ""
-"       --ftp-stmlf             Use Stream_LF format for all binary FTP "
-"files.\n"
-msgstr ""
+msgid "FTP options:\n"
+msgstr "Modifiloj FTP:\n"
 
 #: src/main.c:665
+msgid "       --ftp-stmlf             Use Stream_LF format for all binary FTP files.\n"
+msgstr "       --ftp-stmlf             Uzi la formo Stream_LF por ĉiuj ciferecaj dosieroj FTP.\n"
+
+#: src/main.c:668
 msgid "       --ftp-user=USER         set ftp user to USER.\n"
-msgstr ""
+msgstr "       --ftp-user=UZANTO       difini uzanton de FTP kiel UZANTOn.\n"
 
-#: src/main.c:667
+#: src/main.c:670
 msgid "       --ftp-password=PASS     set ftp password to PASS.\n"
-msgstr ""
+msgstr "       --ftp-password=PASV     difini pasvorton de FTP kiel PASV.\n"
 
-#: src/main.c:669
+#: src/main.c:672
 msgid "       --no-remove-listing     don't remove `.listing' files.\n"
-msgstr ""
+msgstr "       --no-remove-listing     ne forigi dosierojn '.listing'.\n"
 
-#: src/main.c:671
+#: src/main.c:674
 msgid "       --no-glob               turn off FTP file name globbing.\n"
-msgstr ""
+msgstr "       --no-glob               malebligi ŝablonojn por dosiernomoj de FTP.\n"
 
-#: src/main.c:673
+#: src/main.c:676
 msgid "       --no-passive-ftp        disable the \"passive\" transfer mode.\n"
-msgstr ""
+msgstr "       --no-passive-ftp        malebligi \"pasivan\" transigan reĝimon.\n"
 
-#: src/main.c:675
+#: src/main.c:678
 msgid "       --preserve-permissions  preserve remote file permissions.\n"
-msgstr ""
+msgstr "       --preserve-permissions  konservi deforajn dosier-permesojn.\n"
 
-#: src/main.c:677
-msgid ""
-"       --retr-symlinks         when recursing, get linked-to files (not "
-"dir).\n"
-msgstr ""
+#: src/main.c:680
+msgid "       --retr-symlinks         when recursing, get linked-to files (not dir).\n"
+msgstr "       --retr-symlinks         dum rikuro, preni dosierojn 'linked-to' (ne ujo).\n"
 
-#: src/main.c:681
+#: src/main.c:684
 msgid "WARC options:\n"
-msgstr ""
+msgstr "Modifiloj WARC:\n"
 
-#: src/main.c:683
-msgid ""
-"       --warc-file=FILENAME      save request/response data to a .warc.gz "
-"file.\n"
-msgstr ""
+#: src/main.c:686
+msgid "       --warc-file=FILENAME      save request/response data to a .warc.gz file.\n"
+msgstr "       --warc-file=DOSIERNOMO    konservi petan/respondan datumaron al dosiero .warc.gz\n"
 
-#: src/main.c:685
-msgid ""
-"       --warc-header=STRING      insert STRING into the warcinfo record.\n"
-msgstr ""
+#: src/main.c:688
+msgid "       --warc-header=STRING      insert STRING into the warcinfo record.\n"
+msgstr "       --warc-header=ĈENO        enmeti ĈENOn en rikordon de warcinfo.\n"
 
-#: src/main.c:687
-msgid ""
-"       --warc-max-size=NUMBER    set maximum size of WARC files to NUMBER.\n"
-msgstr ""
+#: src/main.c:690
+msgid "       --warc-max-size=NUMBER    set maximum size of WARC files to NUMBER.\n"
+msgstr "       --warc-max-size=NUMERO    difini maksimuman kvanton da dosieroj WARC kiel NUMEROn.\n"
 
-#: src/main.c:689
+#: src/main.c:692
 msgid "       --warc-cdx                write CDX index files.\n"
-msgstr ""
-
-#: src/main.c:691
-msgid ""
-"       --warc-dedup=FILENAME     do not store records listed in this CDX "
-"file.\n"
-msgstr ""
+msgstr "       --warc-cdx                skribi indeks-dosierojn CDX.\n"
 
 #: src/main.c:694
-msgid ""
-"       --no-warc-compression     do not compress WARC files with GZIP.\n"
-msgstr ""
+msgid "       --warc-dedup=FILENAME     do not store records listed in this CDX file.\n"
+msgstr "       --warc-dedup=DOSIERNOMO   ne konservi rikordojn listigitajn en tiu ĉi dosiero CDX.\n"
 
 #: src/main.c:697
+msgid "       --no-warc-compression     do not compress WARC files with GZIP.\n"
+msgstr "       --no-warc-compression     ne densigi dosierojn WARC per GZIP.\n"
+
+#: src/main.c:700
 msgid "       --no-warc-digests         do not calculate SHA1 digests.\n"
-msgstr ""
+msgstr "       --no-warc-digests         ne kalkuli totalojn SHA1.\n"
 
-#: src/main.c:699
-msgid ""
-"       --no-warc-keep-log        do not store the log file in a WARC "
-"record.\n"
-msgstr ""
+#: src/main.c:702
+msgid "       --no-warc-keep-log        do not store the log file in a WARC record.\n"
+msgstr "       --no-warc-keep-log        ne konservi protokol-dosiero en rikordo WARC.\n"
 
-#: src/main.c:701
+#: src/main.c:704
 msgid ""
-"       --warc-tempdir=DIRECTORY  location for temporary files created by "
-"the\n"
+"       --warc-tempdir=DIRECTORY  location for temporary files created by the\n"
 "                                 WARC writer.\n"
 msgstr ""
+"       --warc-tempdir=DOSIERUJO  loko por provizoraj dosieroj kreitaj de\n"
+"                                 la skribanto WARC.\n"
 
-#: src/main.c:706
+#: src/main.c:709
 msgid "Recursive download:\n"
-msgstr ""
+msgstr "Rikura elŝuto:\n"
 
-#: src/main.c:708
+#: src/main.c:711
 msgid "  -r,  --recursive          specify recursive download.\n"
-msgstr ""
+msgstr "  -r,  --recursive          indiki rikuran elŝuton.\n"
 
-#: src/main.c:710
-msgid ""
-"  -l,  --level=NUMBER       maximum recursion depth (inf or 0 for "
-"infinite).\n"
-msgstr ""
+#: src/main.c:713
+msgid "  -l,  --level=NUMBER       maximum recursion depth (inf or 0 for infinite).\n"
+msgstr "  -l,  --level=NUMERO       maksimuma rikura profundo (inf aŭ 0 por nefinita).\n"
 
-#: src/main.c:712
-msgid ""
-"       --delete-after       delete files locally after downloading them.\n"
-msgstr ""
+#: src/main.c:715
+msgid "       --delete-after       delete files locally after downloading them.\n"
+msgstr "       --delete-after       forigi dosierojn loke post elŝuti ilin.\n"
 
-#: src/main.c:714
+#: src/main.c:717
 msgid ""
 "  -k,  --convert-links      make links in downloaded HTML or CSS point to\n"
 "                            local files.\n"
 msgstr ""
+"  -k,  --convert-links      igi ke simbolaj ligoj por elŝutitaj HTML aŭ CSS indiku\n"
+"                            lokajn dosierojn.\n"
 
-#: src/main.c:717
+#: src/main.c:720
 msgid "  --backups=N   before writing file X, rotate up to N backup files.\n"
-msgstr ""
-
-#: src/main.c:721
-msgid ""
-"  -K,  --backup-converted   before converting file X, back up as X_orig.\n"
-msgstr ""
+msgstr "  --backups=N   antaŭ ol skribi dosieron X, rotacii ĝis N savkopiajn dosierojn.\n"
 
 #: src/main.c:724
-msgid ""
-"  -K,  --backup-converted   before converting file X, back up as X.orig.\n"
-msgstr ""
+msgid "  -K,  --backup-converted   before converting file X, back up as X_orig.\n"
+msgstr "  -K,  --backup-converted   antaŭ ol konverti dosieron X, savkopii kiel X_orig.\n"
 
 #: src/main.c:727
-msgid ""
-"  -m,  --mirror             shortcut for -N -r -l inf --no-remove-listing.\n"
-msgstr ""
+msgid "  -K,  --backup-converted   before converting file X, back up as X.orig.\n"
+msgstr "  -K,  --backup-converted   antaŭ ol konverti dosieron X, savkopii kiel X.orig.\n"
 
-#: src/main.c:729
-msgid ""
-"  -p,  --page-requisites    get all images, etc. needed to display HTML "
-"page.\n"
-msgstr ""
+#: src/main.c:730
+msgid "  -m,  --mirror             shortcut for -N -r -l inf --no-remove-listing.\n"
+msgstr "  -m,  --mirror             mallongigo por -N -r -l inf --no-remove-listing.\n"
 
-#: src/main.c:731
-msgid ""
-"       --strict-comments    turn on strict (SGML) handling of HTML "
-"comments.\n"
-msgstr ""
+#: src/main.c:732
+msgid "  -p,  --page-requisites    get all images, etc. needed to display HTML page.\n"
+msgstr "  -p,  --page-requisites    preni ĉiujn bildojn, ktp, bezonataj por montri paĝon HTML.\n"
 
-#: src/main.c:735
+#: src/main.c:734
+msgid "       --strict-comments    turn on strict (SGML) handling of HTML comments.\n"
+msgstr "       --strict-comments    ŝalti severa (SGML) traktado de komentoj HTML.\n"
+
+#: src/main.c:738
 msgid "Recursive accept/reject:\n"
-msgstr ""
+msgstr "Rikura akcepto/malakcepto:\n"
 
-#: src/main.c:737
-msgid ""
-"  -A,  --accept=LIST               comma-separated list of accepted "
-"extensions.\n"
-msgstr ""
+#: src/main.c:740
+msgid "  -A,  --accept=LIST               comma-separated list of accepted extensions.\n"
+msgstr "  -A,  --accept=LISTO              kom-apartita listo de akcepteblaj sufiksoj.\n"
 
-#: src/main.c:739
-msgid ""
-"  -R,  --reject=LIST               comma-separated list of rejected "
-"extensions.\n"
-msgstr ""
+#: src/main.c:742
+msgid "  -R,  --reject=LIST               comma-separated list of rejected extensions.\n"
+msgstr "  -R,  --reject=LISTO              kom-apartita listo de malakcepteblaj sufiksoj.\n"
 
-#: src/main.c:741
+#: src/main.c:744
 msgid "       --accept-regex=REGEX        regex matching accepted URLs.\n"
-msgstr ""
-
-#: src/main.c:743
-msgid "       --reject-regex=REGEX        regex matching rejected URLs.\n"
-msgstr ""
+msgstr "       --accept-regex=REGESP       regesp kongruanta al akcepteblaj URL.\n"
 
 #: src/main.c:746
-msgid "       --regex-type=TYPE           regex type (posix|pcre).\n"
-msgstr ""
+msgid "       --reject-regex=REGEX        regex matching rejected URLs.\n"
+msgstr "       --reject-regex=REGESP       regesp kongruanta al malakcepteblaj URLs.\n"
 
 #: src/main.c:749
-msgid "       --regex-type=TYPE           regex type (posix).\n"
-msgstr ""
+msgid "       --regex-type=TYPE           regex type (posix|pcre).\n"
+msgstr "       --regex-type=TIPO           tipo de regesp (posix|pcre).\n"
 
 #: src/main.c:752
-msgid ""
-"  -D,  --domains=LIST              comma-separated list of accepted "
-"domains.\n"
-msgstr ""
+msgid "       --regex-type=TYPE           regex type (posix).\n"
+msgstr "       --regex-type=TIPO           tipo de regesp (posix).\n"
 
-#: src/main.c:754
-msgid ""
-"       --exclude-domains=LIST      comma-separated list of rejected "
-"domains.\n"
-msgstr ""
+#: src/main.c:755
+msgid "  -D,  --domains=LIST              comma-separated list of accepted domains.\n"
+msgstr "  -D,  --domains=LISTO             kom-apartita listo de akcepteblaj retregionoj.\n"
 
-#: src/main.c:756
-msgid ""
-"       --follow-ftp                follow FTP links from HTML documents.\n"
-msgstr ""
+#: src/main.c:757
+msgid "       --exclude-domains=LIST      comma-separated list of rejected domains.\n"
+msgstr "       --exclude-domains=LISTO     kom-apartita listo de malakcepteblaj retregionoj.\n"
 
-#: src/main.c:758
-msgid ""
-"       --follow-tags=LIST          comma-separated list of followed HTML "
-"tags.\n"
-msgstr ""
+#: src/main.c:759
+msgid "       --follow-ftp                follow FTP links from HTML documents.\n"
+msgstr "       --follow-ftp                sekvi ligojn FTP el dokumentoj HTML.\n"
 
-#: src/main.c:760
-msgid ""
-"       --ignore-tags=LIST          comma-separated list of ignored HTML "
-"tags.\n"
-msgstr ""
+#: src/main.c:761
+msgid "       --follow-tags=LIST          comma-separated list of followed HTML tags.\n"
+msgstr "       --follow-tags=LISTO          kom-apartita listo de sekvataj markoj HTML.\n"
 
-#: src/main.c:762
-msgid ""
-"  -H,  --span-hosts                go to foreign hosts when recursive.\n"
-msgstr ""
+#: src/main.c:763
+msgid "       --ignore-tags=LIST          comma-separated list of ignored HTML tags.\n"
+msgstr "       --ignore-tags=LISTO         kom-apartita listo de preteratentataj markoj HTML.\n"
 
-#: src/main.c:764
+#: src/main.c:765
+msgid "  -H,  --span-hosts                go to foreign hosts when recursive.\n"
+msgstr "  -H,  --span-hosts                iri al fremdaj gastigantoj kiam rikura.\n"
+
+#: src/main.c:767
 msgid "  -L,  --relative                  follow relative links only.\n"
-msgstr ""
+msgstr "  -L,  --relative                  sekvi nur relativajn ligojn.\n"
 
-#: src/main.c:766
+#: src/main.c:769
 msgid "  -I,  --include-directories=LIST  list of allowed directories.\n"
-msgstr ""
-
-#: src/main.c:768
-msgid ""
-"  --trust-server-names             use the name specified by the "
-"redirection\n"
-"                                   url last component.\n"
-msgstr ""
+msgstr "  -I,  --include-directories=LISTO listo de permesataj dosierujoj.\n"
 
 #: src/main.c:771
-msgid "  -X,  --exclude-directories=LIST  list of excluded directories.\n"
-msgstr ""
-
-#: src/main.c:773
 msgid ""
-"  -np, --no-parent                 don't ascend to the parent directory.\n"
+"  --trust-server-names             use the name specified by the redirection\n"
+"                                   url last component.\n"
 msgstr ""
+"  --trust-server-names             uzi la nomon indikitan de la lasta elemento\n"
+"                                   de la redirektiga url.\n"
+
+#: src/main.c:774
+msgid "  -X,  --exclude-directories=LIST  list of excluded directories.\n"
+msgstr "  -X,  --exclude-directories=LISTO listo de forigitaj dosierujoj.\n"
 
 #: src/main.c:776
-msgid "Mail bug reports and suggestions to <bug-wget@gnu.org>.\n"
-msgstr "Retpoŝtu ciman raporton kaj sugestojn al <bug-wget@gnu.org>.\n"
+msgid "  -np, --no-parent                 don't ascend to the parent directory.\n"
+msgstr "  -np, --no-parent                 ne iri supren al la supera dosierujo.\n"
 
-#: src/main.c:781
+#: src/main.c:779
+msgid "Mail bug reports and suggestions to <bug-wget@gnu.org>.\n"
+msgstr "Sendi raportojn pri program-misoj kaj sugestojn al <bug-wget@gnu.org>.\n"
+
+#: src/main.c:784
 #, c-format
 msgid "GNU Wget %s, a non-interactive network retriever.\n"
-msgstr ""
+msgstr "GNU Wget %s, ne-interaga reta elŝutilo.\n"
 
-#: src/main.c:824
+#: src/main.c:827
 #, c-format
 msgid "Password for user %s: "
-msgstr ""
+msgstr "Pasvorto por uzanto %s: "
 
-#: src/main.c:826
+#: src/main.c:829
 #, c-format
 msgid "Password: "
-msgstr ""
-
-#: src/main.c:882
-msgid "Wgetrc: "
-msgstr ""
-
-#: src/main.c:883
-msgid "Locale: "
-msgstr ""
-
-#: src/main.c:884
-msgid "Compile: "
-msgstr ""
+msgstr "Pasvorto: "
 
 #: src/main.c:885
-msgid "Link: "
-msgstr ""
+msgid "Wgetrc: "
+msgstr "Wgetrc: "
 
-#: src/main.c:889
+#: src/main.c:886
+msgid "Locale: "
+msgstr "Lokaĵaro: "
+
+#: src/main.c:887
+msgid "Compile: "
+msgstr "Kompili: "
+
+#: src/main.c:888
+msgid "Link: "
+msgstr "Ligo: "
+
+#: src/main.c:892
 #, c-format
 msgid ""
 "GNU Wget %s built on %s.\n"
 "\n"
 msgstr ""
+"GNU Wget %s konstruita en %s.\n"
+"\n"
 
-#: src/main.c:916
+#: src/main.c:919
 #, c-format
 msgid "    %s (env)\n"
-msgstr ""
+msgstr "    %s (med)\n"
 
-#: src/main.c:923
+#: src/main.c:926
 #, c-format
 msgid "    %s (user)\n"
-msgstr ""
+msgstr "    %s (uzanto)\n"
 
-#: src/main.c:928
+#: src/main.c:931
 #, c-format
 msgid "    %s (system)\n"
-msgstr ""
+msgstr "    %s (sistemo)\n"
 
 #. TRANSLATORS: When available, an actual copyright character
 #. (circle-c) should be used in preference to "(C)".
-#: src/main.c:956
-msgid "Copyright (C) 2011 Free Software Foundation, Inc.\n"
-msgstr ""
-
 #: src/main.c:959
+msgid "Copyright (C) 2011 Free Software Foundation, Inc.\n"
+msgstr "Kopirajto © 2011 Free Software Foundation, Inc.\n"
+
+#: src/main.c:962
 msgid ""
 "License GPLv3+: GNU GPL version 3 or later\n"
 "<http://www.gnu.org/licenses/gpl.html>.\n"
 "This is free software: you are free to change and redistribute it.\n"
 "There is NO WARRANTY, to the extent permitted by law.\n"
 msgstr ""
+"Permeso GPLv3+: GNU GPL versio 3 aŭ posta\n"
+"<http://www.gnu.org/licenses/gpl.html>.\n"
+"Tio ĉi estas libera programaro: vi estas libera por ŝanĝi kaj redisdoni ĝin.\n"
+"Estas neniu GARANTIO, laŭ plej amplekse permesata de leĝoj.\n"
 
 #. TRANSLATORS: When available, please use the proper diacritics for
 #. names such as this one. See en_US.po for reference.
-#: src/main.c:967
+#: src/main.c:970
 msgid ""
 "\n"
 "Originally written by Hrvoje Niksic <hniksic@xemacs.org>.\n"
@@ -2025,279 +1959,284 @@ msgstr ""
 "\n"
 "Originale skribita de Hrvoje Niksic <hniksic@xemacs.org>.\n"
 
-#: src/main.c:970
-#, fuzzy
+#: src/main.c:973
 msgid "Please send bug reports and questions to <bug-wget@gnu.org>.\n"
-msgstr "Retpoŝtu ciman raporton kaj sugestojn al <bug-wget@gnu.org>.\n"
+msgstr "Bonvolu sendi raportojn pri program-misoj kaj demandojn al <bug-wget@gnu.org>.\n"
 
-#: src/main.c:1021 src/main.c:1482
+#: src/main.c:1024 src/main.c:1485
 #, c-format
 msgid "Memory allocation problem\n"
-msgstr ""
+msgstr "Problemo pri memor-rezervo\n"
 
-#: src/main.c:1066
+#: src/main.c:1069
 #, c-format
 msgid "Exiting due to error in %s\n"
-msgstr ""
+msgstr "Ni ĉesas pro eraro en %s\n"
 
-#: src/main.c:1095 src/main.c:1166 src/main.c:1343
+#: src/main.c:1098 src/main.c:1169 src/main.c:1346
 #, c-format
 msgid "Try `%s --help' for more options.\n"
-msgstr "Provu `%s --help' por pliaj opcioj.\n"
+msgstr "Provu '%s --help' por pliaj modifiloj.\n"
 
-#: src/main.c:1162
+#: src/main.c:1165
 #, c-format
 msgid "%s: illegal option -- `-n%c'\n"
-msgstr "%s: neleĝa opcio -- `-n%c'\n"
+msgstr "%s: malvalida modifilo -- '-n%c'\n"
 
-#: src/main.c:1203
+#: src/main.c:1206
 #, c-format
-msgid ""
-"Both --no-clobber and --convert-links were specified, only --convert-links "
-"will be used.\n"
-msgstr ""
+msgid "Both --no-clobber and --convert-links were specified, only --convert-links will be used.\n"
+msgstr "Kaj --no-clobber kaj --convert-links estis indikataj, nur --convert-links estos uzata.\n"
 
-#: src/main.c:1231
+#: src/main.c:1234
 #, c-format
 msgid "Can't be verbose and quiet at the same time.\n"
-msgstr "Ne eblas esti babilema kaj silenta samtempe.\n"
+msgstr "Ne eblas esti detalema kaj silenta samtempe.\n"
 
-#: src/main.c:1237
+#: src/main.c:1240
 #, c-format
 msgid "Can't timestamp and not clobber old files at the same time.\n"
-msgstr ""
+msgstr "Ne eblas temp-marki kaj ne frapi malnovajn dosierojn samtempe.\n"
 
-#: src/main.c:1246
+#: src/main.c:1249
 #, c-format
 msgid "Cannot specify both --inet4-only and --inet6-only.\n"
 msgstr "Ne eblas difini kaj --inet4-only kaj --inet6-only.\n"
 
-#: src/main.c:1256
+#: src/main.c:1259
 msgid ""
 "Cannot specify both -k and -O if multiple URLs are given, or in combination\n"
 "with -p or -r. See the manual for details.\n"
 "\n"
 msgstr ""
+"Ne eblas uzi kaj -k aj -O se pluraj URL estas indikitaj, aŭ kombinite\n"
+"kun -p aŭ -r. Konsultu la gvidlibron por pli da detaloj.\n"
+"\n"
 
-#: src/main.c:1265
+#: src/main.c:1268
 msgid ""
 "WARNING: combining -O with -r or -p will mean that all downloaded content\n"
 "will be placed in the single file you specified.\n"
 "\n"
 msgstr ""
+"AVERTO: kombino de -O kun -r aŭ -p signifos ke ĉiu elŝutita enhavo\n"
+"estos metita en ununura dosiero indikita de vi.\n"
+"\n"
 
-#: src/main.c:1271
+#: src/main.c:1274
 msgid ""
 "WARNING: timestamping does nothing in combination with -O. See the manual\n"
 "for details.\n"
 "\n"
 msgstr ""
+"AVERTO: tempindiko igas nenion kombinite kun -O. Konsultu la gvidlibron\n"
+"por pli da detaloj.\n"
+"\n"
 
-#: src/main.c:1280
+#: src/main.c:1283
 #, c-format
 msgid "File `%s' already there; not retrieving.\n"
 msgstr "La dosiero `%s' jam estas ĉi tie; ĝi ne estos elŝutita.\n"
 
-#: src/main.c:1291
+#: src/main.c:1294
 #, c-format
-msgid ""
-"WARC output does not work with --no-clobber, --no-clobber will be disabled.\n"
-msgstr ""
+msgid "WARC output does not work with --no-clobber, --no-clobber will be disabled.\n"
+msgstr "Eligo de WARC ne funkcias kun --no-clobber, --no-clobber estos malebligata.\n"
 
-#: src/main.c:1298
+#: src/main.c:1301
 #, c-format
-msgid ""
-"WARC output does not work with timestamping, timestamping will be disabled.\n"
-msgstr ""
+msgid "WARC output does not work with timestamping, timestamping will be disabled.\n"
+msgstr "Eligo de WARC ne funkcias kun tempindiko, tempindiko estos malebligata.\n"
 
-#: src/main.c:1305
+#: src/main.c:1308
 #, c-format
 msgid "WARC output does not work with --spider.\n"
-msgstr ""
+msgstr "Eligo de WARC ne funkcias kun --spider.\n"
 
-#: src/main.c:1311
+#: src/main.c:1314
 #, c-format
-msgid ""
-"WARC output does not work with --continue, --continue will be disabled.\n"
-msgstr ""
+msgid "WARC output does not work with --continue, --continue will be disabled.\n"
+msgstr "Eligo de WARC ne funkcias kun --continue, --continue estos malebligata.\n"
 
-#: src/main.c:1318
+#: src/main.c:1321
 #, c-format
-msgid ""
-"Digests are disabled; WARC deduplication will not find duplicate records.\n"
-msgstr ""
+msgid "Digests are disabled; WARC deduplication will not find duplicate records.\n"
+msgstr "Resumoj estas malebligataj; Multobligo de WARK ne trovos duobligitajn rikordojn.\n"
 
-#: src/main.c:1330
-#, fuzzy, c-format
+#: src/main.c:1333
+#, c-format
 msgid "Cannot specify both --ask-password and --password.\n"
-msgstr "Ne eblas difini kaj --inet4-only kaj --inet6-only.\n"
+msgstr "Ne eblas difini kaj --ask-password kaj --password.\n"
 
-#: src/main.c:1338
+#: src/main.c:1341
 #, c-format
 msgid "%s: missing URL\n"
 msgstr "%s: mankanta URL\n"
 
-#: src/main.c:1379
-#, fuzzy, c-format
+#: src/main.c:1382
+#, c-format
 msgid "You cannot specify both --post-data and --post-file.\n"
-msgstr "Ne eblas difini kaj --inet4-only kaj --inet6-only.\n"
+msgstr "Vi ne povas difini kaj --post-data kaj --post-file.\n"
 
-#: src/main.c:1384
+#: src/main.c:1387
 #, c-format
-msgid ""
-"You cannot use --post-data or --post-file along with --method. --method "
-"expects data through --body-data and --body-file options"
-msgstr ""
+msgid "You cannot use --post-data or --post-file along with --method. --method expects data through --body-data and --body-file options"
+msgstr "Vi ne povas uzi --post-data aŭ --post-file kune kun --method. --method postulas datumaron per la modifiloj --body-data kaj --body-file"
 
-#: src/main.c:1393
+#: src/main.c:1396
 #, c-format
-msgid ""
-"You must specify a method through --method=HTTPMethod to use with --body-"
-"data or --body-file.\n"
-msgstr ""
+msgid "You must specify a method through --method=HTTPMethod to use with --body-data or --body-file.\n"
+msgstr "Vi devas indiki metodon per --method=HTTPMetodo por uzi kun --body-data aŭ --body-file.\n"
 
-#: src/main.c:1399
-#, fuzzy, c-format
+#: src/main.c:1402
+#, c-format
 msgid "You cannot specify both --body-data and --body-file.\n"
-msgstr "Ne eblas difini kaj --inet4-only kaj --inet6-only.\n"
+msgstr "Vi ne povas difini kaj --body-data kaj --body-file.\n"
 
-#: src/main.c:1451
+#: src/main.c:1454
 #, c-format
 msgid "This version does not have support for IRIs\n"
-msgstr ""
+msgstr "Tiu ĉi versio ne subtenas IRI\n"
 
-#: src/main.c:1551
+#: src/main.c:1554
 #, c-format
 msgid "-k can be used together with -O only if outputting to a regular file.\n"
-msgstr ""
+msgstr "-k povas esti uzata kune kun -O nur se eliganta al ordinara dosiero.\n"
 
-#: src/main.c:1656
+#: src/main.c:1659
 #, c-format
 msgid "No URLs found in %s.\n"
 msgstr "URL-oj ne trovitaj en %s.\n"
 
-#: src/main.c:1677
+#: src/main.c:1680
 #, c-format
 msgid ""
 "FINISHED --%s--\n"
 "Total wall clock time: %s\n"
 "Downloaded: %d files, %s in %s (%s)\n"
 msgstr ""
+"FINIGITA --%s--\n"
+"Totala mur-horloĝa tempo: %s\n"
+"Elŝutite: %d dosieroj, %s en %s (%s)\n"
 
-#: src/main.c:1691
+#: src/main.c:1694
 #, c-format
 msgid "Download quota of %s EXCEEDED!\n"
-msgstr ""
+msgstr "Elŝuta limo de %s TROIGIS!\n"
 
 #: src/mswindows.c:99
 #, c-format
 msgid "Continuing in background.\n"
-msgstr ""
+msgstr "Ni daŭrigas fone.\n"
 
 #: src/mswindows.c:292
 #, c-format
 msgid "Continuing in background, pid %lu.\n"
-msgstr ""
+msgstr "Ni daŭrigas fone, pid %lu.\n"
 
 #: src/mswindows.c:294 src/utils.c:481
 #, c-format
 msgid "Output will be written to %s.\n"
-msgstr ""
+msgstr "Eligo estos skribita al %s.\n"
 
 #: src/mswindows.c:326
 #, c-format
 msgid "fake_fork_child() failed\n"
-msgstr ""
+msgstr "fake_fork_child() fiaskis\n"
 
 #: src/mswindows.c:334
 #, c-format
 msgid "fake_fork() failed\n"
-msgstr ""
+msgstr "fake_fork() fiaskis\n"
 
 #: src/mswindows.c:462 src/mswindows.c:469
 #, c-format
 msgid "%s: Couldn't find usable socket driver.\n"
-msgstr ""
+msgstr "%s: ne eblis trovi uzeblan ing-pelilon.\n"
 
 #: src/mswindows.c:649
 #, c-format
 msgid "ioctl() failed.  The socket could not be set as blocking.\n"
-msgstr ""
+msgstr "ioctl() fiaskis.  La ingo ne povis esti difinata kiel blokantan.\n"
 
 #: src/netrc.c:350
 #, c-format
 msgid "%s: %s:%d: warning: %s token appears before any machine name\n"
-msgstr ""
+msgstr "%s: %s:%d: averto: la ĵetono %s aperas antaŭ iu ajn maŝina nomo\n"
 
 #: src/netrc.c:381
 #, c-format
 msgid "%s: %s:%d: unknown token \"%s\"\n"
-msgstr ""
+msgstr "%s: %s:%d: nekonata ĵetono \"%s\"\n"
 
 #: src/netrc.c:444
 #, c-format
 msgid "Usage: %s NETRC [HOSTNAME]\n"
-msgstr ""
+msgstr "Uzmaniero: :%s NETRC [GASTIGANT-NOMO]\n"
 
 #: src/netrc.c:454
 #, c-format
 msgid "%s: cannot stat %s: %s\n"
-msgstr ""
+msgstr "%s: ne eblas apliki stat al %s: %s\n"
 
 #: src/openssl.c:115
 msgid "WARNING: using a weak random seed.\n"
-msgstr ""
+msgstr "AVERTO: ni uzas malfortan hazardan semon.\n"
 
 #: src/openssl.c:175
 msgid "Could not seed PRNG; consider using --random-file.\n"
-msgstr ""
+msgstr "Ne ebli semi PRNG; konsideru uzi --random-file.\n"
 
-#: src/openssl.c:597
+#: src/openssl.c:604
 #, c-format
 msgid "%s: cannot verify %s's certificate, issued by %s:\n"
-msgstr ""
+msgstr "%s: ne eblas kontroli atestilon de %s, eldonita de %s:\n"
 
-#: src/openssl.c:606
+#: src/openssl.c:613
 msgid "  Unable to locally verify the issuer's authority.\n"
-msgstr ""
+msgstr "  Ne eblas loke kontroli la aŭtoritato de la eldonanto.\n"
 
-#: src/openssl.c:611
+#: src/openssl.c:618
 msgid "  Self-signed certificate encountered.\n"
-msgstr ""
+msgstr "  Mem-signita atestilo estis trovata.\n"
 
-#: src/openssl.c:614
+#: src/openssl.c:621
 msgid "  Issued certificate not yet valid.\n"
-msgstr ""
+msgstr "  Eldonita atestilo ne validas ankoraŭ.\n"
 
-#: src/openssl.c:617
+#: src/openssl.c:624
 msgid "  Issued certificate has expired.\n"
-msgstr ""
+msgstr "  Eldonita atestilo malvalidiĝis.\n"
 
-#: src/openssl.c:702
+#: src/openssl.c:709
 #, c-format
 msgid ""
 "%s: no certificate subject alternative name matches\n"
 "\trequested host name %s.\n"
 msgstr ""
+"%s: neniu atestila alternativa nomo de temo kongruas al\n"
+"\tla petita gastigant-nomo %s.\n"
 
-#: src/openssl.c:719
+#: src/openssl.c:726
 #, c-format
-msgid ""
-"    %s: certificate common name %s doesn't match requested host name %s.\n"
-msgstr ""
+msgid "    %s: certificate common name %s doesn't match requested host name %s.\n"
+msgstr "    %s: atestila komuna nomo %s ne kongruas al la petita gastigant-nomo %s.\n"
 
-#: src/openssl.c:751
+#: src/openssl.c:758
 #, c-format
 msgid ""
 "    %s: certificate common name is invalid (contains a NUL character).\n"
 "    This may be an indication that the host is not who it claims to be\n"
 "    (that is, it is not the real %s).\n"
 msgstr ""
+"    %s: atestila komuna nomo malvalidas (ĝi enhavas signon NUL).\n"
+"    Tio ĉi povas esti indiko ke la gastiganto ne estas kiu ĝi diras esti\n"
+"    (tio estas, ĝi ne estas la vera %s).\n"
 
-#: src/openssl.c:769
+#: src/openssl.c:776
 #, c-format
 msgid "To connect to %s insecurely, use `--no-check-certificate'.\n"
-msgstr ""
+msgstr "Por konekti al %s sensekure, uzu '--no-check-certificate'.\n"
 
 #: src/progress.c:240
 #, c-format
@@ -2305,32 +2244,34 @@ msgid ""
 "\n"
 "%*s[ skipping %sK ]"
 msgstr ""
+"\n"
+"%*s[ ni preterpasas %sK ]"
 
 #: src/progress.c:454
 #, c-format
 msgid "Invalid dot style specification %s; leaving unchanged.\n"
-msgstr ""
+msgstr "Malvidala indiko de punkto-stilo %s; ni lasas nemodifita.\n"
 
 #. TRANSLATORS: "ETA" is English-centric, but this must
 #. be short, ideally 3 chars.  Abbreviate if necessary.
 #: src/progress.c:803
 #, c-format
 msgid "  eta %s"
-msgstr ""
+msgstr "  eta %s"
 
 #: src/progress.c:1049
 msgid "   in "
-msgstr ""
+msgstr "   en "
 
 #: src/ptimer.c:158
 #, c-format
 msgid "Cannot get REALTIME clock frequency: %s\n"
-msgstr ""
+msgstr "Ne eblas scii la frekvencon de horloĝo REALTIME: %s\n"
 
 #: src/recur.c:434
 #, c-format
 msgid "Removing %s since it should be rejected.\n"
-msgstr ""
+msgstr "Ni forigas %s, ĉar ĝi devos esti malakceptata.\n"
 
 #: src/res.c:391
 #, c-format
@@ -2339,35 +2280,37 @@ msgstr "Ne eblas malfermi %s: %s"
 
 #: src/res.c:550
 msgid "Loading robots.txt; please ignore errors.\n"
-msgstr ""
+msgstr "Ni ŝargas je robots.txt; bonvolu preteratenti erarojn.\n"
 
 #: src/retr.c:767
 #, c-format
 msgid "Error parsing proxy URL %s: %s.\n"
-msgstr ""
+msgstr "Eraro dum analizado de prokurila URL %s: %s.\n"
 
 #: src/retr.c:777
 #, c-format
 msgid "Error in proxy URL %s: Must be HTTP.\n"
-msgstr ""
+msgstr "Eraro en prokurila URL %s: devas esti HTTP.\n"
 
 #: src/retr.c:877
 #, c-format
 msgid "%d redirections exceeded.\n"
-msgstr ""
+msgstr "%d rediktegij troigi.\n"
 
 #: src/retr.c:1119
 msgid ""
 "Giving up.\n"
 "\n"
 msgstr ""
+"Ni rezignas.\n"
+"\n"
 
 #: src/retr.c:1119
 msgid ""
 "Retrying.\n"
 "\n"
 msgstr ""
-"Reprovante.\n"
+"Ni reprovas.\n"
 "\n"
 
 #: src/spider.c:75
@@ -2375,6 +2318,8 @@ msgid ""
 "Found no broken links.\n"
 "\n"
 msgstr ""
+"Ni ne trovis fuŝajn ligojn.\n"
+"\n"
 
 #: src/spider.c:82
 #, c-format
@@ -2385,24 +2330,28 @@ msgid_plural ""
 "Found %d broken links.\n"
 "\n"
 msgstr[0] ""
+"Ni trovis %d fuŝan ligon.\n"
+"\n"
 msgstr[1] ""
+"Ni trovis %d fuŝajn ligojn.\n"
+"\n"
 
 #: src/url.c:639
 msgid "No error"
 msgstr "Sen eraro"
 
 #: src/url.c:641
-#, fuzzy, c-format
+#, c-format
 msgid "Unsupported scheme %s"
-msgstr "Neeltenebla ŝablono"
+msgstr "Nesubtenata ŝablono %s"
 
 #: src/url.c:643
 msgid "Scheme missing"
-msgstr ""
+msgstr "Mankas skemo"
 
 #: src/url.c:645
 msgid "Invalid host name"
-msgstr "Nevalida retnoda nomo"
+msgstr "Malvalida retnoda nomo"
 
 #: src/url.c:647
 msgid "Bad port number"
@@ -2410,7 +2359,7 @@ msgstr "Malĝusta pordnumero"
 
 #: src/url.c:649
 msgid "Invalid user name"
-msgstr "Nevalida uzantnomo"
+msgstr "Malvalida uzantnomo"
 
 #: src/url.c:651
 msgid "Unterminated IPv6 numeric address"
@@ -2422,54 +2371,54 @@ msgstr "IPv6 adreso ne eltenebla"
 
 #: src/url.c:655
 msgid "Invalid IPv6 numeric address"
-msgstr "Nevalida IPv6 numera adreso"
+msgstr "Malvalida IPv6 numera adreso"
 
-#: src/url.c:957
+#: src/url.c:960
 msgid "HTTPS support not compiled in"
-msgstr ""
+msgstr "Subteno al HTTPS ne estas enkompilita"
 
 #: src/utils.c:116
 #, c-format
 msgid "%s: %s: Failed to allocate enough memory; memory exhausted.\n"
-msgstr ""
+msgstr "%s: %s: malsukceso rezervi sufiĉe da memoro; memoro estas elĉerpita.\n"
 
 #: src/utils.c:122
 #, c-format
 msgid "%s: %s: Failed to allocate %ld bytes; memory exhausted.\n"
-msgstr ""
+msgstr "%s: %s: malsukceso rezervi %ld bajtojn; memoro estas elĉerpita.\n"
 
 #: src/utils.c:336
 #, c-format
 msgid "%s: aprintf: text buffer is too big (%ld bytes), aborting.\n"
-msgstr ""
+msgstr "%s: aprintf: teksta bufro tro grandas (%ld bajtoj), ni ĉesas.\n"
 
 #: src/utils.c:479
 #, c-format
 msgid "Continuing in background, pid %d.\n"
-msgstr "Daŭrigante en fona reĝimo, pid %d.\n"
+msgstr "Ni daŭrigas en fona reĝimo, pid %d.\n"
 
 #: src/utils.c:552
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to unlink symlink %s: %s\n"
-msgstr "Kreante simbolan ligilon %s -> %s\n"
+msgstr "Ni fiaskis forigi simbol-ligon %s: %s\n"
 
 #: src/utils.c:2270 src/utils.c:2289
 #, c-format
 msgid "Invalid regular expression %s, %s\n"
-msgstr ""
+msgstr "Malvalida regul-esprimo %s, %s\n"
 
 #: src/utils.c:2312 src/utils.c:2336
-#, fuzzy, c-format
+#, c-format
 msgid "Error while matching %s: %d\n"
-msgstr "Eraro dum registrado al `%s': %s\n"
+msgstr "Eraro dum kongruo al %s: %d\n"
 
 #: src/warc.c:219
 msgid "Error opening GZIP stream to WARC file.\n"
-msgstr ""
+msgstr "Eraro dum malfermo de fluo GZIP al dosiero WARC.\n"
 
 #: src/warc.c:702
 msgid "Error writing warcinfo record to WARC file.\n"
-msgstr ""
+msgstr "Eraro dum skribo de rikordo warcinfo al dosiero WARC.\n"
 
 #: src/warc.c:764
 #, c-format
@@ -2477,23 +2426,25 @@ msgid ""
 "Opening WARC file %s.\n"
 "\n"
 msgstr ""
+"Malfermo de la dosiero WARC %s.\n"
+"\n"
 
 #: src/warc.c:770
 #, c-format
 msgid "Error opening WARC file %s.\n"
-msgstr ""
+msgstr "Eraro dum malfermo de la dosieros WARK %s.\n"
 
 #: src/warc.c:968
 msgid "CDX file does not list original urls. (Missing column 'a'.)\n"
-msgstr ""
+msgstr "Dosiero CDX ne listigas originalajr URL-ojn. (Mankas kolumno 'a'.)\n"
 
 #: src/warc.c:971
 msgid "CDX file does not list checksums. (Missing column 'k'.)\n"
-msgstr ""
+msgstr "Dosiero CDX ne listigas kontrolsumojn. (Mankas kolumno 'k'.)\n"
 
 #: src/warc.c:974
 msgid "CDX file does not list record ids. (Missing column 'u'.)\n"
-msgstr ""
+msgstr "Dosiero CDX ne listigas id de rikordoj. (Mankas kolumno 'k'.)\n"
 
 #: src/warc.c:996
 #, c-format
@@ -2504,45 +2455,68 @@ msgid_plural ""
 "Loaded %d records from CDX.\n"
 "\n"
 msgstr[0] ""
+"Ni ŝargis je %d rikordo el CDX.\n"
+"\n"
 msgstr[1] ""
+"Ni ŝargis je %d rikordoj el CDX.\n"
+"\n"
 
 #: src/warc.c:1041
 #, c-format
 msgid "Could not read CDX file %s for deduplication.\n"
-msgstr ""
+msgstr "Ne eblis legi dosieron CDX %s por multobligo.\n"
 
 #: src/warc.c:1051
 msgid "Could not open temporary WARC manifest file.\n"
-msgstr ""
+msgstr "Ne eblis malfermi provizoran dosieron WARC de manifesto.\n"
 
 #: src/warc.c:1061
 msgid "Could not open temporary WARC log file.\n"
-msgstr ""
+msgstr "Ne eblis malfermi provizoran dosieron WARC de protokolo.\n"
 
 #: src/warc.c:1070
 msgid "Could not open WARC file.\n"
-msgstr ""
+msgstr "Ne eblis malfermi dosieron WARC.\n"
 
 #: src/warc.c:1079
 msgid "Could not open CDX file for output.\n"
-msgstr ""
+msgstr "Ne eblis malfermi dosieron CDX por eligo.\n"
 
 #: src/warc.c:1107
 msgid "Could not open temporary WARC file.\n"
-msgstr ""
+msgstr "Ne eblis provizoran dosieron WARC.\n"
 
 #: src/warc.c:1364
 msgid "Found exact match in CDX file. Saving revisit record to WARC.\n"
-msgstr ""
+msgstr "Estis trovata ĝusta kongruo en dosiero CDX. Ni konservas revizitan rikordon al WARC.\n"
+
+#~ msgid "Authorization failed.\n"
+#~ msgstr "Permeso fiaskis.\n"
+
+#~ msgid "       --metalink-file       download URLs found in local or external metalink FILE.\n"
+#~ msgstr "       --metalink-file       elŝuti URL-ojn trovitajn en loka aŭ ekstera meta-liga DOSIERO.\n"
+
+#~ msgid ""
+#~ "       --retries                 specify the number of retries for a file.\n"
+#~ "                                 (needs to be used with --metalink-file)\n"
+#~ msgstr ""
+#~ "       --retries                 indiki la nombro da reprovoj por dosiero.\n"
+#~ "                                 (bezonas esti uzata kun --metalink-file)\n"
+
+#~ msgid "       --jobs                    specify how many threads use.\n"
+#~ msgstr "       --jobs                    indiki kiom da fadenoj.\n"
+
+#~ msgid "Username and password information not needed to                    be specified when downloading from a metalink.\n"
+#~ msgstr "Informo de uzantnomo kaj pasvorto ne necesas                      esti indikata dum elŝuto el meta-ligo.\n"
+
+#~ msgid "%s can not be used with --metalink.\n"
+#~ msgstr "%s ne povas esti uzata kun --metalink.\n"
 
 #~ msgid "Error in Set-Cookie, field `%s'"
 #~ msgstr "Eraro en Set-Cookie, kampo `%s'"
 
 #~ msgid "%s: illegal option -- %c\n"
-#~ msgstr "%s: neleĝa opcio -- %c\n"
-
-#~ msgid "Authorization failed.\n"
-#~ msgstr "Permesado fiaskis.\n"
+#~ msgstr "%s: neleĝa modifilo -- %c\n"
 
 #~ msgid "%s (%s) - Connection closed at byte %s/%s. "
 #~ msgstr "%s (%s) - Konekto fermita ĉe la bajto %s/%s. "
@@ -2551,7 +2525,7 @@ msgstr ""
 #~ msgstr "Eraro dum registrado al proxy: %s.\n"
 
 #~ msgid ""
-#~ "%s (%s) - `%s' saved [%s/%s])\n"
+#~ "%s (%s) - `%s' saved [%s/%s]\n"
 #~ "\n"
 #~ msgstr ""
 #~ "%s (%s) - `%s' ricevite [%s/%s]\n"
@@ -2561,7 +2535,7 @@ msgstr ""
 #~ msgstr "Malplena retnodo"
 
 #~ msgid "Unable to convert `%s' to a bind address.  Reverting to ANY.\n"
-#~ msgstr "Ne eblis konverti `%s' al adreso. Ŝanĝante al ANY.\n"
+#~ msgstr "Ne eblis konverti `%s' al adreso.  Ni ŝanĝas al ANY.\n"
 
 #~ msgid ""
 #~ "\n"

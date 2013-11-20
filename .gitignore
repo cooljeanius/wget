@@ -27,6 +27,7 @@ Makefile
 build-aux/git-merge-changelog
 confdefs.h
 conftest.*
+config*.lineno
 doc/Makefile
 doc/version.texi
 intl/*

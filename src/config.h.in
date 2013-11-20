@@ -254,6 +254,9 @@
 /* Define to 1 when the gnulib module mbsinit should be tested. */
 #undef GNULIB_TEST_MBSINIT
 
+/* Define to 1 when the gnulib module mbsrtowcs should be tested. */
+#undef GNULIB_TEST_MBSRTOWCS
+
 /* Define to 1 when the gnulib module mbtowc should be tested. */
 #undef GNULIB_TEST_MBTOWC
 
@@ -607,6 +610,10 @@
 /* Define to 1 if you have the declaration of `mbsinit', and to 0 if you
    don't. */
 #undef HAVE_DECL_MBSINIT
+
+/* Define to 1 if you have the declaration of `mbsrtowcs', and to 0 if you
+   don't. */
+#undef HAVE_DECL_MBSRTOWCS
 
 /* Define to 1 if you have the declaration of `PF_INET6', and to 0 if you
    don't. */
@@ -1023,6 +1030,9 @@
 
 /* Define to 1 if you have the `mbsinit' function. */
 #undef HAVE_MBSINIT
+
+/* Define to 1 if you have the `mbsrtowcs' function. */
+#undef HAVE_MBSRTOWCS
 
 /* Define to 1 if <wchar.h> declares mbstate_t. */
 #undef HAVE_MBSTATE_T
@@ -2441,6 +2451,15 @@
 /* Define if you have the 'wint_t' type. */
 #undef HAVE_WINT_T
 
+/* Define to 1 if you have the `wmemchr' function. */
+#undef HAVE_WMEMCHR
+
+/* Define to 1 if you have the `wmemcpy' function. */
+#undef HAVE_WMEMCPY
+
+/* Define to 1 if you have the `wmempcpy' function. */
+#undef HAVE_WMEMPCPY
+
 /* Define if fnmatch.h can be included. */
 #undef HAVE_WORKING_FNMATCH_H
 
@@ -2930,6 +2949,9 @@
 # define _GL_INLINE_HEADER_BEGIN
 # define _GL_INLINE_HEADER_END
 #endif
+
+/* Define to a replacement function name for fnmatch(). */
+#undef fnmatch
 
 /* Define to a replacement function name for getpass(). */
 #undef getpass
