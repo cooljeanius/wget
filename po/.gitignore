@@ -1,7 +1,7 @@
-
+*.gmo
 *.insert-header
-Makefile
-Makefile.in
+*.mo
+*.new.po
 /Makefile.in.in
 /Makefile.in.in~
 /Makevars.template
@@ -10,11 +10,10 @@ Makefile.in
 /Rules-quot~
 /boldquot.sed
 /quot.sed
+Makefile
+Makefile.in
+POTFILES
+core.*
 remove-potcdate.sed
 stamp-poT
-core.*
 wget.*po
-*.new.po
-*.gmo
-*.mo
-POTFILES

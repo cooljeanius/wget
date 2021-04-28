@@ -1,4 +1,4 @@
-dnl#                                               -*- Autoconf -*-
+dnl# wget/confiugre.ac                                    -*- Autoconf -*-
 dnl# Template file for GNU Autoconf
 dnl# Copyright (C) 1995, 1996, 1997, 2001, 2007, 2008, 2009, 2010, 2011
 dnl# Free Software Foundation, Inc.
@@ -31,29 +31,30 @@ dnl#
 dnl# Process this file with autoconf to produce a configure script.
 dnl#
 
-AC_INIT([wget],[m4_esyscmd(build-aux/git-version-gen .tarball-version)],[bug-wget@gnu.org])
+AC_INIT([wget],[m4_esyscmd(build-aux/git-version-gen .tarball-version)],
+        [bug-wget@gnu.org])
 AC_PREREQ([2.69])
 AC_SUBST([PACKAGE_NAME])
 AC_SUBST([PACKAGE_VERSION])
-if test "x$VERSION" != "x"; then
-	test ! -z "$VERSION"
+if test "x${VERSION}" != "x"; then
+	test ! -z "${VERSION}"
 	AC_SUBST([VERSION])
-elif test "x$PACKAGE_VERSION" != "x"; then
-	test ! -z "$PACKAGE_VERSION"
-	test -z "$VERSION" && export VERSION="$PACKAGE_VERSION"
-	test ! -z "$VERSION"
+elif test "x${PACKAGE_VERSION}" != "x"; then
+	test ! -z "${PACKAGE_VERSION}"
+	test -z "${VERSION}" && export VERSION="${PACKAGE_VERSION}"
+	test ! -z "${VERSION}"
 	AC_SUBST([VERSION])
 fi
 
 dnl#
 dnl# What version of Wget are we building?
 dnl#
-AC_MSG_NOTICE([configuring for GNU Wget $PACKAGE_VERSION])
+AC_MSG_NOTICE([configuring for GNU Wget ${PACKAGE_VERSION}])dnl
 
 AC_CONFIG_MACRO_DIR([m4])
-AC_CONFIG_AUX_DIR([build-aux])
+AC_CONFIG_AUX_DIR([build-aux])dnl
 
-AC_CONFIG_SRCDIR([src/wget.h])
+AC_CONFIG_SRCDIR([src/wget.h])dnl
 
 dnl#
 dnl# Get cannonical host (called by finding the target)
@@ -61,24 +62,24 @@ dnl#
 AC_MSG_CHECKING([system])
 AC_MSG_RESULT([ ])
 AC_CANONICAL_TARGET
-AC_DEFINE_UNQUOTED([OS_TYPE],["$host_os"],
-                   [Define to be the name of the operating system.])
+AC_DEFINE_UNQUOTED([OS_TYPE],["${host_os}"],
+                   [Define to be the name of the operating system.])dnl
 
 dnl# other system-related checks
 AC_OBJEXT
 AC_EXEEXT
 AC_USE_SYSTEM_EXTENSIONS
-AC_SEARCH_LIBS([strerror],[cposix])
+AC_SEARCH_LIBS([strerror],[cposix])dnl
 
 dnl# Check for large file support. This check needs to come fairly
 dnl# early because it could (in principle) affect whether functions and
 dnl# headers are available, whether they work, etc.
 AC_SYS_LARGEFILE
 AC_CHECK_SIZEOF([off_t])
-AC_CHECK_ALIGNOF([off_t])
+AC_CHECK_ALIGNOF([off_t])dnl
 
 dnl# Deal with specific hosts
-case $host_os in
+case ${host_os} in
   *mingw32* )
     dnl# FIXME: Replace `main' with a function in `-lws2_32':
     AC_CHECK_LIB([ws2_32],[main])
@@ -87,7 +88,7 @@ case $host_os in
     ;;
 esac
 
-case $host in
+case ${host} in
   *msdosdjgpp)
      ac_cv_func_pipe=no
      skipcheck_pipe=yes
@@ -110,30 +111,32 @@ dnl# Process features.
 dnl#
 
 AC_ARG_WITH([ssl],
-[AS_HELP_STRING([--with-ssl={gnutls,openssl}],[specify the SSL backend. GNU TLS is the default.])])
+[AS_HELP_STRING([--with-ssl={gnutls,openssl}],
+                [specify the SSL backend. GNU TLS is the default.])])dnl
 
 AC_ARG_WITH([zlib],
-[AS_HELP_STRING([--without-zlib],[disable zlib])])
+[AS_HELP_STRING([--without-zlib],[disable zlib])])dnl
 
 AC_ARG_ENABLE([opie],
 [AS_HELP_STRING([--disable-opie],[disable support for opie or s/key FTP login])],
 [ENABLE_OPIE=$enableval],[ENABLE_OPIE=yes])
 test x"${ENABLE_OPIE}" = xyes && AC_DEFINE([ENABLE_OPIE],[1],
-   [Define if you want the Opie support for FTP compiled in.])
+   [Define if you want the Opie support for FTP compiled in.])dnl
 
 AC_ARG_ENABLE([digest],
-[AS_HELP_STRING([--disable-digest],[disable support for HTTP digest authorization])],
-[ENABLE_DIGEST=$enableval],[ENABLE_DIGEST=yes])
-test x"${ENABLE_DIGEST}" = xyes && AC_DEFINE([ENABLE_DIGEST],[1],
-   [Define if you want the HTTP Digest Authorization compiled in.])
+[AS_HELP_STRING([--disable-digest],
+                [disable support for HTTP digest authorization])],
+[ENABLE_DIGEST=${enableval}],[ENABLE_DIGEST=yes])
+test x"${ENABLE_DIGEST}" = x"yes" && AC_DEFINE([ENABLE_DIGEST],[1],
+   [Define if you want the HTTP Digest Authorization compiled in.])dnl
 
 AC_ARG_ENABLE([ntlm],
-[AS_HELP_STRING([--disable-ntlm],[disable support for NTLM authorization])],[ENABLE_NTLM=$enableval],[ENABLE_NTLM=auto])
+[AS_HELP_STRING([--disable-ntlm],[disable support for NTLM authorization])],[ENABLE_NTLM=${enableval}],[ENABLE_NTLM=auto])dnl
 
 AC_ARG_ENABLE([debug],
-[AS_HELP_STRING([--disable-debug],[disable support for debugging output])],[ENABLE_DEBUG=$enableval],[ENABLE_DEBUG=yes])
-test x"${ENABLE_DEBUG}" = xyes && AC_DEFINE([ENABLE_DEBUG],[1],
-   [Define if you want the debug output support compiled in.])
+[AS_HELP_STRING([--disable-debug],[disable support for debugging output])],[ENABLE_DEBUG=${enableval}],[ENABLE_DEBUG=yes])
+test x"${ENABLE_DEBUG}" = x"yes" && AC_DEFINE([ENABLE_DEBUG],[1],
+   [Define if you want the debug output support compiled in.])dnl
 
 dnl#
 dnl# Find the compiler
@@ -144,18 +147,18 @@ AC_MSG_RESULT([ ])
 
 dnl# We want these before the checks, so that the checks can modify
 dnl# their values.
-test -z "$CFLAGS"  && CFLAGS= auto_cflags=1
-test -z "$CC" && cc_specified=yes
+test -z "${CFLAGS}" && CFLAGS= auto_cflags=1
+test -z "${CC}" && cc_specified=yes
 
-if test "x$CC" = "x"; then
-	test -z "$CC"
+if test "x${CC}" = "x"; then
+	test -z "${CC}"
 	AC_PROG_CC
-	if test "x$CC_C_O" = "x"; then
-		test -z "$CC_C_O"
+	if test "x${CC_C_O}" = "x"; then
+		test -z "${CC_C_O}"
 		AM_PROG_CC_C_O
 	fi
 else
-	test ! -z "$CC"
+	test ! -z "${CC}"
 	export CC
 	AC_SUBST([CC])
 fi
@@ -193,7 +196,7 @@ AM_PROG_AR
 AC_PROG_LN_S
 AC_PROG_MKDIR_P
 AM_MISSING_PROG([GIT],[git])
-AM_MISSING_PROG([RSYNC],[rsync])
+AM_MISSING_PROG([RSYNC],[rsync])dnl
 
 if test "x$RANLIB" = "x"; then
 	test -z "$RANLIB"
@@ -220,7 +223,7 @@ AC_MSG_CHECKING([gettext stuff])
 AC_MSG_RESULT([ ])
 AM_GNU_GETTEXT([external],[need-ngettext])
 AM_GNU_GETTEXT_VERSION([0.18.3])
-AC_SUBST([CHARSETALIASDIR])
+AC_SUBST([CHARSETALIASDIR])dnl
 
 dnl#
 dnl# Checks for basic C compiler characteristics.
@@ -239,8 +242,8 @@ dnl# AC_HEADER_STDC is called by other macros, so it is no longer
 dnl# necessary to call it separately
 dnl# We can use a hack to "require" it though
 AC_DEFUN([AC_REQUIRE_HEADER_STDC],[
-  AC_REQUIRE([AC_HEADER_STDC])
-])
+  AC_REQUIRE([AC_HEADER_STDC])dnl
+])dnl
 AC_REQUIRE_HEADER_STDC
 
 dnl#
@@ -264,9 +267,22 @@ AC_CHECK_HEADERS([_Noreturn.h OS.h argz.h arg-nonnull.h arpa/inet.h \
                   sys/mntent.h sys/mount.h sys/param.h sys/socket.h \
                   sys/statfs.h sys/statvfs.h sys/systeminfo.h sys/time.h \
                   sys/vfs.h sys/utime.h termio.h termios.h time.h utime.h \
-                  utmp.h utmpx.h warn-on-use.h wchar.h wctype.h])
+                  utmp.h utmpx.h warn-on-use.h wchar.h wctype.h])dnl
 
-AC_CHECK_DECLS([h_errno],[],[],[#include <netdb.h>])
+if test "x${ac_cv_header_inttypes_h}" = "x"; then
+  test -z "${ac_cv_header_inttypes_h}"
+  AC_CHECK_HEADERS([inttypes.h])
+fi
+if test "x${ac_cv_header_strings_h}" = "x"; then
+  test -z "${ac_cv_header_strings_h}"
+  AC_CHECK_HEADERS([strings.h])
+fi
+if test "x${ac_cv_header_unistd_h}" = "x"; then
+  test -z "${ac_cv_header_unistd_h}"
+  AC_CHECK_HEADERS([unistd.h])
+fi
+
+AC_CHECK_DECLS([h_errno],[],[],[#include <netdb.h>])dnl
 
 dnl#
 dnl# Check sizes of integer types.  These are used to find n-bit
@@ -284,7 +300,7 @@ AC_CHECK_ALIGNOF([long])
 AC_CHECK_SIZEOF([long long])
 AC_CHECK_ALIGNOF([long long])
 AC_CHECK_SIZEOF([void *])
-AC_CHECK_ALIGNOF([void *])
+AC_CHECK_ALIGNOF([void *])dnl
 
 dnl#
 dnl# Checks for non-universal or system-specific types.
@@ -299,12 +315,16 @@ AC_CHECK_TYPE([bool],[
 #ifdef HAVE_SYS_TYPES_H
 # include <sys/types.h>
 #else
-# warning this conftest expects <sys/types.h> to be included.
+# if defined(__GNUC__) && !defined(__STRICT_ANSI__)
+#  warning "conftest for bool expects <sys/types.h> to be included."
+# endif /* __GNUC__ && !__STRICT_ANSI__ */
 #endif /* HAVE_SYS_TYPES_H */
 #ifdef HAVE_STDBOOL_H
 # include <stdbool.h>
 #else
-# warning this conftest expects <stdbool.h> to be included.
+# if defined(__GNUC__) && !defined(__STRICT_ANSI__)
+#  warning "conftest for bool expects <stdbool.h> to be included."
+# endif /* __GNUC__ && !__STRICT_ANSI__ */
 #endif /* HAVE_STDBOOL_H */
 ])
 AC_TYPE_SIZE_T
@@ -347,7 +367,9 @@ AC_CHECK_TYPES([sig_atomic_t],[],[],[
 #if HAVE_INTTYPES_H
 # include <inttypes.h>
 #else
-# warning this conftest expects <inttypes.h> to be included.
+# if defined(__GNUC__) && !defined(__STRICT_ANSI__)
+#  warning "conftest for sig_atomic_t expects <inttypes.h> to be included."
+# endif /* __GNUC__ && !__STRICT_ANSI__ */
 #endif /* HAVE_INTTYPES_H */
 #include <signal.h>
 ])
@@ -440,8 +462,13 @@ AC_CHECK_FUNCS([__argz_count __argz_next __argz_stringify __fpending acl \
                 system timegm tzset uname usleep utime vasprintf \
                 vsnprintf wcwidth])
 
-if test x"$ENABLE_OPIE" = xyes; then
+if test x"${ENABLE_OPIE}" = x"yes"; then
   AC_LIBOBJ([ftp-opie])
+fi
+
+if test "x${ac_cv_func_getpagesize}" = "x"; then
+  test -z "${ac_cv_func_getpagesize}"
+  AC_CHECK_FUNCS([getpagesize])
 fi
 
 dnl# resolve lib?
@@ -460,8 +487,10 @@ dnl# We expect to have these functions on Unix-like systems configure
 dnl# runs on. The defines are provided to get them in config.h.in so
 dnl# Wget can still be ported to non-Unix systems (such as Windows)
 dnl# that lack some of these functions.
-AC_DEFINE([HAVE_STRCASECMP],[1],[Define to 1 if you have the `strcasecmp' function.])
-AC_DEFINE([HAVE_STRNCASECMP],[1],[Define to 1 if you have the `strncasecmp' function.])
+AC_DEFINE([HAVE_STRCASECMP],[1],
+          [Define to 1 if you have the `strcasecmp' function.])
+AC_DEFINE([HAVE_STRNCASECMP],[1],
+          [Define to 1 if you have the `strncasecmp' function.])
 AC_DEFINE([HAVE_STRDUP],[1],[Define to 1 if you have the `strdup' function.])
 AC_DEFINE([HAVE_ISATTY],[1],[Define to 1 if you have the `isatty' function.])
 
@@ -569,11 +598,11 @@ AS_IF([test x$ssl_found != xyes],
 
     dnl# FIXME: Replace `main' with a function in `-lssl':
     AC_CHECK_LIB([ssl],[main])
-    if test "x`echo $LIBS | grep \"-lz\" -`" = "x"; then
+    if test "x$(echo ${LIBS} | grep \"-lz\" -)" = "x"; then
       AC_CHECK_LIB([z],[gzread])
     else
-      test ! -z "$LIBS"
-      LIBS="`echo $(echo $LIBS | tr \  \\n | uniq | sort | uniq | tr \\n \ )`"
+      test ! -z "${LIBS}"
+      LIBS="`echo $(echo ${LIBS} | tr \  \\n | uniq | sort | uniq | tr \\n \ )`"
     fi
     AC_CHECK_LIB([gpg-error],[gpg_err_init])
     AC_CHECK_LIB([gcrypt],[gcry_control])
@@ -943,7 +972,7 @@ fi
 dnl# If the manual variable still is set, then we go with providing a
 dnl# built-in manual
 
-if test "$USE_MANUAL" = "1"; then
+if test "${USE_MANUAL}" = "1"; then
   AC_DEFINE([USE_MANUAL],[1],[If you want to build wget with the built-in manual])
   wget_manual_msg="enabled"
 fi
@@ -954,7 +983,7 @@ AC_MSG_NOTICE([doing output now])
 UPDATED=`build-aux/mdate-sh doc/wget.texi`
 AC_SUBST([UPDATED])
 UPDATEDMONTH=`build-aux/mdate-sh doc/wget.texi | cut -d\  -f2,3`
-AC_SUBST([UPDATEDMONTH])
+AC_SUBST([UPDATEDMONTH])dnl
 
 AH_BOTTOM([
   #ifdef HAVE_ALLOCA_H
@@ -1011,7 +1040,7 @@ AH_BOTTOM([
   #if HAVE_ICONV
   # include <iconv.h>
   #endif /* HAVE_ICONV */
-])
+])dnl
 
 dnl#
 dnl# Create output

@@ -1,7 +1,7 @@
-/config.rpath
 /announce-gen
+/config.rpath
+/do-release-commit-and-tag
 /gnupload
 /update-copyright
 /useless-if-before-free
 /vc-list-files
-/do-release-commit-and-tag
