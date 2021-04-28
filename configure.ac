@@ -32,19 +32,21 @@ dnl# Process this file with autoconf to produce a configure script.
 dnl#
 
 AC_INIT([wget],[m4_esyscmd(build-aux/git-version-gen .tarball-version)],
-        [bug-wget@gnu.org])
-AC_PREREQ([2.69])
-AC_SUBST([PACKAGE_NAME])
-AC_SUBST([PACKAGE_VERSION])
-if test "x${VERSION}" != "x"; then
+        [bug-wget@gnu.org])dnl
+AC_PREREQ([2.69])dnl
+AC_SUBST([PACKAGE_NAME])dnl
+AC_SUBST([PACKAGE_VERSION])dnl
+AS_IF([test "x${VERSION}" != "x"],[dnl
 	test ! -z "${VERSION}"
-	AC_SUBST([VERSION])
-elif test "x${PACKAGE_VERSION}" != "x"; then
-	test ! -z "${PACKAGE_VERSION}"
-	test -z "${VERSION}" && export VERSION="${PACKAGE_VERSION}"
-	test ! -z "${VERSION}"
-	AC_SUBST([VERSION])
-fi
+	AC_SUBST([VERSION])dnl
+],[dnl
+	AS_IF([test "x${PACKAGE_VERSION}" != "x"],[dnl
+		test ! -z "${PACKAGE_VERSION}"
+		test -z "${VERSION}" && export VERSION="${PACKAGE_VERSION}"
+		test ! -z "${VERSION}"
+		AC_SUBST([VERSION])dnl
+	])dnl
+])dnl
 
 dnl#
 dnl# What version of Wget are we building?
@@ -150,18 +152,17 @@ dnl# their values.
 test -z "${CFLAGS}" && CFLAGS= auto_cflags=1
 test -z "${CC}" && cc_specified=yes
 
-if test "x${CC}" = "x"; then
+AS_IF([test "x${CC}" = "x"],[dnl
 	test -z "${CC}"
 	AC_PROG_CC
 	if test "x${CC_C_O}" = "x"; then
 		test -z "${CC_C_O}"
 		AM_PROG_CC_C_O
 	fi
-else
-	test ! -z "${CC}"
-	export CC
-	AC_SUBST([CC])
-fi
+],[dnl
+	test ! -z "${CC}" && export CC
+	AC_SUBST([CC])dnl
+])dnl
 
 gl_EARLY
 
@@ -178,14 +179,14 @@ dnl#   if compiler is gcc, then
 dnl#     use -O2 and some warning flags
 dnl#   else
 dnl#     use os-specific flags or -O
-if test -n "$auto_cflags"; then
-  if test -n "$GCC"; then
-    CFLAGS="$CFLAGS -O2 -Wall"
+if test -n "${auto_cflags}"; then
+  if test -n "${GCC}"; then
+    CFLAGS="${CFLAGS} -O2 -Wall"
   else
-    case "$host_os" in
-      *hpux*)  CFLAGS="$CFLAGS +O3"                      ;;
-      *ultrix* | *osf*) CFLAGS="$CFLAGS -O -Olimit 2000" ;;
-      *)       CFLAGS="$CFLAGS -O" ;;
+    case "${host_os}" in
+      *hpux*)  CFLAGS="${CFLAGS} +O3"                      ;;
+      *ultrix* | *osf*) CFLAGS="${CFLAGS} -O -Olimit 2000" ;;
+      *)       CFLAGS="${CFLAGS} -O" ;;
     esac
   fi
 fi
@@ -198,23 +199,21 @@ AC_PROG_MKDIR_P
 AM_MISSING_PROG([GIT],[git])
 AM_MISSING_PROG([RSYNC],[rsync])dnl
 
-if test "x$RANLIB" = "x"; then
-	test -z "$RANLIB"
+AS_IF([test "x${RANLIB}" = "x"],[dnl
+	test -z "${RANLIB}"
 	AC_PROG_RANLIB
-else
-	test ! -z "$RANLIB"
-	export RANLIB
-	AC_SUBST([RANLIB])
-fi
+],[dnl
+	test ! -z "${RANLIB}" && export RANLIB
+	AC_SUBST([RANLIB])dnl
+])dnl
 
-if test "x$SED" = "x"; then
-	test -z "$SED"
+AS_IF([test "x${SED}" = "x"],[dnl
+	test -z "${SED}"
 	AC_PROG_SED
-else
-	test ! -z "$SED"
-	export SED
-	AC_SUBST([SED])
-fi
+],[dnl
+	test ! -z "${SED}" && export SED
+	AC_SUBST([SED])dnl
+])dnl
 
 dnl#
 dnl# Gettext
@@ -254,7 +253,7 @@ AC_MSG_RESULT([ ])
 AC_HEADER_MAJOR
 AC_HEADER_STAT
 AC_HEADER_STDBOOL dnl# calls "AC_CHECK_HEADER_STDBOOL"
-AC_SUBST([ac_cv_header_stdbool_h])
+AC_SUBST([ac_cv_header_stdbool_h])dnl
 AC_HEADER_SYS_WAIT
 AC_HEADER_TIME
 AC_CHECK_HEADERS([_Noreturn.h OS.h argz.h arg-nonnull.h arpa/inet.h \
@@ -310,7 +309,7 @@ AC_MSG_RESULT([ ])
 # check for bool type
 AC_CHECK_TYPE([bool],[
   AC_DEFINE([HAVE_BOOL_T],[1],
-    [Define to 1 if bool is an available type.])
+    [Define to 1 if bool is an available type.])dnl
 ],[],[
 #ifdef HAVE_SYS_TYPES_H
 # include <sys/types.h>
@@ -331,16 +330,17 @@ AC_TYPE_SIZE_T
 AC_CHECK_SIZEOF([size_t])
 AC_CHECK_ALIGNOF([size_t])
 # check for ssize_t
-AC_CHECK_TYPE([ssize_t],[
-    AC_SUBST([ssize_t])
-    export ssize_t
-    ],[
-    AC_CHECK_DECLS([int])
-    AC_DEFINE([ssize_t],[int],[the signed version of size_t])
-    AC_SUBST([ssize_t],[int])
-])
-if test "x$ssize_t" = "x"; then
-	test -z "$ssize_t"
+AC_CHECK_TYPE([ssize_t],[dnl
+    AC_SUBST([ssize_t])dnl
+    test -n "${ssize_t}" && export ssize_t
+],[dnl
+    AC_CHECK_DECLS([int])dnl
+    AC_DEFINE([ssize_t],[int],[the signed version of size_t])dnl
+    AC_SUBST([ssize_t],[int])dnl
+])dnl
+  ## don't do AS_IF for this one; it breaks the following off_t test:
+if test "x${ssize_t}" = "x"; then
+	test -z "${ssize_t}"
 	AC_TYPE_SSIZE_T
 fi
 AC_TYPE_OFF_T
@@ -372,15 +372,15 @@ AC_CHECK_TYPES([sig_atomic_t],[],[],[
 # endif /* __GNUC__ && !__STRICT_ANSI__ */
 #endif /* HAVE_INTTYPES_H */
 #include <signal.h>
-])
+])dnl
 AC_CHECK_TYPE([long long],
    [AC_DEFINE([HAVE_LONGLONG],[1],
       [Define to 1 if the compiler supports the 'long long' data type.])
-   longlong="yes"])
+   longlong="yes"])dnl
 
-if test "xyes" = "x$longlong"; then
-  if test "x$SIZEOF_LONG_LONG" = "x"; then
-    test -z "$SIZEOF_LONG_LONG"
+if test "xyes" = "x${longlong}"; then
+  if test "x${SIZEOF_LONG_LONG}" = "x"; then
+    test -z "${SIZEOF_LONG_LONG}"
     AC_CHECK_SIZEOF([long long])
   fi
   AC_MSG_CHECKING([if numberLL works])
@@ -389,13 +389,13 @@ if test "xyes" = "x$longlong"; then
     AC_LANG_PROGRAM([[
     ]],[[
       long long val = 1000LL;
-    ]])
-  ],[
-    AC_MSG_RESULT([yes])
-    AC_DEFINE([HAVE_LL],[1],[if your compiler supports LL])
-  ],[
-    AC_MSG_RESULT([no])
-  ])
+    ]])dnl
+  ],[dnl
+    AC_MSG_RESULT([yes])dnl
+    AC_DEFINE([HAVE_LL],[1],[if your compiler supports LL])dnl
+  ],[dnl
+    AC_MSG_RESULT([no])dnl
+  ]) ## (allow newline)
   AC_LANG_POP
 fi
 
@@ -410,7 +410,7 @@ AC_CHECK_MEMBERS([struct stat.st_blksize])
 AC_STRUCT_ST_BLOCKS
 AC_CHECK_MEMBERS([struct stat.st_rdev])
 AC_STRUCT_TIMEZONE dnl# calls "AC_STRUCT_TM"
-AC_CHECK_MEMBERS([struct sockaddr_in6.sin6_scope_id])
+AC_CHECK_MEMBERS([struct sockaddr_in6.sin6_scope_id])dnl
 
 # gnulib
 AC_MSG_CHECKING([gnulib stuff])
@@ -460,7 +460,7 @@ AC_CHECK_FUNCS([__argz_count __argz_next __argz_stringify __fpending acl \
                 strpbrk strptime strrchr strspn strstr strtol strtoll \
                 strtoul strtoull strtoumax strverscmp symlink sysinfo \
                 system timegm tzset uname usleep utime vasprintf \
-                vsnprintf wcwidth])
+                vsnprintf wcwidth])dnl
 
 if test x"${ENABLE_OPIE}" = x"yes"; then
   AC_LIBOBJ([ftp-opie])
@@ -472,27 +472,27 @@ if test "x${ac_cv_func_getpagesize}" = "x"; then
 fi
 
 dnl# resolve lib?
-AC_CHECK_FUNC([strcasecmp],[],[AC_CHECK_LIB([resolve],[strcasecmp])])
+AC_CHECK_FUNC([strcasecmp],[],[AC_CHECK_LIB([resolve],[strcasecmp])])dnl
 
-if test "$ac_cv_lib_resolve_strcasecmp" = "$ac_cv_func_strcasecmp"; then
+if test "x${ac_cv_lib_resolve_strcasecmp}" = "x${ac_cv_func_strcasecmp}"; then
   AC_CHECK_LIB([resolve],[strcasecmp],
-               [LIBS="-lresolve $LIBS"],
+               [LIBS="-lresolve ${LIBS}"],
                [],
                [-lnsl])
 fi
 ac_cv_func_strcasecmp="no"
-AC_SUBST([ac_cv_func_strcasecmp])
+AC_SUBST([ac_cv_func_strcasecmp])dnl
 
 dnl# We expect to have these functions on Unix-like systems configure
 dnl# runs on. The defines are provided to get them in config.h.in so
 dnl# Wget can still be ported to non-Unix systems (such as Windows)
 dnl# that lack some of these functions.
 AC_DEFINE([HAVE_STRCASECMP],[1],
-          [Define to 1 if you have the `strcasecmp' function.])
+          [Define to 1 if you have the `strcasecmp' function.])dnl
 AC_DEFINE([HAVE_STRNCASECMP],[1],
-          [Define to 1 if you have the `strncasecmp' function.])
-AC_DEFINE([HAVE_STRDUP],[1],[Define to 1 if you have the `strdup' function.])
-AC_DEFINE([HAVE_ISATTY],[1],[Define to 1 if you have the `isatty' function.])
+          [Define to 1 if you have the `strncasecmp' function.])dnl
+AC_DEFINE([HAVE_STRDUP],[1],[Define to 1 if you have the `strdup' function.])dnl
+AC_DEFINE([HAVE_ISATTY],[1],[Define to 1 if you have the `isatty' function.])dnl
 
 dnl#
 dnl# Call Wget-specific macros defined in aclocal.
@@ -515,40 +515,41 @@ AC_CHECK_LIB([c],[printf])
 # FIXME: Replace `main' with a function in `-lcurl':
 AC_CHECK_LIB([curl],[main])
 dnl# FIXME: Replace `main' with a function in `-lne':
-AC_CHECK_LIB([ne],[main])
+AC_CHECK_LIB([ne],[main])dnl
 
-AS_IF([test x"$with_zlib" != xno],[
-  AC_CHECK_LIB([z],[compress])
-  AC_CHECK_HEADER([zlib.h])
-])
+AS_IF([test x"${with_zlib}" != x"no"],[
+  AC_CHECK_LIB([z],[compress])dnl
+  AC_CHECK_HEADER([zlib.h])dnl
+])dnl
 
-AS_IF([test x"$with_ssl" = xopenssl],[
+AS_IF([test x"${with_ssl}" = x"openssl"],[dnl
     dnl# some versions of openssl use zlib compression
-    AC_CHECK_LIB([z],[compress])
+    AC_CHECK_LIB([z],[compress])dnl
 
     dnl# As of this writing (OpenSSL 0.9.6), the libcrypto shared library
     dnl# does not record its dependency on libdl, so we need to make sure
     dnl# -ldl ends up in LIBS on systems that have it.  Most OSes use
     dnl# dlopen(), but HP-UX uses shl_load().
     AC_CHECK_LIB([dl],[dlopen],[],[
-      AC_CHECK_LIB([dl],[shl_load])
-    ])
+      AC_CHECK_LIB([dl],[shl_load])dnl
+    ])dnl
 
     ssl_found=no
-    case $host_os in
+    case ${host_os} in
       *mingw32* )
         dnl# prefer link to openssl dlls if possible. If not, then fallback on
         dnl# static libs. If not, then error out.
         
         AC_CHECK_LIB([eay32],[EVP_MD_CTX_init])
-        if test x"$ac_cv_lib_eay32_EVP_MD_CTX_init" != xno
+        if test x"${ac_cv_lib_eay32_EVP_MD_CTX_init}" != x"no"
         then
           AC_CHECK_LIB([ssl32],[SSL_connect],[
             ssl_found=yes
             AC_MSG_NOTICE([Enabling support for SSL via OpenSSL (shared)])
             AC_LIBOBJ([openssl])
             LIBS="${LIBS} -lssl32"
-            AC_DEFINE([HAVE_LIBSSL32],[1],[Define to 1 if you have the `ssl32' library (-lssl32).])
+            AC_DEFINE([HAVE_LIBSSL32],[1],
+                      [Define to 1 if you have the `ssl32' library (-lssl32).])dnl
           ],
           [AC_MSG_ERROR([openssl not found: shared lib eay32 found but ssl32 not found])])
           
@@ -562,7 +563,7 @@ AS_IF([test x"$with_ssl" = xopenssl],[
       ;;
     esac
 
-AS_IF([test x$ssl_found != xyes],
+AS_IF([test "x${ssl_found}" != "xyes"],
 [
   dnl# Now actually check for -lssl if it was not already found
     AC_CHECK_HEADERS_ONCE([openssl/ssl.h openssl/x509.h openssl/err.h \
@@ -579,21 +580,21 @@ AS_IF([test x$ssl_found != xyes],
   #include <openssl/md4.h>
   #include <openssl/md5.h>
     ],[SSL_library_init ()])
-    if test x"$LIBSSL" != x
+    if test x"${LIBSSL}" != x""
     then
       ssl_found=yes
       AC_MSG_NOTICE([compiling in support for SSL via OpenSSL])
       AC_LIBOBJ([openssl])
-      LIBS="$LIBSSL $LIBS"
-    elif test x"$with_ssl" != x
+      LIBS="${LIBSSL} ${LIBS}"
+    elif test x"${with_ssl}" != x""
     then
       AC_MSG_ERROR([--with-ssl=openssl was given, but SSL is not available.])
     fi
-])
+])dnl
 
 ],[
   dnl# --with-ssl is not gnutls: check if it is "no"
-  AS_IF([test x"$with_ssl" != xno],[
+  AS_IF([test x"${with_ssl}" != x"no"],[
     dnl# Now actually check for -lssl
 
     dnl# FIXME: Replace `main' with a function in `-lssl':
@@ -614,14 +615,14 @@ AS_IF([test x$ssl_found != xyes],
   AC_LIB_HAVE_LINKFLAGS([gnutls],[],[
 #include <gnutls/gnutls.h>
   ],[gnutls_global_init()])
-  if test x"$LIBGNUTLS" != x
+  if test x"${LIBGNUTLS}" != x""
   then
     ssl_found=yes
     AC_MSG_NOTICE([compiling in support for SSL via GnuTLS])
     AC_LIBOBJ([gnutls])
-    LIBS="$LIBGNUTLS $LIBS"
+    LIBS="${LIBGNUTLS} ${LIBS}"
   else
-    AC_MSG_ERROR([--with-ssl was given, but GNUTLS is not available.])
+    AC_MSG_ERROR([--with-ssl was given (possibly implicitly), but GNUTLS is not available.])
   fi
 
   AC_CHECK_FUNCS([gnutls_priority_set_direct])
@@ -629,32 +630,32 @@ AS_IF([test x$ssl_found != xyes],
 ]) # endif: --with-ssl == openssl?
 
 dnl# Enable NTLM if requested and if SSL is available.
-if test x"$LIBSSL" != x || test "$ac_cv_lib_ssl32_SSL_connect" = yes
+if test x"${LIBSSL}" != x"" || test x"${ac_cv_lib_ssl32_SSL_connect}" = x"yes"
 then
-  if test x"$ENABLE_NTLM" != xno
+  if test x"${ENABLE_NTLM}" != x"no"
   then
     AC_DEFINE([ENABLE_NTLM],[1],
-     [Define if you want the NTLM authorization support compiled in.])
+     [Define if you want the NTLM authorization support compiled in.])dnl
     AC_LIBOBJ([http-ntlm])
   fi
 else
   AC_CHECK_LIB([nettle],[nettle_md4_init],[HAVE_NETTLE=yes],[HAVE_NETTLE=no; AC_MSG_WARN([*** libnettle was not found. You will not be able to use NTLM. ***])])
 
-  if test x"$HAVE_NETTLE" = xyes
+  if test x"${HAVE_NETTLE}" = x"yes"
   then
-    AC_SUBST([NETTLE_LIBS],["-lnettle"])
+    AC_SUBST([NETTLE_LIBS],["-lnettle"])dnl
     AC_DEFINE([HAVE_NETTLE],[1],[Use libnettle])
-    if test x"$ENABLE_NTLM" != xno
+    if test x"${ENABLE_NTLM}" != x"no"
     then
       AC_DEFINE([ENABLE_NTLM],[1],
-       [Define if you want the NTLM authorization support compiled in.])
+       [Define if you want the NTLM authorization support compiled in.])dnl
       AC_LIBOBJ([http-ntlm])
-      LIBS="$NETTLE_LIBS $LIBS"
+      LIBS="${NETTLE_LIBS} ${LIBS}"
     fi
   else
     dnl# If SSL is unavailable and the user explicitly requested NTLM,
     dnl# abort.
-    if test x"$ENABLE_NTLM" = xyes
+    if test x"${ENABLE_NTLM}" = x"yes"
     then
       AC_MSG_ERROR([NTLM authorization requested and SSL not enabled; aborting])
     fi
@@ -678,7 +679,7 @@ dnl# is to autodetect IPv6 and use it where available.
 dnl#
 
 AC_ARG_ENABLE([ipv6],
-  AS_HELP_STRING([--disable-ipv6],[disable IPv6 support]),
+  [AS_HELP_STRING([--disable-ipv6],[disable IPv6 support])],
   [case "${enable_ipv6}" in
     no)
       AC_MSG_NOTICE([disabling IPv6 at user request])
@@ -701,30 +702,30 @@ AC_ARG_ENABLE([ipv6],
   ],[
     dnl# If nothing is specified, assume auto-detection.
     ipv6=yes
-  ])
+  ])dnl
 
-if test "X$ipv6" = "Xyes"; then
+if test "X${ipv6}" = "Xyes"; then
   PROTO_INET6([],[
     AC_MSG_NOTICE([Disabling IPv6 support: your system does not support the PF_INET6 protocol family])
     ipv6=no
   ])
 fi
 
-if test "X$ipv6" = "Xyes"; then
+if test "X${ipv6}" = "Xyes"; then
   TYPE_STRUCT_SOCKADDR_IN6([],[
     AC_MSG_NOTICE([Disabling IPv6 support: your system does not support `struct sockaddr_in6'])
     ipv6=no
   ])
-  if test "X$ipv6" = "Xyes"; then
+  if test "X${ipv6}" = "Xyes"; then
     WGET_STRUCT_SOCKADDR_STORAGE
     MEMBER_SIN6_SCOPE_ID
   fi
 fi
 
-if test "X$ipv6" = "Xyes"; then
-  AC_DEFINE([ENABLE_IPV6],[1],[Define if IPv6 support is enabled.])
+if test "X${ipv6}" = "Xyes"; then
+  AC_DEFINE([ENABLE_IPV6],[1],[Define if IPv6 support is enabled.])dnl
   AC_MSG_NOTICE([Enabling support for IPv6.])
-elif test "x$force_ipv6" = "xyes"; then
+elif test "x${force_ipv6}" = "xyes"; then
   AC_MSG_ERROR([IPv6 support requested but not found; aborting])
 fi
 
@@ -750,23 +751,23 @@ AC_ARG_ENABLE([iri],
       iri=yes
       ;;
     *)
-      AC_MSG_ERROR([Invalid --enable-iri argument `$enable_iri'])
+      AC_MSG_ERROR([Invalid --enable-iri argument `${enable_iri}'])
       ;;
     esac
   ],[
     dnl# If nothing is specified, assume auto-detection
     iri=yes
-  ])
+  ])dnl
 
 AC_ARG_WITH([libidn],[AS_HELP_STRING([--with-libidn=[DIR]],
                                    [Support IDN/IRIs (needs GNU Libidn)])],
-                                   [libidn=$withval],[libidn=""])
-AS_IF([test "X$iri" != "Xno"],[
+                                   [libidn=${withval}],[libidn=""])dnl
+AS_IF([test "X${iri}" != "Xno"],[
   AM_ICONV
 
-  if test "X$am_cv_func_iconv" != "Xyes"; then
+  if test "X${am_cv_func_iconv}" != "Xyes"; then
     iri=no
-    if test "X$force_iri" = "Xyes"; then
+    if test "X${force_iri}" = "Xyes"; then
       AC_MSG_ERROR([Libiconv is required for IRIs support])
     else
       AC_MSG_NOTICE([disabling IRIs because libiconv was not found])
@@ -775,13 +776,13 @@ AS_IF([test "X$iri" != "Xno"],[
 ],[dnl# else
    dnl# For some reason (i.e. the gettext checks), this seems to be set even 
    dnl# when we do not check. Explicitly unset.
-  LIBICONV=
-])
+  LIBICONV=""
+])dnl
 
-if test "X$iri" != "Xno"; then
-  if test "$libidn" != ""; then
-    LDFLAGS="${LDFLAGS} -L$libidn/lib"
-    CPPFLAGS="${CPPFLAGS} -I$libidn/include"
+if test "X${iri}" != "Xno"; then
+  if test "X${libidn}" != "X"; then
+    LDFLAGS="${LDFLAGS} -L${libidn}/lib"
+    CPPFLAGS="${CPPFLAGS} -I${libidn}/include"
   fi
 
   # If idna.h cannot be found, check to see if it was installed under
@@ -791,15 +792,15 @@ if test "X$iri" != "Xno"; then
   AC_CHECK_HEADER([idna.h],[],
     [AC_CHECK_HEADER([idn/idn-int.h],
                     [CPPFLAGS="${CPPFLAGS} -I/usr/include/idn"],
-                    [iri=no])])
+                    [iri=no])])dnl
 
-  if test "X$iri" != "Xno"; then
+  if test "X${iri}" != "Xno"; then
     AC_CHECK_LIB([idn],[stringprep_check_version],
       [iri=yes LIBS="${LIBS} -lidn"],[iri=no])
   fi
 
-  if test "X$iri" != "Xno" ; then
-    AC_DEFINE([ENABLE_IRI],[1],[Define if IRI support is enabled.])
+  if test "X${iri}" != "Xno" ; then
+    AC_DEFINE([ENABLE_IRI],[1],[Define if IRI support is enabled.])dnl
     AC_MSG_NOTICE([Enabling support for IRI.])
   else
     AC_MSG_WARN([Libidn not found])
@@ -814,10 +815,10 @@ AC_CHECK_HEADER([uuid/uuid.h],
                 [AC_CHECK_LIB([uuid],[uuid_generate],
                   [LIBS="${LIBS} -luuid"
                    AC_DEFINE([HAVE_LIBUUID],[1],
-                             [Define if libuuid is available.])
-                  ],[AC_CHECK_LIB([uuid],[main])
-                  ])
-])
+                             [Define if libuuid is available.])dnl
+                  ],[AC_CHECK_LIB([uuid],[main])dnl
+                  ])dnl
+])dnl
 
 dnl#
 dnl# Check for PCRE
@@ -827,19 +828,19 @@ AC_CHECK_HEADER([pcre.h],
                 [AC_CHECK_LIB([pcre],[pcre_compile],
                   [LIBS="${LIBS} -lpcre"
                    AC_DEFINE([HAVE_LIBPCRE],[1],
-                             [Define if libpcre is available.])
-                  ])
-])
+                             [Define if libpcre is available.])dnl
+                  ])dnl
+])dnl
 
 dnl# Needed by src/Makefile.am
-AM_CONDITIONAL([IRI_IS_ENABLED],[test "X$iri" != "Xno"])
+AM_CONDITIONAL([IRI_IS_ENABLED],[test "X${iri}" != "Xno"])dnl
 
 dnl#
 dnl# Documentation tools
 dnl#
 
 AC_MSG_CHECKING([for documentation tools])
-AC_MSG_RESULT([ ])
+AC_MSG_RESULT([ ])dnl
 
 dnl#
 dnl# Find makeinfo.  We used to provide support for Emacs processing
@@ -849,119 +850,110 @@ dnl# command-line options, such as `-I'.  Now we depend on makeinfo to
 dnl# build the Info documentation.
 dnl#
 
-AC_CHECK_PROGS([MAKEINFO],[makeinfo],[true])
-AM_MISSING_PROG([EMACSBIN],[emacs])
+AC_CHECK_PROGS([MAKEINFO],[makeinfo],[true])dnl
+AM_MISSING_PROG([EMACSBIN],[emacs])dnl
 AM_PATH_LISPDIR
-AM_MISSING_PROG([INSTALLINFO],[install-info])
-if test "x$INSTALLINFO" = "x"; then
-	test -z "$INSTALLINFO"
+AM_MISSING_PROG([INSTALLINFO],[install-info])dnl
+AS_IF([test "x${INSTALLINFO}" = "x"],[dnl
+	test -z "${INSTALLINFO}"
 	AC_PATH_PROG([INSTALLINFO],[install-info])
-else
-	test ! -z "$INSTALLINFO"
-	export INSTALLINFO
-	AC_SUBST([INSTALLINFO])
-fi
-AM_MISSING_PROG([MYDVIPS],[dvips])
-if test "x$DVIPS" = "x"; then
-	test -z "$DVIPS"
-	test -z "$MYDVIPS"
-	AC_PATH_PROG([MYDVIPS],[dvips])
-else
-	test ! -z "$DVIPS"
-	export DVIPS
-fi
-AM_MISSING_PROG([MYTEXI2DVI],[texi2dvi])
-if test "x$TEXI2DVI" = "x"; then
-	test -z "$TEXI2DVI"
-	test -z "$MYTEXI2DVI"
-	AC_PATH_PROG([MYTEXI2DVI],[texi2dvi])
-fi
-AM_MISSING_PROG([TEXI2HTML],[texi2html])
-if test "x$TEXI2HTML" = "x"; then
-	test -z "$TEXI2HTML"
-	AC_PATH_PROG([TEXI2HTML],[texi2html])
-else
-	test ! -z "$TEXI2HTML"
-	export TEXI2HTML
-	AC_SUBST([TEXI2HTML])
-fi
-AM_MISSING_PROG([MYTEXI2PDF],[texi2pdf])
-if test "x$TEXI2PDF" = "x"; then
-	test -z "$TEXI2PDF"
-	test -z "$MYTEXI2PDF"
-	AC_PATH_PROG([MYTEXI2PDF],[texi2pdf])
-fi
-AM_MISSING_PROG([TEXI2POD],[texi2pod])
-if test "x$TEXI2POD" = "x"; then
-	test -z "$TEXI2POD"
-	AC_PATH_PROG([TEXI2POD],[texi2pod])
-else
-	test ! -z "$TEXI2POD"
-	export TEXI2POD
-	AC_SUBST([TEXI2POD])
-fi
-AM_MISSING_PROG([NROFF],[nroff])
-if test "x$NROFF" = "x"; then
-	test -z "$NROFF"
-	AC_PATH_PROG([NROFF],[nroff])
-else
-	test ! -z "$NROFF"
-	export NROFF
-	AC_SUBST([NROFF])
-fi
+],[dnl
+	test ! -z "${INSTALLINFO}" && export INSTALLINFO
+	AC_SUBST([INSTALLINFO])dnl
+])dnl
+AM_MISSING_PROG([MYDVIPS],[dvips])dnl
+AS_IF([test "x${DVIPS}" = "x"],[dnl
+	test -z "${DVIPS}" && test -z "${MYDVIPS}"
+	AC_PATH_PROG([MYDVIPS],[dvips])dnl
+],[dnl
+	test ! -z "${DVIPS}" && export DVIPS
+])dnl
+AM_MISSING_PROG([MYTEXI2DVI],[texi2dvi])dnl
+AS_IF([test "x${TEXI2DVI}" = "x"],[dnl
+	test -z "${TEXI2DVI}" && test -z "${MYTEXI2DVI}"
+	AC_PATH_PROG([MYTEXI2DVI],[texi2dvi])dnl
+])dnl
+AM_MISSING_PROG([TEXI2HTML],[texi2html])dnl
+AS_IF([test "x${TEXI2HTML}" = "x"],[dnl
+	test -z "${TEXI2HTML}"
+	AC_PATH_PROG([TEXI2HTML],[texi2html])dnl
+],[dnl
+	test ! -z "${TEXI2HTML}" && export TEXI2HTML
+	AC_SUBST([TEXI2HTML])dnl
+])dnl
+AM_MISSING_PROG([MYTEXI2PDF],[texi2pdf])dnl
+AS_IF([test "x${TEXI2PDF}" = "x"],[dnl
+	test -z "${TEXI2PDF}" && test -z "${MYTEXI2PDF}"
+	AC_PATH_PROG([MYTEXI2PDF],[texi2pdf])dnl
+])dnl
+AM_MISSING_PROG([TEXI2POD],[texi2pod])dnl
+AS_IF([test "x${TEXI2POD}" = "x"],[dnl
+	test -z "${TEXI2POD}"
+	AC_PATH_PROG([TEXI2POD],[texi2pod])dnl
+],[dnl
+	test ! -z "${TEXI2POD}" && export TEXI2POD
+	AC_SUBST([TEXI2POD])dnl
+])dnl
+AM_MISSING_PROG([NROFF],[nroff])dnl
+AS_IF([test "x${NROFF}" = "x"],[dnl
+	test -z "${NROFF}"
+	AC_PATH_PROG([NROFF],[nroff])dnl
+],[dnl
+	test ! -z "${NROFF}" && export NROFF
+	AC_SUBST([NROFF])dnl
+])dnl
 
 dnl#
 dnl# Find perl and pod2man
 dnl#
 
 AC_PATH_PROGS([PERL],[perl5 perl],[no])
-AC_PATH_PROG([POD2MAN],[pod2man],[no])
+AC_PATH_PROG([POD2MAN],[pod2man],[no])dnl
 
 if test "x${POD2MAN}" = xno; then
   COMMENT_IF_NO_POD2MAN="# "
 else
-  COMMENT_IF_NO_POD2MAN=
+  COMMENT_IF_NO_POD2MAN=""
 fi
-AC_SUBST([COMMENT_IF_NO_POD2MAN])
-AC_SUBST([POD2MAN])
+AC_SUBST([COMMENT_IF_NO_POD2MAN])dnl
+AC_SUBST([POD2MAN])dnl
 
-if test "x$PERL" = "x"; then
+AS_IF([test "x${PERL}" = "x"],[
   AC_PATH_PROG([PERL],[perl],[],
-    [$PATH:/usr/local/bin/perl:/usr/bin:/usr/local/bin])
-  AC_SUBST([PERL])
-else
-  test ! -z "$PERL"
-  export PERL
-  AC_SUBST([PERL])
-fi
+    [${PATH}:/usr/local/bin/perl:/usr/bin:/usr/local/bin])dnl
+  AC_SUBST([PERL])dnl
+],[
+  test ! -z "${PERL}" && export PERL
+  AC_SUBST([PERL])dnl
+])dnl
 
 AC_PATH_PROGS([AM_NROFF],[gnroff nroff],[],
-  [$PATH:/usr/bin:/usr/local/bin])
-AC_SUBST([AM_NROFF])
+  [${PATH}:/usr/bin:/usr/local/bin])dnl
+AC_SUBST([AM_NROFF])dnl
 
-if test -n "$AM_NROFF"; then
+AS_IF([test -n "${AM_NROFF}"],[
   dnl# only check for nroff options if an nroff command was found
 
   AC_MSG_CHECKING([how to use *nroff to get plain text from man pages])
   MANOPT="-man"
-  mancheck=`echo foo | $AM_NROFF $MANOPT 2>/dev/null`
-  if test -z "$mancheck"; then
+  mancheck=`echo foo | ${AM_NROFF} ${MANOPT} 2>/dev/null`
+  if test -z "${mancheck}"; then
     MANOPT="-mandoc"
-   mancheck=`echo foo | $AM_NROFF $MANOPT 2>/dev/null`
-    if test -z "$mancheck"; then
+    mancheck=`echo foo | ${AM_NROFF} ${MANOPT} 2>/dev/null`
+    if test -z "${mancheck}"; then
       MANOPT=""
       AC_MSG_RESULT([failed])
       AC_MSG_WARN([found no *nroff option to get plaintext from man pages])
     else
-      AC_MSG_RESULT([$MANOPT])
+      AC_MSG_RESULT([${MANOPT}])
     fi
   else
-    AC_MSG_RESULT([$MANOPT])
+    AC_MSG_RESULT([${MANOPT}])
   fi
-  AC_SUBST([MANOPT])
-fi
+  AC_SUBST([MANOPT])dnl
+])dnl
 
-if test -z "$MANOPT"
+if test -z "${MANOPT}"
 then
   dnl# if no nroff tool was found, or no option that could convert
   dnl# manpages was found, then disable the built-in manual stuff
@@ -978,10 +970,10 @@ if test "${USE_MANUAL}" = "1"; then
 fi
 
 dnl# output
-AC_MSG_NOTICE([doing output now])
+AC_MSG_NOTICE([doing output now])dnl
 
 UPDATED=`build-aux/mdate-sh doc/wget.texi`
-AC_SUBST([UPDATED])
+AC_SUBST([UPDATED])dnl
 UPDATEDMONTH=`build-aux/mdate-sh doc/wget.texi | cut -d\  -f2,3`
 AC_SUBST([UPDATEDMONTH])dnl
 

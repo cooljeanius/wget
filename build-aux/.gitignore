@@ -1,5 +1,4 @@
 /announce-gen
-/config.rpath
 /do-release-commit-and-tag
 /gnupload
 /update-copyright

@@ -4,9 +4,7 @@
 /macros.h
 /signature.h
 /test-getline.c
-/test-getopt.c
 /test-getopt.h
-/test-getopt_long.h
 /test-ioctl.c
 /test-open.c
 /test-open.h
@@ -20,3 +18,12 @@ site.exp
 *.tab.c
 WgetTest.pm
 Makefile
+/_Noreturn.h
+/arg-nonnull.h
+/c++defs.h
+/dummy.c
+/init.sh
+/test-getopt-main.h
+/test-getopt-posix.c
+/unused-parameter.h
+/warn-on-use.h
