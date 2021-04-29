@@ -52,7 +52,7 @@ EXTRA_DIST = ChangeLog.README MAILING-LIST \
 CLEANFILES = *~ *.bak $(DISTNAME).tar.gz
 DISTCLEANFILES = */*~ */*/*~ */.gitignore~ */*/.gitignore~ *.gcno */*.gcno \
   */*/*.gcno *.gcda */*.gcda */*/*.gcda
-MAINTAINERCLEANFILES = .sc-start-sc_*
+MAINTAINERCLEANFILES = .sc-start-sc_* autoscan.log
 
 BUILT_SOURCES = .version
 
@@ -66,7 +66,9 @@ clean-generic-local:
 distclean-local:
 	-rm -rfv autom4te.cache || rmdir autom4te.cache
 
-.PHONY: clean-generic-local distclean-local
+maintainer-clean-local: distclean-local
+
+.PHONY: clean-generic-local distclean-local maintainer-clean-local
 
 .version:
 	echo $(VERSION) > $@-t && mv $@-t $@

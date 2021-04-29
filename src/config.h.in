@@ -757,6 +757,9 @@
 /* Define to 1 if you have the <c++defs.h> header file. */
 #undef HAVE_C__DEFS_H
 
+/* Define to 1 if C11-style _Generic works. */
+#undef HAVE_C__GENERIC
+
 /* Define if the GNU dcgettext() function is already present or preinstalled.
    */
 #undef HAVE_DCGETTEXT
@@ -2056,6 +2059,9 @@
 
 /* Define to 1 if you have the <sys/systeminfo.h> header file. */
 #undef HAVE_SYS_SYSTEMINFO_H
+
+/* Define to 1 if you have the <sys/timeb.h> header file. */
+#undef HAVE_SYS_TIMEB_H
 
 /* Define to 1 if you have the <sys/time.h> header file. */
 #undef HAVE_SYS_TIME_H

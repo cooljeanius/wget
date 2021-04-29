@@ -1933,7 +1933,7 @@ CLEANFILES = *~ *.bak $(DISTNAME).tar.gz
 DISTCLEANFILES = */*~ */*/*~ */.gitignore~ */*/.gitignore~ *.gcno */*.gcno \
   */*/*.gcno *.gcda */*.gcda */*/*.gcda
 
-MAINTAINERCLEANFILES = .sc-start-sc_*
+MAINTAINERCLEANFILES = .sc-start-sc_* autoscan.log
 BUILT_SOURCES = .version
 TESTS_ENVIRONMENT = @CHARSETALIASDIR@ @LOCALCHARSET_TESTS_ENVIRONMENT@
 all: $(BUILT_SOURCES)
@@ -2417,7 +2417,8 @@ maintainer-clean: maintainer-clean-recursive
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
 	-rm -rf $(top_srcdir)/autom4te.cache
 	-rm -f Makefile
-maintainer-clean-am: distclean-am maintainer-clean-generic
+maintainer-clean-am: distclean-am maintainer-clean-generic \
+	maintainer-clean-local
 
 mostlyclean: mostlyclean-recursive
 
@@ -2449,9 +2450,9 @@ uninstall-am:
 	install-info install-info-am install-man install-pdf \
 	install-pdf-am install-ps install-ps-am install-strip \
 	installcheck installcheck-am installdirs installdirs-am \
-	maintainer-clean maintainer-clean-generic mostlyclean \
-	mostlyclean-generic pdf pdf-am ps ps-am tags tags-am uninstall \
-	uninstall-am
+	maintainer-clean maintainer-clean-generic \
+	maintainer-clean-local mostlyclean mostlyclean-generic pdf \
+	pdf-am ps ps-am tags tags-am uninstall uninstall-am
 
 .PRECIOUS: Makefile
 
@@ -2462,7 +2463,9 @@ clean-generic-local:
 distclean-local:
 	-rm -rfv autom4te.cache || rmdir autom4te.cache
 
-.PHONY: clean-generic-local distclean-local
+maintainer-clean-local: distclean-local
+
+.PHONY: clean-generic-local distclean-local maintainer-clean-local
 
 .version:
 	echo $(VERSION) > $@-t && mv $@-t $@

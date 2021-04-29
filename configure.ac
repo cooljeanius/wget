@@ -235,6 +235,7 @@ AC_C_INLINE
 AC_C_PROTOTYPES
 AC_C_RESTRICT
 AC_C_VOLATILE
+AC_C__GENERIC
 AX_C___ATTRIBUTE__
 
 dnl# AC_HEADER_STDC is called by other macros, so it is no longer
@@ -265,8 +266,8 @@ AC_CHECK_HEADERS([_Noreturn.h OS.h argz.h arg-nonnull.h arpa/inet.h \
                   sys/filsys.h sys/fs/s5param.h sys/fs_types.h sys/fstyp.h \
                   sys/ioctl.h sys/mntent.h sys/mount.h sys/param.h sys/socket.h \
                   sys/statfs.h sys/statvfs.h sys/systeminfo.h sys/time.h \
-                  sys/vfs.h sys/utime.h termio.h termios.h time.h utime.h \
-                  utmp.h utmpx.h warn-on-use.h wchar.h wctype.h])dnl
+                  sys/timeb.h sys/vfs.h sys/utime.h termio.h termios.h time.h \
+                  utime.h utmp.h utmpx.h warn-on-use.h wchar.h wctype.h])dnl
 
 if test "x${ac_cv_header_inttypes_h}" = "x"; then
   test -z "${ac_cv_header_inttypes_h}"

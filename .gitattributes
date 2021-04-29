@@ -12,6 +12,9 @@ build-aux/mdate-sh linguist-vendored
 build-aux/missing linguist-vendored
 build-aux/test-driver linguist-vendored
 build-aux/texinfo.tex linguist-vendored
+config.guess linguist-vendored
+config.sub linguist-vendored
+install-sh linguist-vendored
 m4/ax_c___attribute__.m4 linguist-vendored
 m4/getpagesize.m4 linguist-vendored
 ChangeLog    merge=cl-merge
