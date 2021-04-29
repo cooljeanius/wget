@@ -50,7 +50,8 @@ EXTRA_DIST = ChangeLog.README MAILING-LIST \
              m4/gnulib-cache.m4
 
 CLEANFILES = *~ *.bak $(DISTNAME).tar.gz
-DISTCLEANFILES = */*~ */*/*~ */.gitignore~ */*/.gitignore~ *.gcno
+DISTCLEANFILES = */*~ */*/*~ */.gitignore~ */*/.gitignore~ *.gcno */*.gcno \
+  */*/*.gcno *.gcda */*.gcda */*/*.gcda
 MAINTAINERCLEANFILES = .sc-start-sc_*
 
 BUILT_SOURCES = .version
@@ -65,7 +66,7 @@ clean-generic-local:
 distclean-local:
 	-rm -rfv autom4te.cache || rmdir autom4te.cache
 
-.PHONY: clean-generic-local
+.PHONY: clean-generic-local distclean-local
 
 .version:
 	echo $(VERSION) > $@-t && mv $@-t $@
