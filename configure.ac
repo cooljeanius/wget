@@ -258,12 +258,12 @@ AC_HEADER_SYS_WAIT
 AC_HEADER_TIME
 AC_CHECK_HEADERS([_Noreturn.h OS.h argz.h arg-nonnull.h arpa/inet.h \
                   c++defs.h ctype.h endian.h fcntl.h fenv.h float.h \
-                  fs_info.h langinfo.h limits.h locale.h mach/mach.h \
-                  math.h malloc.h memcopy.h mntent.h mnttab.h netdb.h \
-                  nl_types.h nlist.h pwd.h regex.h signal.h stddef.h \
-                  stdio.h stdio_ext.h sys/acl.h sys/file.h sys/filsys.h \
-                  sys/fs/s5param.h sys/fs_types.h sys/fstyp.h sys/ioctl.h \
-                  sys/mntent.h sys/mount.h sys/param.h sys/socket.h \
+                  fs_info.h langinfo.h libc-config.h limits.h locale.h \
+                  mach/mach.h math.h malloc.h malloc/malloc.h memcopy.h \
+                  mntent.h mnttab.h netdb.h nl_types.h nlist.h pwd.h regex.h \
+                  signal.h stddef.h stdio.h stdio_ext.h sys/acl.h sys/file.h \
+                  sys/filsys.h sys/fs/s5param.h sys/fs_types.h sys/fstyp.h \
+                  sys/ioctl.h sys/mntent.h sys/mount.h sys/param.h sys/socket.h \
                   sys/statfs.h sys/statvfs.h sys/systeminfo.h sys/time.h \
                   sys/vfs.h sys/utime.h termio.h termios.h time.h utime.h \
                   utmp.h utmpx.h warn-on-use.h wchar.h wctype.h])dnl
@@ -990,6 +990,9 @@ AH_BOTTOM([
   #ifdef HAVE_ICONV_H
   # include <iconv.h>
   #endif /* HAVE_ICONV_H */
+  #ifdef HAVE_LIBC_CONFIG_H
+  # include <libc-config.h>
+  #endif /* HAVE_LIBC_CONFIG_H */
   #ifdef HAVE_NETDB_H
   # include <netdb.h>
   #endif /* HAVE_NETDB_H */

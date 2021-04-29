@@ -1919,7 +1919,7 @@ distuninstallcheck_listfiles = find . -type f | \
 
 
 # Search for macros in the m4 subdirectory:
-ACLOCAL_AMFLAGS = -I m4
+ACLOCAL_AMFLAGS = -I m4 --install
 
 # subdirectories in the distribution
 SUBDIRS = lib src po tests util @COMMENT_IF_NO_POD2MAN@ doc
@@ -1930,6 +1930,8 @@ EXTRA_DIST = ChangeLog.README MAILING-LIST \
              m4/gnulib-cache.m4
 
 CLEANFILES = *~ *.bak $(DISTNAME).tar.gz
+DISTCLEANFILES = */*~ */*/*~ */.gitignore~ */*/.gitignore~ *.gcno
+MAINTAINERCLEANFILES = .sc-start-sc_*
 BUILT_SOURCES = .version
 TESTS_ENVIRONMENT = @CHARSETALIASDIR@ @LOCALCHARSET_TESTS_ENVIRONMENT@
 all: $(BUILT_SOURCES)
@@ -2352,11 +2354,13 @@ clean-generic:
 distclean-generic:
 	-test -z "$(CONFIG_CLEAN_FILES)" || rm -f $(CONFIG_CLEAN_FILES)
 	-test . = "$(srcdir)" || test -z "$(CONFIG_CLEAN_VPATH_FILES)" || rm -f $(CONFIG_CLEAN_VPATH_FILES)
+	-test -z "$(DISTCLEANFILES)" || rm -f $(DISTCLEANFILES)
 
 maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
 	@echo "it deletes files that may require special tools to rebuild."
 	-test -z "$(BUILT_SOURCES)" || rm -f $(BUILT_SOURCES)
+	-test -z "$(MAINTAINERCLEANFILES)" || rm -f $(MAINTAINERCLEANFILES)
 clean: clean-recursive
 
 clean-am: clean-generic mostlyclean-am
@@ -2365,7 +2369,7 @@ distclean: distclean-recursive
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
 	-rm -f Makefile
 distclean-am: clean-am distclean-DEJAGNU distclean-generic \
-	distclean-tags
+	distclean-local distclean-tags
 
 dvi: dvi-recursive
 
@@ -2435,22 +2439,26 @@ uninstall-am:
 	clean-generic cscope cscopelist-am ctags ctags-am dist \
 	dist-all dist-bzip2 dist-gzip dist-hook dist-lzip dist-shar \
 	dist-tarZ dist-xz dist-zip dist-zstd distcheck distclean \
-	distclean-DEJAGNU distclean-generic distclean-tags \
-	distcleancheck distdir distuninstallcheck dvi dvi-am html \
-	html-am info info-am install install-am install-data \
-	install-data-am install-dvi install-dvi-am install-exec \
-	install-exec-am install-html install-html-am install-info \
-	install-info-am install-man install-pdf install-pdf-am \
-	install-ps install-ps-am install-strip installcheck \
-	installcheck-am installdirs installdirs-am maintainer-clean \
-	maintainer-clean-generic mostlyclean mostlyclean-generic pdf \
-	pdf-am ps ps-am tags tags-am uninstall uninstall-am
+	distclean-DEJAGNU distclean-generic distclean-local \
+	distclean-tags distcleancheck distdir distuninstallcheck dvi \
+	dvi-am html html-am info info-am install install-am \
+	install-data install-data-am install-dvi install-dvi-am \
+	install-exec install-exec-am install-html install-html-am \
+	install-info install-info-am install-man install-pdf \
+	install-pdf-am install-ps install-ps-am install-strip \
+	installcheck installcheck-am installdirs installdirs-am \
+	maintainer-clean maintainer-clean-generic mostlyclean \
+	mostlyclean-generic pdf pdf-am ps ps-am tags tags-am uninstall \
+	uninstall-am
 
 .PRECIOUS: Makefile
 
 
 clean-generic-local:
 	rm -f install-info
+
+distclean-local:
+	-rm -rfv autom4te.cache || rmdir autom4te.cache
 
 .PHONY: clean-generic-local
 

@@ -4,6 +4,8 @@
 *.cache
 *.dirstamp
 *.exe
+*.gcda
+*.gcno
 *.log
 *.munged_for_texi_inclusion
 *.o
@@ -11,6 +13,7 @@
 *.sum
 *.tar.gz
 *.tmp
+*.trs
 *.version
 */*/*deps/*.*o
 */*deps/*.*o
@@ -23,6 +26,7 @@
 /ABOUT-NLS~
 /GNUmakefile
 /maint.mk
+.sc-start-sc_*
 Makefile
 build-aux/git-merge-changelog
 confdefs.h
@@ -31,6 +35,14 @@ config*.lineno
 doc/Makefile
 doc/version.texi
 intl/*
+lib/byteswap.h
+lib/ctype.h
+lib/dirent.h
+lib/getopt-cdefs.h
+lib/inttypes.h
+lib/limits.h
+lib/math.h
+lib/utime.h
 lib/Makefile
 lib/Makefile.in
 lib/git-merge-changelog
@@ -40,6 +52,7 @@ po/*.gmo
 po/.reference/*.*o
 po/.reference/*.s1
 po/Makefile.in
+po/stamp-po
 src/Makefile
 src/build_info.c
 src/config.h
@@ -48,5 +61,12 @@ test*/Test*/*
 test*/WgetTest.pm
 test*/core.*
 test*/unit-tests
+test*/lib*.a
+test*/test-fnmatch
+test*/test-getline
+test*/test-getopt-posix
+test*/test-ioctl
+test*/test-open
+test*/test-version-etc
 tmpwrk*/*
 util/Makefile

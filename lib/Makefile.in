@@ -83,6 +83,7 @@
 #  iconv-h \
 #  ioctl \
 #  ioctl-tests \
+#  libc-config \
 #  listen \
 #  lstat \
 #  maintainer-makefile \

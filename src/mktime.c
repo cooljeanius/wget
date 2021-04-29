@@ -38,6 +38,10 @@
 
 #include <string.h>		/* For the real memcpy prototype.  */
 
+#if defined(HAVE_LIBC_CONFIG_H) || defined(GNULIB_TEST_MKTIME)
+# include <libc-config.h>
+#endif /* HAVE_LIBC_CONFIG_H || GNULIB_TEST_MKTIME */
+
 #if DEBUG
 # include <stdio.h>
 # include <stdlib.h>

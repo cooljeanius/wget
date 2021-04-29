@@ -14897,6 +14897,12 @@ then :
   printf "%s\n" "#define HAVE_LANGINFO_H 1" >>confdefs.h
 
 fi
+ac_fn_c_check_header_compile "$LINENO" "libc-config.h" "ac_cv_header_libc_config_h" "$ac_includes_default"
+if test "x$ac_cv_header_libc_config_h" = xyes
+then :
+  printf "%s\n" "#define HAVE_LIBC_CONFIG_H 1" >>confdefs.h
+
+fi
 ac_fn_c_check_header_compile "$LINENO" "limits.h" "ac_cv_header_limits_h" "$ac_includes_default"
 if test "x$ac_cv_header_limits_h" = xyes
 then :
@@ -14925,6 +14931,12 @@ ac_fn_c_check_header_compile "$LINENO" "malloc.h" "ac_cv_header_malloc_h" "$ac_i
 if test "x$ac_cv_header_malloc_h" = xyes
 then :
   printf "%s\n" "#define HAVE_MALLOC_H 1" >>confdefs.h
+
+fi
+ac_fn_c_check_header_compile "$LINENO" "malloc/malloc.h" "ac_cv_header_malloc_malloc_h" "$ac_includes_default"
+if test "x$ac_cv_header_malloc_malloc_h" = xyes
+then :
+  printf "%s\n" "#define HAVE_MALLOC_MALLOC_H 1" >>confdefs.h
 
 fi
 ac_fn_c_check_header_compile "$LINENO" "memcopy.h" "ac_cv_header_memcopy_h" "$ac_includes_default"

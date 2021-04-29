@@ -38,7 +38,7 @@ distuninstallcheck_listfiles = find . -type f | \
 			       grep -Ev '(/share/info/dir|/etc/wgetrc)$$'
 
 # Search for macros in the m4 subdirectory:
-ACLOCAL_AMFLAGS = -I m4
+ACLOCAL_AMFLAGS = -I m4 --install
 
 # subdirectories in the distribution
 SUBDIRS = lib src po tests util @COMMENT_IF_NO_POD2MAN@ doc
@@ -50,6 +50,8 @@ EXTRA_DIST = ChangeLog.README MAILING-LIST \
              m4/gnulib-cache.m4
 
 CLEANFILES = *~ *.bak $(DISTNAME).tar.gz
+DISTCLEANFILES = */*~ */*/*~ */.gitignore~ */*/.gitignore~ *.gcno
+MAINTAINERCLEANFILES = .sc-start-sc_*
 
 BUILT_SOURCES = .version
 
@@ -59,6 +61,9 @@ TESTS_ENVIRONMENT += @LOCALCHARSET_TESTS_ENVIRONMENT@
 
 clean-generic-local:
 	rm -f install-info
+
+distclean-local:
+	-rm -rfv autom4te.cache || rmdir autom4te.cache
 
 .PHONY: clean-generic-local
 

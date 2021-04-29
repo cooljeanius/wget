@@ -1305,6 +1305,9 @@
 /* Define to 1 if you have the `curl' library (-lcurl). */
 #undef HAVE_LIBCURL
 
+/* Define to 1 if you have the <libc-config.h> header file. */
+#undef HAVE_LIBC_CONFIG_H
+
 /* Define to 1 if you have the `dl' library (-ldl). */
 #undef HAVE_LIBDL
 
@@ -1405,6 +1408,9 @@
 
 /* Define to 1 if you have the <malloc.h> header file. */
 #undef HAVE_MALLOC_H
+
+/* Define to 1 if you have the <malloc/malloc.h> header file. */
+#undef HAVE_MALLOC_MALLOC_H
 
 /* Define if malloc, realloc, and calloc set errno on allocation failure. */
 #undef HAVE_MALLOC_POSIX
@@ -3354,6 +3360,9 @@
   #ifdef HAVE_ICONV_H
   # include <iconv.h>
   #endif /* HAVE_ICONV_H */
+  #ifdef HAVE_LIBC_CONFIG_H
+  # include <libc-config.h>
+  #endif /* HAVE_LIBC_CONFIG_H */
   #ifdef HAVE_NETDB_H
   # include <netdb.h>
   #endif /* HAVE_NETDB_H */
