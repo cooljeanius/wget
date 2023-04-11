@@ -66,12 +66,12 @@ Compiling From Repository Sources
        On GNU systems, the functionality provided by libiconv is already
        present in the system libraries.
 
-     * [34]git is used to fetch gnulib files trough the bootstrap.sh script.
+     * [34]git is used to fetch gnulib files trough the bootstrap script.
 
    For those who might be confused as to what to do once they check out
    the source code, considering configure and Makefile do not yet exist at
-   that point, a shell script called bootstrap.sh has been provided. After
-   calling ./bootstrap.sh you're ready to build GNU Wget in the normal
+   that point, a shell script called bootstrap has been provided. After
+   calling ./bootstrap --copy you're ready to build GNU Wget in the normal
    fashion, with ./configure and make.
 
    So, to sum up, after checking out the source code as described above,
@@ -79,8 +79,8 @@ Compiling From Repository Sources
     1. Change to the topmost GNU Wget directory:
  $  cd wget        # assumes you've cloned a repository to "./wget"
     2. Generate all the automatically-generated files required prior to
-       configuring the package:
- $  ./bootstrap.sh
+       configuring the package (ensure GNULIB_SRCDIR is set correctly!):
+ $  ./bootstrap --bootstrap-sync --copy
     3. Configure the package and compile it:
  $  ./configure [some_parameters]
  $  make
@@ -88,7 +88,7 @@ Compiling From Repository Sources
  $  src/wget --version
  GNU Wget 1.12-devel (9cb2563197bc)
 
- Copyright © 2008,2010 Free Software Foundation, Inc.
+ Copyright ï¿½ 2008,2010 Free Software Foundation, Inc.
  License GPLv3+: GNU GPL version 3 or later
  <http://www.gnu.org/licenses/gpl.html>.
  This is free software: you are free to change and redistribute it.
@@ -109,7 +109,7 @@ Compiling From Repository Sources
      * [42]Valid HTML 4.01
      __________________________________________________________________
 
-   All content © 2007 Free Software Foundation. For terms of use,
+   All content ï¿½ 2007 Free Software Foundation. For terms of use,
    redistribution, and modification, please see the [43]WikiLicense page.
 
 References

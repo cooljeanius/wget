@@ -29,7 +29,6 @@
 /dup2.c
 /errno.in.h
 /error.c
-/error.h
 /exitfail.c
 /exitfail.h
 /fatal-signal.c
@@ -155,8 +154,6 @@
 /stat-time.c
 /stat-time.h
 /stat.c
-/stdalign.in.h
-/stdbool.in.h
 /stddef.in.h
 /stdint.in.h
 /stdio-impl.h
@@ -379,7 +376,6 @@ Makefile
 /dup2.c
 /errno.in.h
 /error.c
-/error.h
 /exitfail.c
 /exitfail.h
 /fatal-signal.c
@@ -553,9 +549,7 @@ Makefile
 /stat-time.c
 /stat-time.h
 /stat.c
-/stdalign.in.h
 /stdarg.in.h
-/stdbool.in.h
 /stddef.in.h
 /stdint.in.h
 /stdio-impl.h
@@ -639,6 +633,7 @@ Makefile
 /af_alg.h
 /alignof.h
 /arg-nonnull.h
+/assert.in.h
 /assure.h
 /at-func.c
 /attribute.h
@@ -662,7 +657,7 @@ Makefile
 /dirfd.c
 /dup.c
 /dynarray.h
-/explicit_bzero.c
+/error.in.h
 /fchdir.c
 /fdopendir.c
 /fflush.c
@@ -703,7 +698,10 @@ Makefile
 /hash-triple.h
 /hash.c
 /hash.h
+/ialloc.c
+/ialloc.h
 /idx.h
+/intprops-internal.h
 /inttypes.in.h
 /isblank.c
 /lc-charset-dispatch.c
@@ -716,8 +714,10 @@ Makefile
 /mbrtowc-impl.h
 /mbtowc-lock.c
 /mbtowc-lock.h
+/md5-stream.c
 /mempcpy.c
 /memrchr.c
+/memset_explicit.c
 /nl_langinfo-lock.c
 /openat-die.c
 /openat-priv.h
@@ -739,17 +739,19 @@ Makefile
 /setlocale-lock.c
 /setlocale_null.c
 /setlocale_null.h
+/sha1-stream.c
 /spawn.c
 /spawn_faction_addchdir.c
 /spawnattr_setpgroup.c
 /stat-w32.c
 /stat-w32.h
+/stdckdint.in.h
+/stdio-read.c
 /stpcpy.c
 /strdup.c
 /sys-limits.h
 /sys_random.in.h
 /thread-optim.h
-/unused-parameter.h
 /utime.c
 /utime.in.h
 /warn-on-use.h
@@ -769,3 +771,5 @@ Makefile
 /wmemchr-impl.h
 /wmemchr.c
 /wmempcpy.c
+/memcmp.c
+/time.c

@@ -25,5 +25,4 @@ Makefile
 /init.sh
 /test-getopt-main.h
 /test-getopt-posix.c
-/unused-parameter.h
 /warn-on-use.h

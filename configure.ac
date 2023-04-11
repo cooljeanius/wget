@@ -56,6 +56,8 @@ AC_MSG_NOTICE([configuring for GNU Wget ${PACKAGE_VERSION}])dnl
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_AUX_DIR([build-aux])dnl
 
+AC_CONFIG_LIBOBJ_DIR([src])dnl
+
 AC_CONFIG_SRCDIR([src/wget.h])dnl
 
 dnl#
@@ -103,7 +105,7 @@ dnl# Automake setup
 dnl#
 AC_MSG_CHECKING([automake stuff])
 AC_MSG_RESULT([ ])
-AM_INIT_AUTOMAKE([1.9 dejagnu dist-bzip2 dist-lzip dist-xz dist-zip gnu tar-ustar -Wall -Wno-portability -Wno-obsolete -Wno-override])
+AM_INIT_AUTOMAKE([1.9 dejagnu dist-bzip2 dist-lzip dist-xz dist-zip gnu subdir-objects tar-ustar -Wall -Wno-portability -Wno-obsolete -Wno-override])
 AM_MAINTAINER_MODE
 AM_SANITY_CHECK
 AM_MAKE_INCLUDE
@@ -122,7 +124,7 @@ AC_ARG_WITH([zlib],
 AC_ARG_ENABLE([opie],
 [AS_HELP_STRING([--disable-opie],[disable support for opie or s/key FTP login])],
 [ENABLE_OPIE=$enableval],[ENABLE_OPIE=yes])
-test x"${ENABLE_OPIE}" = xyes && AC_DEFINE([ENABLE_OPIE],[1],
+test x"${ENABLE_OPIE}" = x"yes" && AC_DEFINE([ENABLE_OPIE],[1],
    [Define if you want the Opie support for FTP compiled in.])dnl
 
 AC_ARG_ENABLE([digest],
@@ -149,7 +151,7 @@ AC_MSG_RESULT([ ])
 
 dnl# We want these before the checks, so that the checks can modify
 dnl# their values.
-test -z "${CFLAGS}" && CFLAGS= auto_cflags=1
+test -z "${CFLAGS}" && CFLAGS="" auto_cflags=1
 test -z "${CC}" && cc_specified=yes
 
 AS_IF([test "x${CC}" = "x"],[dnl
@@ -339,13 +341,13 @@ AC_CHECK_TYPE([ssize_t],[dnl
     AC_DEFINE([ssize_t],[int],[the signed version of size_t])dnl
     AC_SUBST([ssize_t],[int])dnl
 ])dnl
-  ## don't do AS_IF for this one; it breaks the following off_t test:
+  ## don't do AS_IF for this one; it breaks the off_t test that follows it:
 if test "x${ssize_t}" = "x"; then
 	test -z "${ssize_t}"
 	AC_TYPE_SSIZE_T
 fi
 AC_TYPE_OFF_T
-# size and alignment of off_t are checked above
+# size and alignment of off_t were already checked above
 AC_TYPE_PID_T
 AC_TYPE_UID_T
 AC_TYPE_INT8_T
@@ -513,8 +515,7 @@ dnl#
 AC_MSG_CHECKING([libraries])
 AC_MSG_RESULT([ ])
 AC_CHECK_LIB([c],[printf])
-# FIXME: Replace `main' with a function in `-lcurl':
-AC_CHECK_LIB([curl],[main])
+AC_CHECK_LIB([curl],[Curl_gethostname])
 dnl# FIXME: Replace `main' with a function in `-lne':
 AC_CHECK_LIB([ne],[main])dnl
 
