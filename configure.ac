@@ -37,15 +37,13 @@ AC_PREREQ([2.69])dnl
 AC_SUBST([PACKAGE_NAME])dnl
 AC_SUBST([PACKAGE_VERSION])dnl
 AS_IF([test "x${VERSION}" != "x"],[dnl
-	test ! -z "${VERSION}"
-	AC_SUBST([VERSION])dnl
+  test -n "${VERSION}" && export VERSION
+  AC_SUBST([VERSION])dnl
 ],[dnl
-	AS_IF([test "x${PACKAGE_VERSION}" != "x"],[dnl
-		test ! -z "${PACKAGE_VERSION}"
-		test -z "${VERSION}" && export VERSION="${PACKAGE_VERSION}"
-		test ! -z "${VERSION}"
-		AC_SUBST([VERSION])dnl
-	])dnl
+  AS_IF([test "x${PACKAGE_VERSION}" != "x"],[dnl
+    test -n "${PACKAGE_VERSION}" && test -z "${VERSION}" && export VERSION="${PACKAGE_VERSION}"
+    AC_SUBST([VERSION])dnl
+  ])dnl
 ])dnl
 
 dnl#
@@ -105,7 +103,7 @@ dnl# Automake setup
 dnl#
 AC_MSG_CHECKING([automake stuff])
 AC_MSG_RESULT([ ])
-AM_INIT_AUTOMAKE([1.9 dejagnu dist-bzip2 dist-lzip dist-xz dist-zip gnu subdir-objects tar-ustar -Wall -Wno-portability -Wno-obsolete -Wno-override])
+AM_INIT_AUTOMAKE([1.11.6 dejagnu dist-bzip2 dist-lzip dist-xz dist-zip gnu subdir-objects tar-ustar -Wall -Wno-portability -Wno-obsolete -Wno-override])
 AM_MAINTAINER_MODE
 AM_SANITY_CHECK
 AM_MAKE_INCLUDE
@@ -155,22 +153,21 @@ test -z "${CFLAGS}" && CFLAGS="" auto_cflags=1
 test -z "${CC}" && cc_specified=yes
 
 AS_IF([test "x${CC}" = "x"],[dnl
-	test -z "${CC}"
-	AC_PROG_CC
-	if test "x${CC_C_O}" = "x"; then
-		test -z "${CC_C_O}"
-		AM_PROG_CC_C_O
-	fi
+  test -z "${CC}" || unset CC
+  AC_PROG_CC
+  if test "x${CC_C_O}" = "x"; then
+    test -z "${CC_C_O}" || unset CC_C_O
+    AM_PROG_CC_C_O
+  fi
 ],[dnl
-	test ! -z "${CC}" && export CC
-	AC_SUBST([CC])dnl
+  test -n "${CC}" && export CC
+  AC_SUBST([CC])dnl
 ])dnl
 
 gl_EARLY
 
 AC_PROG_CXX
 AC_PROG_CXXCPP
-AC_PROG_GCC_TRADITIONAL
 AM_PROG_LEX
 AC_PROG_YACC
 
@@ -202,19 +199,19 @@ AM_MISSING_PROG([GIT],[git])
 AM_MISSING_PROG([RSYNC],[rsync])dnl
 
 AS_IF([test "x${RANLIB}" = "x"],[dnl
-	test -z "${RANLIB}"
-	AC_PROG_RANLIB
+  test -z "${RANLIB}" || unset RANLIB
+  AC_PROG_RANLIB
 ],[dnl
-	test ! -z "${RANLIB}" && export RANLIB
-	AC_SUBST([RANLIB])dnl
+  test -n "${RANLIB}" && export RANLIB
+  AC_SUBST([RANLIB])dnl
 ])dnl
 
 AS_IF([test "x${SED}" = "x"],[dnl
-	test -z "${SED}"
-	AC_PROG_SED
+  test -z "${SED}" || unset SED
+  AC_PROG_SED
 ],[dnl
-	test ! -z "${SED}" && export SED
-	AC_SUBST([SED])dnl
+  test -n "${SED}" && export SED
+  AC_SUBST([SED])dnl
 ])dnl
 
 dnl#
@@ -272,15 +269,15 @@ AC_CHECK_HEADERS([_Noreturn.h OS.h argz.h arg-nonnull.h arpa/inet.h \
                   utime.h utmp.h utmpx.h warn-on-use.h wchar.h wctype.h])dnl
 
 if test "x${ac_cv_header_inttypes_h}" = "x"; then
-  test -z "${ac_cv_header_inttypes_h}"
+  test -z "${ac_cv_header_inttypes_h}" || unset ac_cv_header_inttypes_h
   AC_CHECK_HEADERS([inttypes.h])
 fi
 if test "x${ac_cv_header_strings_h}" = "x"; then
-  test -z "${ac_cv_header_strings_h}"
+  test -z "${ac_cv_header_strings_h}" || unset ac_cv_header_strings_h
   AC_CHECK_HEADERS([strings.h])
 fi
 if test "x${ac_cv_header_unistd_h}" = "x"; then
-  test -z "${ac_cv_header_unistd_h}"
+  test -z "${ac_cv_header_unistd_h}" || unset ac_cv_header_unistd_h
   AC_CHECK_HEADERS([unistd.h])
 fi
 
@@ -604,7 +601,7 @@ AS_IF([test "x${ssl_found}" != "xyes"],
     if test "x$(echo ${LIBS} | grep \"-lz\" -)" = "x"; then
       AC_CHECK_LIB([z],[gzread])
     else
-      test ! -z "${LIBS}"
+      test -n "${LIBS}" && echo "LIBS are currently '${LIBS}'; uniq-ing them next…"
       LIBS="`echo $(echo ${LIBS} | tr \  \\n | uniq | sort | uniq | tr \\n \ )`"
     fi
     AC_CHECK_LIB([gpg-error],[gpg_err_init])
@@ -857,52 +854,52 @@ AM_MISSING_PROG([EMACSBIN],[emacs])dnl
 AM_PATH_LISPDIR
 AM_MISSING_PROG([INSTALLINFO],[install-info])dnl
 AS_IF([test "x${INSTALLINFO}" = "x"],[dnl
-	test -z "${INSTALLINFO}"
-	AC_PATH_PROG([INSTALLINFO],[install-info])
+  test -z "${INSTALLINFO}" || unset INSTALLINFO
+  AC_PATH_PROG([INSTALLINFO],[install-info])
 ],[dnl
-	test ! -z "${INSTALLINFO}" && export INSTALLINFO
-	AC_SUBST([INSTALLINFO])dnl
+  test -n "${INSTALLINFO}" && export INSTALLINFO
+  AC_SUBST([INSTALLINFO])dnl
 ])dnl
 AM_MISSING_PROG([MYDVIPS],[dvips])dnl
 AS_IF([test "x${DVIPS}" = "x"],[dnl
-	test -z "${DVIPS}" && test -z "${MYDVIPS}"
-	AC_PATH_PROG([MYDVIPS],[dvips])dnl
+  test -z "${DVIPS}" && test -z "${MYDVIPS}"
+  AC_PATH_PROG([MYDVIPS],[dvips])dnl
 ],[dnl
-	test ! -z "${DVIPS}" && export DVIPS
+  test -n "${DVIPS}" && export DVIPS
 ])dnl
 AM_MISSING_PROG([MYTEXI2DVI],[texi2dvi])dnl
 AS_IF([test "x${TEXI2DVI}" = "x"],[dnl
-	test -z "${TEXI2DVI}" && test -z "${MYTEXI2DVI}"
-	AC_PATH_PROG([MYTEXI2DVI],[texi2dvi])dnl
+  test -z "${TEXI2DVI}" && test -z "${MYTEXI2DVI}"
+  AC_PATH_PROG([MYTEXI2DVI],[texi2dvi])dnl
 ])dnl
 AM_MISSING_PROG([TEXI2HTML],[texi2html])dnl
 AS_IF([test "x${TEXI2HTML}" = "x"],[dnl
-	test -z "${TEXI2HTML}"
-	AC_PATH_PROG([TEXI2HTML],[texi2html])dnl
+  test -z "${TEXI2HTML}" || unset TEXI2HTML
+  AC_PATH_PROG([TEXI2HTML],[texi2html])dnl
 ],[dnl
-	test ! -z "${TEXI2HTML}" && export TEXI2HTML
-	AC_SUBST([TEXI2HTML])dnl
+  test -n "${TEXI2HTML}" && export TEXI2HTML
+  AC_SUBST([TEXI2HTML])dnl
 ])dnl
 AM_MISSING_PROG([MYTEXI2PDF],[texi2pdf])dnl
 AS_IF([test "x${TEXI2PDF}" = "x"],[dnl
-	test -z "${TEXI2PDF}" && test -z "${MYTEXI2PDF}"
-	AC_PATH_PROG([MYTEXI2PDF],[texi2pdf])dnl
+  test -z "${TEXI2PDF}" && test -z "${MYTEXI2PDF}"
+  AC_PATH_PROG([MYTEXI2PDF],[texi2pdf])dnl
 ])dnl
 AM_MISSING_PROG([TEXI2POD],[texi2pod])dnl
 AS_IF([test "x${TEXI2POD}" = "x"],[dnl
-	test -z "${TEXI2POD}"
-	AC_PATH_PROG([TEXI2POD],[texi2pod])dnl
+  test -z "${TEXI2POD}" || unset TEXI2POD
+  AC_PATH_PROG([TEXI2POD],[texi2pod])dnl
 ],[dnl
-	test ! -z "${TEXI2POD}" && export TEXI2POD
-	AC_SUBST([TEXI2POD])dnl
+  test -n "${TEXI2POD}" && export TEXI2POD
+  AC_SUBST([TEXI2POD])dnl
 ])dnl
 AM_MISSING_PROG([NROFF],[nroff])dnl
 AS_IF([test "x${NROFF}" = "x"],[dnl
-	test -z "${NROFF}"
-	AC_PATH_PROG([NROFF],[nroff])dnl
+  test -z "${NROFF}" || unset NROFF
+  AC_PATH_PROG([NROFF],[nroff])dnl
 ],[dnl
-	test ! -z "${NROFF}" && export NROFF
-	AC_SUBST([NROFF])dnl
+  test -n "${NROFF}" && export NROFF
+  AC_SUBST([NROFF])dnl
 ])dnl
 
 dnl#
@@ -912,7 +909,7 @@ dnl#
 AC_PATH_PROGS([PERL],[perl5 perl],[no])
 AC_PATH_PROG([POD2MAN],[pod2man],[no])dnl
 
-if test "x${POD2MAN}" = xno; then
+if test "x${POD2MAN}" = "xno"; then
   COMMENT_IF_NO_POD2MAN="# "
 else
   COMMENT_IF_NO_POD2MAN=""
@@ -925,7 +922,7 @@ AS_IF([test "x${PERL}" = "x"],[
     [${PATH}:/usr/local/bin/perl:/usr/bin:/usr/local/bin])dnl
   AC_SUBST([PERL])dnl
 ],[
-  test ! -z "${PERL}" && export PERL
+  test -n "${PERL}" && export PERL
   AC_SUBST([PERL])dnl
 ])dnl
 

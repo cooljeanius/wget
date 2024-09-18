@@ -1,3 +1,4 @@
+aclocal.m4 linguist-generated
 build-aux/ar-lib linguist-vendored
 build-aux/compile linguist-vendored
 build-aux/config.guess linguist-vendored
@@ -14,7 +15,18 @@ build-aux/test-driver linguist-vendored
 build-aux/texinfo.tex linguist-vendored
 config.guess linguist-vendored
 config.sub linguist-vendored
+configure linguist-generated
+configure.scan linguist-generated
+doc/Makefile.in linguist-generated
 install-sh linguist-vendored
+lib/Makefile.in linguist-generated
 m4/ax_c___attribute__.m4 linguist-vendored
 m4/getpagesize.m4 linguist-vendored
+m4/lib-*.m4 linguist-vendored
+src/config.h.in linguist-generated
+src/Makefile.in linguist-generated
+tests/Makefile.in linguist-generated
+util/Makefile.in linguist-generated
+
+# gnulib ChangeLog drive
 ChangeLog    merge=cl-merge

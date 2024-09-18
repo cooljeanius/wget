@@ -30,7 +30,7 @@
 Makefile
 build-aux/git-merge-changelog
 confdefs.h
-conftest.*
+conftest*
 config*.lineno
 doc/Makefile
 doc/version.texi

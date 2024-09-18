@@ -18,11 +18,5 @@ site.exp
 *.tab.c
 WgetTest.pm
 Makefile
-/_Noreturn.h
-/arg-nonnull.h
-/c++defs.h
-/dummy.c
-/init.sh
-/test-getopt-main.h
-/test-getopt-posix.c
-/warn-on-use.h
+/test-getopt.c
+/test-getopt_long.h
